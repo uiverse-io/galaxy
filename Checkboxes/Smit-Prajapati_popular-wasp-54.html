@@ -1,0 +1,33 @@
+<input type="checkbox" class="checkbox">
+
+<style>
+/* From Uiverse.io by Smit-Prajapati - Tags: checkbox, cool checkbox, checkmark */
+.checkbox {
+  appearance: none;
+  overflow: hidden;
+  min-width: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  border: 2px solid rgb(255, 102, 0);
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  font-size: 35px;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox:checked {
+  border: 2px solid rgb(255, 212, 59);
+  background: linear-gradient(135deg, rgb(255, 212, 59) 0%, rgb(255, 102, 0) 100%);
+  box-shadow: -5px -5px 30px rgba(255, 212, 59, 1), 5px 5px 30px rgba(255, 102, 0, 1);
+}
+
+.checkbox:checked::before {
+  background: linear-gradient(135deg, rgb(255, 212, 59) 0%, rgb(255, 102, 0) 100%);
+}
+</style>
