@@ -1,0 +1,84 @@
+<a class="code-button code-button--html code-button--color" href="#">
+  <b class="code-button__bracket">&lt;</b>
+  <span class="code-button__code">/</span>
+  <span class="code-button__text">html</span>
+  <b class="code-button__bracket">&gt;</b>
+</a>
+<style>
+/* From Uiverse.io by VashonG - Tags: flashy, animation, button */
+.code-button {
+  display: inline-block;
+  font-family: "Menlo", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Monaco", "Consolas", monospace;
+  margin: 1em;
+  border-radius: 3px;
+  background: #434d5a;
+  border: none;
+  padding: 1em 0;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: 9em;
+  transition: all 0.2s ease, background-color 0.2s ease-in 0.15s, box-shadow 0.2s ease-in 0.15s, color 0s ease;
+}
+
+.code-button__bracket, .code-button__text, .code-button__code {
+  display: inline-block;
+  margin-right: -3px;
+  text-align: center;
+  width: 0.5em;
+  transition: all 0.2s ease, color 0s ease;
+}
+
+.code-button__bracket {
+  font-weight: normal;
+}
+
+.code-button__text {
+  opacity: 0;
+  position: absolute;
+  transition: all 0s ease;
+}
+
+.code-button:hover {
+  padding: 1em 0;
+  transition: all 0.2s ease, background-color 0.2s ease-in 0.05s, box-shadow 0.2s ease-in 0.05s, color 0s ease;
+}
+
+.code-button:hover .code-button__code, .code-button:hover .code-button__text {
+  width: 2em;
+}
+
+.code-button:hover .code-button__code, .code-button:hover .code-button__text, .code-button:hover .code-button__bracket {
+  transition: all 0.2s ease, color 0s ease;
+}
+
+.code-button:hover .code-button__code {
+  opacity: 0;
+  position: absolute;
+}
+
+.code-button:hover .code-button__text {
+  opacity: 1;
+  position: static;
+}
+
+.code-button--color:hover {
+  color: #434d5a;
+}
+
+.code-button--color:hover.code-button--css {
+  background-color: #aaffa9;
+  box-shadow: inset 15px 5px 70px -10px #aaffa9, inset -15px -5px 70px -10px #11ffbd;
+}
+
+.code-button--color:hover.code-button--html {
+  background-color: #fc8f71;
+  box-shadow: inset 15px 15px 90px -20px #fc8f71, inset -15px -5px 80px -10px #fcdcab;
+}
+
+.code-button--color:hover.code-button--js {
+  background-color: #87e1ed;
+  box-shadow: inset 15px 15px 90px -20px #7996d1, inset -15px -5px 80px -10px #87e1ed;
+}
+ 
+</style>
