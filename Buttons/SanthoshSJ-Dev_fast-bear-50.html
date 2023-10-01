@@ -1,0 +1,62 @@
+
+<button class="button">
+  <span class="button-text">Hover me</span>
+  <div class="fill-container"></div>
+</button>
+<style>
+/* From Uiverse.io by SanthoshSJ-Dev - Tags: simple, blue, button, fluid, animated */
+.button {
+  position: relative;
+  padding: 24px 64px;
+  border-radius: 50px;
+  color: #fafafa;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background-color: #212121;
+  border: solid 1px #fafafa4d;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.button .button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.button .fill-container {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  padding-bottom: 100%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.button .fill-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  border-radius: 50px;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(-100%);
+}
+
+.button:hover {
+  border-color: blue;
+  transform: translateY(-4px);
+}
+
+.button:hover .fill-container {
+  transform: translateY(-50%) rotate(0);
+}
+
+.button:hover .fill-container::after {
+  transform: translateY(0);
+}
+</style>
