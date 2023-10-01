@@ -1,0 +1,120 @@
+<div class="fx-block">
+	<div class="toggle">
+		<div>
+			<input type="checkbox" id="toggles">
+			<div data-unchecked="On" data-checked="Off">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<style>
+/* From Uiverse.io by JaydipPrajapati1910 - Tags: switch, toggle switch, light switch */
+.toggle > div {
+  position: relative;
+  padding: 10px;
+  width: 150px;
+  height: 75px;
+  border-radius: 50px;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .5), 0px 1px 1px 0 rgba(255, 255, 255, 1);
+  background: rgb(189, 191, 193);
+  background: linear-gradient(to bottom, rgba(189, 191, 193, 1) 0%, rgba(249, 251, 254, 1) 100%);
+}
+
+.toggle > div > input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  top: -3px;
+  left: 17px;
+  width: 130px;
+  height: 55px;
+  z-index: 5;
+}
+
+.toggle > div > input[type=checkbox] ~ div {
+  width: 130px;
+  height: 55px;
+  border-radius: 50px;
+  border: 1px solid #979797;
+  box-shadow: inset 5px 0 0 0 rgba(0, 0, 0, .1), inset -5px 0 0 0 rgba(0, 0, 0, .1), inset -6px 0 0 0 rgba(255, 255, 255, .5), inset -4px 6px 11px -5px rgba(0, 0, 0, .2), inset 1px 1px 0 0 rgba(255, 255, 255, 1), -6px 4px 11px -7px rgba(0, 0, 0, .5);
+  background: rgb(253, 252, 251);
+  background: linear-gradient(to right, rgba(253, 252, 251, 1) 37%, rgba(229, 229, 229, 1) 61%);
+}
+
+.toggle > div > input[type=checkbox]:checked ~ div {
+  box-shadow: inset -5px 0 0 0 rgba(0, 0, 0, .1), inset 5px 0 0 0 rgba(0, 0, 0, .1), inset 6px 0 0 0 rgba(255, 255, 255, .5), inset -4px 6px 11px -5px rgba(0, 0, 0, .2), inset 1px 1px 0 0 rgba(255, 255, 255, 1), -6px 4px 11px -7px rgba(0, 0, 0, .5);
+  background: rgb(229, 229, 229);
+  background: linear-gradient(to right, rgba(229, 229, 229, 1) 39%, rgba(253, 252, 251, 1) 63%);
+}
+
+.toggle > div > input[type=checkbox] ~ div:before {
+  content: attr(data-unchecked);
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  top: 27px;
+  left: 30px;
+}
+
+.toggle > div > input[type=checkbox] ~ div:after {
+  content: attr(data-checked);
+  color: #df0000;
+  text-shadow: 0 1px 0 #fff, 0px 0 7px #df0000;
+  filter: dropshadow(color=#df0000, offx=0, offy=0);
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  top: 27px;
+  left: 100px;
+}
+
+.toggle > div > input[type=checkbox]:checked ~ div:before {
+  color: #119400;
+  text-shadow: 0 1px 0 #fff, 0px 0 7px #007a08;
+  filter: dropshadow(color=#007a08, offx=0, offy=0);
+}
+
+.toggle > div > input[type=checkbox]:checked ~ div:after {
+  color: #000;
+  text-shadow: none;
+  filter: dropshadow(none);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
