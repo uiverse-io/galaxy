@@ -1,0 +1,76 @@
+<div class="loading">
+  <div class="cube">
+    <div class="side front"></div>
+    <div class="side back"></div>
+    <div class="side top"></div>
+    <div class="side bottom"></div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by mrpumps31232 - Tags: 3d, loader, cube, modern, animated, clean, fun */
+.loading {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  margin: 50px auto;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 2s infinite linear;
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.front {
+  background: linear-gradient(45deg, #f00, #0ff);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: linear-gradient(45deg, #0ff, #f00);
+  transform: translateZ(-50px) rotateY(180deg);
+}
+
+.top {
+  background: linear-gradient(45deg, #f0f, #ff0);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: linear-gradient(45deg, #ff0, #f0f);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.left {
+  background: linear-gradient(45deg, #0f0, #00f);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.right {
+  background: linear-gradient(45deg, #00f, #0f0);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+</style>
