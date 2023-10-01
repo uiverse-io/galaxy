@@ -1,0 +1,59 @@
+<button class="animated-button">
+  <span>Hover me</span>
+</button>
+<style>
+/* From Uiverse.io by gharsh11032000 - Tags: button, hover effect */
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 16px 32px;
+  border: none;
+  background-color: #2196F3;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  color: #2196F3;
+  background-color: #fff;
+  box-shadow: 0 0 20px hsla(263, 77%, 31%, 0);
+}
+
+.animated-button:active {
+  scale: 0.9;
+}
+
+.animated-button:hover:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 1;
+}
+
+
+
+
+
+</style>
