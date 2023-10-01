@@ -1,0 +1,76 @@
+<div class="loader">
+  <div class="cube">
+    <div class="side front"></div>
+    <div class="side back"></div>
+    <div class="side top"></div>
+    <div class="side bottom"></div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+  </div>
+
+</div>
+ 
+<style>
+/* From Uiverse.io by PriyanshuGupta28 - Tags: loader, 3d loader, 3d cude loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 2s infinite linear;
+}
+
+.side {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+}
+
+.front {
+  transform: translateZ(50px);
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+}
+
+.back {
+  transform: translateZ(-50px);
+  background: linear-gradient(45deg, #40e0d0, #ff8c00);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(50px);
+  background: linear-gradient(45deg, #800080, #00bfff);
+}
+
+.bottom {
+  transform: rotateX(90deg) translateZ(-50px);
+  background: linear-gradient(45deg, #008000, #ffff00);
+}
+
+.left {
+  transform: rotateY(90deg) translateZ(50px);
+  background: linear-gradient(45deg, #0000ff, #ff1493);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(-50px);
+  background: linear-gradient(45deg, #00ffff, #ff0000);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+</style>
