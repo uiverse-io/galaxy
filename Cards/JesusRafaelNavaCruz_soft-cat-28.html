@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="card">
+    <p class="title">
+      Rick Sanchez
+    </p>
+  </div>
+  <div class="card">
+    <p class="title">
+      Morty Smith
+    </p>
+  </div>
+  <div class="card">
+    <p class="title">
+      Summer Smith
+    </p>
+  </div>
+
+  <div class="card">
+    <p class="title">
+      Beth Smith
+    </p>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by JesusRafaelNavaCruz - Tags: slider, sliding, slide */
+.container {
+  overflow: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem;
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  display: inline-block;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin: 1rem auto;
+}
+</style>
