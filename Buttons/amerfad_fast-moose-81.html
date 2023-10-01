@@ -1,0 +1,54 @@
+<button class="animated-button">Button</button>
+
+<style>
+/* From Uiverse.io by amerfad - Tags: button */
+.animated-button {
+  background-color: #ff6b6b;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.animated-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.animated-button:hover:after {
+  width: 210px;
+  height: 200px;
+  opacity: 1;
+}
+
+.animated-button:focus {
+  outline: none;
+}
+
+.animated-button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+</style>
