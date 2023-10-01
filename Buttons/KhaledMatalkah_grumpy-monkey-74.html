@@ -1,0 +1,66 @@
+<button class="button">
+  Button
+</button>
+<style>
+/* From Uiverse.io by KhaledMatalkah - Tags: gradient, button */
+.button {
+  display: inline-block;
+  padding: 15px 32px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  opacity: 0.3;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:before {
+  left: -100%;
+  background: linear-gradient(90deg, rgba(0, 136, 255, 0.8), rgba(255, 0, 170, 0.8), rgba(0, 136, 255, 0.8));
+  z-index: -1;
+}
+
+.button:hover:before {
+  left: 0;
+}
+
+.button:after {
+  right: -100%;
+  background: linear-gradient(270deg, rgba(0, 136, 255, 0.8), rgba(255, 0, 170, 0.8), rgba(0, 136, 255, 0.8));
+  z-index: -1;
+}
+
+.button:hover:after {
+  right: 0;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+</style>
