@@ -1,0 +1,159 @@
+<div class="card">
+  <div class="header">
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="active">JS console...</div>
+  </div>
+  <div class="content">
+  <div class="req">
+     console.log(a<span>*</span>b);
+  </div>
+  <div class="res error">
+    <span>ReferenceError</span>{" <span>a is not defined </span>"}
+  </div>
+   <div class="req">
+     console.log(2<span>*</span>3);
+  </div>
+  <div class="res">
+   6
+  </div>
+ 
+  </div>
+
+</div>
+
+
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: card */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 290px;
+  height: 254px;
+  background: #2b2b2b;
+  margin: 0 2px;
+}
+
+.card .header {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(17, 17, 17);
+  padding-left: 4px;
+}
+
+.card .header .btn {
+  margin-left: 8px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active {
+  cursor: pointer;
+  position: relative;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefe;
+  background-color: #2b2b2b;
+  height: 100%;
+  margin-left: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 12px;
+}
+
+.card .header div:nth-child(1) {
+  background-color: rgb(255, 102, 0);
+}
+
+.card .header div:nth-child(2) {
+  background-color: rgb(247, 202, 1);
+}
+
+.card .header div:nth-child(3) {
+  background-color: rgb(10, 184, 10);
+}
+
+.card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  line-height: 125%;
+  color: #fff;
+}
+
+.card .content .req, .card .content .res {
+  padding: .2em 1.6em;
+  border-bottom: 1px solid rgba(102, 101, 101, 0.685);
+  font-size: 12px;
+}
+
+.card .content .req {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: #fff;
+}
+
+.card .content .req::before {
+  position: absolute;
+  content: "";
+  border-left: 1px solid rgb(177, 176, 176);
+  border-bottom: 1px solid rgb(177, 176, 176);
+  padding: 4px;
+  left: 2px;
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  transform: rotate(220deg);
+}
+
+.card .content .res {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: #fff;
+}
+
+.card .content .res span:nth-child(1) {
+  color: rgb(230, 103, 103);
+  font-style: italic;
+  margin-right: 8px;
+}
+
+.card .content .res span:nth-child(2) {
+  color: rgb(77, 245, 43);
+}
+
+.card .content .res.error {
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+.card .content .res.error::before {
+  position: absolute;
+  content: "X";
+  padding: 3px;
+  left: 2px;
+  height: 6px;
+  width: 6px;
+  background-color: rgba(255, 0, 0, 0.644);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+</style>
