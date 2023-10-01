@@ -1,0 +1,95 @@
+<label class="toggle-switch">
+  <input type="checkbox">
+  <span class="toggle-switch__slider"></span>
+</label>
+<style>
+/* From Uiverse.io by KareemTolan - Tags: switch */
+/* Toggle switch styles */
+.toggle-switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.toggle-switch__slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.toggle-switch input:checked + .toggle-switch__slider {
+  background-color: #2196f3;
+  /* Neon effect */
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2196f3, 0 0 40px #2196f3, 0 0 50px #2196f3, 0 0 60px #2196f3, 0 0 70px #2196f3;
+}
+
+.toggle-switch input:checked + .toggle-switch__slider:before {
+  transform: translateX(26px);
+}
+
+/* Shake animation */
+.toggle-switch input:checked + .toggle-switch__slider:before:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Accessibility styles */
+.toggle-switch input:focus + .toggle-switch__slider {
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.5);
+}
+
+.toggle-switch input:focus:not(:checked) + .toggle-switch__slider:before,
+.toggle-switch input:focus:checked + .toggle-switch__slider:before {
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.5);
+}
+
+.toggle-switch input:not(:checked):disabled + .toggle-switch__slider,
+.toggle-switch input:checked:disabled + .toggle-switch__slider {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+</style>
