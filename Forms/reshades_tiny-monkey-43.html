@@ -1,0 +1,95 @@
+<form class="form">
+  <div class="content">
+    <p align="center">Enter your OTP Code</p>
+    <div class="inp">
+    <input maxlength="1" class="input" type="text" placeholder="">
+    <input maxlength="1" class="input" type="text" placeholder=""> 
+    <input maxlength="1" class="input" type="text" placeholder=""> 
+    <input maxlength="1" class="input" type="text" placeholder=""> 
+    </div>
+    <button>Verify</button>
+  </div>
+  
+</form>
+<style>
+/* From Uiverse.io by reshades - Tags: OTP, form, verify, Verification */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #333333;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  -webkit-backdrop-filter: blur(8.2px);
+  border: 1px solid #fff;
+  width: 17em;
+  height: 12em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.form p {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.inp {
+  margin-left: auto;
+  margin-right: auto;
+  white-space: 4px;
+}
+
+.input + .input {
+  margin-left: 0.5em
+}
+
+.input {
+  color: #fff;
+  height: 2em;
+  width: 2em;
+  float: left;
+  text-align: center;
+  background: #00000000;
+  outline: none;
+  border: 1px #fff solid;
+  border-radius: 5px;
+  transition: all 0.6s ease;
+  font-size: larger;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px #fff solid;
+}
+
+.input:not(:placeholder-shown) {
+  background-color: #fff;
+  width: 1em;
+  height: 1em
+}
+
+.form button {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #00000000;
+  color: #fff;
+  width: 8.5em;
+  height: 2.3em;
+  border: #fff 0.1em solid;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.form button:hover {
+  background-color: #fff;
+  color: #000
+}
+
+</style>
