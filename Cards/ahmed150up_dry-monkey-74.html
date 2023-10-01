@@ -1,0 +1,58 @@
+<div class="card-container">
+    <div class="card-header">Voice Chat</div>
+    <div class="card-body">
+      <audio controls="">
+        <source type="audio/mpeg" src="">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card-footer">
+        <button class="mute-button">Mute</button>
+        <button class="unmute-button">Unmute</button>
+    </div>
+</div>
+
+<style>
+/* From Uiverse.io by ahmed150up - Tags: card */
+.card-container {
+  width: 330px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.mute-button, .unmute-button {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mute-button:hover, .unmute-button:hover {
+  background-color: rgb(247, 247, 247);
+  color: rgb(0, 0, 0);
+}
+
+</style>
