@@ -1,0 +1,131 @@
+<form class="form">
+  <ul class="wrapper">
+    
+    <li style="--i:4;"><input class="input" type="text" placeholder="Name" required=""></li>
+    <li style="--i:3;"><input class="input" placeholder="Phone number" required="" name="phone"></li>
+    <li style="--i:2;"><input class="input" type="email" placeholder="E-mail" required="" name="email"></li>
+    <button style="--i:1;">Submit</button>
+  </ul>
+</form>
+
+<style>
+/* From Uiverse.io by andrew-demchenk0 - Tags: form */
+/* you can choose any color you want. don't be afraid to experiment  */
+
+.input, button {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  padding: 10px;
+  border: 0.1px solid #575cb5;
+}
+
+button {
+  background: #6d74e3;
+  border: none;
+}
+
+.wrapper {
+  position: relative;
+  transform: skewY(-14deg);
+}
+
+.wrapper li, button {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  z-index: var(--i);
+  transition: 0.3s;
+  color: white;
+}
+
+.wrapper li::before, button::before {
+  position: absolute;
+  content: '';
+  background: #6d74e3;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 40px;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.3s;
+}
+
+.wrapper li::after, button::after {
+  position: absolute;
+  content: '';
+  background: #6d74e3;
+  width: 200px;
+  height: 40px;
+  top: -40px;
+  left: 0;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.3s;
+}
+
+.wrapper li:nth-child(1)::after, .wrapper li:nth-child(1)::before {
+  background-color: #d8daf7;
+}
+
+.wrapper li:nth-child(2)::after, .wrapper li:nth-child(2)::before {
+  background-color: #c2c5f3;
+}
+
+.wrapper li:nth-child(3)::after, .wrapper li:nth-child(3)::before {
+  background-color: #989deb;
+}
+
+li .input {
+  outline: none;
+  border: none;
+  color: black;
+}
+
+li .input::placeholder {
+  color: black;
+}
+
+li:nth-child(1) .input {
+  background: #d8daf7;
+}
+
+li:nth-child(2) .input {
+  background: #c2c5f3;
+}
+
+li:nth-child(3) .input {
+  background: #989deb;
+}
+
+
+li:nth-child(1) .input:focus {
+  outline: none;
+  border: 3.5px solid #d8daf7;
+}
+
+li:nth-child(2) .input:focus {
+  outline: none;
+  border: 3.5px solid #c2c5f3;
+}
+
+li:nth-child(3) .input:focus {
+  outline: none;
+  border: 3.5px solid #989deb;
+}
+
+.wrapper li:hover, button:hover {
+  transform: translateX(-20px);
+}
+
+button:hover, button:hover::before, button:hover::after {
+  background: #575cb5;
+}
+
+button:active {
+  transform: translateX(0px);
+}
+
+
+</style>
