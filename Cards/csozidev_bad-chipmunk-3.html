@@ -1,0 +1,33 @@
+<div class="card"></div>
+<style>
+/* From Uiverse.io by csozidev - Tags: simple, card, hover, dark, glow, hover effect, advanced, hoverme */
+/* glowing hover card made by: csozi | Website: english.csozi.hu*/
+
+.card {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: rgb(255, 0, 179);
+  background: linear-gradient(137deg, rgb(255, 0, 179) 0%, rgba(0,212,255,1) 100%);
+  transition: 0.3s ease;
+  border-radius: 30px;
+  filter: drop-shadow(0px 0px 30px rgba(209, 38, 197, 0.5));
+}
+
+.card::after {
+  content: '';
+  background-color: #181818;
+  position: absolute;
+  z-index: 1;
+  transition: 0.3s ease;
+  height: 98%;
+  width: 98%;
+  top: 1%;
+  left: 1%;
+  border-radius: 28px;
+}
+
+.card:hover {
+  filter: drop-shadow(0px 0px 30px rgba(209, 38, 197, 1));
+}
+</style>
