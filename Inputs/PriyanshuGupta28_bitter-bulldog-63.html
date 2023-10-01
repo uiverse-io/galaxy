@@ -1,0 +1,76 @@
+ <div class="input-container">
+    <label for="name" class="name">Name:</label>
+    <input placeholder="Enter your name" type="text" class="input">
+    <div class="underline"></div>
+  </div>
+<style>
+/* From Uiverse.io by PriyanshuGupta28 - Tags: input, input effect , css input, html input, cool input */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #333;
+  width: 200px;
+  outline: none;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  transition: width 0.3s;
+}
+
+.input[type="text"]:focus + .underline {
+  width: 100%;
+}
+
+@keyframes floating-label {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+}
+
+.input[type="text"]:placeholder-shown + label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #777;
+  pointer-events: none;
+  transition: transform 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.input[type="text"]:focus:not(:placeholder-shown) + label {
+  transform: translateY(-25px);
+  font-size: 12px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  animation: floating-label 0.3s forwards;
+}
+
+</style>
