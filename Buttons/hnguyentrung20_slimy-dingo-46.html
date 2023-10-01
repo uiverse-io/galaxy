@@ -1,0 +1,127 @@
+<button>
+  <div class="progress">
+     <div class="progress-bar"> </div>
+  </div>
+  
+  <p class="before-scan">Find aliens</p>
+  <p class="scaning">Scanning</p>
+  <p class="complete">No aliens found</p>
+</button>
+<style>
+/* From Uiverse.io by hnguyentrung20 - Tags: button */
+@keyframes MoveBackground {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -165px;
+  }
+}
+
+@keyframes Scaning {
+  0% {
+    width: 0%;
+  }
+
+  30% {
+    width: 10%;
+  }
+
+  70% {
+    width: 40%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+button {
+  background: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition-duration: 300ms;
+  border: none;
+  max-width: 1370px;
+  width: fit-content;
+}
+
+button:hover {
+  color: white;
+  border: 4px black solid;
+  max-width: 170px;
+  padding: 5px 30px;
+}
+
+button:active {
+  background: none;
+  color: white;
+  border: 4px #1F8A70 solid;
+  background-color: #1F8A70;
+  max-width: 170px;
+}
+
+button .progress {
+  display: none;
+}
+
+button:active .progress .progress-bar {
+  display: none;
+}
+
+button:hover .progress {
+ /* background-image: repeating-linear-gradient(-28deg, transparent, transparent 31px, #DC0000 19px, #DC000010 70px); */
+  display: block;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition-duration: 600ms;
+  overflow: hidden;
+  animation: Scaning 3s linear;
+}
+
+.progress .progress-bar {
+  width: 165px;
+  height: 100%;
+  background-image: repeating-linear-gradient(-25deg, transparent, transparent 31px, #000000 19px, #000000ee 70px);
+  animation: MoveBackground 2s linear infinite reverse;
+}
+
+button::before {
+  /* content: "<d"; */
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+button:hover .before-scan,
+ .complete, .scaning {
+  display: none;
+}
+
+button:hover .scaning {
+  display: block;
+  mix-blend-mode: difference;
+  padding: 0px 0px;
+}
+
+button:active .scaning {
+  display: none;
+}
+
+button:active .complete {
+  display: block;
+}
+</style>
