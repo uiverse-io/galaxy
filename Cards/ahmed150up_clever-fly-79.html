@@ -1,0 +1,123 @@
+<div class="chat-card">
+  <div class="chat-header">
+   <div class="h2">ChatGPT</div>
+  </div>
+  <div class="chat-body">
+    <div class="message incoming">
+      <p>Hello, how can I assist you today?</p>
+    </div>
+    <div class="message outgoing">
+      <p>I have a question about your services.</p>
+    </div>
+    <div class="message incoming">
+      <p>Sure, I'm here to help. What would you like to know?</p>
+    </div>
+    
+  </div>
+  <div class="chat-footer">
+    <input placeholder="Type your message" type="text">
+    <button>Send</button>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by ahmed150up - Tags: card, chat, chatgpt */
+.chat-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 10px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+}
+
+.chat-header .h2 {
+  font-size: 16px;
+  color: #333;
+}
+
+.chat-body {
+  padding: 20px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.incoming {
+  background-color: #e1e1e1;
+}
+
+.outgoing {
+  background-color: #f2f2f2;
+  text-align: right;
+}
+
+.message p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+.chat-footer {
+  padding: 10px;
+  background-color: #f2f2f2;
+  display: flex;
+}
+
+.chat-footer input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.chat-footer button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4285f4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-footer button:hover {
+  background-color: #0f9d58;
+}
+
+@keyframes chatAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-card .message {
+  animation: chatAnimation 0.3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0.1s;
+}
+
+.chat-card .message:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.chat-card .message:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+
+</style>
