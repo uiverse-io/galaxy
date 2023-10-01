@@ -1,0 +1,69 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by ibrahimjlidi - Source: alexruix/white-cat-50 - Tags: loader, 3d loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  position: relative;
+}
+
+.loader:before {
+  content: '';
+  width: 48px;
+  height: 5px;
+  background: #253050;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow324 0.5s linear infinite;
+}
+
+.loader:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #044080;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+  animation: jump7456 0.5s linear infinite;
+}
+
+@keyframes jump7456 {
+  15% {
+    border-bottom-right-radius: px;
+  }
+
+  25% {
+    transform: translateY(15px) rotate(22.5deg);
+  }
+
+  50% {
+    transform: translateY(17px) scale(1, .9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+
+  75% {
+    transform: translateY(4px) rotate(50.5deg);
+  }
+
+  100% {
+    transform: translateY(4) rotate(90deg);
+  }
+}
+
+@keyframes shadow324 {
+
+  0%,
+    100% {
+    transform: scale(2, 2);
+  }
+
+  50% {
+    transform: scale(2, );
+  }
+}
+</style>
