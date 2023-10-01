@@ -1,0 +1,72 @@
+<button class="button">
+  <span></span>
+  Button
+  <span></span>
+</button>
+<style>
+/* From Uiverse.io by MusKRI - Source: https://www.youtube.com/watch?v=e3w9liPXSi4 - Tags: button, active, ripple */
+.button {
+  padding: 15px 40px;
+  background: linear-gradient(to right, #09021c, #0c061d);
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.button > span {
+  position: absolute;
+  z-index: -1;
+  background: transparent;
+  opacity: 0.5;
+  width: 33.333%;
+  height: 100%;
+}
+
+.button > :first-child {
+  left: 0;
+  top: 0;
+}
+
+.button > :last-child {
+  right: 0;
+  top: 0;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: hsl(236, 19%, 25%);
+  opacity: 0;
+  width: 10%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  inset: 0;
+  margin: auto;
+  transition: opacity 1000ms 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.button:active::before {
+  transform: scale(13);
+  opacity: 1;
+  transition: all 400ms ease-in-out;
+}
+
+.button:has(:first-child:active)::before {
+  margin-left: 0;
+}
+
+.button:has(:last-child:active)::before {
+  margin-right: 0;
+}
+
+.button:has(:first-child:active)::before,
+.button:has(:last-child:active)::before {
+  transition: all 400ms ease-in-out;
+}
+</style>
