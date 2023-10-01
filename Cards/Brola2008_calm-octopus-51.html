@@ -1,0 +1,35 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by Brola2008 - Tags: gradient, card, box-shadow */
+.one-div {
+  width: 190px;
+  height: 250px;
+  background: linear-gradient(-45deg, rgb(9, 16, 109) ,  rgba(0,255,239,1));
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+}
+
+.one-div::after {
+  content: "HOVER ME";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgb(0,0,0);
+  transition: .3s;
+}
+
+.one-div:hover {
+  scale: 1.1;
+  border-radius: 20px 80px;
+  box-shadow: 11px 11px 25px rgba(0, 0, 0, 0.5);
+}
+
+.one-div:hover::after {
+  content: "THANKS";
+  color: aqua;
+}
+
+</style>
