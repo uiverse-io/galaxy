@@ -1,0 +1,103 @@
+<div class="btn btn--huge">
+  <div class="btn--huge__text">
+    <div>
+      Explore More
+      <span>Explore More</span>
+    </div>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by z1789976172 - Source: https://www.respawn.com/ - Tags: button, animal, hover button */
+:after,:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn--huge {
+  cursor: pointer;
+  position: relative;
+  height: 45px;
+  background-color: #ff4e33;
+  text-transform: uppercase;
+  display: inline-block;
+  color: fff;
+  font-family: Arial;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 0 20px 0 50px;
+  white-space: nowrap;
+}
+
+.btn--huge:before {
+  -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.5s cubic-bezier(0.785, 0.15 , 0.15, 0.86);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #D6D4D3;
+}
+
+.btn--huge:after {
+  -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.5s cubic-bezier(0.785, 0.15 , 0.15, 0.86);
+  content: '→';
+  font-size: 14px;
+  line-height: 1;
+  color: #D6D4D3;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  margin-top: -11px;
+  background: #FF4E33;
+  z-index: 2;
+  border-radius: 50%;
+  border: 1px solid #D6D4D3;
+}
+
+.btn--huge__text {
+  position: relative;
+  top: -1px;
+  -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.btn--huge__text div {
+  position: relative;
+  color: #fff;
+}
+
+.btn--huge__text span {
+  -webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  color: #000;
+  width: 0;
+}
+
+.btn--huge:hover:after {
+  -webkit-transform: translateX(-30px);
+  transform: translateX(-30px);
+}
+
+.btn--huge:hover:before {
+  width: 0;
+}
+
+.btn--huge:hover .btn--huge__text span {
+  width: 100%;
+}
+</style>
