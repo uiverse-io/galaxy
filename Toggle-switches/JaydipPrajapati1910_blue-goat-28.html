@@ -1,0 +1,86 @@
+<input type="checkbox" id="toggle_checkbox">
+<label for="toggle_checkbox">
+  <div class="star">
+ 🔅
+  </div>
+  <div class="moon">🌙</div>
+</label>
+
+<style>
+/* From Uiverse.io by JaydipPrajapati1910 - Tags: switch, moon, sun, toggle switch */
+#toggle_checkbox {
+  display: none;
+}
+
+label {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 116px;
+  height: 56px;
+  margin: 0 auto;
+  background-color: rgb(7, 189, 128);
+  border: 4px solid rgb(75, 114, 94);
+  border-radius: 56px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+  overflow: hidden;
+  user-select: none;
+}
+
+.star {
+  position: absolute;
+  top: 5px;
+  left: 13px;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  transform: scale(1);
+  border-radius: 50%;
+  transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+  z-index: 1;
+  background-color: none;
+}
+
+.moon {
+  position: absolute;
+  bottom: -52px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  transition: 0.3s ease bottom;
+}
+
+.moon:before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -17px;
+  background-color: none;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  transition: 0.2s ease background-color;
+}
+
+#toggle_checkbox:checked + label {
+  background-color: rgb(75, 114, 94);
+  border: 4px solid  rgb(7, 189, 128);
+}
+
+#toggle_checkbox:checked + label .star {
+  top: 2px;
+  left: 64px;
+  transform: scale(0.6);
+}
+
+#toggle_checkbox:checked + label .moon {
+  bottom: 14px;
+}
+
+
+</style>
