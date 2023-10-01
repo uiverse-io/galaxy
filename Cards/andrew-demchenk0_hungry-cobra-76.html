@@ -1,0 +1,108 @@
+<div class="card">
+	<div class="card-content-wrapper">
+		<div class="card-title">Free plan</div>
+		<div class="card-price">
+			<span>$</span>
+			0
+			<span>/month</span>
+		</div>
+		<div class="card-subtitle">Benefits:</div>
+		<ul class="card-benefits">
+				<li>Lorem ipsum, dolor sit amet</li>
+				<li>Lorem ipsum, dolor sit amet</li>
+		</ul>
+	</div>
+	<button class="card-btn">More info</button>
+</div>
+<style>
+/* From Uiverse.io by andrew-demchenk0 - Tags: card, hover effect, hover button, more info, ul, li, free, benefits, free plan */
+.card {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 150px;
+  height: 200px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-wrapper {
+  transform: translateY(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.7s;
+}
+
+.card-title {
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--font-color);
+}
+
+.card-price {
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: var(--font-color);
+  font-weight: 700;
+}
+
+.card-price span {
+  font-size: 15px;
+  color: var(--font-color-sub);
+  font-weight: 500;
+}
+
+.card-subtitle {
+  letter-spacing: 2px;
+  font-size: 17px;
+  color: var(--main-focus);
+  font-weight: 500;
+}
+
+.card-benefits {
+  font-size: 15px;
+  padding-left: 20px;
+  color: var(--font-color);
+}
+
+.card-btn {
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  background: var(--main-focus);
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  transform: translateY(30px);
+  color: var(--bg-color);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  opacity: 0;
+  transition: all 0.7s;
+}
+
+.card:hover > .card-btn {
+  opacity: 1;
+  transform: translateY(17px);
+}
+
+.card-btn:hover {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card:hover > .card-content-wrapper {
+  transform: translateY(5px);
+}
+</style>
