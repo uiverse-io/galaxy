@@ -1,0 +1,44 @@
+<div class="input-box">
+    <input required="" type="text" class="input">
+    <label class="label text--flicking">Name<sup>*</sup></label>
+</div>
+
+<style>
+/* From Uiverse.io by TaniaDou - Tags: input, remove, placeholder, cool input */
+.input-box {
+  position: relative;
+  max-width: 190px;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem;
+  background: none;
+  border: solid 1.5px #9e9e9e;
+  border-radius: .6rem;
+  color: #9e9e9e;
+  font-size: 1rem;
+}
+
+.label {
+  position: absolute;
+  pointer-events: none;
+  left: 1rem;
+  top: .875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 2rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: #9e9e9e;
+  transition: 500ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input:focus~.label, input:valid ~ label {
+  top: -6px;
+  left: -5px;
+  font-size: .875rem;
+  color: #9e9e9e;
+}
+</style>
