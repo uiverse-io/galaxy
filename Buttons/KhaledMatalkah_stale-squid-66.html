@@ -1,0 +1,67 @@
+<button class="button">
+  Button
+</button>
+<style>
+/* From Uiverse.io by KhaledMatalkah - Tags: button, hover, transition */
+.button {
+  display: inline-block;
+  padding: 15px 32px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(130deg, #ff6b6b, #c94d4d, #8e3636);
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.button:before {
+  left: 100%;
+  background: linear-gradient(130deg, #ff6b6b, #c94d4d, #8e3636);
+  z-index: -1;
+}
+
+.button:hover:before {
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.button:after {
+  right: 100%;
+  background: linear-gradient(130deg, #ff6b6b, #c94d4d, #8e3636);
+  z-index: -1;
+}
+
+.button:hover:after {
+  transform: translateX(50%);
+  opacity: 1;
+}
+
+.button:hover .button-text {
+  transform: translateY(-3px);
+}
+
+.button-text {
+  transition: transform 0.3s ease-in-out;
+}
+
+</style>
