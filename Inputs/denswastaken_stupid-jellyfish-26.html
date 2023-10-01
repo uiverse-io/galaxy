@@ -1,0 +1,65 @@
+	<div class="input-group">
+		<input placeholder="Enter new item here" type="text" id="input-field">
+		<button class="submit-button"><span>ADD</span></button>
+	</div>
+<style>
+/* From Uiverse.io by denswastaken - Tags: input, add */
+.input-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 160px;
+}
+
+.submit-button {
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+  background: #2E2E2E;
+  border-radius: 0 10px 10px 0;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  transition: 0.3s;
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  cursor: pointer;
+}
+
+.submit-button:active {
+  transform: translate(0em, 0.2em);
+}
+
+.submit-button span {
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s;
+}
+
+.submit-button:hover span {
+  background: #2E2E2E;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s;
+}
+
+#input-field {
+  background-color: #2E2E2E;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  width: 300px;
+  padding-left: 8px;
+  color: white;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::placeholder {
+  color: rgb(184, 184, 184);
+}
+</style>
