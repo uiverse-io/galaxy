@@ -1,0 +1,117 @@
+<div class="box">
+  <button class="button">LISTEN</button>
+  <div class="music">
+    <span class="soundwave" style="--i: 12"></span>
+    <span class="soundwave" style="--i: 31"></span>
+    <span class="soundwave" style="--i: 25"></span>
+    <span class="soundwave" style="--i: 18"></span>
+    <span class="soundwave" style="--i: 11"></span>
+    <span class="soundwave" style="--i: 23"></span>
+    <span class="soundwave" style="--i: 16"></span>
+    <span class="soundwave" style="--i: 34"></span>
+    <span class="soundwave" style="--i: 19"></span>
+    <span class="soundwave" style="--i: 14"></span>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by tarantino421 - Tags: button, music, hover button */
+.box {
+  --clr-shadow__border: #3effff;
+  --clr-text: #F6F4EB;
+  --clr-soundwave: #83e4ac;
+  --clr-music: #30858d;
+  --size: 3rem;
+  position: relative;
+  outline: 1px solid var(--clr-shadow__border);
+}
+
+.button {
+  background: transparent;
+  padding: calc(var(--size) / 3) var(--size);
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text);
+  letter-spacing: 0.2rem;
+  text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),-2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+}
+
+.music {
+  width: 100%;
+  height: 100%;
+  bottom: 0%;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: var(--clr-music);
+}
+
+.box:hover .music {
+  opacity: 1;
+}
+
+.soundwave {
+  width: 100%;
+  border: 1px solid var(--clr-music);
+  border-bottom: none;
+  background: linear-gradient(to top, var(--clr-soundwave) 70%, var(--clr-music));
+  animation: music-animation calc(0.03s * var(--i)) linear infinite;
+  opacity: 1;
+}
+
+@keyframes music-animation {
+  0%, 100% {
+    height: calc(0.06rem * var(--i));
+  }
+
+  10% {
+    height: calc(0.04rem * var(--i));
+  }
+
+  20% {
+    height: calc(0.05rem * var(--i));
+  }
+
+  30% {
+    height: calc(0.01rem * var(--i));
+  }
+
+  40% {
+    height: calc(0.07rem * var(--i));
+  }
+
+  50% {
+    height: calc(0.04rem * var(--i));
+  }
+
+  60% {
+    height: calc(0.08rem * var(--i));
+  }
+
+  70% {
+    height: calc(0.06rem * var(--i));
+  }
+
+  80% {
+    height: calc(0.09rem * var(--i));
+  }
+
+  90% {
+    height: calc(0.05rem * var(--i));
+  }
+}
+
+
+
+
+
+
+
+
+</style>
