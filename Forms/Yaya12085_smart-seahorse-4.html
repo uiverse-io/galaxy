@@ -1,0 +1,130 @@
+<form class="form">
+  <span class="close">X</span>
+
+  <div class="info">
+  <span class="title">OTP Verification</span>
+<p class="description">Please enter the code we have sent you. </p>
+   </div>
+    <div class="inputs">
+    <input placeholder="" type="tel" maxlength="1">
+    <input placeholder="" type="tel" maxlength="1">
+    <input placeholder="" type="tel" maxlength="1">
+    <input placeholder="" type="tel" maxlength="1">
+  </div>
+        <a class="validate" href="#">Verify</a>
+<p class="resend">You don't receive the code ?<a class="resend-action">resend</a></p>
+
+</form>
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: OTP, form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+  border-radius: 10px;
+  box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
+  max-width: 320px;
+}
+
+.info {
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.description {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.form .inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form .inputs input {
+  height: 2.5em;
+  width: 2.5em;
+  outline: none;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  border-radius: 0.3em;
+  border: 1px solid rgba(253, 253, 253, 0.363);
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.form .inputs input:focus {
+  border: 1px solid rgb(99 102 241);
+}
+
+.resend {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.resend-action {
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 6px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.resend-action:hover {
+  text-decoration: underline #2b8af7;
+}
+
+.validate {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-decoration: none;
+  background-color: #606c88;
+  padding: 10px 20px;
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: .3s ease;
+}
+
+.validate:hover {
+  background-color: #3f4c6b;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #3f4c6b;
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s ease;
+}
+
+.close:hover {
+  background-color: rgba(255, 0, 0, 0.603);
+}
+</style>
