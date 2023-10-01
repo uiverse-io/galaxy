@@ -1,0 +1,95 @@
+<div class="radio-group">
+  <label class="radio-button">
+    <input type="radio" name="radio" value="option1">
+    <svg class="radio-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8"></circle>
+      <circle cx="12" cy="12" r="5"></circle>
+    </svg>
+    <div class="radio-text">Option 1</div>
+  </label>
+  <label class="radio-button">
+    <input type="radio" name="radio" value="option2">
+    <svg class="radio-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8"></circle>
+      <circle cx="12" cy="12" r="5"></circle>
+    </svg>
+    <div class="radio-text">Option 2</div>
+  </label>
+  <label class="radio-button">
+    <input type="radio" name="radio" value="option3">
+    <svg class="radio-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8"></circle>
+      <circle cx="12" cy="12" r="5"></circle>
+    </svg>
+    <div class="radio-text">Option 3</div>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by ahmed150up - Tags: radio */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.radio-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-button:hover .radio-icon {
+  transform: scale(1.2);
+  fill: #2ed573;
+}
+
+.radio-button input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio-text {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.radio-button::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-button:hover .radio-text {
+  font-size: 18px;
+  color: #2ed573;
+  font-weight: bold;
+}
+
+.radio-button:hover::before {
+  border: 2px solid #2ed573;
+}
+
+.radio-button input[type="radio"]:checked + .radio-icon {
+  fill: #2ed573;
+}
+
+.radio-button input[type="radio"]:checked + .radio-icon circle:last-child {
+  opacity: 1;
+}
+
+</style>
