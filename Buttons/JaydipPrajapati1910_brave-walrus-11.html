@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="center">
+      <button class="btn">
+        <svg class="border" viewBox="0 0 180 60" height="60px" width="180px">
+          <polyline class="bg-line" points="179,1 179,59 1,59 1,1 179,1"></polyline>
+          <polyline class="hl-line" points="179,1 179,59 1,59 1,1 179,1"></polyline>
+        </svg>
+        <span>HOVER ME</span>
+      </button>
+    </div>
+  </div>
+<style>
+/* From Uiverse.io by JaydipPrajapati1910 - Tags: button, hover, hover effect */
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #222;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.btn svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #91C9FF;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.btn:hover span {
+  transition: 1s ease-in-out;
+  color: #fff;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+</style>
