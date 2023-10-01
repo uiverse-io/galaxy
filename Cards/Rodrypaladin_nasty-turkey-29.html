@@ -1,0 +1,91 @@
+<article class="card">
+    <div class="card-int">
+        <span class="card__span">Category</span>
+        <div class="img"></div>
+        <div class="card-data">
+          <p class="title">This is a test title
+          </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <button class="button">More info</button>
+        </div>
+    </div>
+</article>
+<style>
+/* From Uiverse.io by Rodrypaladin - Tags: animation, purple, pink, card, hover, html, css, cool card */
+.card {
+  width: 300px;
+  padding: 10px;
+  background-image: linear-gradient(to right bottom, #5d0391, #7b05ae, #9b05cb, #bd00e7, #bd00e7);
+  background-size: 200% 200%;
+  border-radius: 12px;
+}
+
+.card-int {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.img {
+  width: 100%;
+  height: 175px;
+  background-color: pink;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-data {
+  padding: 20px;
+  font-size: 14px;
+}
+
+.card__span {
+  font-family: 'Lucida Sans' sans-serif;
+  font-size: 11px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  background-image: linear-gradient(to right bottom, #5d0391, #7b05ae, #9b05cb, #bd00e7, #bd00e7);
+  background-size: 200% 200%;
+  border: none;
+  padding: 8px 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.1s ease-in;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+.card:hover, button:hover {
+  animation: gradient 0.8s ease-in 1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 200% 200%;
+  }
+
+  100% {
+    background-position: 400% 400%;
+  }
+}
+
+</style>
