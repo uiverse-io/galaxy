@@ -1,0 +1,110 @@
+<svg xmlns="://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+  <g id="a">
+    <g style="--c1: 120; --c2: 0; --delay: -0.5s">
+      <path id="b">
+      </path>
+      <path id="c">
+      </path>
+    </g>
+    <g style="--c1: 210; --c2: 60" transform="rotate(180 12 12)">
+      <path id="b">
+      </path>
+      <path id="c">
+      </path>
+    </g>
+  </g>
+</svg>
+<style>
+/* From Uiverse.io by SelfMadeSystem - Tags: animation, loader, animated, google */
+/* Google flip animation thing */
+
+#a {
+  transform-origin: center;
+  animation: a 2s step-end infinite;
+}
+
+@keyframes a {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(270deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+}
+
+#b {
+  animation: b1 1s linear infinite, b2 2s step-end infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes b1 {
+  0%,
+    100% {
+    d: path("M 0 12 a 12 12 0 0 1 24 0 a 12 12 0 0 0 -24 0");
+  }
+
+  25%,
+    75% {
+    d: path("M 0 12 a 12 12 0 0 1 24 0 a 12 0 0 0 0 -24 0");
+  }
+}
+
+@keyframes b2 {
+  0% {
+    fill: hsl(var(--c1), 100%, 43%);
+  }
+
+  50% {
+    fill: hsl(var(--c2), 100%, 43%);
+  }
+}
+
+#c {
+  animation: c1 1s linear infinite, c2 2s linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes c1 {
+  0%,
+    25%,
+    75%,
+    100% {
+    d: path("M 0 12 h 24 a 12 0  0 0 1 -24 0");
+  }
+
+  50% {
+    d: path("M 0 12 h 24 a 12 12 0 0 1 -24 0");
+  }
+}
+
+@keyframes c2 {
+  0%,
+    25% {
+    fill: hsl(var(--c1), 100%, 43%);
+  }
+
+  12.5%,
+    37.5% {
+    fill: hsl(var(--c1), 100%, 25%);
+  }
+
+  50%,
+    75% {
+    fill: hsl(var(--c2), 100%, 43%);
+  }
+
+  62.5%,
+    87.5% {
+    fill: hsl(var(--c2), 100%, 25%);
+  }
+}
+</style>
