@@ -1,0 +1,158 @@
+<div class="radio">
+      <label>
+        <input checked="" value="1" name="radio" type="radio">
+        <span>Cyber Punk</span>
+        <div class="rotor">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+      <label>
+        <input value="2" name="radio" type="radio">
+        <span>Solar Punk</span>
+        <div class="rotor">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+      <label>
+        <input value="3" name="radio" type="radio">
+        <span>Steam Punk</span>
+        <div class="rotor">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+    </div>
+<style>
+/* From Uiverse.io by WerlynRodriguez - Tags: radio */
+.radio {
+  --input_size: 1.8em;
+  --rotor_size: calc(var(--input_size) + 0.5em);
+    /* 2em = 0.5em, 4em = 1em, 6em = 1.5em, 8em = 2em*/
+  --rotor_border_size: 0.3em;
+  --theme_color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+@media(prefers-color-scheme: dark) {
+  .radio {
+    --theme_color: #fff;
+  }
+}
+
+.radio label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  font-size: calc(var(--input_size) * 0.8);
+}
+
+.radio label span {
+  font-family: monospace;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: normal;
+  word-spacing: 0.1em;
+  color: var(--theme_color);
+}
+
+.radio input {
+  z-index: 1;
+  width: var(--input_size);
+  height: var(--input_size);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+/* The rotor is all the circles rotating at the input */
+.radio .rotor {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--rotor_size);
+  height: var(--rotor_size);
+  margin: 0 -14px;
+  transform: scale(0.3) rotate(-180deg);
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+
+.radio input:checked ~ .rotor {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.radio label input ~ span {
+  position: relative;
+  top: 10px;
+  padding: 0.5em 1em;
+  border: calc(var(--rotor_border_size) / 2) solid transparent;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  transition: all 0.3s ease-out;
+}
+
+.radio input:checked ~ span {
+  border: calc(var(--rotor_border_size) / 2) solid var(--theme_color);
+  background-size: cover;
+  background-blend-mode: difference;
+  font-style: italic;
+  filter: drop-shadow(0px 0px 0.2em #fdfdfd);
+}
+
+.radio .rotor span:first-child {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: var(--rotor_border_size) dashed var(--theme_color);
+  animation: rotate 2s linear infinite;
+  filter: drop-shadow(0px 0px 0.2em #fdfdfd);
+}
+
+.radio .rotor span:nth-child(2) {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: var(--rotor_border_size) dashed #7d008b;
+  border-top: var(--rotor_border_size) solid #7d008b;
+  border-bottom: var(--rotor_border_size) solid #7d008b;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.31, 1.84, 0.67, -0.44);
+  animation-duration: 2.35s;
+}
+
+.radio .rotor span:last-child {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border: var(--rotor_border_size) dashed #d303ea;
+  border-top: var(--rotor_border_size) solid #d303ea;
+  border-bottom: var(--rotor_border_size) solid #d303ea;
+  filter: drop-shadow(0px 0px 0.2em #e600ff);
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.22, 0.94, 0.44, -0.33);
+  animation-duration: 1.35s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
