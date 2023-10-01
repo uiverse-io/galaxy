@@ -1,0 +1,48 @@
+<div>
+<button class="button">
+  Hover Me!
+</button>
+<span class="backdrop"></span>
+</div>
+<style>
+/* From Uiverse.io by akshat-patel28 - Tags: glassmorphism, button, square, css, hover effect, css effect, hover button */
+.button {
+  width: 90px;
+  height: 90px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0px;
+  cursor: pointer;
+  outline: 0px;
+  padding: 0 2px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.backdrop {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(36, 33, 228);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all ease-in-out 0.5s;
+}
+
+.button:hover + .backdrop {
+  top: 48%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transform: rotate(15deg) translateX(-50%) translateY(-50%);
+}
+
+.button:active,.button:active +.backdrop {
+  box-shadow: none;
+}
+</style>
