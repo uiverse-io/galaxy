@@ -1,0 +1,55 @@
+<button>
+  Hover Me
+</button>
+<style>
+/* From Uiverse.io by NAKAMOZ - Tags: button */
+button {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 17px;
+  position: relative;
+  z-index: 3;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+button::before {
+  content: "";
+  border: 3px solid white;
+  position: absolute;
+  left: -25px;
+  bottom: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+button:hover::before {
+  left: -25px;
+  bottom: -17.5px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  z-index: -1;
+}
+
+button:hover {
+  color: #282828;
+}
+
+</style>
