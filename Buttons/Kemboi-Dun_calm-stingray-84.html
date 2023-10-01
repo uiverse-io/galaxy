@@ -1,0 +1,54 @@
+    <button class="btn">
+        Hover me
+    </button>
+<style>
+/* From Uiverse.io by Kemboi-Dun - Tags: button */
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2px;
+  width: 0;
+  background-color: #f8f8f8;
+  transition: .5s ease;
+}
+
+.btn:hover {
+  color: #181818;
+  transition-delay: .5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  transition: .4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+}
+</style>
