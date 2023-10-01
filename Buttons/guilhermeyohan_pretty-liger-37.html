@@ -1,0 +1,95 @@
+<button class="container moon-container">
+  <div class="moon">
+    <div class="mancha2"></div>
+    </div>
+		 <div class="moon-text">To the Moon</div>
+</button>
+
+<style>
+/* From Uiverse.io by guilhermeyohan - Tags: button */
+.moon-container {
+  width: 170px;
+  height: 50px;
+  background: linear-gradient(0, #120c56, #000000);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+.moon-container:hover {
+  transform: scale(1.2);
+  border-radius: 62px;
+  box-shadow: 1px 0px 100px #ece1bd60;
+  transition: all 1.4s;
+}
+
+.moon-text {
+  position: relative;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.moon {
+  position: relative;
+  border-color: transparent;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #F0EAD6;
+  box-shadow: 0px 0px 10px #F0EAD6;
+}
+
+.moon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 22%;
+  left: 45%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.4;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  top: 67%;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.3;
+}
+
+.mancha2 {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgba(51, 51, 51, 0.583);
+  border-radius: 50%;
+  position: absolute;
+  top: 47%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.moon:hover {
+  box-shadow: 0px 0px 100px #F0EAD6;
+  transition: all 1.4s;
+}
+
+.moon:active {
+  transform: scale(1.5);
+  transition: all 1.4s;
+}
+
+</style>
