@@ -1,0 +1,59 @@
+<div class="neomorph-spinner">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<style>
+/* From Uiverse.io by MyNameJeremy - Tags: loader */
+.neomorph-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.neomorph-spinner > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #004dff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  animation: spin_5113 1s ease infinite;
+}
+
+.neomorph-spinner > div:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.neomorph-spinner > div:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.neomorph-spinner > div:nth-child(3) {
+  transform: rotate(180deg);
+}
+
+.neomorph-spinner > div:nth-child(4) {
+  transform: rotate(270deg);
+}
+
+@keyframes spin_5113 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+</style>
