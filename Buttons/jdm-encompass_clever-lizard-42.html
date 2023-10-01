@@ -1,0 +1,74 @@
+<button class="button">
+  <a href="https://www.facebook.com/JDmOwO" class="no-link-style">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50" style="null" class="icon icons8-Facebook-Filled">
+      <path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z" fill="#ffffff"></path>
+    </svg>
+  </a>
+</button><br>
+<style>
+/* From Uiverse.io by jdm-encompass - Tags: button, social media, animated, follow */
+.button {
+  background-color: #1877F2;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  animation: sway 2s infinite alternate;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.button:hover {
+  transform: rotate(-360deg);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 255, 0.5);
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(10);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: gold 1px 1px 1px;
+  }
+
+  100% {
+    text-shadow: gold 0 0 10px gold;
+  }
+}
+
+.icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.9))
+}
+
+.follow-text {
+  color: white;
+  position: relative;
+  top: 3em;
+  left: -4em;
+  transition: transform 0.5s;
+}
+
+.follow-text:hover {
+  transform: scale(1.2);
+  color: rgba(31,81,255,100);
+  filter: drop-shadow(2px 2px 4px rgba(31,81,255,2.0))
+}
+
+</style>
