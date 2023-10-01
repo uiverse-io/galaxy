@@ -1,0 +1,35 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by scob337 - Tags: card */
+.one-div {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  background-color: hsl(180, 5%, 17%);
+  border-radius: 50%;
+  position: relative;
+}
+
+.one-div::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: hsla(236, 93%, 43%, 0.897);
+  top: 190px;
+  left: 200px;
+  border-radius: 50%;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.one-div::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: hsla(236, 93%, 43%, 0.897);
+  top: 100px;
+  left: 50px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+</style>
