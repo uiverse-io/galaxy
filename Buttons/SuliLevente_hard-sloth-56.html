@@ -1,0 +1,50 @@
+<button>Button</button>
+<style>
+/* From Uiverse.io by SuliLevente - Tags: button */
+button {
+  background-color: #040810;
+  color: #C7C7C7;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  overflow: hidden;
+  position: relative;
+  border: 3px double #2D6FBB;
+  z-index: 1;
+}
+
+button::before {
+  content: "";
+  background-color: #2D6FBB;
+  transform: translateX(-100%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+button:hover::before {
+  transform: translateX(0);
+}
+
+button::after {
+  content: "";
+  background-color: #2D6FBB;
+  transform: translateX(100%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+button:hover::after {
+  transform: translateX(0);
+}
+</style>
