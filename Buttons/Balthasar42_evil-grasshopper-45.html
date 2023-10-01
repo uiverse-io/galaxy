@@ -1,0 +1,110 @@
+<button class="btn btn--primary">
+
+  <span class="btn-inner">
+    <span class="btn-label">
+      to the galaxy
+    </span>
+    <span class="btn-blur" aria-hidden=""></span>
+  </span>
+  
+</button>
+<style>
+/* From Uiverse.io by Balthasar42 - Tags: button */
+.btn {
+  --btn-gradient: var(--btn-gradient-from),var(--btn-gradient-to);
+  border: 0 none;
+  appearance: none;
+  border-radius: 9999px;
+  background-color: var(--btn-bg);
+  box-shadow: 0 0 2px 2px var(--btn-shadow), 0 0 4px 4px var(--btn-shadow), 0 0 8px 8px var(--btn-shadow);
+}
+
+.btn,
+.btn * {
+  box-sizing: border-box;
+}
+
+.btn-inner {
+  position: relative;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  min-width: 10rem;
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+  color: var(--btn-text-color);
+}
+
+.btn-label {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  border-radius: inherit;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-bg);
+  background-image: linear-gradient(to bottom,var(--btn-gradient));
+}
+
+.btn-blur {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  z-index: 0;
+  transform: scaleX(3.5);
+  filter: blur(6px);
+}
+
+.btn-blur:before {
+  --gradient: var(--btn-color-from), var(--btn-color), var(--btn-color-to);
+  --transition: 5s;
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: conic-gradient(var(--gradient));
+  animation: turn var(--transition) linear infinite;
+}
+
+.btn:hover,
+.btn:active {
+  transition: transform .5s ease-in-out 0s;
+  transform: translateY(-1px);
+}
+
+.btn:active .btn-blur:before {
+  --transition: 2s;
+}
+
+.btn--primary {
+  --btn-bg: #111111;
+  --btn-gradient-from: #111111;
+  --btn-gradient-to: rgba(255, 255, 255, 0.1);
+  --btn-text-color: #ffffff;
+  --btn-color: #5f17d4;
+  --btn-color-from: #c6a3ff;
+  --btn-color-to: #966ed8;
+  --btn-shadow: #5f17d42d;
+}
+
+@keyframes turn {
+  0% {
+    transform: translateY(-50%) rotate(0deg)
+  }
+
+  to {
+    transform: translateY(-50%) rotate(1turn)
+  }
+}
+</style>
