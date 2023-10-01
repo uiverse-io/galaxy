@@ -1,0 +1,177 @@
+<div class="radio-input">
+      <div class="radio">
+        <input checked="" value="value-1" name="future" id="value-1" type="radio" class="input">
+        <label for="value-1">
+          <div class="center">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </label>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="block"></div>
+      </div>
+      <div class="radio">
+        <input value="value-2" name="future" id="value-2" type="radio" class="input">
+        <label for="value-2">
+          <div class="center">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </label>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="block"></div>
+      </div>
+      <div class="radio">
+        <input value="value-3" name="future" id="value-3" type="radio" class="input">
+        <label for="value-3">
+          <div class="center">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </label>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="block"></div>
+      </div>
+    </div>
+<style>
+/* From Uiverse.io by XuYeean - Tags: radio */
+.radio-input {
+  display: flex;
+  max-width: 300px;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+
+.radio-input > .radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+
+.input {
+  z-index: 1;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #48e9ff88;
+  transform-origin: center;
+  transform: rotateX(120deg) rotateZ(45deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.input:hover:not(.input:checked) {
+  animation: light 8s ease-in-out forwards infinite alternate;
+}
+
+.input:checked {
+  animation: Scale 2.8s ease-in-out forwards infinite alternate;
+  box-shadow: 0 0 40px #48e9ff, inset 0 0 4px #48e9ff;
+}
+
+@keyframes light {
+  50% {
+    box-shadow: 0 0 40px #48e9ff, inset 0 0 8px #48e9ff;
+  }
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  transition: all 0.4s ease-in-out;
+  transform: rotateX(120deg) rotateZ(0deg);
+  opacity: 0;
+  cursor: pointer;
+}
+
+label .center > div {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+}
+
+.input:checked + label .center > div {
+  opacity: 1;
+}
+
+label .center > div:nth-child(1) {
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid #48e9ff;
+  border-bottom: 1px solid #48e9ff;
+}
+
+label .center > div:nth-child(2) {
+  right: 0;
+  border-right: 1px solid #48e9ff;
+  border-top: 1px solid #48e9ff;
+}
+
+label .center > div:nth-child(3) {
+  bottom: 0;
+  border-left: 1px solid #48e9ff;
+  border-bottom: 1px solid #48e9ff;
+}
+
+label .center > div:nth-child(4) {
+  left: 0;
+  border-left: 1px solid #48e9ff;
+  border-top: 1px solid #48e9ff;
+}
+
+.input:checked + label {
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+  transform: rotateX(120deg) rotateZ(45deg);
+}
+
+.input:checked ~ .top {
+  transform: rotateX(120deg) rotateZ(45deg) translateZ(12px) !important;
+}
+
+.top,
+.bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  transform: rotateX(120deg) rotateZ(45deg) translateZ(0px);
+}
+
+.input:checked ~ .top,
+.input:checked ~ .bottom {
+  background: #48e9ff;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.input:checked ~ .bottom {
+  transform: rotateX(120deg) rotateZ(45deg) translateZ(-24px);
+  z-index: -1;
+}
+
+</style>
