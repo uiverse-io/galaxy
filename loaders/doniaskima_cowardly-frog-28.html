@@ -1,0 +1,46 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by doniaskima - Tags: simple, material design, neumorphism, skeuomorphism, glassmorphism, flashy, loader */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  animation: l12-0 2s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  flex: 4;
+  background: radial-gradient(at 50% 20%,#0000,#000a) bottom left/20px 20px repeat-x,
+    linear-gradient(red 0 0) bottom/100% 20px no-repeat
+    #ddd;
+  -webkit-mask: repeating-linear-gradient(90deg,#000 0 4px,#0000 0 20px) 8px 0,
+    radial-gradient(farthest-side,#000 90%,#0000) left bottom/20px 20px repeat-x;
+}
+
+.loader::after {
+  flex: 1;
+  transform-origin: top;
+  animation: l12-1 1s cubic-bezier(0,20,1,20) infinite;
+}
+
+@keyframes l12-0 {
+ 
+  0%,49.9% {
+    transform: scaleX(1)
+  }
+
+  50%,100% {
+    transform: scaleX(-1)
+  }
+}
+
+@keyframes l12-1 {
+ 
+  100% {
+    transform: rotate(-2deg)
+  }
+}
+</style>
