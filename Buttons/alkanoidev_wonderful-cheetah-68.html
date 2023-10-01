@@ -1,0 +1,42 @@
+<button>
+      <svg>
+      <filter id="pedroduarteisalegend">
+        <feTurbulence stitchTiles="stitch" numOctaves="4" baseFrequency="0.5" type="fractalNoise"></feTurbulence>
+      </filter>
+      <rect filter="url(#pedroduarteisalegend)" height="100%" width="100%"></rect>
+    </svg>
+      Button
+</button>
+<style>
+/* From Uiverse.io by alkanoidev - Tags: button */
+button {
+  position: relative;
+  padding-top: 0.75rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  transition: all 0.3s;
+  border-radius: 0.5rem;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  background-image: linear-gradient(to bottom left, #68ecc0, #63aff1, #9b6fff);
+}
+
+button:hover {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #000000;
+}
+
+button svg {
+  pointer-events: none;
+  opacity: 100;
+  border-radius: 0.5rem;
+  mix-blend-mode: soft-light;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+</style>
