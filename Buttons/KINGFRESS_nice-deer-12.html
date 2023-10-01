@@ -1,0 +1,69 @@
+<button>
+  <span class="txt">click me</span>
+  <span class="txt2">You did it</span>
+  <span class="gradient"></span>
+</button>
+<style>
+/* From Uiverse.io by KINGFRESS - Tags: gradient, button */
+button {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  height: 3.3em;
+  width: 12em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: .4s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .gradient {
+  height: 100%;
+  width: 350%;
+  background: linear-gradient(to right, #156aa3 25%, #64EAE7 65%, #16a085 90%);
+  position: absolute;
+  top: 0;
+  left: 60%;
+  transform: translateX(-50%);
+  z-index: -1;
+  transition: .4s ease;
+}
+
+button .txt {
+  transition: .4s ease .5s;
+}
+
+button .txt2 {
+  position: absolute;
+  opacity: 0;
+  transition: .4s;
+}
+
+button:hover .gradient {
+  transition: .4s ease;
+  transform: translateX(-40%);
+}
+
+button:focus .gradient {
+  background-size: 200%;
+  background-position: right;
+  transform: translateX(-88%);
+  transition: 1s ease;
+}
+
+button:focus .txt {
+  opacity: 0;
+  transition: .4s ease;
+}
+
+button:focus .txt2 {
+  opacity: 1;
+  transition: 1s ease .5s;
+}
+</style>
