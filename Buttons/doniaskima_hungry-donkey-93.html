@@ -1,0 +1,89 @@
+<button class="btn-27">
+  <span class="text-container">
+    <span class="text">Button</span>
+  </span>
+  <span class="text-container">
+    <span aria-hidden="" class="text">Button</span>
+  </span>
+</button>
+
+<style>
+/* From Uiverse.io by doniaskima - Tags: button */
+.btn-27,
+.btn-27 *,
+.btn-27 :after,
+.btn-27 :before,
+.btn-27:after,
+.btn-27:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-27 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-27:disabled {
+  cursor: default;
+}
+
+.btn-27:-moz-focusring {
+  outline: auto;
+}
+
+.btn-27 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-27 [hidden] {
+  display: none;
+}
+
+.btn-27 {
+  --tilt: 40deg;
+  background: none;
+  -webkit-mask-image: none;
+  padding: 2rem 5rem;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.btn-27 .text-container {
+  background: #fff;
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transform-origin: center center;
+  transition: transform 0.2s;
+}
+
+.btn-27 .text {
+  color: #000;
+}
+
+.btn-27:hover .text-container:first-child {
+  transform: rotateY(var(--tilt));
+}
+
+.btn-27:hover .text-container:nth-child(2) {
+  transform: rotateY(calc(var(--tilt) * -1));
+}
+
+</style>
