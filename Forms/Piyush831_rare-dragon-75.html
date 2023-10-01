@@ -1,0 +1,80 @@
+<form class="form">
+    <div class="flex">
+      <div class="login color">Login</div>
+      <label class="color">Username :</label>
+      <input type="text" class="input">
+      <label class="color">Password :</label>
+      <input type="password" class="input"> 
+      <button class="">Log-in</button>
+      <br>
+      <div class="color align">Don't have account? <span class="span">Sign-Up</span></div>
+    </div>
+</form>
+<style>
+/* From Uiverse.io by Piyush831 - Tags: form, creative, box-shadow */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(to right ,grey,silver);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.login {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.form button {
+  margin-top: 25px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  border: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 19px;
+  font-weight: bold;
+  color: grey;
+}
+
+.form label {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.form button:hover {
+  box-shadow: 2px 2px 12px white;
+}
+
+.input {
+  height: 30px;
+  outline: none;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 2px 2px 12px inset black;
+}
+
+.span:hover {
+  font-weight: bold;
+}
+
+.color {
+  color: white;
+}
+
+.align {
+  text-align: center;
+}
+
+</style>
