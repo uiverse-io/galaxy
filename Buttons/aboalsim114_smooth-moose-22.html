@@ -1,0 +1,63 @@
+<button>
+Hover me
+</button>
+<style>
+/* From Uiverse.io by aboalsim114 - Tags: button */
+button {
+  padding: 0.8em 1.8em;
+  border: 2px solid #fff;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #000;
+  border-radius: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+button::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 800ms ease-in-out;
+  z-index: -1;
+  opacity: 80%;
+}
+
+button::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 800ms ease-in-out;
+  z-index: -1;
+  opacity: 60%;
+}
+
+button:hover::after {
+  width: 37.5%;
+}
+
+button:hover::before {
+  width: 37.5%;
+}
+</style>
