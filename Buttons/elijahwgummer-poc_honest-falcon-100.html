@@ -1,0 +1,71 @@
+<button class="button">
+  <span>Button</span>
+  <div class="overlay"></div>
+  <div class="shine"></div>
+</button>
+
+<style>
+/* From Uiverse.io by elijahwgummer-poc - Tags: button, bubble, animated, shine */
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 26px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #ff6b6b;
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button .shine {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, transparent 80%);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover .overlay {
+  opacity: 0.7;
+}
+
+.button:hover .shine {
+  opacity: 1;
+}
+
+.button:hover {
+  background-color: #ff3333;
+}
+
+.button:active {
+  background-color: #cc0000;
+}
+
+</style>
