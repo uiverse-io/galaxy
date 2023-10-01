@@ -1,0 +1,37 @@
+<button>
+    Button
+</button>
+<style>
+/* From Uiverse.io by Cornerstone-04 - Tags: button */
+button {
+  position: relative;
+  background: none;
+  border: solid 1px #121212;
+  transition: linear 250ms;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+button:is(:hover,:focus) {
+  color: #fff;
+}
+
+button::after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  z-index: -1;
+  background-color: #121212;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: linear 250ms;
+}
+
+button:is(:hover, :focus)::after {
+  transform: scale(1);
+}
+</style>
