@@ -1,0 +1,54 @@
+<div class="firstAnimation">
+    <div class="secondAnimation">
+        <div class="card">
+        </div>
+    </div>
+</div>
+<style>
+/* From Uiverse.io by SantiagoBoS - Tags: card */
+.card {
+  width: 190px;
+  height: 254px;
+  background: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.card:hover {
+  width: 190px;
+  height: 254px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 20px;
+  background-color: #dfdfdf;
+  transition: all .5s;
+}
+
+.secondAnimation {
+  --hoverContorno: #959595;
+}
+
+.secondAnimation:hover,
+.secondAnimation:focus {
+  -webkit-animation: cardAnimacion 1.4s;
+  animation: cardAnimacion 1.4s;
+  box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0);
+  border-radius: 20px;
+}
+
+@-webkit-keyframes cardAnimacion {
+  0% {
+    box-shadow: 0 0 0 0 var(--hoverContorno);
+  }
+}
+
+@keyframes cardAnimacion {
+  0% {
+    box-shadow: 0 0 0 0 var(--hoverContorno);
+  }
+}
+
+
+
+
+</style>
