@@ -1,0 +1,101 @@
+<div class="box">
+  <button class="button">FALL</button>
+  <div class="falling-leaves">
+    <span class="leaf" style="--i: 13; --hue:20"></span>
+    <span class="leaf" style="--i: 16; --hue:10"></span>
+    <span class="leaf" style="--i: 17; --hue:0"></span>
+    <span class="leaf" style="--i: 21; --hue:10"></span>
+    <span class="leaf" style="--i: 13; --hue:90"></span>
+    <span class="leaf" style="--i: 11; --hue:70"></span>
+    <span class="leaf" style="--i: 14; --hue:40"></span>
+    <span class="leaf" style="--i: 17; --hue:60"></span>
+    <span class="leaf" style="--i: 19; --hue:0"></span>
+    <span class="leaf" style="--i: 26; --hue:90"></span>
+    <span class="leaf" style="--i: 17; --hue:60"></span>
+    <span class="leaf" style="--i: 20; --hue:10"></span>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by tarantino421 - Tags: button, hover button, fall */
+.box {
+  --clr-shadow__border: #ef7305;
+  --clr-text: #F6F4EB;
+  --clr-falling-leaves: #441a12;
+  --size: 3rem;
+  position: relative;
+  outline: 1px solid var(--clr-shadow__border);
+}
+
+.button {
+  background: transparent;
+  padding: calc(var(--size) / 3) var(--size);
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text);
+  letter-spacing: 0.2rem;
+  text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+    -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+}
+
+.falling-leaves {
+  width: 100%;
+  height: 100%;
+  bottom: 0%;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  background: var(--clr-falling-leaves);
+}
+
+.box:hover .falling-leaves {
+  opacity: 1;
+}
+
+.leaf {
+  height: 1rem;
+  width: 1rem;
+  clip-path: polygon(
+    45% 0%,
+    45% 10%,
+    15% 30%,
+    35% 60%,
+    20% 80%,
+    45% 100%,
+    70% 80%,
+    55% 60%,
+    85% 30%,
+    55% 10%,
+    55% 0%
+  );
+  background-color: hsl(var(--hue), 70%, 50%);
+  animation: falling-leaves-animation linear infinite;
+  animation-duration: calc(0.5s * var(--i));
+}
+
+@keyframes falling-leaves-animation {
+  0% {
+    transform: rotate(-10deg) translateY(calc(-51% * var(--i)));
+  }
+
+  50% {
+    transform: rotate(-40deg) translateY(calc(0% * var(--i)));
+  }
+
+  100% {
+    transform: rotate(150deg) translateY(calc(100% * var(--i)));
+  }
+}
+
+
+
+
+
+
+
+
+</style>
