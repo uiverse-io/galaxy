@@ -1,0 +1,61 @@
+<div class="container">
+
+  <div class="title">Title</div>
+  <input class="input" name="text" type="text">
+  
+</div>
+<style>
+/* From Uiverse.io by catraco - Tags: input, dark, advanced, input effect  */
+.container {
+  --light: rgb(255, 255, 255);
+  --dark: rgb(50, 50, 50);
+  --br: 8px;
+}
+
+.container:hover .title {
+  opacity: 1;
+}
+
+.input {
+  background-color: transparent;
+  border: 2px solid white;
+  color: var(--light);
+  max-width: 200px;
+  padding: .5rem;
+  border-radius: var(--br);
+  outline: none;
+  opacity: .8;
+  transition: .2s ease-in-out;
+}
+
+.input:focus {
+  opacity: 1;
+}
+
+.title {
+  border-radius: var(--br);
+  transform: translate(-50%, -150%);
+  background-color: var(--light);
+  transition: .2s ease-in-out;
+  opacity: 0;
+  color: var(--dark);
+  position: absolute;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: .5rem;
+  left: 50%;
+}
+
+.title::before {
+  transform: translate(-50%, 50%) rotate(45deg);
+  background-color: var(--light);
+  position: absolute;
+  z-index: -1;
+  content: '';
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 50%;
+}
+</style>
