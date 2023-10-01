@@ -1,0 +1,71 @@
+<div class="toggle">
+  <input id="toggle-switch" type="checkbox">
+  <label for="toggle-switch"></label>
+</div>
+
+<style>
+/* From Uiverse.io by PriyanshuGupta28 - Tags: switch, theme-switch, advanced */
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input[type="checkbox"] {
+  display: none;
+}
+
+.toggle label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.toggle input:checked + label {
+  background-color: #6000df;
+}
+
+.toggle input:checked + label::before {
+  transform: translateX(26px);
+}
+
+.toggle label:hover {
+  background-color: #999;
+}
+
+.toggle input:checked + label:hover {
+  background-color: rgb(99, 33, 138);
+}
+
+.toggle input:active + label {
+  background-color: #6f4ea3;
+}
+
+.toggle input:checked:active + label {
+  background-color: #009b93;
+}
+
+.toggle input:focus + label {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+</style>
