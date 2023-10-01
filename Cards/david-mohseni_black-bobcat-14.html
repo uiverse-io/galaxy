@@ -1,0 +1,89 @@
+<div class="flip">
+    <div class="content">
+        <div class="front">
+            <h2>Front</h2>
+            <p>Front Description</p>
+        </div>
+        <div class="back">
+            <h2>Back</h2>
+            <p>Back Description</p>
+        </div>
+    </div>
+</div>
+<style>
+/* From Uiverse.io by david-mohseni - Tags: card */
+.flip {
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+  padding: 1em;
+  width: 190px;
+  height: 254px;
+  transform-style: preserve-3d;
+  transition: 3s ease;
+}
+
+.flip:hover {
+  transform: rotateY(180deg);
+}
+/* Content */
+.flip .content {
+  transform-style: preserve-3d;
+}
+
+.flip .back, .flip .front {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip .back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.flip h2,
+.flip p {
+  transform: translateZ(90px);
+  text-shadow: 0 0 3px black;
+  text-align: center;
+}
+
+.flip h2 {
+  font-size: 3em;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.flip p {
+  font-size: 1em;
+  color: #eee;
+  line-height: 1.6em;
+}
+
+.flip::before,
+.flip::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: linear-gradient(purple, red);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg)translateZ(1px);
+}
+
+.flip::before {
+  transform: none;
+  background-image: linear-gradient(violet, orange);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
