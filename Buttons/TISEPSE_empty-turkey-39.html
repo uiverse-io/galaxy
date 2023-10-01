@@ -1,0 +1,50 @@
+<a class="bck-grnd"><span></span>Hover me </a>
+<style>
+/* From Uiverse.io by TISEPSE - Tags: animation, button, click */
+.bck-grnd {
+  position: relative;
+  display: flex;
+  background-color: #DAC0A3;
+  padding: 12px 25px;
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  border: 3px solid transparent;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  z-index: 2;
+  letter-spacing: 3px;
+  box-shadow: 0 0.4rem #EADBC8;
+  box-shadow: 0.4rem 0.4rem 0  #EADBC8;
+  transition: 0.5s;
+}
+
+.bck-grnd span {
+  background: #F8F0E5;
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 30px 30px 0px 0px;
+  top: 120%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.bck-grnd:hover span {
+  top: -70%;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.bck-grnd:hover {
+  color: #d8ba98;
+  border: 3px solid #DAC0A3;
+  box-shadow: none;
+}
+
+.bck-grnd:active {
+  transform: scale(1.1);
+}
+   
+</style>
