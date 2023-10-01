@@ -1,0 +1,149 @@
+<div class="cube">
+  <div class="topD"></div>
+  <div>
+    <span style="--i:0"></span>
+    <span style="--i:1"></span>
+    <span style="--i:2"></span>
+    <span style="--i:3"></span>
+  </div>
+
+  <div class="cube2">
+    <div>
+      <span style="--i:0"></span>
+      <span style="--i:1"></span>
+      <span style="--i:2"></span>
+      <span style="--i:3"></span>
+    </div>
+
+    <div class="cube3">
+      <div class="top3"></div>
+      <div>
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Nawsome - Tags: 3d, loader, cube */
+.cube {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animateD 8s linear infinite;
+}
+
+@keyframes animateD {
+  0% {
+    transform: rotateX(-15deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(-15deg) rotateY(-360deg);
+  }
+}
+
+.cube div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cube2 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: animateD2 5s ease-out infinite alternate;
+}
+
+@keyframes animateD2 {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(180deg) rotateY(-360deg);
+  }
+}
+
+.cube2 div {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 65%;
+  height: 65%;
+  transform-style: preserve-3d;
+}
+
+.cube2 div span {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 65%;
+  height: 65%;
+  background: transparent;
+  border: 2px solid #7dff99;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(62px);
+}
+
+.cube3 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animateD3 1s ease-in-out infinite alternate;
+}
+
+@keyframes animateD3 {
+  0% {
+    transform: rotateX(-90deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(90deg) rotateY(45deg);
+  }
+}
+
+.cube3 div {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  width: 15%;
+  height: 15%;
+  transform-style: preserve-3d;
+}
+
+.cube3 div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7dff99;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(14px);
+  box-shadow: 0px 0px 7px #7dff99;
+}
+
+.top3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #7dff99;
+  transform: rotateX(90deg) translateZ(14px);
+  box-shadow: 0px 0px 10px #7dff99;
+}
+
+
+</style>
