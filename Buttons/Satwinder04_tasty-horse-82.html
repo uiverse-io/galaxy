@@ -1,0 +1,78 @@
+<button class="animated-button">hover me</button>
+
+<style>
+/* From Uiverse.io by Satwinder04 - Tags: blue, button, ripple */
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 16px 28px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #1f347b;
+  /* border-radius: 40px; */
+  overflow: hidden;
+  border: none;
+  z-index: 1;
+}
+
+.animated-button:before {
+  transition: 1s;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.animated-button:hover:before {
+  width: 300px;
+  height: 300px;
+  opacity: 0.4;
+  transition: all 0.5s ease-out;
+}
+
+.animated-button:hover {
+  background-color: #fff;
+  color: #202960;
+  transition: all 0.5s ease-out;
+}
+
+.animated-button:hover:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: #255ea4;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
+</style>
