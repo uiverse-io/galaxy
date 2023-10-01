@@ -1,0 +1,92 @@
+<div tabindex="0" class="signInButton">
+  <p class="signInButtonText">Sign In</p>
+</div>
+<style>
+/* From Uiverse.io by OnCloud125252 - Tags: simple, black, button, animated, simple button */
+/* Note that you only needs to edit the config to customize the button! */
+
+.signInButton {
+  /* Config start */
+  --signIn_width: 6rem;
+  --signIn_height: 2.5rem;
+  --signIn_bottomLeftTriangleSideLength: 1rem;
+  --signIn_topRightTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: 6rem;
+  height: 2.5rem;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.signInButton::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--signIn_bottomLeftTriangleSideLength) var(--signIn_bottomLeftTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.signInButton::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: calc(var(--signIn_topRightTriangleSideLength) * 1.4142135623730950488016887242097);
+  height: calc(var(--signIn_topRightTriangleSideLength) * 1.4142135623730950488016887242097);
+  outline: 1px solid white;
+  transform: translate(50%, -50%) rotate(45deg);
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.signInButton:hover {
+  cursor: pointer;
+}
+
+.signInButton:hover::before {
+  --signIn_bottomLeftTriangleSideLength: calc(var(--signIn_width) + var(--signIn_height) - var(--signIn_topRightTriangleSideLength) + (var(--signIn_topRightTriangleSideLength) * 0.3));
+}
+
+.signInButton:focus-visible::before {
+  --signIn_bottomLeftTriangleSideLength: calc(var(--signIn_width) + var(--signIn_height) - var(--signIn_topRightTriangleSideLength) + (var(--signIn_topRightTriangleSideLength) * 0.3));
+}
+
+.signInButton:hover::after {
+  transform: translate(calc(50% + var(--signIn_topRightTriangleSideLength) * 0.1), calc((50% + var(--signIn_topRightTriangleSideLength) * 0.1) * -1)) rotate(45deg);
+}
+
+.signInButton:focus-visible::after {
+  transform: translate(calc(50% + var(--signIn_topRightTriangleSideLength) * 0.1), calc((50% + var(--signIn_topRightTriangleSideLength) * 0.1) * -1)) rotate(45deg);
+}
+
+.signInButton:hover>.signInButtonText {
+  color: black;
+}
+
+.signInButton:focus-visible>.signInButtonText {
+  color: black;
+}
+
+.signInButtonText {
+  margin: auto 0;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  z-index: 1;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+</style>
