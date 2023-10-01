@@ -1,0 +1,57 @@
+<div class="radio-input">
+        <input value="value-1" name="value-radio" id="value-1" type="radio">
+        <label for="value-1" class="label">BASIC</label>
+        <input value="value-2" name="value-radio" id="value-2" type="radio">
+        <label for="value-2" class="label">STANDARD</label>
+        <input value="value-3" name="value-radio" id="value-3" type="radio">
+        <label for="value-3" class="label">PREMIUM</label>
+</div>
+<style>
+/* From Uiverse.io by SanjanaSogimatt - Tags: neumorphism, skeuomorphism, minimalist, gradient, button, hover, glow, radio, animated, futuristic-radio-buttons */
+.radio-input {
+  box-shadow: -10px -15px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 25px rgba(70, 70, 70, 0.5);
+  margin: auto;
+  height: 80px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  border-radius: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+}
+
+.radio-input input[type="radio"] {
+  display: none;
+}
+
+.label {
+  font-size: .9rem;
+  font-weight: 600;
+  font-family: 'poppins',sans-serif;
+  padding: 18px 15px;
+  border-radius: 35px;
+  transition: 0.5s;
+  cursor: pointer;
+  color: black;
+}
+
+.radio-input input[type="radio"]:checked + label {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.151),
+    10px 10px 15px rgba(0, 0, 0, 0.218);
+  background: linear-gradient(45deg,#cf6efb,#4f29cd);
+  color: white;
+  transform: translateY(-4px);
+}
+
+.radio-input input[type="radio"]:hover:not(:checked)+ label {
+  box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.151),
+    inset 10px 10px 15px rgba(0, 0, 0, 0.218);
+}
+
+</style>
