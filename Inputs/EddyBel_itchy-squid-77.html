@@ -1,0 +1,65 @@
+<div class="input__container">
+  <label class="input__label">Username</label>
+  <input placeholder="Enter your username" class="input" name="text" type="text">
+  <p class="input__description">What do you want to call yourself?</p>
+</div>
+<style>
+/* From Uiverse.io by EddyBel - Tags: input */
+.input__container {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.input__container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(25px);
+  border-radius: 20px;
+  background-color: #e499ff;
+  background-image: radial-gradient(at 47% 69%, hsla(17,62%,65%,1) 0px, transparent 50%),
+radial-gradient(at 9% 32%, hsla(222,75%,60%,1) 0px, transparent 50%);
+}
+
+.input__label {
+  display: block;
+  margin-left: 0.4em;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.input__description {
+  font-size: 0.6em;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.6em;
+  padding-left: 0.9em;
+  border-radius: 20px;
+  background: #fff;
+  transition: background 300ms, color 300ms;
+}
+
+.input:hover,.input:focus {
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
+</style>
