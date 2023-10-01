@@ -1,0 +1,68 @@
+<button class="button">
+  Button
+</button>
+<style>
+/* From Uiverse.io by fcb4355 - Tags: button, after, 3d button */
+.button {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  color: #007ffe;
+  cursor: pointer;
+  transition: .3s;
+  transition-delay: .3s;
+  z-index: 0;
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 17px;
+  height: 17px;
+  background-color: #007ffe;
+  right: -20px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .3s;
+  opacity: 0;
+}
+
+.button::before {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  width: 17px;
+  height: 17px;
+  background-color: #007ffe;
+  left: -20px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .3s;
+  opacity: 0;
+}
+
+button:hover::after {
+  z-index: -1;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0;
+  opacity: 1;
+}
+
+button:hover::before {
+  z-index: -1;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0;
+  opacity: 1;
+}
+
+button:hover {
+  color: #fff;
+  box-shadow: 10px 50px 50px rgba(52, 152, 219,.2);
+}
+</style>
