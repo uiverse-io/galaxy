@@ -1,0 +1,94 @@
+<form class="form"> 
+    <span id="login-lable">Login</span> 
+    <input class="input" type="text" placeholder="UserName"> 
+    <input class="input" type="text" placeholder="PassWord" minlength="8" maxlength="15">
+    <button id="btn">Submit</button> 
+</form>
+<style>
+/* From Uiverse.io by KhelVers - Tags: form, animated, submit, log in, 3d form , 3d cool effect, 3d login form */
+.form {
+  height: 18em;
+  width: 16em;
+  padding: 4%;
+  border-radius: 16px;
+  background: #e8e8e8;
+  box-shadow: 12px 12px 18px #bababa,
+              -12px -12px 18px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+#login-lable {
+  height: 15%;
+  text-align: center;
+  font-size: 34px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-shadow: -2px -2px 3px #ffffff ,
+              2px 2px 3px #bababa;
+  position: relative;
+  top: -14px;
+}
+
+.input {
+  height: 16%;
+  padding: 1px 8px;
+  border: none;
+  font-size: 1em;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  background: #f3f3f3;
+  box-shadow: inset -2px -2px 4px #ffffff,
+              inset 2px 2px 4px rgba(0, 0, 0, 0.356);
+  text-decoration: none;
+  background: linear-gradient(to right,white, #80808010, white);
+  background-size: 200% 200%;
+  animation: input 4s infinite;
+}
+
+.input:focus-visible {
+  outline: none;
+  background: rgb(241, 241, 241);
+}
+
+#btn {
+  font-size: x-large;
+  letter-spacing: 3px;
+  color: white;
+  font-weight: 700;
+  height: 18%;
+  background: linear-gradient(144deg,#af40ff,
+              #5b42f3 50%,#00ddeb);
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset 1px 3px 3px #ffffffbd,
+               inset -4px -4px 3px #00000046;
+  background-size: 150% 150%;
+  animation: input 5s infinite;
+  transition: all 900ms ease-in;
+}
+
+#btn:hover {
+  position: relative;
+  bottom: 3px;
+  background: linear-gradient(144deg,#9706ff,
+              #2f0fff 50%,#18f0ff);
+}
+
+@keyframes input {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+    
+</style>
