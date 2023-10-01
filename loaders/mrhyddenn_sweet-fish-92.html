@@ -1,0 +1,87 @@
+<div class="loader">
+    <div class="loader-in"></div>
+    <div class="loader-dot"></div>
+</div>
+<style>
+/* From Uiverse.io by mrhyddenn - Tags: loader */
+.loader,
+.loader-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: relative;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.001) 0%, rgba(0, 0, 0, 0.4) 50%);
+  box-shadow: 0 0 60px 0px rgba(0, 0, 0, 0.3);
+  animation: circle41 1.2s infinite alternate;
+}
+
+.loader-in {
+  width: 78%;
+  height: 78%;
+  border-radius: 50%;
+  animation: circle 1.2s infinite alternate;
+  animation-delay: calc(1.2s / 4);
+}
+
+.loader-in::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #6E2E8E 0%, #0B9FBD 100%);
+  border-radius: 50%;
+  animation: rot122 2.4s infinite linear;
+}
+
+.loader-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55%;
+  height: 55%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.001) 0%, rgba(0, 0, 0, 0.4) 50%);
+  background-size: 120%;
+  background-position: center;
+}
+
+.loader-dot::after {
+  content: '';
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+  animation: circle41 1.2s infinite alternate;
+  animation-delay: calc(1.2s / 4);
+}
+
+@keyframes rot122 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circle41 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+</style>
