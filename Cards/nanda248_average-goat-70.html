@@ -1,0 +1,124 @@
+<div class="card">
+  <div class="circle small top-left">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="circle">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="circle small bottom-right">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by nanda248 - Tags: card, playing card, uno */
+.card {
+  width: 11em;
+  height: 14.8em;
+  position: relative;
+  background: #28282B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #F5F5DC;
+  border-radius: 5px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.card .circle {
+  width: 8em;
+  height: 14em;
+  border-radius: 50%;
+  transform: skew(-25deg);
+  border: 4px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card .circle.small {
+  position: absolute;
+  width: 1.5em;
+  height: 3em;
+  border: 1px solid white;
+}
+
+.card .circle.top-left {
+  top: 0.3em;
+  left: 0.6em;
+}
+
+.card .circle.bottom-right {
+  bottom: 0.3em;
+  right: 0.6em;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translate(0, -5px);
+}
+
+.card:hover:after, .card:hover:before {
+  visibility: hidden;
+}
+
+.card .circle span:nth-child(1) {
+  background-color: #FF2400;
+  border-top-left-radius: 100%;
+}
+
+.card .circle span:nth-child(2) {
+  background-color: #1F51FF;
+  border-top-right-radius: 100%;
+}
+
+.card .circle span:nth-child(3) {
+  background-color: #FFEA00;
+  border-bottom-left-radius: 100%;
+}
+
+.card .circle span:nth-child(4) {
+  background-color: #50C878;
+  border-bottom-right-radius: 100%;
+}
+
+/* glider animation */
+.card:before {
+  content: '';
+  position: absolute;
+  height: 130%;
+  width: 1em;
+  background-color: aliceblue;
+  opacity: 0.14;
+  animation: glider 1.8s infinite linear;
+  animation-delay: 0.05s;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  height: 120%;
+  width: 0.8em;
+  background-color: aliceblue;
+  opacity: 0.1;
+  animation: glider 1.8s infinite linear;
+}
+
+@keyframes glider {
+  0% {
+    transform: rotate(45deg) translate(-12em, 1.2em);
+  }
+
+  100% {
+    transform: rotate(45deg) translate(18em, -2.8em);
+  }
+}
+</style>
