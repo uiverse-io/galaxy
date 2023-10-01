@@ -1,0 +1,87 @@
+<label class="container">
+  <input checked="checked" type="checkbox">
+  <div class="checkmark"></div>
+</label>
+<style>
+/* From Uiverse.io by EddyBel - Tags: gradient, checkbox */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.container::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  filter: blur(5px);
+  background-color: #b899ff;
+  background-image: radial-gradient(at 6% 13%, hsla(322,81%,60%,1) 0px, transparent 50%),
+radial-gradient(at 9% 59%, hsla(209,65%,71%,1) 0px, transparent 50%),
+radial-gradient(at 39% 16%, hsla(325,93%,79%,1) 0px, transparent 50%);
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  position: relative;
+}
+
+.container input:checked ~ .checkmark::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 65%;
+  height: 65%;
+  content: "";
+  border-radius: 50%;
+  background-color: #ff99f0;
+  background-image: radial-gradient(at 86% 29%, hsla(277,65%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 13% 20%, hsla(54,73%,71%,1) 0px, transparent 50%),
+  radial-gradient(at 76% 0%, hsla(145,64%,69%,1) 0px, transparent 50%);
+  animation: animation__checked 600ms normal;
+}
+
+@keyframes animation__checked {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 100;
+    transform: scale(1);
+  }
+}
+</style>
