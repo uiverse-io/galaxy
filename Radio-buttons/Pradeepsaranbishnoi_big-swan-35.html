@@ -1,0 +1,150 @@
+<div class="cont">
+  <input name="radio" type="radio" id="r1">
+  <label for="r1"></label>
+  <input name="radio" type="radio" id="r2">
+  <label for="r2"></label>
+  <input checked="true" name="radio" type="radio" id="r3">
+  <label for="r3"></label>
+  <div class="slider">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="dot2"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+<div class="cont">
+  <input name="radio2" type="radio" id="r4">
+  <label for="r4"></label>
+  <input name="radio2" type="radio" id="r5">
+  <label for="r5"></label>
+  <input checked="true" name="radio2" type="radio" id="r6">
+  <label for="r6"></label>
+  <div class="slider">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="dot2"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Pradeepsaranbishnoi - Tags: radio */
+.cont input[type="radio"] {
+  display: none;
+}
+
+.cont {
+  width: 140px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.cont label:before {
+  cursor: pointer;
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #111;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px;
+}
+
+.cont .slider > .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+  left: 15px;
+  opacity: 0;
+  background-color: #111;
+  transition: all 0.3s;
+}
+
+.cont input[type="radio"]:checked ~ .slider > .dot {
+  opacity: 1;
+}
+
+.cont .line1 {
+  height: 65px;
+  width: 2px;
+  background-color: #111;
+  position: absolute;
+  transform-origin: bottom;
+  transform: translateX(65px) translateY(20px);
+  transition: all 0.3s;
+}
+
+.cont .line2 {
+  position: absolute;
+  height: 150px;
+  width: 2px;
+  background-color: #111;
+  transform: translateX(65px) translateY(80px);
+}
+
+.cont .dot2 {
+  position: absolute;
+  height: 6.66667px;
+  width: 6.66667px;
+  background-color: #111;
+  border-radius: 50%;
+  transform: translateX(62.66667px) translateY(76.66667px);
+}
+
+.cont #r1:checked ~ .slider > .dot, .cont #r4:checked ~ .slider > .dot {
+  transform: translateX(2px) translateY(2px);
+}
+
+.cont #r1:checked ~ .slider > .line1, .cont #r4:checked ~ .slider > .line1 {
+  transform: translateX(63px) translateY(13px) rotate(-32deg) scaleY(1.2)
+}
+
+.cont #r2:checked ~ .slider > .dot, .cont #r5:checked ~ .slider > .dot {
+  transform: translateX(46px) translateY(2px);
+}
+
+.cont #r2:checked ~ .slider > .line1, .cont #r5:checked ~ .slider > .line1 {
+  transform: translateX(65px) translateY(15px);
+}
+
+.cont #r3:checked ~ .slider > .dot, .cont #r6:checked ~ .slider > .dot {
+  transform: translateX(90px) translateY(2px);
+}
+
+.cont #r3:checked ~ .slider > .line1, .cont #r6:checked ~ .slider > .line1 {
+  transform: translateX(66px) translateY(16px) rotate(32deg) scaleY(1.3)
+}
+
+.cont:nth-of-type(2) {
+  transform: translateX(-50%) scaleY(-1) translateY(37px);
+}
+
+.zapp, .zapp:after, .zapp:before {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 4px;
+  margin-left: -2px;
+  background-color: #f00;
+}
+
+.zapp {
+  transform: translateY(-40px);
+}
+
+.zapp:after {
+  transform: translateX(42px);
+}
+
+.zapp:before {
+  transform: translateX(-38px);
+}
+
+#c1:checked ~ #c4:checked ~ .zapp {
+  display: none;
+}
+
+</style>
