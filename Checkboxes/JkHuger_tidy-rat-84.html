@@ -1,0 +1,57 @@
+<label class="checkbox">
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<style>
+/* From Uiverse.io by JkHuger - Tags: checkbox */
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox .checkmark {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #0078d4;
+  border-color: #0078d4;
+}
+
+.checkbox input[type="checkbox"]:checked + .checkmark:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+
+.checkbox .checkmark:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: transparent;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+</style>
