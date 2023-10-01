@@ -1,0 +1,276 @@
+<div class="level-up-content">
+    <div class="level-up-content">
+        <div class="level-up">
+            <span class="leyend">Level Up!</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <span class="world">world 1-1</span>
+
+        
+        <div class="suggestion">
+            <span>Reload or click ↓</span>
+        </div>
+        
+    </div>
+</div>
+
+<style>
+/* From Uiverse.io by MijailVillegas - Tags: notification */
+/*Mijail Villegas - Bear
+Me gusta  la estética retro de los level ups*/
+
+.level-up-content {
+  display: grid;
+  width: 200px;
+  height: 70px;
+  padding: 10px;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin: auto;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  height: 20px;
+  margin: 10px 0;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  font-size: 1em;
+}
+
+.progress {
+  animation: progress-animation 2s ease-out forwards;
+  background-color: #000000;
+  height: 100%;
+  width: 0%;
+  z-index: 1;
+}
+
+.progress::before {
+  content: "";
+  display: block;
+  color: #ddd;
+  padding-top: 3px;
+  height: 20px;
+  animation: progress-xp 2.1s ease-out forwards;
+}
+
+.progress::after {
+  content: "+220xp";
+  display: block;
+  color: rgb(0, 255, 0);
+  position: absolute;
+  padding-top: 3px;
+  z-index: 999;
+  opacity: 0;
+  animation: add-xp 2s cubic-bezier(0, 0.92, 0.05, 1.07) forwards;
+}
+
+.span-content::before {
+  display: block;
+  color: #ddd;
+  margin-left: auto;
+  height: 20px;
+}
+
+.level-up {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.level-up .leyend {
+  font-size: 1.2em;
+  animation: level-up-animation 1s cubic-bezier(0, 0.62, 0, 0.97) forwards 2s;
+  opacity: 0;
+  transform: translateY(100%);
+  filter: drop-shadow(4px 4px 0px black);
+}
+
+.level-up-content:hover {
+  cursor: pointer;
+}
+
+.level-up-content:hover .leyend {
+  opacity: 1;
+  transform: translateY(100%);
+  background: #a11a1a;
+  animation: grow-up 1s ease-in-out forwards infinite;
+}
+
+.leyend::before {
+  content: "lvl 5";
+  display: block;
+  color: #ddd;
+  padding-top: 3px;
+  font-size: 0.5em;
+  height: 10px;
+}
+
+.level-up-content .world {
+  font-weight: 900;
+  animation: blink 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes add-xp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-230%);
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: black;
+  }
+
+  to {
+    color: white;
+  }
+}
+
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+
+  65% {
+    width: 100%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progress-xp {
+  0% {
+    content: "0xp";
+  }
+
+  5% {
+    content: "+5xp";
+  }
+
+  10% {
+    content: "+10xp";
+  }
+
+  15% {
+    content: "+35xp";
+  }
+
+  22% {
+    content: "+52xp";
+  }
+
+  25% {
+    content: "+75xp";
+  }
+
+  30% {
+    content: "+90xp";
+  }
+
+  38% {
+    content: "+118xp";
+  }
+
+  40% {
+    content: "+162xp";
+  }
+
+  45% {
+    content: "+195xp";
+  }
+
+  50% {
+    content: "+200xp";
+  }
+
+  65% {
+    content: "+220xp";
+  }
+
+  80% {
+    content: "+220xp";
+  }
+
+  100% {
+    content: "NEW LEVEL!";
+  }
+}
+
+@keyframes level-up-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    background: #a11a1a;
+  }
+}
+
+@keyframes grow-up {
+  0% {
+    transform: scale(110%);
+  }
+
+  12% {
+    transform: scale(90%);
+  }
+
+  25% {
+    transform: scale(100%);
+  }
+
+  37% {
+    transform: scale(115%);
+  }
+
+  50% {
+    transform: scale(110%);
+  }
+
+  75% {
+    transform: scale(130%);
+  }
+
+  to {
+    transform: scale(115%);
+  }
+}
+
+/* you can delete this part */
+.suggestion {
+  font-size: 0.7em;
+  position: absolute;
+  color: #9b9b9b;
+  display: block;
+  top: 80%;
+  left: 60%;
+}
+/**/
+</style>
