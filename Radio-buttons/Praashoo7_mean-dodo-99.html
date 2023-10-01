@@ -1,0 +1,242 @@
+<div class="main">
+<label class="switch">
+  <input type="radio" name="value-radio">
+  <div class="button">
+    <div class="light"></div>
+    <div class="dots"></div>
+  </div>
+</label>
+<label class="switch1">
+  <input type="radio" checked="" name="value-radio">
+  <div class="button">
+    <div class="light"></div>
+    <div class="dots"></div>
+  </div>
+</label>
+<label class="switch2">
+  <input type="radio" name="value-radio">
+  <div class="button">
+    <div class="light"></div>
+    <div class="dots"></div>
+  </div>
+</label>
+<div class="back"></div>
+</div>
+<style>
+/* From Uiverse.io by Praashoo7 - Tags: realistic, radio, traffic-lights */
+/*Design Inspired by @ykadosh on Codepen*/
+
+.back {
+  position: absolute;
+  width: 16.6em;
+  height: 6.5em;
+  margin-top: -0.8em;
+  margin-left: -0.77em;
+  border-radius: 70px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+  background-color: #171717;
+  z-index: -1;
+}
+
+.main {
+  display: flex;
+}
+
+.switch {
+  display: block;
+  position: relative;
+  background-color: black;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black, inset 0 2px 2px -2px white, inset 0 0 2px 5px #47434c, inset 0 0 2px 22px black;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 5px;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch input:checked + .button .light {
+  animation: flicker 0.2s infinite 0.3s;
+}
+
+.switch input:checked + .button .shine {
+  opacity: 1;
+}
+
+.switch input:checked + .button .shadow {
+  opacity: 0;
+}
+
+.switch .button {
+  transition: all 0.3s cubic-bezier(1, 0, 1, 1);
+  background-color: #9b0621;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: relative;
+  left: -0.75em;
+  top: -0.75em;
+  cursor: pointer;
+}
+
+.switch .light {
+  opacity: 0;
+  animation: light-off 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#ffc97e, #ff1818 40%, transparent 70%);
+}
+
+.switch .dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(transparent 30%, rgba(101, 0, 0, 0.7) 70%);
+  background-size: 10px 10px;
+  border-radius: 50%;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes light-off {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+}
+
+.switch1 {
+  display: block;
+  position: relative;
+  background-color: black;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black, inset 0 2px 2px -2px white, inset 0 0 2px 5px #47434c, inset 0 0 2px 22px black;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 5px;
+}
+
+.switch1 input {
+  display: none;
+}
+
+.switch1 input:checked + .button .light {
+  animation: flicker 0.2s infinite 0.3s;
+}
+
+.switch1 input:checked + .button .shine {
+  opacity: 1;
+}
+
+.switch1 input:checked + .button .shadow {
+  opacity: 0;
+}
+
+.switch1 .button {
+  transition: all 0.3s cubic-bezier(1, 0, 1, 1);
+  background-color: #949207;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: relative;
+  left: -0.75em;
+  top: -0.785em;
+  cursor: pointer;
+}
+
+.switch1 .light {
+  opacity: 0;
+  animation: light-off 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#f6ff7e, #eeff00 40%, transparent 70%);
+}
+
+.switch1 .dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(transparent 30%, rgba(91, 101, 0, 0.7) 70%);
+  background-size: 10px 10px;
+  border-radius: 50%;
+}
+
+.switch2 {
+  display: block;
+  position: relative;
+  background-color: black;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black, inset 0 2px 2px -2px white, inset 0 0 2px 5px #47434c, inset 0 0 2px 22px black;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 5px;
+}
+
+.switch2 input {
+  display: none;
+}
+
+.switch2 input:checked + .button .light {
+  animation: flicker 0.2s infinite 0.3s;
+}
+
+.switch2 input:checked + .button .shine {
+  opacity: 1;
+}
+
+.switch2 input:checked + .button .shadow {
+  opacity: 0;
+}
+
+.switch2 .button {
+  transition: all 0.3s cubic-bezier(1, 0, 1, 1);
+  background-color: #2f9407;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: relative;
+  left: -0.75em;
+  top: -0.79em;
+  cursor: pointer;
+}
+
+.switch2 .light {
+  opacity: 0;
+  animation: light-off 1s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#f6ff7e, #00ff00 40%, transparent 70%);
+}
+
+.switch2 .dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(transparent 30%, rgba(0, 101, 13, 0.7) 70%);
+  background-size: 10px 10px;
+  border-radius: 50%;
+}
+</style>
