@@ -1,0 +1,76 @@
+<button class="button">
+  <div class="circle"></div>
+  <span>Button</span>
+</button>
+<style>
+/* From Uiverse.io by KSAplay - Tags: button */
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0.5em 2em;
+  border-radius: 2em;
+  border: 0 solid #fefefe;
+  background-color: #ece5d8;
+  color: #3b4255;
+  box-shadow: 0 0 9px -4px #797979;
+  transition: 100ms;
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 2em;
+  background-color: #ffdf99;
+  opacity: 0;
+  z-index: 1;
+  transition: 100ms;
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0.4em;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 1em;
+  background-color: #313131;
+}
+
+.circle::before {
+  position: absolute;
+  content: '';
+  width: 32%;
+  height: 32%;
+  border-radius: 1em;
+  border: 3px solid #ffcd33;
+}
+
+.button span {
+  z-index: 2;
+  padding-left: 1.1em;
+}
+
+.button:hover {
+  border: 3px solid #fefefe;
+  box-shadow: 0 0 5px 0 #f0f0f0, inset 0 0 3px 0 #656565;
+}
+
+.button:active {
+  border: 0 solid #fefefe;
+  color: white;
+  box-shadow: inset 0 0 5px 0 #4b4b4b;
+  opacity: .7;
+}
+
+.button:active.button::after {
+  opacity: .5;
+}
+</style>
