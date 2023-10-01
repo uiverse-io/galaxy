@@ -1,0 +1,215 @@
+<div class="container">
+
+      <div class="card">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 14C7.33333 14.6667 8.6 16 11 16C13.4 16 14.6667 14.6667 15 14M7.31238 8.31247H7.68738M7.31238 8.68747H7.68738M14.3124 8.31247H14.6874M14.3124 8.68747H14.6874M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11ZM8 8.5C8 8.77614 7.77614 9 7.5 9C7.22386 9 7 8.77614 7 8.5C7 8.22386 7.22386 8 7.5 8C7.77614 8 8 8.22386 8 8.5ZM15 8.5C15 8.77614 14.7761 9 14.5 9C14.2239 9 14 8.77614 14 8.5C14 8.22386 14.2239 8 14.5 8C14.7761 8 15 8.22386 15 8.5Z" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+        </svg>          
+        <br>Picture 1</div>
+
+      <div class="card">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 14H14M7.31238 8.31247H7.68738M7.31238 8.68747H7.68738M14.3124 8.31247H14.6874M14.3124 8.68747H14.6874M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11ZM8 8.5C8 8.77614 7.77614 9 7.5 9C7.22386 9 7 8.77614 7 8.5C7 8.22386 7.22386 8 7.5 8C7.77614 8 8 8.22386 8 8.5ZM15 8.5C15 8.77614 14.7761 9 14.5 9C14.2239 9 14 8.77614 14 8.5C14 8.22386 14.2239 8 14.5 8C14.7761 8 15 8.22386 15 8.5Z" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <br>Picture 2</div>
+
+      <div class="card">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.31238 8.31247H7.68738M7.31238 8.68747H7.68738M14.3124 8.31247H14.6874M14.3124 8.68747H14.6874M15 15C14.6667 14.3333 13.4 13 11 13C8.6 13 7.33333 14.3333 7 15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11ZM8 8.5C8 8.77614 7.77614 9 7.5 9C7.22386 9 7 8.77614 7 8.5C7 8.22386 7.22386 8 7.5 8C7.77614 8 8 8.22386 8 8.5ZM15 8.5C15 8.77614 14.7761 9 14.5 9C14.2239 9 14 8.77614 14 8.5C14 8.22386 14.2239 8 14.5 8C14.7761 8 15 8.22386 15 8.5Z" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <br>Picture 3</div>
+
+      <div class="card">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 10C1 14.9706 5.02944 19 10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C7.69494 1 5.59227 1.86656 4 3.29168M3 1V4C3 4.55228 3.44772 5 4 5H7M13 8L9.35355 11.6464C9.15829 11.8417 8.84171 11.8417 8.64645 11.6464L7 10" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <br>Picture 4</div>
+    </div>
+<style>
+/* From Uiverse.io by xantha01 - Tags: card, animated, card hover */
+.container {
+  position: relative;
+  width: 225px;
+  height: 325px;
+  cursor: pointer;
+}
+
+.card {
+  position: absolute;
+  inset: 2.5px;
+  border-radius: 10px;
+  transform-origin: bottom left;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f1f4f7;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.container:hover .card:nth-child(1) {
+  animation: cardAnimation1 4s 0.5s infinite ease;
+}
+
+.container:hover .card:nth-child(2) {
+  animation: cardAnimation2 4s 1s infinite ease;
+}
+
+.container:hover .card:nth-child(3) {
+  animation: cardAnimation3 4s 1.5s infinite ease;
+}
+
+.container:hover .card:nth-child(4) {
+  animation: cardAnimation4 4s 2s infinite ease;
+}
+
+.card:nth-child(1) {
+  background: linear-gradient(0deg, #4776e6 0%, #8e54e9 100%);
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(0deg, #b3ffab 0%, #12fff7 100%);
+  opacity: 0;
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(178deg, #ffb99a 0%, #ffdbc5 100%);
+  opacity: 0;
+}
+
+.card:nth-child(4) {
+  background: linear-gradient(178deg, #606c88 0%, #3f4c6b 100%);
+  opacity: 0;
+}
+
+@keyframes cardAnimation1 {
+  0% {
+    transform: rotateZ(0deg);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  25% {
+    transform: rotateZ(-20deg);
+    opacity: 1;
+    z-index: 0;
+  }
+
+  50% {
+    transform: rotateZ(0deg);
+    z-index: 1;
+    opacity: 1;
+  }
+
+  75% {
+    transform: rotateZ(20deg);
+    z-index: 0;
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@keyframes cardAnimation2 {
+  0% {
+    transform: rotateZ(0deg);
+    z-index: -1;
+    opacity: 0;
+  }
+
+  45% {
+    transform: rotateZ(-15deg);
+    z-index: 0;
+    opacity: 1;
+  }
+
+  60% {
+    transform: rotateZ(0deg);
+    z-index: 1;
+    opacity: 1;
+  }
+
+  75% {
+    transform: rotateZ(15deg);
+    z-index: 0;
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@keyframes cardAnimation3 {
+  0% {
+    transform: rotateZ(0deg);
+    z-index: -1;
+    opacity: 0;
+  }
+
+  45% {
+    transform: rotateZ(-20deg);
+    z-index: 0;
+    opacity: 0;
+  }
+
+  60% {
+    transform: rotateZ(0deg);
+    z-index: 1;
+    opacity: 1;
+  }
+
+  75% {
+    transform: rotateZ(20deg);
+    z-index: 0;
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@keyframes cardAnimation4 {
+  0% {
+    transform: rotateZ(0deg);
+    z-index: 0;
+    opacity: 0;
+  }
+
+  35% {
+    transform: rotateZ(-25deg);
+    z-index: 0;
+    opacity: 0.0;
+  }
+
+  75% {
+    transform: rotateZ(0deg);
+    z-index: 1;
+    opacity: 1;
+  }
+
+  90% {
+    transform: rotateZ(25deg);
+    z-index: 0;
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+    z-index: 0;
+    opacity: 0;
+  }
+}
+
+
+</style>
