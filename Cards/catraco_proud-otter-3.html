@@ -1,0 +1,43 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by catraco - Tags: simple, card, light&dark */
+.one-div {
+  --dark: #3a7aba;
+  --light: #50a5f5;
+  --low-light: #50ccf5;
+  background-color: var(--light);
+  background: linear-gradient(-45deg, var(--light), var(--low-light));
+  box-shadow: 5px 5px 0 white, 10px 10px 0 var(--dark);
+  border-right: 5px solid var(--dark);
+  border-bottom: 5px solid var(--dark);
+  border-radius: .5rem 2rem .5rem .5rem;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.one-div::after {
+  content: "NOTE BOOK";
+  color: var(--dark);
+  font-weight: 600;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  margin-top: 2rem;
+  background-color: white;
+  letter-spacing: 1px;
+  z-index: 50;
+}
+
+.one-div::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  border-left: 2px solid white;
+  height: 10%;
+}
+</style>
