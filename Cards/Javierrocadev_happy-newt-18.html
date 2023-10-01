@@ -1,0 +1,128 @@
+<div class="card">
+  <p class="title">Who to follow</p>
+  <div class="user__container">
+    <div class="user">
+      <div class="image"></div>
+      <div class="user__content">
+        <div class="text">
+          <span class="name">Name</span>
+          <p class="username">@namedlorem</p>
+        </div>
+        <button class="follow">Follow</button>
+      </div>
+      
+    </div> 
+    <div class="user">
+      <div class="image"></div>
+      <div class="user__content">
+        <div class="text">
+          <span class="name">Name</span>
+          <p class="username">@namedlorem</p>
+        </div>
+        <button class="follow">Follow</button>
+      </div>
+      
+    </div> 
+    <div class="user">
+      <div class="image"></div>
+      <div class="user__content">
+        <div class="text">
+          <span class="name">Name</span>
+          <p class="username">@namedlorem</p>
+        </div>
+        <button class="follow">Follow</button>
+      </div>
+      
+    </div> 
+
+  </div>
+  <a class="more" href="#">See more</a>
+</div>
+<style>
+/* From Uiverse.io by Javierrocadev - Source: twitter.com - Tags: twitter, card, card hover */
+.card {
+  width: 350px;
+  height: 350px;
+  background: #E8EAEA;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title, .more {
+  padding: 10px 15px;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.user__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.user__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.3em;
+}
+
+.name {
+  font-weight: 800;
+}
+
+.username {
+  font-size: .9em;
+  color: #64696e;
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  background: rgb(22,19,70);
+  background: linear-gradient(295deg, rgba(22,19,70,1) 41%, rgba(89,177,237,1) 100%);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.follow {
+  border: none;
+  border-radius: 25px;
+  background-color: #0f1113;
+  color: white;
+  padding: 8px 15px;
+  font-weight: 700;
+}
+
+.more {
+  display: block;
+  text-decoration: none;
+  color: rgb(29, 155, 240);
+  font-weight: 800;
+}
+
+.user:hover {
+  background-color: #b3b6b6;
+}
+
+.more:hover {
+  background-color: #b3b6b6;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.follow:hover {
+  background-color: #2c3136;
+}
+</style>
