@@ -1,0 +1,39 @@
+<div class="spinner"></div>
+<style>
+/* From Uiverse.io by Rajan1092 - Tags: 3d loader, dotted loader */
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--c) 50%  0, 
+        var(--c) 50%  100%, 
+        var(--c) 100% 50%, 
+        var(--c) 0    50%;
+  background-size: 13.4px 13.4px;
+  background-repeat: no-repeat;
+  animation: spinner-3hs4a3 1s infinite;
+}
+
+.spinner::before {
+  --c: radial-gradient(farthest-side,#2b55a0 92%,#0000);
+  margin: 4.5px;
+  background-size: 9px 9px;
+  animation-timing-function: linear;
+}
+
+.spinner::after {
+  --c: radial-gradient(farthest-side,#2b55a0 92%,#0000);
+}
+
+@keyframes spinner-3hs4a3 {
+  100% {
+    transform: rotate(.5turn);
+  }
+}
+</style>
