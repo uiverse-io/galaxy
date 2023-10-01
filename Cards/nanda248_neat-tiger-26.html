@@ -1,0 +1,181 @@
+<div class="main">
+  <div class="card">
+    <div class="i1">
+      <span class="corner-text">A</span>
+      <svg viewBox="0 0 122.88 107.39"><defs></defs><title>red-heart</title><path class="heart-icon" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"></path></svg>
+    </div>
+    <div class="center-shape">
+      <svg viewBox="0 0 122.88 107.39"><defs></defs><title>red-heart</title><path class="heart-icon" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"></path></svg>
+    </div>
+    <div class="i2">
+      <span class="corner-text">A</span>
+      <svg viewBox="0 0 122.88 107.39"><defs></defs><title>red-heart</title><path class="heart-icon" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"></path></svg>
+    </div>
+  </div>
+  <div class="bg-card-1"></div>
+  <div class="bg-card-2"></div>
+</div>
+<style>
+/* From Uiverse.io by nanda248 - Tags: card, playing card, stack of cards, gold card */
+.main {
+  position: relative;
+}
+
+/* card styles */
+.card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: "i1 . ."
+    ". center ."
+    ". . i2";
+  width: 12em;
+  height: 18em;
+  border-radius: 4px;
+  background: #ffd700;
+  transition: 0.5s;
+  z-index: 20;
+}
+
+.bg-card-1 {
+  background-color: #daa520;
+  position: absolute;
+  top: 0;
+  width: 12em;
+  height: 18em;
+  border-radius: 4px;
+  transition: 0.5s;
+  z-index: 8;
+}
+
+.bg-card-2 {
+  background-color: #b8860b;
+  position: absolute;
+  top: 0;
+  width: 12em;
+  height: 18em;
+  border-radius: 4px;
+  transition: 0.5s;
+  z-index: 4;
+}
+
+/* glider animation */
+.card:before {
+  content: '';
+  position: absolute;
+  height: 130%;
+  width: 0.6em;
+  background-color: aliceblue;
+  opacity: 0.3;
+  animation: glider 1.8s infinite linear;
+  animation-delay: 0.05s;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  height: 130%;
+  width: 0.4em;
+  background-color: aliceblue;
+  opacity: 0.2;
+  animation: glider 1.8s infinite linear;
+}
+
+@keyframes glider {
+  0% {
+    transform: rotate(45deg) translate(-140px, -140px);
+  }
+
+  100% {
+    transform: rotate(45deg) translate(220px, -40px);
+  }
+}
+
+/* icon styles */
+.i1,.i2 svg {
+  width: 1.5em;
+  fill: #FF3131;
+}
+
+.i1 {
+  grid-area: i1;
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.2em 0.4em;
+}
+
+.i2 {
+  grid-area: i2;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.2em 0.4em;
+  transform: rotate(180deg);
+}
+
+.corner-text {
+  color: #FF3131;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.center-shape {
+  grid-area: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-shape svg {
+  width: 4em;
+  fill: #FF3131;
+}
+
+/* hover effects */
+.card:hover {
+  box-shadow: #ffd700 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+.card:hover:after, .card:hover:before {
+  visibility: hidden;
+}
+
+.card:hover svg,
+.card:hover span {
+  animation: color-change 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes color-change {
+  from {
+    fill: #FF3131;
+    color: #FF3131;
+  }
+
+  to {
+    fill: #E34234;
+    color: #E34234;
+  }
+}
+
+/* hover fan out effects */
+.card:active {
+  transform: rotate(10deg);
+  transform-origin: bottom left;
+  box-shadow: none;
+}
+
+.card:active + .bg-card-1 {
+  transform: rotate(5deg);
+  transform-origin: bottom left;
+}
+</style>
