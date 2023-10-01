@@ -1,0 +1,91 @@
+<button class="button">
+  <div class="display">
+    <div id="msg">Click Me</div>
+  </div>
+  
+  <span></span>
+  <span></span>
+</button>
+<style>
+/* From Uiverse.io by htwarriors108 - Tags: gradient, button, animated, colorful, hover effect, click effect, click animation, box-shadow, multicolor */
+.button {
+  height: 50px;
+  width: 180px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 25px;
+  animation: animate 1.5s linear infinite;
+  border: none;
+  cursor: pointer;
+}
+
+.button, .display, #msg {
+  transition: 0.3s;
+}
+
+.button:active .display {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.button:active .display #msg {
+  -webkit-text-fill-color: #1b1b1b;
+}
+
+.button:hover {
+  scale: 1.15;
+  animation: animate 0.7s linear infinite;
+  transform: translateY(-15px);
+}
+
+.button .display, .button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button .display {
+  z-index: 1;
+  background-color: #1b1b1b;
+  height: 42.5px;
+  width: 172.5px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.button .display #msg {
+  line-height: 42.5px;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.button span {
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  border-radius: 25px;
+}
+
+.button span:first-child {
+  filter: blur(15px);
+}
+
+.button span:last-child {
+  filter: blur(15px);
+  transition: 0.3s;
+}
+
+.button:hover span:last-child {
+  width: 110%;
+  height: 120%;
+}
+</style>
