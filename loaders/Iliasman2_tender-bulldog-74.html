@@ -1,0 +1,128 @@
+<div class="lamp">
+  <div class="glass">
+    <div class="lava">
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob top"></div>
+      <div class="blob bottom"></div>
+    </div>
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+      <feBlend in="SourceGraphic" in2="goo"></feBlend>
+    </filter>
+  </defs>
+</svg>
+<style>
+/* From Uiverse.io by Iliasman2 - Tags: loader */
+.lamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30em;
+  min-height: 300px;
+  width: 13em;
+  min-width: calc(300px * 3 / 7);
+  background: #2b4353;
+  clip-path: polygon(33% 0, 0 70%, 22% 88%, 0 100%, 100% 100%, 78% 88%, 100% 70%, 67% 0);
+}
+
+.glass {
+  background: #b6e1e0;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 30%;
+  overflow: hidden;
+}
+
+.lava {
+  filter: url("#goo");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.blob {
+  border-radius: 50%;
+  background: #e8630a;
+  position: absolute;
+}
+
+.blob.top {
+  width: 100%;
+  height: 4%;
+  top: -3.7%;
+  left: 0;
+}
+
+.blob.bottom {
+  width: 100%;
+  height: 4%;
+  bottom: -3%;
+  left: 0;
+}
+
+.blob:nth-child(1) {
+  width: calc(15% * 1.4);
+  height: 15%;
+  left: 45%;
+  bottom: -15%;
+  animation: blob-one_2 ease-in-out 7s infinite;
+}
+
+.blob:nth-child(2) {
+  width: calc(22% * 1.4);
+  height: 22%;
+  right: 14%;
+  bottom: -15%;
+  animation: blob-two_2 ease-in-out 11s infinite;
+}
+
+.blob:nth-child(3) {
+  width: calc(32% * 1.4);
+  height: 32%;
+  bottom: -15%;
+  left: 14%;
+  animation: blob-three_2 ease-in-out 16s infinite;
+}
+
+@keyframes blob-one_2 {
+  0%, 100% {
+    transform: translatey(0);
+  }
+
+  50% {
+    transform: translatey(-700%);
+  }
+}
+
+@keyframes blob-two_2 {
+  0%, 100% {
+    transform: translatey(0);
+  }
+
+  50% {
+    transform: translatey(-420%);
+  }
+}
+
+@keyframes blob-three_2 {
+  0%, 100% {
+    transform: translatey(0);
+  }
+
+  50% {
+    transform: translatey(-305%);
+  }
+}
+</style>
