@@ -1,0 +1,171 @@
+<div class="loader">
+  <div class="inner">
+  </div>
+</div>
+<style>
+/* From Uiverse.io by csemszepp - Source: https://codepen.io/dfitzy/pen/XdaoWg - Tags: loader, revolver */
+.loader {
+  animation: spin 1.5s linear alternate infinite;
+  background: #B73F41;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+.loader:before {
+  background: #B73F41;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 0.5em;
+  width: 0.5em;
+  z-index: 2;
+}
+
+.loader:after {
+  background: #262E2A;
+  border-radius: 50%;
+  box-shadow: 0em -2.60em #262E2A,
+    2.25em -4.02em #e5e7eb,
+    2.25em -1.25em #262E2A,
+    4.60em 0em #e5e7eb,
+    2.25em 1.25em #262E2A,
+    2.25em 4.02em #e5e7eb,
+    0em 2.60em #262E2A,
+    -2.25em 4.02em #e5e7eb,
+    -2.25em 1.25em #262E2A,
+    -4.60em 0em #e5e7eb,
+    -2.25em -1.25em #262E2A,
+    -2.25em -4.02em #e5e7eb;
+  content: '';
+  display: block;
+  height: 2em;
+  width: 2em;
+}
+
+.inner {
+  animation: load 1.5s linear alternate infinite;
+  border: solid 1px #B73F41;
+  border-radius: 50%;
+  height: 1.75em;
+  width: 1.75em;
+  z-index: 1;
+}
+
+.loader, .loader:before, .loader:after, .inner {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@keyframes load {
+  0% {
+    box-shadow: 0em -2.60em #262E2A,
+      2.25em -1.25em #262E2A,
+      2.25em 1.25em #262E2A,
+      0em 2.60em #262E2A,
+      -2.25em 1.25em #262E2A,
+      -2.25em -1.25em #262E2A;
+  }
+
+  15% {
+    box-shadow: 0em -2.60em #262E2A,
+      2.25em -1.25em #262E2A,
+      2.25em 1.25em #262E2A,
+      0em 2.60em #262E2A,
+      -2.25em 1.25em #262E2A,
+      -2.25em -1.25em #B73F41;
+  }
+
+  30% {
+    box-shadow: 0em -2.60em #262E2A,
+      2.25em -1.25em #262E2A,
+      2.25em 1.25em #262E2A,
+      0em 2.60em #262E2A,
+      -2.25em 1.25em #B73F41,
+      -2.25em -1.25em #B73F41;
+  }
+
+  45% {
+    box-shadow: 0em -2.60em #262E2A,
+      2.25em -1.25em #262E2A,
+      2.25em 1.25em #262E2A,
+      0em 2.60em #B73F41,
+      -2.25em 1.25em #B73F41,
+      -2.25em -1.25em #B73F41;
+  }
+
+  60% {
+    box-shadow: 0em -2.60em #262E2A,
+      2.25em -1.25em #262E2A,
+      2.25em 1.25em #B73F41,
+      0em 2.60em #B73F41,
+      -2.25em 1.25em #B73F41,
+      -2.25em -1.25em #B73F41;
+  }
+
+  75% {
+    box-shadow: 0em -2.60em #262E2A,
+      2.25em -1.25em #B73F41,
+      2.25em 1.25em #B73F41,
+      0em 2.60em #B73F41,
+      -2.25em 1.25em #B73F41,
+      -2.25em -1.25em #B73F41;
+  }
+
+  90% {
+    box-shadow: 0em -2.60em #B73F41,
+      2.25em -1.25em #B73F41,
+      2.25em 1.25em #B73F41,
+      0em 2.60em #B73F41,
+      -2.25em 1.25em #B73F41,
+      -2.25em -1.25em #B73F41;
+  }
+
+  100% {
+    box-shadow: 0em -2.60em #B73F41,
+      2.25em -1.25em #B73F41,
+      2.25em 1.25em #B73F41,
+      0em 2.60em #B73F41,
+      -2.25em 1.25em #B73F41,
+      -2.25em -1.25em #B73F41;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(60deg);
+  }
+
+  30% {
+    transform: rotate(120deg);
+  }
+
+  45% {
+    transform: rotate(180deg);
+  }
+
+  60% {
+    transform: rotate(240deg);
+  }
+
+  75% {
+    transform: rotate(300deg);
+  }
+
+  90% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+</style>
