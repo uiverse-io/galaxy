@@ -1,0 +1,52 @@
+<div class="loader">
+  <div class="loader-inner"></div>
+</div>
+
+<style>
+/* From Uiverse.io by KhaledMatalkah - Tags: animation, 3d, loader, animated */
+.loader {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  animation: loaderAnimation 1.5s infinite linear;
+}
+
+.loader-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #3053c7;
+  border-radius: 50%;
+  animation: innerAnimation 1s infinite ease-in-out;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes innerAnimation {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+</style>
