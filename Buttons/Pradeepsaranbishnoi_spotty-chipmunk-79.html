@@ -1,0 +1,202 @@
+<input id="c" type="checkbox">
+<label id="upload_app" for="c">
+  <div id="app">
+    <div id="arrow"></div>
+    <div id="success">
+      <i class="fas fa-check-circle"></i>
+    </div>
+  </div>
+</label>
+<style>
+/* From Uiverse.io by Pradeepsaranbishnoi - Tags: button */
+#c {
+  display: none;
+}
+
+#upload_app {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 120px;
+  height: 42px;
+  transform: translateY(-50%);
+  transition: 0.3s ease width;
+  cursor: pointer;
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border: 2px solid #143240;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#app:before {
+  content: "Upload";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px;
+  left: 0;
+  color: #143240;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+#arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+#arrow:before,
+#arrow:after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  width: 10px;
+  height: 2px;
+  background-color: #143240;
+}
+
+#arrow:before {
+  right: 17px;
+  transform: rotateZ(-45deg);
+}
+
+#arrow:after {
+  right: 11px;
+  transform: rotateZ(45deg);
+}
+
+#success {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 54px;
+  height: 54px;
+  margin: -8px;
+  background-color: #143240;
+  transform: scale(0);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+#success i {
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px auto;
+  transform: scale(0);
+}
+
+#c:checked + #upload_app {
+  width: 42px;
+}
+
+#c:checked + #upload_app #arrow:before {
+  animation: _a 0.4s ease 0.4s forwards, _incHeight 4s ease 1s forwards;
+}
+
+#c:checked + #upload_app #arrow:after {
+  animation: _b 0.4s ease 0.4s forwards, _incHeight 4s ease 1s forwards;
+}
+
+#c:checked + #upload_app #success {
+  animation: _success 0.4s cubic-bezier(0, 0.74, 0.32, 1.21) 5s forwards;
+}
+
+#c:checked + #upload_app #success i {
+  animation: _success 0.3s cubic-bezier(0, 0.74, 0.32, 1.21) 5.2s forwards;
+}
+
+@keyframes _a {
+  0% {
+    top: 18px;
+    right: 17px;
+    width: 10px;
+    transform: rotateZ(-45deg);
+    background-color: #143240;
+  }
+
+  100% {
+    top: 36px;
+    right: 19px;
+    width: 19px;
+    transform: rotateZ(0deg);
+    background-color: #ffc107;
+  }
+}
+
+@keyframes _b {
+  0% {
+    top: 18px;
+    right: 11px;
+    width: 10px;
+    transform: rotateZ(45deg);
+    background-color: #143240;
+  }
+
+  100% {
+    top: 36px;
+    right: 0;
+    width: 19px;
+    transform: rotateZ(0deg);
+    background-color: #ffc107;
+  }
+}
+
+@keyframes _incHeight {
+  0% {
+    top: 36px;
+    height: 2px;
+  }
+
+  25% {
+    top: 31px;
+    height: 8px;
+  }
+
+  50% {
+    top: 21px;
+    height: 18px;
+  }
+
+  80% {
+    top: 11px;
+    height: 28px;
+  }
+
+  100% {
+    top: 0;
+    height: 39px;
+  }
+}
+
+@keyframes _success {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
