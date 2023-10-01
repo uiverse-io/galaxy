@@ -1,0 +1,102 @@
+<div class="loader">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<style>
+/* From Uiverse.io by satyamchaudharydev - Tags: loader */
+.loader {
+ --loader: rgb(49, 180, 255);
+ --loader-size: 30px;
+ position: relative;
+ width: 100px;
+ height: 40px;
+ overflow: hidden;
+ transition: .5s;
+ letter-spacing: 2px
+}
+
+.loader span {
+ position: absolute;
+}
+
+.loader span:nth-child(1) {
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: var(--loader-size);
+ background: linear-gradient(90deg, transparent, var(--loader));
+ animation: loader-anim1 1s linear infinite;
+}
+
+@keyframes loader-anim1 {
+ 0% {
+  left: -100%;
+ }
+
+ 50%,100% {
+  left: 100%;
+ }
+}
+
+.loader  span:nth-child(2) {
+ top: -100%;
+ right: 0;
+ width: var(--loader-size);
+ height: 100%;
+ background: linear-gradient(180deg, transparent, var(--loader));
+ animation: loader-anim2 1s linear infinite;
+ animation-delay: .25s
+}
+
+@keyframes loader-anim2 {
+ 0% {
+  top: -100%;
+ }
+
+ 50%,100% {
+  top: 100%;
+ }
+}
+
+.loader span:nth-child(3) {
+ bottom: 0;
+ right: -100%;
+ width: 100%;
+ height: var(--loader-size);
+ background: linear-gradient(270deg, transparent, var(--loader));
+ animation: loader-anim3 1s linear infinite;
+ animation-delay: .5s
+}
+
+@keyframes loader-anim3 {
+ 0% {
+  right: -100%;
+ }
+
+ 50%,100% {
+  right: 100%;
+ }
+}
+
+.loader span:nth-child(4) {
+ bottom: -100%;
+ left: 0;
+ width: var(--loader-size);
+ height: 100%;
+ background: linear-gradient(360deg, transparent, var(--loader));
+ animation: loader-anim4 1s linear infinite;
+ animation-delay: .75s
+}
+
+@keyframes loader-anim4 {
+ 0% {
+  bottom: -100%;
+ }
+
+ 50%,100% {
+  bottom: 100%;
+ }
+}
+</style>
