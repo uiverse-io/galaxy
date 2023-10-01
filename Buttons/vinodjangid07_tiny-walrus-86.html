@@ -1,0 +1,61 @@
+<button class="button">
+    <svg fill="white" height="1.5em" class="svgIcon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg>
+    <span class="tooltip">Info</span>
+</button>
+<style>
+/* From Uiverse.io by vinodjangid07 - Tags: button, hover effect, shine */
+.button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(32, 32, 32);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.svgIcon {
+  z-index: 2;
+}
+
+.button::before {
+  width: 35px;
+  height: 22px;
+  background: linear-gradient(to bottom,rgba(255, 255, 255, 0.575), rgba(0, 0, 0, 0.103));
+  position: absolute;
+  content: "";
+  top: 3.6px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  background-color: rgb(134, 134, 134);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .5s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.button:hover .tooltip {
+  opacity: 1;
+  transition-duration: .5s;
+}
+
+.button:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+</style>
