@@ -1,0 +1,75 @@
+<button class="button">
+    <span class="text">HOVER ME</span>
+    <div class="wave"></div>
+</button>
+<style>
+/* From Uiverse.io by ercnersoy - Tags: button, anime */
+.button {
+  width: 200px;
+  padding: 20px 40px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  border: 0;
+  cursor: pointer;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover .wave {
+  top: -120px;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.wave {
+  width: 200px;
+  height: 200px;
+  background-color: #27a9ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: -70px;
+  transition: 0.4s;
+}
+
+.wave::before, a .wave::after {
+  width: 200%;
+  height: 200%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.wave::before {
+  border-radius: 45%;
+  background-color: #0581b3;
+  animation: wave 5s linear infinite;
+}
+
+.wave::after {
+  border-radius: 40%;
+  background-color: rgba(20, 20, 20, 0.5);
+  animation: wave 10s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(300deg);
+  }
+}
+</style>
