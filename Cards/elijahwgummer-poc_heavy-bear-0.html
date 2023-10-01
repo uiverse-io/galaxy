@@ -1,0 +1,81 @@
+<div class="card">
+    <div class="card-content">
+      <div class="card-title">Cool Card</div>
+      <p class="card-description">This is a cool card design.</p>
+      <button class="card-button">Click Me</button>
+    </div>
+  </div>
+<style>
+/* From Uiverse.io by elijahwgummer-poc - Tags: card, animated, cool card, keyframes, pure css */
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: #F7F7F7;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #FF5F6D, #FF9671);
+  transform: rotate(-45deg);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  padding: 10px 20px;
+  background-color: #FF5F6D;
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #FF3A4C;
+}
+
+</style>
