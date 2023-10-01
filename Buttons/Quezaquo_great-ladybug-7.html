@@ -1,0 +1,188 @@
+<div class="container">
+        <button class="btn">
+          <div class="btn-text default">EXPLORE..</div>
+          <div class="btn-text active">LAUNCH..</div>
+          <div class="spaceship1">
+            <svg viewBox="0 0 24 24" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.88 18.054a35.897 35.897 0 0 1 8.531-16.32a.8.8 0 0 1 1.178 0c.166.18.304.332.413.455a35.897 35.897 0 0 1 8.118 15.865c-2.141.451-4.34.747-6.584.874l-2.089 4.178a.5.5 0 0 1-.894 0l-2.089-4.178a44.019 44.019 0 0 1-6.584-.874zM12 15a3 3 0 1 0 0-6a3 3 0 0 0 0 6z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <div class="spaceship2">
+            <svg viewBox="0 0 24 24" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.88 18.054a35.897 35.897 0 0 1 8.531-16.32a.8.8 0 0 1 1.178 0c.166.18.304.332.413.455a35.897 35.897 0 0 1 8.118 15.865c-2.141.451-4.34.747-6.584.874l-2.089 4.178a.5.5 0 0 1-.894 0l-2.089-4.178a44.019 44.019 0 0 1-6.584-.874zM12 15a3 3 0 1 0 0-6a3 3 0 0 0 0 6z" fill="currentColor"></path>
+            </svg>
+          </div>
+        </button>
+        <div class="spaceship3">
+            <svg viewBox="0 0 24 24" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.88 18.054a35.897 35.897 0 0 1 8.531-16.32a.8.8 0 0 1 1.178 0c.166.18.304.332.413.455a35.897 35.897 0 0 1 8.118 15.865c-2.141.451-4.34.747-6.584.874l-2.089 4.178a.5.5 0 0 1-.894 0l-2.089-4.178a44.019 44.019 0 0 1-6.584-.874zM12 15a3 3 0 1 0 0-6a3 3 0 0 0 0 6z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+<style>
+/* From Uiverse.io by Quezaquo - Tags: button */
+.active {
+  opacity: 0;
+  position: absolute;
+}
+
+.btn {
+  all: unset;
+  background: rgb(25,24,37);
+  background: linear-gradient(123deg, rgba(25,24,37,1) 0%, rgba(48,30,103,1) 51%, rgba(134,93,255,1) 82%, rgba(227,132,255,1) 100%);
+  padding: 0.55em 0.15em 0.55em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0.5em;
+}
+
+.btn:hover {
+  -webkit-box-shadow: -1px -1px 53px -15px rgba(255,255,255,0.75);
+  box-shadow: -1px -1px 53px -15px rgba(255,255,255,0.75);
+}
+
+.btn:hover > .default {
+  opacity: 0;
+  position: absolute;
+}
+
+.btn:hover > .active {
+  opacity: 1;
+  position: relative;
+  -webkit-transition-delay: .4s;
+  transition-delay: .4s;
+}
+
+.btn:hover .spaceship1 {
+  opacity: 0;
+}
+
+.btn:hover .spaceship2 {
+  opacity: 0;
+}
+
+.btn:hover + .spaceship3 {
+  opacity: 1;
+}
+
+.btn:hover::after {
+  -webkit-animation: none;
+  animation: none;
+  display: none;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 0.5em;
+  top: 43%;
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation-name: halo;
+  animation-name: halo;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.btn:active + .spaceship3 {
+  -webkit-animation: lauch 1s ease-in forwards;
+  animation: lauch 1s ease-in forwards;
+}
+
+.btn-text {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.spaceship1 {
+  position: relative;
+  z-index: 2;
+  left: 1em;
+  bottom: 0.8em;
+  -webkit-animation: 10s float infinite;
+  animation: 10s float infinite;
+}
+
+.spaceship2 {
+  position: relative;
+  z-index: 2;
+  left: -14em;
+  top: 1.5em;
+  -webkit-animation: 7s float infinite;
+  animation: 7s float infinite;
+}
+
+.spaceship3 {
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+  top: -4.7em;
+  left: 5.8em;
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+
+  50% {
+    -webkit-transform: translatey(-10px);
+    transform: translatey(-10px);
+  }
+
+  100% {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes halo {
+  from {
+    opacity: 0.2;
+    width: 0em;
+    height: 0em;
+  }
+
+  to {
+    opacity: 0;
+    width: 23em;
+    height: 3.55em;
+  }
+}
+
+@keyframes lauch {
+  from {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translatey(-110px);
+    transform: translatey(-110px);
+    opacity: 0;
+  }
+}
+</style>
