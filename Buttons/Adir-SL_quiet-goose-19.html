@@ -1,0 +1,50 @@
+<button> Click here </button>
+<style>
+/* From Uiverse.io by Adir-SL - Tags: pink, button, toy */
+button {
+  --fontSize: 2rem;
+  --button: 356, 80%;
+  --buttonColor: hsl(var(--button), 70%);
+  --sideColor: hsl(var(--button), 40%);
+  --text: hsl(var(--button), 30%);
+  --bgColor: #e8e8e8;
+  position: relative;
+  font-size: 0;
+  font-family: sans-serif;
+  transition: all 300ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
+  border-radius: 999px;
+  padding: calc(var(--fontSize) / 2);
+  height: calc(var(--fontSize) * 2);
+  min-width: calc(var(--fontSize) * 2);
+  line-height: calc(var(--fontSize) * 0.75);
+  border: none;
+  outline: none;
+  background-color: var(--buttonColor);
+  transform: rotate(-25deg);
+  color: var(--text);
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: calc(var(--fontSize) / -25) calc(var(--fontSize) / 25) calc(var(--fontSize) / 25) #ffffffbb inset, calc(var(--fontSize) / -25) calc(var(--fontSize) / -50) calc(var(--fontSize) / 25) #ffffff88 inset,
+    0 0 calc(var(--fontSize) / 5) #0f004a77 inset, 0 0 0 calc(var(--fontSize) / 3.6) var(--buttonColor) inset,
+    0 0 calc(var(--fontSize) / 6.25) calc(var(--fontSize) / 3.125) #0f004a44 inset, calc(var(--fontSize) / -25) calc(var(--fontSize) / 12.5) 0 var(--sideColor),
+    calc(var(--fontSize) / -8.33) calc(var(--fontSize) / 12.5) calc(var(--fontSize) / 6.25) #0f004a44, calc(var(--fontSize) / -16.666) calc(var(--fontSize) / 12.5) calc(var(--fontSize) / 25) #0f004a66;
+}
+
+button:hover {
+  transform: rotate(0);
+  overflow: visible;
+  font-size: var(--fontSize);
+}
+
+button::before,
+button::after {
+  content: ": ";
+  font-family: serif;
+  font-weight: bold;
+  text-shadow: calc(var(--fontSize) / 25) 0 0 var(--sideColor), 0 0 calc(var(--fontSize) / 12.5) #0f004a55,
+    calc(var(--fontSize) / 50) 0 0 var(--sideColor), calc(var(--fontSize) / 50) calc(var(--fontSize) / -50) 0 var(--sideColor);
+  color: var(--bgColor);
+  font-size: var(--fontSize);
+}
+</style>
