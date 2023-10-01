@@ -1,0 +1,182 @@
+<div class="phoneContainer">
+    <div class="screen">
+        <div class="camera"></div>
+        <div class="appsContainer">
+            <div class="widgets">
+                <div class="one"></div>
+                <div class="two"></div>
+            </div>
+            <div class="apps">
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+                <div class="oneApp"></div>
+            </div>
+
+            <div class="menuBar">
+                <div class="twoApp"></div>
+                <div class="twoApp"></div>
+                <div class="twoApp"></div>
+                <div class="twoApp"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+<style>
+/* From Uiverse.io by laminelawal - Tags: card, iphone, widget */
+.phoneContainer {
+  width: 185px;
+  height: 350px;
+  background-color: black;
+  border-radius: 20px;
+  position: relative;
+}
+
+.screen {
+  width: 180px;
+  height: 340px;
+  background: rgb(255,196,196);
+  background: linear-gradient(167deg, rgba(255,196,196,1) 10%, rgba(45,138,253,1) 20%, rgba(34,193,195,1) 48%, rgba(211,216,255,1) 69%, rgba(0,164,24,1) 88%);
+  border-radius: 20px;
+  position: absolute;
+  top: 4px;
+  bottom: 2px;
+  right: 2px;
+  left: 2px;
+  box-sizing: border-box;
+}
+
+.camera {
+  width: 80px;
+  background-color: black;
+  position: absolute;
+  height: 20px;
+  top: 4%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 25px;
+  transition: 0.3s;
+  animation-name: callTransition;
+  animation-duration: 1.9s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes callTransition {
+  15% {
+    width: 40px;
+  }
+
+  95% {
+    width: 95px;
+    background-color: darkblue;
+  }
+}
+
+.camera:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: rgb(19, 19, 51);
+  position: absolute;
+  border-radius: 50%;
+  left: 5px;
+  top: 2px;
+}
+
+.camera:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: lightgreen;
+  position: absolute;
+  border-radius: 50%;
+  right: 5px;
+  top: 6px;
+}
+
+.appsContainer {
+  margin-top: 10px;
+  position: absolute;
+  right: 50%;
+  top: 40%;
+  transform: translate(50%, -50%);
+}
+
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.one, .two {
+  height: 80px;
+  width: 80px;
+  background-color: blue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.two {
+  background-color: lightblue;
+}
+
+.oneApp, .twoApp {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.menuBar {
+  display: flex;
+  border-radius: 20px;
+  position: absolute;
+  bottom: -70px;
+}
+
+.menuBar .twoApp:not(:last-child) {
+  margin-right: 10px;
+}
+
+.menuBar::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 13px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 20px;
+  top: -5px;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.menuBar::before {
+  content: "°°°°°°";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bolder;
+  color: gray;
+}
+</style>
