@@ -1,0 +1,112 @@
+<div class="radio-input">
+  <input value="value-1" name="value-radio" id="value-1" type="radio" class="input i_female">
+  <input value="value-2" name="value-radio" id="value-2" type="radio" class="input i_no-gender">
+  <input value="value-3" name="value-radio" id="value-3" type="radio" class="input i_male">
+  <div class="card female">
+    <svg class="logo" width="48" height="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+     <path d="M12 15.75A7.125 7.125 0 1 0 12 1.5a7.125 7.125 0 0 0 0 14.25Z"></path>
+     <path d="M12 15.75v6.75"></path>
+     <path d="M14.719 19.5H9.28"></path>
+    </svg>
+    <div class="title">Female</div>
+  </div>
+  <div class="card no-gender">
+    <svg class="logo" width="48" height="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+     <path d="M10.125 15.75a6.375 6.375 0 1 0 0-12.75 6.375 6.375 0 0 0 0 12.75Z"></path>
+     <path d="M10.125 16.5v6"></path>
+     <path d="M12.75 19.5H7.5"></path>
+     <path d="M20.25 5.25V1.5H16.5"></path>
+     <path d="M15.717 6.034 20.25 1.5"></path>
+    </svg>
+    <div class="title">N/A</div>
+  </div>
+  <div class="card male">
+    <svg class="logo" width="48" height="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+     <path d="M10.125 21a7.125 7.125 0 1 0 0-14.25 7.125 7.125 0 0 0 0 14.25Z"></path>
+     <path d="M21 7.5V3h-4.5"></path>
+     <path d="M15.188 8.813 21 3"></path>
+    </svg>
+    <div class="title">Male</div>
+  </div>
+
+</div>
+<style>
+/* From Uiverse.io by csozidev - Tags: simple, button, hover, input, radio, gender, colorful */
+/* Gender selector made by: csozi | Website: www.csozi.hu*/
+
+.radio-input {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  height: fit-content;
+  gap: 10px;
+  scale: 0.7;
+}
+
+.radio-input input {
+  height: 100px;
+  width: 100px;
+  translate: 0px 55px;
+  opacity: 0;
+  z-index: 10;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  border: solid darkgray;
+  background-color: lightgray;
+  border-radius: 10px;
+  translate: 0px -55px;
+  position: relative;
+  z-index: 9;
+  transition: 0.2s;
+  color: darkgray;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  translate: -50% 0px;
+}
+
+.card .title {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 23px;
+  bottom: 0px;
+  font-weight: bold;
+}
+
+.i_female:hover ~ .female {
+  filter: brightness(1.1);
+}
+
+.i_male:hover ~ .male {
+  filter: brightness(1.1);
+}
+
+.i_no-gender:hover ~ .no-gender {
+  filter: brightness(1.1);
+}
+
+.i_female:checked ~ .female {
+  border: solid #ff87bf;
+  color: #ff87bf;
+  background-color: #ffb8d9;
+}
+
+.i_male:checked ~ .male {
+  border: solid #3d44ff;
+  color: #3d44ff;
+  background-color: #85a5ff;
+}
+
+.i_no-gender:checked ~ .no-gender {
+  border: solid #c9c600;
+  color: #c9c600;
+  background-color: #fffd82;
+}
+</style>
