@@ -1,0 +1,42 @@
+<label class="container">
+    <input checked="checked" type="checkbox">
+    <div class="checkmark"></div>
+</label>
+<style>
+/* From Uiverse.io by joe-watson-sbf - Tags: checkbox */
+.container {
+  display: block;
+  height: 1.5em;
+  width: 1.5em;
+  cursor: pointer;
+  position: relative;
+}
+
+.container input {
+  position: absolute;
+  transform: scale(0);
+}
+
+.container input:checked ~ .checkmark {
+  transform: rotate(45deg);
+  height: 2em;
+  width: .7em;
+  border-color: #32cd32;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
+}
+
+.container .checkmark {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border: 2px solid #32cd32;
+  border-radius: 4px;
+  transition: all .3s;
+}
+
+
+
+
+</style>
