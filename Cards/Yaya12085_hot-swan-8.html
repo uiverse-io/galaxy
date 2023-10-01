@@ -1,0 +1,65 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: green, card, animated, colorful */
+.one-div {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: repeating-radial-gradient(circle at 50%, rgba(10, 222, 61,.4), rgba(10, 222, 61,.4) 2px, #000  2px, #000 12px);
+  border-radius: 50%;
+  border: 1px dotted rgba(10, 222, 61,.4);
+  overflow: hidden;
+}
+
+.one-div::before {
+  position: absolute;
+  content: "";
+  top: calc(100% - 25%);
+  left: 50%;
+  transform-origin: 5px 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 50%;
+  border-radius: 10px;
+  filter: blur(3px);
+  background-image: linear-gradient(to left, rgba(10, 222, 61, .3) 50% , rgb(10, 222, 61) 50%);
+  opacity: .7;
+  animation: radar-animation 2.5s infinite linear;
+}
+
+.one-div::after {
+  content: "";
+  position: absolute;
+  bottom: 24%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: rgba(10, 222, 61,1);
+  animation: dot-animation 2.5s infinite ease-in-out;
+}
+
+@keyframes radar-animation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes dot-animation {
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+</style>
