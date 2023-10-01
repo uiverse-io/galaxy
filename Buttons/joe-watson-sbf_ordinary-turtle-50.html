@@ -1,0 +1,55 @@
+<button class="btn">
+    <span class="btn__visible">Buy Now</span>
+    <span class="btn__invisible">Only 2 Left</span>
+</button>
+<style>
+/* From Uiverse.io by joe-watson-sbf - Tags: gradient, button, hover, shop */
+.btn {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 8px;
+  border-radius: 30px;
+  border: none;
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn > * {
+  display: inline-block;
+  transition: all ease-in-out .5s;
+}
+
+.btn__visible {
+  padding: 1.2rem 3rem;
+  text-align: center;
+}
+
+.btn__invisible {
+  width: 100%;
+  position: absolute;
+  padding: 1.2rem 0;
+  left: 0;
+  top: -100%;
+}
+
+.btn:hover {
+  background-image: linear-gradient(160deg, #f093fb 0%, #f5576c 100%);
+}
+
+.btn:hover .btn__visible {
+  transform: translateY(100%);
+}
+
+.btn:hover .btn__invisible {
+  top: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+</style>
