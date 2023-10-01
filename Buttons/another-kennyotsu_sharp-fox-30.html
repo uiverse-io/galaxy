@@ -1,0 +1,83 @@
+<div class="container">
+  <button id="spacebar" class="button">
+    <li> space </li> <div id="bump"></div>
+  </button> <p>space-themed button.
+  <br> literally.</p>
+</div>
+<style>
+/* From Uiverse.io by another-kennyotsu - Tags: button */
+/* k k im joking */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  color: rgb(129, 129, 129);
+}
+
+.container p {
+  margin-left: 6px;
+}
+
+.button {
+  transition: 180ms ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 240px;
+  height: 68px;
+  background: linear-gradient(#ffffff, #7a7a7a);
+  border-radius: 10px;
+  box-shadow: 10px 15px 30px #0000006b, inset -8px 0 8px rgba(196, 196, 196, 0.25), inset 0 -8px 8px rgba(134, 134, 134, 0.15);
+}
+
+.button::before {
+  transition: 180ms ease-in-out;
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  bottom: 12px;
+  right: 8px;
+  background: linear-gradient(90deg, #c0c0c0, #ffffff);
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25),
+  10px 5px 10px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  border-left: 1px solid #0004;
+  border-top: 1px solid #0004;
+  border-right: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+}
+
+.button:active {
+  box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.25), inset -8px 0 8px rgba(196, 196, 196, 0.25), inset 0 -8px 8px rgba(134, 134, 134, 0.15);
+}
+
+.button:active::before {
+  transition: 180ms ease-in-out;
+  top: 3px;
+  left: 1px;
+  bottom: 12px;
+  right: 6px;
+  filter: brightness(0.95);
+}
+
+#bump {
+  position: absolute;
+  bottom: 18px;
+  height: 4px;
+  width: 24px;
+  border-radius: 8px;
+  background: rgb(179, 179, 179);
+}
+
+.button li {
+  list-style: none;
+  position: absolute;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  margin-top: 8px;
+}
+</style>
