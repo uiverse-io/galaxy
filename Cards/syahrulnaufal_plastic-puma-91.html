@@ -1,0 +1,112 @@
+<div id="content">
+  <div id="blurer"></div>
+  <div class="blob"></div>
+  <div class="blob"></div>
+  <div class="blob"></div>
+  <div class="blob"></div>
+  <div id="article"></div>
+</div>
+<style>
+/* From Uiverse.io by syahrulnaufal - Tags: card, aesthetic */
+#content {
+  width: 250px;
+  height: 400px;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  background-color: bisque;
+  border-radius: 15px;
+}
+
+.blob {
+  flex-shrink: 0;
+  flex-basis: 1;
+  width: 230px;
+  height: 230px;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.blob:nth-child(2) {
+  top: -10px;
+  left: -320px;
+  background-color: #FFB84C;
+  animation: wave 1.5s infinite alternate;
+  animation-delay: 0s;
+}
+
+.blob:nth-child(3) {
+  top: 0px;
+  left: -360px;
+  background-color: #F266AB;
+  animation: wave 1.5s infinite alternate;
+  animation-delay: 0.5s;
+}
+
+.blob:nth-child(4) {
+  top: 180px;
+  left: -750px;
+  background-color: #A459D1;
+  animation: wave 1.5s infinite alternate;
+  animation-delay: 1s;
+}
+
+.blob:nth-child(5) {
+  top: 230px;
+  left: -820px;
+  background-color: #2CD3E1;
+  animation: wave 1.5s infinite alternate;
+  animation-delay: 1.5s;
+}
+
+#blurer {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(40px);
+  flex-shrink: 0;
+  flex-basis: 1;
+  border-radius: 15px;
+}
+
+#article {
+  position: relative;
+  width: 90%;
+  height: 93%;
+  flex-shrink: 0;
+  flex-basis: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 10;
+  justify-self: center;
+  align-self: center;
+  border-radius: 15px;
+  left: -1157px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+#article h1 {
+  padding: 20px 10px;
+  color: #303030;
+  font-size: 3em;
+  font-family: 'Caveat', cursive;
+}
+</style>
