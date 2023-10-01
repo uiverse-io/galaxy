@@ -1,0 +1,108 @@
+<div class="radio-input">
+  <div class="info">
+  <span class="question">What does CSS stand for?</span>
+  <span class="steps">3/10</span>
+   </div>
+  <input type="radio" id="value-1" name="value-radio" value="value-1">
+  <label for="value-1">Computer Style Sheets</label>
+  <input type="radio" id="value-2" name="value-radio" value="value-2">
+  <label for="value-2">Cascading Style Sheets</label>
+  <input type="radio" id="value-3" name="value-radio" value="value-3">
+  <label for="value-3">Creative Style Sheets</label>
+   <span class="result success">Congratulations!</span>
+   <span class="result error">Bad answer</span>
+</div>
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: progress, card, shadow, radio, quizz, select */
+.radio-input input {
+  display: none;
+}
+
+.radio-input {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
+  width: 320px;
+}
+
+.info {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question {
+  color: rgb(49, 49, 49);
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 800;
+}
+
+.steps {
+  background-color: rgb(0, 0, 0);
+  padding: 4px;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+}
+
+.radio-input  label {
+  display: flex;
+  background-color: #fff;
+  padding: 14px;
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(187, 187, 187, 0.164);
+  color: #000;
+  transition: .3s ease;
+}
+
+.radio-input  label:hover {
+  background-color: rgba(24, 24, 24, 0.13);
+  border: 1px solid #bbb;
+}
+
+.result {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  display: none;
+  transition: display .4s ease;
+}
+
+.result.success {
+  color: green;
+}
+
+.result.error {
+  color: red;
+}
+
+.radio-input input:checked + label {
+  border-color: red;
+  color: red;
+}
+
+.radio-input input[value="value-2"]:checked + label {
+  border-color: rgb(22, 245, 22);
+  color: rgb(16, 184, 16);
+}
+
+.radio-input:has(input[value="value-2"]:checked) .result.success {
+  display: flex;
+}
+
+.radio-input:has(input:not([value="value-2"]):checked ) .result.error {
+  display: flex;
+}
+</style>
