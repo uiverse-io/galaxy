@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="btn">
+    <div class="sides top">
+      BUTTON
+    </div>
+    <div class="sides front"></div>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by Saiyed-Tanvir - Tags: button, box */
+.btn {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.sides {
+  transition: all 0.07s;
+  cursor: pointer;
+}
+
+.top {
+  background: linear-gradient(259.35deg, #FF6B00 0%, #BD00FF 100%);
+  height: 2cm;
+  width: 4cm;
+  transform: rotateX(60deg);
+  font-weight: bolder;
+  padding: 0.5cm 1cm;
+  color: white;
+}
+
+.front {
+  background: linear-gradient(280.65deg, #BD5000 0%, #8C00BD 100%);
+  height: 2cm;
+  width: 4cm;
+  transform: translateY(-38px) rotateX(-60deg);
+}
+
+.btn:active .top {
+  transform: rotateX(60deg) translateZ(0px);
+}
+
+.btn:active .front {
+  height: 0.1cm;
+  transform: rotateX(-60deg) translateZ(-26px);
+}
+</style>
