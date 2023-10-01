@@ -1,0 +1,189 @@
+<div class="wrapper">
+
+<article>
+	<span class="h1">How to create a pop-up without JavaScript</span>
+	<p>Ever wanted a pop-up mechanism on your website, but you don't want to use JavaScript? Here's how:</p>
+
+	<p>Toggle the <strong>How it works</strong> button for more info.</p>
+
+</article>
+
+<details>
+	<summary>How it works<svg viewBox="0 0 256 256" fill="currentColor" height="192" width="192" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="256" width="256"></rect><circle stroke-width="16" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" fill="none" r="96" cy="128" cx="128"></circle><circle r="12" cy="180" cx="128"></circle><path stroke-width="16" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" fill="none" d="M127.9995,144.0045v-8a28,28,0,1,0-28-28"></path></svg></summary>
+	<div>
+			<p>The scaling effect you see when you open this <code>&lt;details&gt;</code> element is created by using a keyframe animation.</p>
+		<p></p><pre><code>@keyframes scale { 
+&nbsp;0% {
+&nbsp;&nbsp;transform: scale(0);
+&nbsp;}
+&nbsp;100% {
+&nbsp;&nbsp;transform: scale(1);
+&nbsp;}
+}</code></pre> <p></p>
+<p>This animation is added to the <code>&lt;div&gt;</code>, but only when the <code>[open]</code> attribute is toggled.</p>
+<p></p><pre><code>details[open] div { 
+&nbsp;animation: scale .15s ease;
+}</code></pre><p></p>
+	<p>Sadly there's no way (that I know of) to animate the  <code>&lt;div&gt;</code> when the  <code>&lt;details&gt;</code> is closing.</p>
+	</div>
+</details>
+</div>
+<style>
+/* From Uiverse.io by Admin12121 - Tags: card, popup */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+article {
+  margin-top: 50px;
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.1);
+}
+
+article > * + * {
+  margin-top: 0.5em;
+}
+
+article:is(h1, h2, h3) + * {
+  margin-top: 0.5em;
+}
+
+article .h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.125;
+}
+
+article code {
+  background-color: #eee;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+details {
+  position: relative;
+  right: 16px;
+  margin-top: 35px;
+  bottom: 16px;
+  color: #6b7280;
+  display: flex;
+  flex-direction: column;
+}
+
+details div {
+  background-color: #1e1e27;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  position: absolute;
+  height: 350px;
+  width: 400px;
+  bottom: calc(100% + 1rem);
+  right: -50%;
+  overflow: auto;
+  transform-origin: 100% 100%;
+  color: #95a3b9;
+}
+
+details div::-webkit-scrollbar {
+  width: 15px;
+  background-color: #1e1e27;
+}
+
+details div::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 99em;
+  background-color: #95a3b9;
+  border: 5px solid #1e1e27;
+}
+
+details div > * + * {
+  margin-top: 0.75em;
+}
+
+details div p > code {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+details div pre {
+  white-space: pre-line;
+  border: 1px solid #95a3b9;
+  border-radius: 6px;
+  font-family: monospace;
+  padding: 0.75em;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+details[open] div {
+  -webkit-animation: scale 0.25s ease;
+  animation: scale 0.25s ease;
+}
+
+summary {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 0.75em 3em 0.75em 1.25em;
+  border-radius: 99em;
+  color: #fff;
+  background-color: #185adb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.15s ease;
+  position: relative;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:hover, summary:focus {
+  background-color: #1348af;
+}
+
+summary svg {
+  position: absolute;
+  right: 1.25em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5em;
+  height: 1.5em;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+</style>
