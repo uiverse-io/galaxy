@@ -1,0 +1,99 @@
+<div class="button">
+    <div class="button-wrapper">
+        <div class="text">Download</div>
+        <span class="icon">
+            For Free!
+        </span>
+    </div>
+</div>
+<style>
+/* From Uiverse.io by absoluteSTrange - Tags: button */
+.button {
+  --width: 100px;
+  --height: 25px;
+  --button-color: #0059ff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: solid;
+  transition: background box-shadow 0.3s;
+  -webkit-box-shadow: 4px 8px 19px -3px #0059ff;
+  box-shadow: 0px 0px 20px -3px #0059ff;
+  text-shadow: 0 0 .4em rgb(255, 255, 255);
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  background-color: var(--button-color);
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--button-color);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.45s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background: #4586ff;
+  box-shadow: 0px 0px 20px -3px #4586ff;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+
+
+
+</style>
