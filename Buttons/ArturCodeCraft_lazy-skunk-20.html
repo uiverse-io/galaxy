@@ -1,0 +1,75 @@
+<button class="swallow__icon">
+  <span></span>
+</button>
+<style>
+/* From Uiverse.io by ArturCodeCraft - Tags: icon, apple, button, menu, menuicon, menu button , hamburger menu */
+/* <reset-style> ============================ */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+/* <main-style> ============================ */
+.swallow__icon {
+  width: 2rem;
+  height: 2rem;
+  padding: .25rem;
+  background-color: rgb(29, 29, 31, .7);
+  backdrop-filter: saturate(180%) blur(20px);
+  border: solid 1px rgba(66,66,69,0.7);
+  position: relative;
+}
+
+.swallow__icon span {
+  width: 1.5rem;
+  height: .563rem;
+  position: absolute;
+  top: calc(.25rem + .563rem - 1px);
+  left: calc(.25rem - 1px);
+  transition: transform 1s cubic-bezier(.86, 0, .07, 1),
+              transform-origin 1s cubic-bezier(.86, 0, .07, 1);
+}
+
+.swallow__icon span:before,
+.swallow__icon span:after {
+  content: "";
+  width: .75rem;
+  height: .125rem;
+  background-color: rgb(245, 245, 247);
+  position: absolute;
+  bottom: 0;
+  transition: transform 1s cubic-bezier(.86, 0, .07, 1),
+              transform-origin 1s cubic-bezier(.86, 0, .07, 1);
+}
+
+.swallow__icon span:before {
+  right: 50%;
+  border-radius: 2px 0 0 2px;
+  transform-origin: 100% 100%;
+  transform: rotate(40deg);
+}
+
+.swallow__icon span:after {
+  left: 50%;
+  border-radius: 0 2px 2px 0;
+  transform-origin: 0 100%;
+  transform: rotate(-40deg);
+}
+
+.swallow__icon:hover span {
+  transform: translateY(-8px);
+}
+
+.swallow__icon:hover span:before {
+  transform-origin: 100% 0;
+  transform: rotate(-40deg);
+}
+
+.swallow__icon:hover span:after {
+  transform-origin: 0 0;
+  transform: rotate(40deg);
+}
+</style>
