@@ -1,0 +1,48 @@
+<div class="mover"></div>
+<style>
+/* From Uiverse.io by mrhyddenn - Tags: loader */
+.mover {
+  background: rgba(248, 25, 25, 0.979);
+  height: 10px;
+  width: 80px;
+  border-radius: 10px;
+  position: relative;
+  animation: mover5 2s ease-in-out infinite;
+}
+
+.mover::before,
+.mover::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  border-radius: 10px;
+  left: 20px;
+  animation: mover5 2s ease-in-out infinite;
+}
+
+.mover::before {
+  background: rgb(201, 1, 1);
+  top: 20px;
+  width: 50px;
+}
+
+.mover::after {
+  background: rgb(255, 116, 106);
+  top: -20px;
+  width: 60px;
+}
+
+@keyframes mover5 {
+  0% {
+    transform: translateX(30px) scale(1);
+  }
+
+  50% {
+    transform: translateX(-30px) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(30px) scale(1);
+  }
+}
+</style>
