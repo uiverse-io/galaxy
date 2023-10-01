@@ -1,0 +1,79 @@
+ <div class="card">
+   <span></span>
+   <div class="content">Hold Me : )</div>
+   </div>
+<style>
+/* From Uiverse.io by htwarriors108 - Tags: gradient, card, hover, glow, neon, gradients, colorful, hover effect, press effect, multicolor */
+.card {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+  transform: rotateX(-55deg) rotateY(15deg) rotateZ(60deg);
+}
+
+.card:hover {
+  transform: rotate(0);
+}
+
+.card:active {
+  transform: translateY(-20px) rotate(-3deg);
+  scale: 0.95;
+}
+
+.card::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+  filter: blur(30px);
+}
+
+.card span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.card span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card .content {
+  position: relative;
+  padding: 10px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5em;
+}
+</style>
