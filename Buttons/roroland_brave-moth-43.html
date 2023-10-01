@@ -1,0 +1,84 @@
+<div class="flip-button">
+  <button class="button button-front">
+    <span class="text-front">Label one</span>
+    <span class="text-back">Back can be longer</span>
+  </button>
+</div>
+
+<style>
+/* From Uiverse.io by roroland - Tags: flat design, button, flip, animated, two side */
+.flip-button {
+  --col1: #4CAF50;
+  --col2: #4f16ac;
+  --col3: #d8d1e4;
+  position: relative;
+  min-width: 10rem;
+  min-height: 3rem;
+  perspective: 500px;
+}
+
+.flip-button .button {
+  appearance: none;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  border-radius: 30px;
+  font-size: .75em;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--col1);
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease-out .5s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.flip-button:hover .button {
+  background-color: var(--col2);
+  cursor: pointer;
+  transform: rotateY(180deg) scale(1.5);
+  transition: all .3s ease-out;
+}
+
+.flip-button:hover .button:active {
+  background-color: rgba(81, 23, 173, 0.75);
+  transform: rotateY(180deg) scale(1.45);
+  outline: 10px solid var(--col3);
+  transition: all .1s ease-out;
+}
+
+.flip-button .button::after {
+  content: '';
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.25);
+  display: block;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  transition: all .3s ease-out .95s;
+}
+
+.flip-button:hover .button::after {
+  box-shadow: 0px 0px 1px 10px rgba(160, 29, 149, 0.15);
+  transition: all .3s ease-out;
+}
+
+.flip-button .text-front,
+.flip-button .text-back {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 1.5em;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+  width: 100%;
+}
+
+.flip-button .text-back {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+
+</style>
