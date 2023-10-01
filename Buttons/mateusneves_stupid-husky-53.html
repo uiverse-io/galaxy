@@ -1,0 +1,62 @@
+<button>
+  <span class="label">Next</span>
+  <span class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+  </span>
+</button>
+<style>
+/* From Uiverse.io by mateusneves - Tags: button */
+button {
+ position: relative;
+ font-size: 14px;
+ letter-spacing: 3px;
+ height: 3em;
+ padding: 0 3em;
+ border: none;
+ background-color: #c41b54;
+ color: #fff;
+ text-transform: uppercase;
+ overflow: hidden;
+ border-radius: 5px
+}
+
+button::before {
+ content: '';
+ display: block;
+ position: absolute;
+ z-index: 0;
+ bottom: 0;
+ left: 0;
+ height: 0px;
+ width: 100%;
+ background: rgb(196,27,84);
+ background: linear-gradient(90deg, rgba(196,27,84,1) 20%, rgba(124,7,46,1) 100%);
+ transition: 0.2s;
+}
+
+button .label {
+ position: relative;
+}
+
+button .icon {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 3em;
+ width: 3em;
+ position: absolute;
+ top: 3em;
+ right: 0;
+ opacity: 0;
+ transition: 0.4s;
+}
+
+button:hover::before {
+ height: 100%;
+}
+
+button:hover .icon {
+ top: 0;
+ opacity: 1;
+}
+</style>
