@@ -1,0 +1,36 @@
+<button class="btn"><span>Hover Me</span></button>
+<style>
+/* From Uiverse.io by isfandiyor132 - Tags: button, hover, square, neon, futuristic */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  outline: none;
+  height: 50px;
+  width: 150px;
+  border: none;
+  text-decoration: none;
+  background-image: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+}
+
+.btn:hover {
+  animation: rotate 0.4s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    filter: hue-rotate(-360deg)
+  }
+}
+
+.btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 142px;
+  background: #222222;
+  font-size: 18px;
+}
+</style>
