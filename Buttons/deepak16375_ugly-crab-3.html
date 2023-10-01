@@ -1,0 +1,32 @@
+<button class="button">
+  Hover me!
+</button>
+<style>
+/* From Uiverse.io by deepak16375 - Tags: gradient, button, animated, gradients, hover effect, hoverme, hover button */
+.button {
+  font-size: 17px;
+  font-weight: bold;
+  border: 0px;
+  color: white;
+  background-color: #1877f2;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-image: linear-gradient(90deg,
+		#B799FF 0%,
+		#ACBCFF 50%,
+		#AEE2FF 75%,
+		#E6FFFD 100%);
+  color: black;
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  100% {
+    background-position: 50rem;
+  }
+}
+</style>
