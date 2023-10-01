@@ -1,0 +1,143 @@
+<div class="container"> 
+  <div class="window"> 
+    <div class="window-title">
+      <p>Console Window</p>
+      <div class="window-buttons">
+        <div class="window-button fullscreen"></div>
+        <div class="window-button reduce"></div>
+        <div class="window-button close"></div>
+      </div>
+    </div>
+    <div class="console">
+      <pre><code>def main():
+  for i in range(100):
+    print(f"Add to favorites {i}")
+    if favorite = true:
+      Favorite()
+
+def Favorite():
+  print("thanks")
+
+main()</code></pre>
+    </div>
+  </div>
+</div>
+
+
+<style>
+/* From Uiverse.io by NlghtM4re - Tags: green, card, code, menu */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.window-title {
+  height: 30px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.window-title p {
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.window-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.window-button {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.window-button.close {
+  background-color: #f00;
+}
+
+.window-button.close:hover {
+  background-color: rgb(182, 2, 2);
+  cursor: pointer;
+}
+
+.window-button.reduce {
+  background-color: #ff0;
+}
+
+.window-button.reduce:hover {
+  background-color: rgb(172, 172, 4);
+  cursor: pointer;
+}
+
+.window-button.fullscreen {
+  background-color: #0f0;
+}
+
+.window-button.fullscreen:hover {
+  background-color: rgb(7, 159, 7);
+  cursor: pointer;
+}
+
+.window-button:focus {
+  outline: none;
+}
+
+.console {
+  width: 100%;
+  height: calc(100% - 30px);
+  background-color: #000;
+  color: #fff;
+  overflow: auto;
+}
+
+.console pre {
+  margin: 0;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.console pre code {
+  color: #0f0;
+  outline: none;
+}
+
+.console::-webkit-scrollbar {
+  width: 8px;
+}
+
+.console::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+.console::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+.console::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+</style>
