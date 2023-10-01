@@ -1,0 +1,90 @@
+<div class="card">
+<div class="cloud">
+</div>
+<div class="shadow"></div>
+</div>
+<style>
+/* From Uiverse.io by shadowfax29 - Tags: card, cloud, hover effect */
+.card {
+  width: 190px;
+  height: 254px;
+  background-color: #66D0FF;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all .3s;
+  border: 3px solid #66D0FF;
+  box-shadow: 0 0 10px white;
+}
+
+.cloud {
+  width: 150px;
+  height: 70px;
+  background: #ECEFF1;
+  box-shadow: 10px 10px rgba(0,0,0,0.2);
+  border-radius: 70px;
+}
+
+.cloud::after, .cloud::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.cloud::after {
+  width: 50px;
+  height: 50px;
+  top: -30px;
+  left: -55px;
+}
+
+.cloud::before {
+  width: 70px;
+  height: 70px;
+  top: -20px;
+  left: 60px;
+}
+
+.cloud {
+  animation: float 1.8s infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.shadow {
+  width: 150px;
+  height: 24px;
+  background-color: rgba(0,0,0,0.2);
+  margin-top: 100px;
+  border-radius: 50%;
+  filter: blur(7px);
+  animation: sha 1.8s infinite alternate;
+}
+
+@keyframes sha {
+  0% {
+    transform: scale(1,1);
+  }
+
+  100% {
+    transform: scale(.85,.85);
+  }
+}
+
+.card:hover {
+  width: 200px;
+  height: 264px;
+  transform: scale(0.9);
+  padding: 20px;
+  border: 5px solid black;
+}
+</style>
