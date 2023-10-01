@@ -1,0 +1,37 @@
+<button class="bt">
+  Button
+
+</button>
+<style>
+/* From Uiverse.io by wang3616359git - Tags: button */
+.bt {
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+        /*background-color: #0985e8;*/
+  background-color: rgba(92, 215, 152,0.8);
+  height: 40px;
+  width: 100px;
+  clip-path: polygon(
+                0 0,5% 0,5% 15%,10% 15%,10% 0,100% 0,
+                100% 75%,95% 75%,95% 85%,100% 85%,100% 100%,
+                50% 100%,50% 85%,45% 85%,45% 100%,0 100%,
+                0 65%,5% 65%,5% 50%,0 50%,0 0
+        );
+  border-top-right-radius: 5px;
+  border-right: #aebdb7 2px solid;
+  border-bottom: #b0bab1 2px solid;
+  transition: all 0.6s ease;
+}
+
+.bt:active {
+  transition: all 0.01s ease;
+  border-right: #aebdb7 0 solid;
+  border-bottom: #b0bab1 0 solid;
+  user-select: none;
+  transform: translateX(1px) translateY(1px);
+}
+</style>
