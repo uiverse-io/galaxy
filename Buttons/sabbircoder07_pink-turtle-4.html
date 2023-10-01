@@ -1,0 +1,58 @@
+<button><span class="main-text">Next Step<span> <span>→</span> </span></span></button>
+<style>
+/* From Uiverse.io by sabbircoder07 - Tags: button, animated, read more */
+button {
+  font-family: "Lexend Deca", sans-serif;
+  border: none;
+  background-image: linear-gradient(to right top, #5FFBF1,#D16BA5,#86A8E7);
+  color: #ffffff;
+  font-size: 17px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding: 13px 26px;
+  cursor: pointer;
+  transform: skew(15deg);
+  transition: all 1s;
+}
+
+.main-text {
+  display: inline-block;
+  transform: skew(-15deg);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background-image: linear-gradient(to bottom, #D16BA5,#86A8E7,#5FFBF1);
+  border-radius: 26px;
+  animation: pulsate 1s infinite;
+}
+
+button:hover span {
+  display: inline-block;
+  transform: translateX(2px);
+  transition: all 1s;
+}
+
+button:focus {
+  outline: none;
+  border-radius: 26px;
+  animation: pulsate 1s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+</style>
