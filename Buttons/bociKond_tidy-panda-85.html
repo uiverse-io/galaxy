@@ -1,0 +1,68 @@
+<button class="button">
+  <span class="button-text">Button</span>
+  <span class="tooltip">Tooltip</span>
+</button>
+<style>
+/* From Uiverse.io by bociKond - Tags: tooltip, button, hover, click, transition, hover effect, transparent, dashed */
+.button {
+  --clr: #DA5552;
+  --clr-white: #e3e3e3;
+  padding: .75rem 3rem;
+  border: 4px dashed var(--clr);
+  background-color: transparent;
+  color: var(--clr);
+  font-weight: bold;
+  position: relative;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  top: calc(-100% - .75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr);
+  color: var(--clr-white);
+  padding: .5rem 2rem;
+  cursor: auto;
+  display: none;
+  animation: showTooltip 300ms ease-in-out;
+  transform-origin: bottom;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 8px 0 8px;
+  border-color: var(--clr) transparent transparent transparent;
+  bottom: -9px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.button:hover {
+  background-color: var(--clr);
+  color: var(--clr-white);
+  border-color: transparent;
+}
+
+.button:hover .tooltip {
+  display: block;
+}
+
+@keyframes showTooltip {
+  0% {
+    opacity: 0;
+    transform: scaleY(0) translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1) translateX(-50%);
+  }
+}
+</style>
