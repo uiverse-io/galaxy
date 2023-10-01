@@ -1,0 +1,113 @@
+<div class="loader">
+  <div class="cube">
+    <div class="side"></div>
+    <div class="side"></div>
+    <div class="side"></div>
+    <div class="side"></div>
+    <div class="side"></div>
+    <div class="side"></div>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by Pradeepsaranbishnoi - Tags: 3d, loader, cube */
+/* The loader container */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  perspective: 1000px;
+  transform-type: preserve-3d;
+}
+
+
+/* The cube */
+.cube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px);
+  animation: cube 4s cubic-bezier(.18,.56,.64,1) infinite;
+}
+
+@keyframes cube {
+  0% {
+    top: 0%;
+    left: 0%;
+    transform: translateZ(-50px);
+  }
+
+  25% {
+    top: 50%;
+    left: 50%;
+    transform: translateZ(-50px) rotateX(-90deg) rotateZ(90deg);
+  }
+
+  50% {
+    top: 0%;
+    left: 50%;
+    transform: translateZ(-50px) rotateX(0deg) rotateZ(180deg);
+  }
+
+  75% {
+    top: 50%;
+    left: 0%;
+    transform: translateZ(-50px) rotateX(-90deg) rotateZ(-90deg);
+  }
+}
+
+
+/* The side */
+.side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* back */
+.side:nth-child(1) {
+  transform: rotateX(-180deg) translateZ(50px);
+  background-color: #1e3f57;
+}
+
+/* left side */
+.side:nth-child(2) {
+  transform: rotateY(-90deg) translateZ(50px);
+  background-color: #6bb2cd;
+}
+
+/* right side */
+.side:nth-child(3) {
+  transform: rotateY(90deg) translateZ(50px);
+  background-color: #6bb2cd;
+}
+
+/* top side */
+.side:nth-child(4) {
+  transform: rotateX(90deg) translateZ(50px);
+  background-color: #3c617d;
+}
+
+/* bottom side */
+.side:nth-child(5) {
+  transform: rotateX(-90deg) translateZ(50px);
+  background-color: #3c617d;
+}
+
+/* top */
+.side:nth-child(6) {
+  transform: translateZ(50px);
+  background-color: #1e3f57;
+}
+
+</style>
