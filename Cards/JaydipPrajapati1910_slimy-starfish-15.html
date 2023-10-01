@@ -1,0 +1,119 @@
+<div class="card shadow">
+
+<div class="ribbon">
+    <div class="ribbon-stitches-top"></div>
+    <div class="ribbon-content">
+        <span>Text Here</span>
+    </div>
+    <div class="ribbon-stitches-bottom"></div>
+</div>
+</div>
+<style>
+/* From Uiverse.io by JaydipPrajapati1910 - Tags: card, white and red, card template, ribbon  */
+.card {
+  width: 200px;
+  height: 290px;
+  background: white;
+  border-radius: 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+}
+
+.shadow {
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(190, 190, 190),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.ribbon {
+  width: 230px;
+  position: absolute;
+  margin-top: 229px;
+  margin-left: -20px;
+  text-align: center;
+  font-size: 20px !important;
+  background: #D64B4B;
+  background: -webkit-gradient(linear, left top, left bottom, from(#D64B4B), to(#AB2C2C));
+  background: -webkit-linear-gradient(top, #D64B4B, #AB2C2C);
+  background: -moz-linear-gradient(top, #D64B4B, #AB2C2C);
+  background: -ms-linear-gradient(top, #D64B4B, #AB2C2C);
+  background: -o-linear-gradient(top, #D64B4B, #AB2C2C);
+  background-image: -ms-linear-gradient(top, #D64B4B 0%, #AB2C2C 100%);
+  -webkit-box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
+  box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
+  font-family: 'Helvetica Neue',Helvetica, sans-serif;
+}
+
+.ribbon span {
+  font-size: 35px !important;
+  color: #801111;
+  text-shadow: #D65C5C 0 1px 0;
+  margin: 0px;
+  padding: 19px 10px;
+}
+
+.ribbon:before, .ribbon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #C23A3A;
+  z-index: -1;
+}
+
+.ribbon:before {
+  left: -2em;
+  border-right-width: 1.5em;
+  border-left-color: transparent;
+  -webkit-box-shadow: rgba(0,0,0,0.4) 1px 1px 1px;
+  -moz-box-shadow: rgba(0,0,0,0.4) 1px 1px 1px;
+  box-shadow: rgba(0,0,0,0.4) 1px 1px 1px;
+}
+
+.ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
+  -webkit-box-shadow: rgba(0,0,0,0.4) -1px 1px 1px;
+  -moz-box-shadow: rgba(0,0,0,0.4) -1px 1px 1px;
+  box-shadow: rgba(0,0,0,0.4) -1px 1px 1px;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+  border-color: #871616 transparent transparent transparent;
+  position: absolute;
+  display: block;
+  border-style: solid;
+  bottom: -1em;
+  content: '';
+}
+
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
+
+.ribbon-stitches-top {
+  margin-top: 2px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+.ribbon-stitches-bottom {
+  margin-bottom: 2px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+}
+
+</style>
