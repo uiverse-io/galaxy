@@ -1,0 +1,62 @@
+<button class="button">
+click me
+</button>
+<style>
+/* From Uiverse.io by ahmedrizk101 - Tags: button, #button, 3d button */
+.button {
+  width: 200px;
+  height: 40px;
+  background: yellow;
+  box-shadow: -6px 6px 0 0 hsl(60, 100%, 40%);
+  border: none;
+  outline: none;
+  position: relative;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button:active {
+  box-shadow: -3px 3px 0 0 hsl(60, 100%, 40%);
+  top: 3px;
+  left: -3px;
+  background-color: hsl(60, 100%, 45%);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  background: none;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-right: 6px solid hsl(60, 100%, 40%);
+  border-left-width: 0;
+  top: 0;
+  left: -6px;
+}
+
+.button:active::before {
+  border: 3px solid transparent;
+  border-right: 3px solid hsl(60, 100%, 40%);
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  background: none;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top: 6px solid hsl(60, 100%, 40%);
+  border-bottom-width: 0;
+  bottom: -6px;
+  right: 0;
+}
+
+.button:active:after {
+  border: 3px solid transparent;
+  border-top: 3px solid hsl(60, 100%, 40%);
+}
+
+</style>
