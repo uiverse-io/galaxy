@@ -1,0 +1,67 @@
+<button class="button">
+  Hover me 🥹
+</button>
+<style>
+/* From Uiverse.io by kevkevkevin - Tags: button, creative */
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  color: #292930;
+  background: #ffdc60;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 0 50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 0px 77px 12px rgba(0,0,0,0.13);
+  -webkit-box-shadow: 0px 0px 77px 12px rgba(0,0,0,0.13);
+  -moz-box-shadow: 0px 0px 77px 12px rgba(0,0,0,0.13);
+}
+
+button:before, button:after {
+  content: "";
+  background: #5956e9;
+  height: 50%;
+  width: 0;
+  position: absolute;
+  transition: .3s cubic-bezier(.785,.135,.15,.86);
+  -webkit-transition: .3s cubic-bezier(.785,.135,.15,.86);
+  z-index: -1;
+}
+
+button::before {
+  top: 0;
+  left: 0;
+  right: auto;
+}
+
+button:after {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #57c9da;
+}
+
+button:hover:before {
+  width: 100%;
+  right: 0;
+  left: auto;
+}
+
+button:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+</style>
