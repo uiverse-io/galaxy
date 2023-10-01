@@ -1,0 +1,64 @@
+<div class="card">Hold Me</div>
+<style>
+/* From Uiverse.io by htwarriors108 - Source: htwarriors108 - Tags: gradient, card, hover, flip, neon, blur filter, animated, hover effect, card flip */
+.card {
+  background-color: #fff;
+  width: 190px;
+  height: 254px;
+  box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  transition: 0.5s;
+  cursor: pointer;
+  transform: rotateX(-55deg) rotateY(15deg) rotateZ(60deg);
+  font-size: 2.2em;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.card:active {
+  scale: 1.1;
+  rotate: 5deg;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.card:hover {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.card, .card::before {
+  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+}
+
+.card::before {
+  content: '';
+  width: 120%;
+  height: 110%;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  filter: blur(30px);
+  animation: animate 5s linear infinite;
+}
+
+</style>
