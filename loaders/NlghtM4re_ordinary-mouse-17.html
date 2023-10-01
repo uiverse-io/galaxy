@@ -1,0 +1,61 @@
+<div class="container">
+      <div class="item" style="--i:0;"></div>
+      <div class="item" style="--i:1;"></div>
+      <div class="item" style="--i:2;"></div>
+      <div class="item" style="--i:3;"></div>
+      <div class="item" style="--i:4;"></div>
+      <div class="item" style="--i:5;"></div>
+      <div class="item" style="--i:6;"></div>
+      <div class="item" style="--i:7;"></div>
+      <div class="item" style="--i:8;"></div>
+      <div class="item" style="--i:9;"></div>
+      <div class="item" style="--i:10;"></div>
+      <div class="item" style="--i:11;"></div>
+      <div class="item" style="--i:12;"></div>
+      <div class="item" style="--i:13;"></div>
+      <div class="item" style="--i:14;"></div>
+      <div class="item" style="--i:15;"></div>
+      <div class="item" style="--i:16;"></div>
+      <div class="item" style="--i:17;"></div>
+      <div class="item" style="--i:18;"></div>
+      <div class="item" style="--i:19;"></div>
+      <div class="item" style="--i:20;"></div>
+    </div>
+<style>
+/* From Uiverse.io by NlghtM4re - Tags: blue, purple, loader, smooth, glow */
+.container {
+  position: absolute;
+  top: 40%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  position: absolute;
+  background-color: transparent;
+  width: calc(var(--i) * 2.5vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: .9vmin solid rgb(0, 200, 255);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: my-move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+  box-shadow: 0px 0px 15px rgb(124, 124, 124),
+    inset 0px 0px 15px rgb(124, 124, 124);
+}
+
+@keyframes my-move {
+  0%,
+  100% {
+    transform: rotateX(70deg) translateZ(50px) translateY(0px);
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+    filter: hue-rotate(180deg);
+  }
+}
+</style>
