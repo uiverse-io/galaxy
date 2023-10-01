@@ -1,0 +1,36 @@
+<div class="card">
+</div>
+<style>
+/* From Uiverse.io by alexruix - Tags: card */
+/*Rainbow card*/
+.card {
+ --background: #f5f5f5;
+ --green: #1FC11B;
+ --yellow: #FFD913;
+ --orange: #FF9C55;
+ --red: #FF5555;
+ --violet: #555BFF;
+ width: 190px;
+ height: 254px;
+ display: flex;
+ flex-direction: column;
+ gap: 1em;
+ background: var(--background);
+ padding: 1rem;
+ border: 3px solid var(--violet);
+ box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+        20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 
+        30px -30px 0 -3px var(--background), 30px -30px var(--orange), 
+        40px -40px 0 -3px var(--background), 40px -40px var(--red);
+ transition: box-shadow 1s, top 1s, left 1s;
+}
+
+
+/*Hover*/
+.card:hover {
+ box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -3px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -3px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -3px  var(--background), 0 0 0 0  var(--red);
+}
+</style>
