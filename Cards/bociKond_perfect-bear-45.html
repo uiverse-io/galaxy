@@ -1,0 +1,140 @@
+<div class="wrapper">
+<div class="circle-1"></div>
+<div class="circle-2"></div>
+<div class="card">
+  <section class="top">
+    <span class="u-l">User list:</span>
+  </section>
+  <section class="bottom">
+    <ul class="users">
+      <li class="user">
+        <span class="user-name">Olivia Anderson</span>
+        <span class="user-occupation">Marketing Manager</span>
+      </li>
+      <li class="user">
+        <span class="user-name">Ethan Murphy</span>
+        <span class="user-occupation">Graphic Designer</span>
+      </li>
+      <li class="user">
+        <span class="user-name">Ava Collins</span>
+        <span class="user-occupation">Financial Analyst</span>
+      </li>
+      <li class="user">
+        <span class="user-name">Noah Walker</span>
+        <span class="user-occupation">Journalist</span>
+      </li>
+    </ul>
+  </section>
+</div>
+</div>
+<style>
+/* From Uiverse.io by bociKond - Source: https://10015.io - Tags: glassmorphism, list, minimalist, card, blur filter, username, filter, blur, minimal, card template */
+.wrapper {
+  position: relative;
+  --white: #e3e3e3;
+  --bc: rgb(203,46,79);
+  --bc-al: rgba(203,46,79,0.6);
+}
+
+.card {
+  max-width: 340px;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-areas: "top" "bottom";
+  grid-template-rows: 20% 1fr;
+  border: 1px solid var(--bc-al);
+  border-radius: .75rem;
+  background: var(--bc-al);
+  color: var(--white);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 15px 30px -15px var(--bc-al);
+  isolation: isolate;
+}
+
+.circle-1 {
+  position: absolute;
+  content: '';
+  width: 5rem;
+  height: 5rem;
+  left: 1rem;
+  top: 50%;
+  transform: translate(-50%);
+  background-color: var(--bc-al);
+  border-radius: 50%;
+  z-index: -10;
+}
+
+.circle-2 {
+  position: absolute;
+  content: '';
+  width: 3rem;
+  height: 3rem;
+  right: -1rem;
+  top: 3rem;
+  background-color: var(--bc-al);
+  border-radius: 50%;
+  z-index: -10;
+}
+
+.top {
+  padding: .5rem 4rem;
+  z-index: 1;
+}
+
+.bottom {
+  z-index: 2;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 0;
+}
+
+.user {
+  width: 100%;
+  padding: .75rem 4rem;
+  display: flex;
+  gap: .1rem;
+  flex-direction: column;
+  align-items: flex;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--bc-al);
+  position: relative;
+}
+
+.user:hover {
+  background-color: var(--bc-al);
+}
+
+.user:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.user::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.user-name {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.user-occupation {
+  opacity: .8;
+}
+
+.u-l {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-style: italic;
+}
+</style>
