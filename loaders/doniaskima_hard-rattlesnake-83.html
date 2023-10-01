@@ -1,0 +1,24 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by doniaskima - Tags: material design, neumorphism, loader */
+/* HTML: <div class="loader"></div> */
+.loader {
+  height: 80px;
+  width: 20px;
+  color: #514b82;
+  background: radial-gradient(farthest-side,currentColor 94%,#0000 ) top/8px 8px,
+    linear-gradient(currentColor 0 0) top/4px 70%,
+    conic-gradient(from -30deg at bottom,#0000,currentColor 2deg 58deg,#0000 60deg) bottom            /100% 20px,
+    conic-gradient(from 150deg at top   ,#0000,currentColor 2deg 58deg,#0000 60deg) bottom 20px left 0/100% 20px;
+  background-repeat: no-repeat;
+  transform-origin: 50% 4px;
+  animation: l15 2s infinite cubic-bezier(0.5,300,0.5,-300);
+}
+
+@keyframes l15 {
+ 
+  100% {
+    transform: rotate(0.5deg)
+  }
+}
+</style>
