@@ -1,0 +1,87 @@
+<form class="discountForm">
+ 
+  <span class="DiscountHeading">TAKE 10% OFF.</span>
+  <p class="DiscountSubheading">Here is your discount! The promo code will be sent to your email.</p>
+  <div class="inputContainer">
+    <input placeholder="Enter your email" type="email" name="email" id="email-address">
+    <button type="submit" class="submitButton">Get it!</button>
+  </div>
+     <button class="exitBtn">×</button>
+</form>
+
+
+
+<style>
+/* From Uiverse.io by vinodjangid07 - Tags: form, discount */
+.discountForm {
+  width: 250px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  gap: 20px;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.082);
+}
+
+.DiscountHeading {
+  font-size: 1.5em;
+  color: rgb(15, 15, 15);
+  font-weight: 700;
+}
+
+.DiscountSubheading {
+  font-size: 0.8em;
+  color: black;
+  text-align: center;
+}
+
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#email-address {
+  height: 30px;
+  width: 100%;
+  border: 1px solid rgb(228, 228, 228);
+  background-color: white;
+  padding: 0px 10px;
+  outline: none;
+  text-align: center;
+}
+
+.submitButton {
+  width: 100%;
+  height: 30px;
+  border: none;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: rgb(36, 36, 36);
+}
+
+.exitBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.171);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: none;
+  color: black;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+</style>
