@@ -1,0 +1,328 @@
+<form class="form">
+  <header>
+    Credit card information
+  <span class="message">Fill the form to continue.</span>
+  </header>
+  <label>
+    <span>Card Number</span>
+    <input placeholder="Type your card number" class="input" type="number" required="">
+  </label>
+  <label>
+    <span>Name on card</span>
+    <input placeholder="Type your name as appear on card" class="input" type="text" required="">
+  </label>
+  <fieldset>
+    <label class="sm">
+    <span>Exp. Month</span>
+    <div class="custom-select">
+    <select class="input" type="select" required="">
+      <option></option>
+      <option>January</option>
+      <option>February</option>
+      <option>March</option>
+      <option>April</option>
+      <option>May</option>
+      <option>June</option>
+      <option>July</option>
+      <option>August</option>
+      <option>September</option>
+      <option>October</option>
+      <option>November</option>
+      <option>Dicember</option>
+    </select>
+    </div>
+  </label>
+  <label class="sm">
+    <span>Exp. Year </span>
+    <div class="custom-select">
+    <select class="input" type="select" required="">
+      <option></option>
+      <option>2023</option>
+      <option>2024</option>
+      <option>2025</option>
+      <option>2026</option>
+
+    </select>
+    </div>
+  </label>
+    <label class="sm">
+    <span>CW </span>   
+    <input class="input" placeholder="1234" size="4" maxlength="4" type="text" required="">
+  </label>
+  </fieldset>
+  <div class="submitCard">
+    <button>Complete payment</button>
+  </div>
+</form>
+<style>
+/* From Uiverse.io by roroland - Tags: form */
+/* Initial form state */
+.form {
+  --col1: #fff;
+  --col2: #252325;
+  --col3: rgba(232, 213, 196, 0.9);
+  --col4: #ffffff;
+  --col5: #683363;
+  --sh: rgba(80, 80, 80, 0.35);
+  --rad: 4px;
+  --radBig: 10px;
+  border-radius: 0 0 var(--radBig) var(--radBig);
+  box-shadow: 0 0 20px var(--sh);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em 1em;
+  padding: 1em;
+  position: relative;
+  max-width: 75%;
+  max-height: 90px;
+  transition: background .3s ease-out, max-height .3s ease-out;
+  overflow: hidden;
+}
+
+.form::before {
+  content: 'Ready to purchase?';
+  color: var(--col2);
+  font-size: 1.2em;
+  font-weight: 700;
+  display: grid;
+  width: calc(100% - 2em);
+  height: 60%;
+  position: absolute;
+  place-items: center;
+  z-index: 99999;
+}
+
+.form::after {
+  content: '';
+  backdrop-filter: blur(6px) grayscale(100%);
+  background: linear-gradient(-180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.5) 70%, rgba(255, 255, 255, 0.3) 90%);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  position: absolute;
+  z-index: 999;
+}
+
+.form::after,
+.form::before {
+  border-radius: 0 0 var(--radBig) var(--radBig);
+  pointer-events: none;
+  transition: all .5s ease-out;
+}
+
+/* Form hover and focus */
+.form:hover,
+.form:focus-within {
+  max-width: 100%;
+  max-height: 380px;
+}
+
+.form:focus-within {
+  overflow: initial;
+}
+
+.form:hover::before,
+.form:hover::after {
+  opacity: 0;
+}
+
+.form:hover::after {
+  backdrop-filter: blur(0) grayscale(0%);
+}
+
+.form header {
+  color: var(--col1);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+/* Labels and inputs UI */
+:is(.form) label span, label input {
+  flex: 1 100%;
+  transition: all .3s ease-out;
+}
+
+:is(.form) input, select, button {
+  appearance: none;
+  border: 0;
+  padding: .75em;
+  border-radius: var(--rad);
+  transition: all .3s ease-out;
+}
+
+.form label {
+  display: flex;
+  flex-flow: row wrap;
+  color: var(--col4);
+  gap: .5em;
+}
+
+.form input {
+  box-shadow: inset 3px 3px 1px var(--sh);
+}
+
+.form fieldset {
+  display: flex;
+  backdrop-filter: blur(10px);
+  flex-flow: row nowrap;
+  gap: 1em;
+  position: relative;
+  transition: all .3s ease-out;
+  padding: 1rem;
+  z-index: 10;
+  border: 3px double var(--col1);
+  border-radius: var(--rad);
+}
+
+.form fieldset label {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: .75em;
+}
+
+.sm {
+  justify-content: space-around;
+}
+
+.sm span {
+  text-align: center;
+}
+
+.form select {
+  box-shadow: inset 3px 3px 1px var(--sh);
+  padding: .75em 1.75em .75em 0.5em;
+  position: relative;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select::after {
+  position: absolute;
+  content: "";
+  top: 45%;
+  right: 5px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--col5) transparent transparent transparent;
+}
+
+.form fieldset span {
+  flex: 1 100%;
+}
+
+.form fieldset input {
+  flex: 0 1 40px;
+}
+
+.form button {
+  background-color: var(--col1);
+  color: var(--col4);
+  border: 2px solid var(--col4);
+  font-size: 1em;
+  font-weight: 700;
+  align-self: center;
+  padding: .5em 1.5em;
+  appearance: none;
+}
+
+/* Form and UI valid and invalid states */
+.form input:focus,
+.form select:focus {
+  outline: 3px solid var(--col3);
+  outline-offset: 1px;
+}
+
+.form input:invalid:not(:focus),
+.form select:invalid:not(:focus) {
+  background-color: var(--col3);
+  outline: 3px solid var(--col4);
+  outline-offset: 1px;
+}
+
+.form input:valid:not(:focus),
+.form select:valid:not(:focus) {
+  outline: 3px solid var(--col1);
+  outline-offset: 1px;
+}
+
+.form .message {
+  display: block;
+  opacity: 0;
+  font-size: .75em;
+  font-weight: 400;
+  transition: all .3s ease-out;
+  margin: -1rem 0 0;
+}
+
+.form:has(:invalid) .message {
+  opacity: 1;
+  margin: .25rem 0 0 0;
+}
+
+label:has(input:invalid),
+label:has(select:invalid) {
+  color: var(--col3);
+  opacity: .8;
+}
+
+label:has(input:valid),
+label:has(select:valid) {
+  opacity: 1;
+}
+
+.form:hover:has(:focus, :active):valid .submitCard {
+  max-height: 180px;
+  opacity: 1;
+  transition: opacity 1s ease-out .5s, translate 1.3s ease-out;
+  translate: 0 100%;
+}
+
+.form:hover:invalid {
+  transition: all .3s ease-out;
+  background-color: var(--col5);
+}
+
+.form:hover:valid {
+  transition: all .3s ease-out;
+  background-color: var(--col1);
+}
+
+.form:hover:valid * {
+  color: var(--col2);
+}
+
+.form:hover:valid input,
+.form:hover:valid select {
+  outline: 3px solid var(--col2);
+}
+
+.form:hover:invalid fieldset {
+  border: 1px dashed var(--col3);
+}
+
+.form:hover:valid fieldset {
+  border: 1px dashed var(--col2);
+}
+
+/* Submit block */
+.form .submitCard {
+  display: flex;
+  justify-content: center;
+  background-color: var(--col2);
+  border-radius: 0 0 var(--rad) var(--rad);
+  bottom: 0;
+  padding: .5em;
+  opacity: 0;
+  max-height: 0;
+  translate: 0 -100%;
+  position: absolute;
+  width: calc(100% - 2em);
+  transition: all .5s ease-out .1s;
+  z-index: -1;
+}
+</style>
