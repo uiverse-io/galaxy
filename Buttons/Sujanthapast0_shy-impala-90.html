@@ -1,0 +1,56 @@
+<button class="button">
+<p class="submit">submit</p>
+
+</button>
+<style>
+/* From Uiverse.io by Sujanthapast0 - Source: Sujanthapast0 - Tags: animation, subscription, minimalist, success, button, smooth, submit, 3d button */
+.button {
+  width: 90px;
+  height: 40px;
+  position: relative;
+  font-family: var(--font);
+  color: #3b82f6;
+  font-weight: 600;
+  background-color: #fff;
+  border: none;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  transition: all ease 100ms;
+}
+
+button:hover {
+  background-color: #cbdcf8;
+}
+
+button:focus {
+  background-color: #cbdcf8;
+}
+
+button::before {
+  content: 'done✅';
+  position: absolute;
+  color: #3b82f6;
+  left: 0;
+  top: -14px;
+  right: 0;
+  transition: all ease 300ms;
+  opacity: 0%;
+}
+
+button:focus::before {
+  opacity: 100%;
+  transform: translatey(26px);
+}
+
+.submit {
+  transition: all ease 100ms;
+  opacity: 100%;
+}
+
+button:focus > .submit {
+  opacity: 0%;
+}
+
+
+</style>
