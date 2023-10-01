@@ -1,0 +1,54 @@
+<button class="custom-button">Click Me</button>
+<style>
+/* From Uiverse.io by PriyanshuGupta28 - Tags: button */
+/* styles.css */
+
+/* Reset default styles for the button */
+button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a pseudo-element for the animation effect */
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* Hover effect for the button */
+button:hover::before {
+  width: 100%;
+}
+
+/* Active effect for the button */
+button:active::before {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: none;
+  animation: ripple 0.4s ease;
+}
+
+/* Keyframes animation for the active effect */
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+</style>
