@@ -1,0 +1,128 @@
+
+  <form class="form">
+      <p class="login">Log in to Twitter</p>
+      <div class="inputContainer">
+        <input type="button" value="next" class="submit">
+        <input placeholder="phone or email or username" type="text" class="fInput email">
+        <input placeholder="Enter your password" type="text" class="fInput pass">
+      </div>
+      <button class="forget">forget password?</button>
+      <div class="con">
+        <p>don't have account?&nbsp;</p>
+        <a href="#"> sign in</a>
+      </div>
+    </form>
+
+<style>
+/* From Uiverse.io by omar-alghaish - Tags: login, twitter, form */
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+  padding: 50px;
+  height: 500px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.inputContainer {
+  background-color: rgba(255, 0, 0, 0);
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.fInput {
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid rgb(48, 45, 45);
+  background-color: black;
+  padding: 10px;
+  color: white;
+  transition: .1s;
+  position: absolute;
+}
+
+.fInput:focus {
+  border: 1px rgb(0, 136, 255) solid;
+  outline: none;
+}
+
+.fInput:focus::placeholder {
+  color: rgb(0, 136, 255);
+}
+
+.fInput.email {
+  z-index: 1;
+}
+
+.fInput.pass:focus {
+  z-index: 2;
+}
+
+.submit {
+  width: 100%;
+  top: 60px;
+  padding: 7px 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .3s;
+  position: absolute;
+}
+
+.submit:focus + .email {
+  display: none;
+}
+
+.login {
+  width: 100%;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 30px 0;
+  position: absolute;
+  top: 90px;
+  left: 55px
+}
+
+.submit:hover {
+  opacity: .9;
+}
+
+.forget {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border: 1PX solid rgba(255, 255, 255, 0.151);
+  margin-top: 15px;
+  padding: 7px 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 50px;
+}
+
+.forget:hover {
+  background-color: rgba(255, 255, 255, 0.151);
+}
+
+.con {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 30px;
+  color: rgb(111, 103, 103);
+  font-size: 13px;
+  font-family: sans-serif;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.con a {
+  color: rgb(0, 136, 255);
+}
+</style>
