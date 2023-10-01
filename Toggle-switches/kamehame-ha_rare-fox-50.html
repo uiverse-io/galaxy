@@ -1,0 +1,57 @@
+<label class="gravity-switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+</label>
+<style>
+/* From Uiverse.io by kamehame-ha - Tags: switch, click effect, gravity, fancy */
+.gravity-switch {
+  width: 4em;
+  height: 2em;
+  border-radius: 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.gravity-switch input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.gravity-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition-delay: .4s;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.gravity-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  transition-delay: .4s;
+  transition: .4s;
+}
+
+.gravity-switch input:checked + .slider {
+  transform: rotate(90deg);
+  transform-origin: 25% 50%;
+  background-color: #22c55e;
+}
+
+.gravity-switch input:checked+.slider:before {
+  transition-delay: 400ms;
+  transform: translateX(2em)
+}
+</style>
