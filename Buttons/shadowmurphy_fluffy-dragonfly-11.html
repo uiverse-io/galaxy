@@ -1,0 +1,71 @@
+<button class="button">
+  <span class="inner-circle"></span>
+  <span class="text">Button</span>
+</button>
+<style>
+/* From Uiverse.io by shadowmurphy - Tags: button, active, animated */
+.button * {
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  background: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 19px;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  text-decoration: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background-image: linear-gradient(to right, #AF40FF, #5B42F3, #006eeb, #42a0f3, #AF40FF);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: moveGradient 3s linear infinite;
+  z-index: -1;
+}
+
+.inner-circle {
+  position: absolute;
+  width: 94%;
+  height: 84%;
+  background-color: rgb(2, 3, 20);
+  border-radius: 6px;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.text {
+  z-index: 3;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+</style>
