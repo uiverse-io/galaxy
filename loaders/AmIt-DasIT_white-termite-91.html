@@ -1,0 +1,60 @@
+<div class="card">
+  <div class="conic_back1"></div>
+  <div class="conic_back2"></div>
+</div>
+<style>
+/* From Uiverse.io by AmIt-DasIT - Tags: loader */
+.card {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: 1s;
+  animation: rotate 1s linear infinite;
+}
+
+.card .conic_back1 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background: conic-gradient(transparent, transparent, transparent, crimson);
+}
+
+.card .conic_back2 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  transform: rotate(180deg);
+  background: conic-gradient(transparent, transparent, transparent, orange);
+}
+
+@keyframes rotate {
+  0% {
+    width: 0px;
+    height: 0px;
+    transform: rotate(0deg);
+  }
+
+  30% {
+    width: 45px;
+    height: 45px;
+    transform: rotate(100deg);
+  }
+
+  60% {
+    width: 35px;
+    height: 35px;
+    filter: blur(1px);
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(1240deg);
+  }
+}
+
+</style>
