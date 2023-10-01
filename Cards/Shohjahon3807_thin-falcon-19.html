@@ -1,0 +1,60 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by Shohjahon3807 - Tags: card, hover, follow me */
+.one-div {
+  width: 300px;
+  height: 200px;
+  background-color: #f0f5f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.one-div::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  background-image: linear-gradient(45deg, #e1e8f2, #f0f5f9);
+  border-radius: 20px;
+  opacity: 0.8;
+  transform: scale(1.2);
+  filter: blur(10px);
+}
+
+.one-div:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.one-div:hover::before {
+  animation: gradient-animation 5s linear infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+</style>
