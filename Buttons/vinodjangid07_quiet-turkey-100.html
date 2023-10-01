@@ -1,0 +1,66 @@
+<button class="Btn">
+  <span class="svgContainer">
+    <svg viewBox="0 0 448 512"><path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z"></path></svg>
+  </span>
+  <span class="textContainer">Share</span>
+</button>
+<style>
+/* From Uiverse.io by vinodjangid07 - Tags: button, share, hover effect */
+.Btn {
+  width: 145px;
+  height: 45px;
+  background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px #4dc6d93d;
+  background-size: 400% 400%;
+}
+
+.svgContainer {
+  width: 45px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svgContainer svg {
+  width: 16px;
+}
+
+.svgContainer svg path {
+  fill: white;
+}
+
+.textContainer {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.Btn:hover {
+  animation: gradient 5s ease infinite;
+}
+/* Button's gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+</style>
