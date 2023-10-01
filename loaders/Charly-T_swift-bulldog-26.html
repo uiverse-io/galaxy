@@ -1,0 +1,76 @@
+<svg class="loader" viewBox="0 0 100 100">
+    <circle class="moon moon-back"></circle>
+    <circle class="planet"></circle>
+    <circle class="moon moon-front"></circle>
+</svg>
+<style>
+/* From Uiverse.io by Charly-T - Tags: loader */
+.loader {
+  --moon-r: 0.7em;
+  --planet-r: 1.75em;
+  --planet-stroke-width: 4;
+  --center: 50;
+  --moon-max: 80;
+  --moon-min: 20;
+  --animation-duration: 4000ms;
+  --planet-stroke: black;
+  --planet-fill: white;
+  --moon-fill: #fecb00;
+  width: 7em;
+}
+
+.planet {
+  cx: var(--center);
+  cy: var(--center);
+  r: var(--planet-r);
+  fill: var(--planet-fill);
+  stroke: var(--planet-stroke);
+  stroke-width: var(--planet-stroke-width);
+}
+
+.moon {
+  fill: var(--moon-fill);
+  r: var(--moon-r);
+}
+
+.moon-front {
+  animation: orbit0234 var(--animation-duration) ease-in-out infinite,
+    orbit-front var(--animation-duration) linear infinite;
+}
+
+.moon-back {
+  animation: orbit0234 var(--animation-duration) ease-in-out infinite;
+}
+
+@keyframes orbit0234 {
+  0% {
+    cx: var(--moon-max);
+    cy: var(--moon-min);
+  }
+
+  50% {
+    cx: var(--moon-min);
+    cy: var(--moon-max);
+  }
+
+  100% {
+    cx: var(--moon-max);
+    cy: var(--moon-min);
+  }
+}
+
+@keyframes orbit-front {
+  0% {
+    opacity: 0;
+  }
+
+  49% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+</style>
