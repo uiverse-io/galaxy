@@ -1,0 +1,42 @@
+  <button class="fancy-button">Click Me!</button>
+
+<style>
+/* From Uiverse.io by Progee45 - Tags: button, animated */
+.fancy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff4081;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.fancy-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: skewX(-30deg);
+  transition: left 0.3s ease-in-out;
+}
+
+.fancy-button:hover {
+  transform: scale(1.1);
+}
+
+.fancy-button:hover:before {
+  left: 100%;
+}
+</style>
