@@ -1,0 +1,61 @@
+<div class="containerInput">
+    <input placeholder="Type for validate" type="text">
+</div>
+<style>
+/* From Uiverse.io by marcos700x - Tags: input */
+.containerInput {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 0 4px 0;
+  z-index: 1;
+  font-size: 15px;
+}
+
+.containerInput::before {
+  content: '';
+  width: 110%;
+  aspect-ratio: 1;
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto;
+  animation: rotate6234 2.5s ease-in-out infinite;
+  z-index: -1;
+  background-image: conic-gradient(from 0deg at 50% 50%, #073AFF00 0%, #FF0000FF 25%, #073AFF00 25%);
+}
+
+.containerInput > input {
+  width: 210px;
+  height: 50px;
+  font-size: inherit;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  background-color: #0a0a0a;
+  outline: 5px solid #0a0a0a;
+}
+
+.containerInput > input:focus {
+  outline: none;
+}
+
+.containerInput > input:not(:placeholder-shown) {
+  outline: none;
+}
+
+.containerInput > input:not(:placeholder-shown):valid {
+  outline: 4px solid rgb(0, 255, 183);
+  border-radius: 0;
+}
+
+@keyframes rotate6234 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
