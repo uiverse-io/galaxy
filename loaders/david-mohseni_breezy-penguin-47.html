@@ -1,0 +1,47 @@
+<div class="arrow">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<style>
+/* From Uiverse.io by david-mohseni - Tags: loader */
+.arrow {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-bottom: 5px solid red;
+  border-right: 5px solid red;
+  transform: rotate(45deg);
+  margin: -15px;
+  animation: animate28797 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate28797 {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+</style>
