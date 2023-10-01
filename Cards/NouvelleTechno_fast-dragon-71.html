@@ -1,0 +1,99 @@
+<div class="card">
+    <span class="title">🍪 Cookie Notice</span>
+    <p class="description">We use cookies to ensure that we give you the best experience on our website. <a href="#">Read cookies policies</a>. </p>
+    <div class="actions">
+        <a class="prefs">
+            Manage preferences
+        </a>
+        <button class="decline">
+            Decline
+        </button>
+        <button class="valid">
+            Accept
+        </button>
+    </div>
+</div>
+<style>
+/* From Uiverse.io by NouvelleTechno - Tags: card */
+.card {
+  width: 350px;
+  background: white;
+  padding: 20px;
+  position: relative;
+}
+
+.card .title {
+  color: black;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.card .description {
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card .prefs {
+  color: blue;
+}
+
+.card .actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .8em;
+}
+
+.card button {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 5px;
+  background: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card .decline {
+  border-color: red;
+  color: red;
+}
+
+.card .decline:hover {
+  background-color: red;
+  color: white;
+}
+
+.card .valid {
+  border-color: green;
+  color: green;
+}
+
+.card .valid:hover {
+  background-color: green;
+  color: white;
+}
+
+.card div::before, div::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.7);
+  box-shadow: 0 15px 10px rgba(0,0,0,0.7);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.card div::after {
+  right: 10px;
+  left: unset;
+  transform: rotate(3deg);
+}
+</style>
