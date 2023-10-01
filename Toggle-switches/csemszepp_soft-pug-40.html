@@ -1,0 +1,511 @@
+<span class="switch">
+	<span class="switch-border1">
+		<span class="switch-border2">
+			<input checked="" type="checkbox" id="switch1">
+			<label for="switch1"></label>
+			<span class="switch-top"></span>
+			<span class="switch-shadow"></span>
+			<span class="switch-handle"></span>
+			<span class="switch-handle-left"></span>
+			<span class="switch-handle-right"></span>
+			<span class="switch-handle-top"></span>
+			<span class="switch-handle-bottom"></span>
+			<span class="switch-handle-base"></span>
+			<span class="switch-led switch-led-green">
+				<span class="switch-led-border">
+					<span class="switch-led-light">
+						<span class="switch-led-glow"></span>
+					</span>
+				</span>
+			</span>
+			<span class="switch-led switch-led-red">
+				<span class="switch-led-border">
+					<span class="switch-led-light">
+						<span class="switch-led-glow"></span>
+					</span>
+				</span>
+			</span>
+		</span>
+	</span>
+</span>
+
+<style>
+/* From Uiverse.io by csemszepp - Source: https://codepen.io/bhargavmdubal/pen/wvQBMqQ - Tags: skeuomorphism, switch, theme-switch, toggle switch */
+.switch {
+  display: inline-block;
+  margin: 10em 2em;
+  position: relative;
+  border-radius: 3.5em;
+  -webkit-box-shadow: 0 0 0.5em rgba(2,255,255,0.2);
+  -moz-box-shadow: 0 0 0.5em rgba(255,255,255,0.2);
+  box-shadow: 0 0 0.5em rgba(255,255,255,0.2);
+}
+
+.switch label {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch span {
+  display: block;
+  -webkit-transition: top 0.2s;
+  -moz-transition: top 0.2s;
+  -ms-transition: top 0.2s;
+  -o-transition: top 0.2s;
+  transition: top 0.2s;
+}
+
+.switch-border1 {
+  border: 0.1em solid #000;
+  border-radius: 3.5em;
+  -webkit-box-shadow: 0 0.2em rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 0 0.2em rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0.2em rgba(255, 255, 255, 0.2);
+}
+
+.switch-border2 {
+  width: 6.6em;
+  height: 12.6em;
+  position: relative;
+  border: 0.1em solid #323232;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2D2D2D), color-stop(0.5, #4B4B4B), to(#2D2D2D));
+  background-image: -webkit-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -moz-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -ms-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -o-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: linear-gradient(to right, #2D2D2D, #4B4B4B, #2D2D2D);
+  border-radius: 3.4em;
+}
+
+.switch-border2:before,
+.switch-border2:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: .3;
+  border-radius: 3.4em;
+}
+
+.switch-border2:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(#000, rgba(0,0,0,0));
+  background: -moz-linear-gradient(#000, rgba(0,0,0,0));
+  background: -ms-linear-gradient(#000, rgba(0,0,0,0));
+  background: -o-linear-gradient(#000, rgba(0,0,0,0));
+  background: linear-gradient(#000, rgba(0,0,0,0));
+}
+
+.switch-border2:after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(#000));
+  background: -webkit-linear-gradient(rgba(0,0,0,0), #000);
+  background: -moz-linear-gradient(rgba(0,0,0,0), #000);
+  background: -ms-linear-gradient(rgba(0,0,0,0), #000);
+  background: -o-linear-gradient(rgba(0,0,0,0), #000);
+  background: linear-gradient(rgba(0,0,0,0), #000);
+}
+
+.switch-top {
+  width: 100%;
+  height: 84%;
+  position: absolute;
+  top: 8%;
+  left: 0;
+  z-index: 1;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2D2D2D), color-stop(0.5, #4B4B4B), to(#2D2D2D));
+  background-image: -webkit-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -moz-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -ms-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: -o-linear-gradient(left, #2D2D2D, #4B4B4B, #2D2D2D);
+  background-image: linear-gradient(to right, #2D2D2D, #4B4B4B, #2D2D2D);
+  border-radius: 3.4em;
+}
+
+.switch-shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3.4em;
+  -webkit-box-shadow: 0 0 2em black inset;
+  -moz-box-shadow: 0 0 2em black inset;
+  box-shadow: 0 0 2em black inset;
+}
+
+.switch-handle-left,
+.switch-handle-right {
+  content: '';
+  display: block;
+  width: 3.6em;
+  height: 0;
+  position: absolute;
+  top: 6.6em;
+  z-index: 2;
+  border-bottom: 4.5em solid #111;
+  border-left: 0.7em solid transparent;
+  border-right: 0.7em solid transparent;
+  border-radius: 0;
+}
+
+.switch-handle-left {
+  left: 0.8em;
+}
+
+.switch-handle-right {
+  right: 0.8em;
+}
+
+.switch-handle {
+  width: 3.6em;
+  height: 4.5em;
+  position: absolute;
+  top: 6.6em;
+  left: 1.5em;
+  z-index: 3;
+  background: #333;
+  background-image: -webkit-gradient(linear, left top, right top, from(#111), color-stop(0.4, #777), color-stop(0.5, #888), color-stop(0.6, #777), to(#111));
+  background-image: -webkit-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -moz-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -ms-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -o-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: linear-gradient(to right, #111, #777 40%, #888, #777 60%, #111);
+  border-radius: 0;
+}
+
+.switch-handle-top {
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  top: 8.5em;
+  left: 0.8em;
+  z-index: 4;
+  background-color: #555;
+  background-image: -webkit-gradient(linear, left top, right top, from(#5F5F5F), to(#878787));
+  background-image: -webkit-linear-gradient(left, #5F5F5F, #878787);
+  background-image: -moz-linear-gradient(left, #5F5F5F, #878787);
+  background-image: -ms-linear-gradient(left, #5F5F5F, #878787);
+  background-image: -o-linear-gradient(left, #5F5F5F, #878787);
+  background-image: linear-gradient(to right, #5F5F5F, #878787);
+  border-top: 0.2em solid #AEB2B3;
+  border-radius: 2.5em;
+}
+
+.switch-handle-bottom {
+  width: 3.6em;
+  height: 3.6em;
+  position: absolute;
+  top: 4.7em;
+  left: 1.5em;
+  z-index: 3;
+  background: #333;
+  background-image: -webkit-gradient(linear, left top, right top, from(#111), color-stop(0.4, #777), color-stop(0.5, #888), color-stop(0.6, #777), to(#111));
+  background-image: -webkit-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -moz-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -ms-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: -o-linear-gradient(left, #111, #777 40%, #888, #777 60%, #111);
+  background-image: linear-gradient(to right, #111, #777 40%, #888, #777 60%, #111);
+  border-top: 0.2em solid #141414;
+  border-radius: 1.8em;
+}
+
+.switch-handle-base {
+  width: 4.2em;
+  height: 4.2em;
+  position: absolute;
+  top: 3.8em;
+  left: 1.2em;
+  z-index: 2;
+  border-top: 0.2em solid rgba(255,255,255,0.35);
+  border-radius: 2.1em;
+  -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,0.8) inset;
+  -moz-box-shadow: 0 0 0.5em rgba(0,0,0,0.8) inset;
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.8) inset;
+}
+
+.switch-led {
+  position: absolute;
+  left: 2em;
+  border-radius: 1.4em;
+}
+
+.switch-led-border {
+  border: 0.2em solid black;
+  border-radius: 1.3em;
+}
+
+.switch-led-light {
+  border-radius: 1.1em;
+  -webkit-box-shadow: 0 0 0.5em rgba(255,255,255,0.5) inset;
+  -moz-box-shadow: 0 0 0.5em rgba(255,255,255,0.5) inset;
+  box-shadow: 0 0 0.5em rgba(255,255,255,0.5) inset;
+}
+
+.switch-led-glow {
+  width: 2em;
+  height: 2em;
+  position: relative;
+  border-radius: 1em;
+}
+
+.switch-led-glow:before {
+  content: '';
+  display: block;
+  width: 0.6em;
+  height: 0.6em;
+  position: absolute;
+  top: 0.3em;
+  left: 0.7em;
+  background: rgba(255,255,255,0.2);
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 0 1em rgba(255,255,255,0.75);
+  -moz-box-shadow: 0 0 1em rgba(255,255,255,0.75);
+  box-shadow: 0 0 1em rgba(255,255,255,0.75);
+}
+
+.switch-led-glow:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  border: 1em solid #fff;
+  border-color: transparent #fff transparent #fff;
+  border-radius: 1em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.switch-led:after {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  color: #666;
+  font-family: arial, verdana, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0.1em rgba(0,0,0,0.7);
+}
+
+.switch-led-green:after {
+  content: 'ON';
+  top: -1.8em;
+}
+
+.switch-led-red:after {
+  content: 'OFF';
+  bottom: -1.8em;
+}
+
+.switch-led-green {
+  top: -5em;
+  border-top: 0.1em solid rgba(0,161,75,0.5);
+  border-bottom: 0.1em solid rgba(255,255,255,0.25);
+}
+
+.switch-led-green .switch-led-light {
+  background: rgb(0,161,75);
+  border: 0.1em solid rgb(0,104,56);
+}
+
+.switch-led-red {
+  bottom: -5em;
+  border-top: 0.1em solid rgba(237,28,36,0.2);
+  border-bottom: 0.1em solid rgba(255,255,255,0.25);
+  -webkit-box-shadow: 0 0 3em rgb(237,28,36);
+  -moz-box-shadow: 0 0 3em rgb(237,28,36);
+  box-shadow: 0 0 3em rgb(237,28,36);
+}
+
+.switch-led-red .switch-led-light {
+  background: rgb(237,28,36);
+  border: 0.1em solid rgb(161,30,45);
+}
+
+.switch-led-red .switch-led-glow {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  filter: alpha(opacity=30);
+}
+
+/* Switch on */
+
+.switch input:checked~.switch-handle-left, .switch input:checked~.switch-handle-right {
+  top: 1.5em;
+  border-bottom: 0;
+  border-top: 4.5em solid #111;
+}
+
+.switch input:checked~.switch-handle {
+  top: 1.5em;
+}
+
+.switch input:checked~.switch-handle-top {
+  top: -1em;
+  border-top: 0;
+  border-bottom: 0.2em solid #AEB2B3;
+}
+
+.switch input:checked~.switch-handle-bottom {
+  top: 4.2em;
+  border-top: 0;
+  border-bottom: 0.2em solid #141414;
+}
+
+.switch input:checked~.switch-handle-base {
+  top: 4.5em;
+  border-top: 0;
+  border-bottom: 0.2em solid rgba(255,255,255,0.35);
+}
+
+.switch input:checked~.switch-led-green {
+  -webkit-box-shadow: 0 0 3em rgb(0,161,75);
+  -moz-box-shadow: 0 0 3em rgb(0,161,75);
+  box-shadow: 0 0 3em rgb(0,161,75);
+}
+
+.switch input:checked~.switch-led-green .switch-led-glow {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
+  filter: alpha(opacity=40);
+}
+
+.switch input:checked~.switch-led-red {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.switch input:checked~.switch-led-red .switch-led-glow {
+  background: rgba(255, 255, 255, 0);
+  filter: alpha(opacity=0);
+}
+
+#switchwhite {
+  visibility: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  left: 9999px;
+}
+
+.switchwhite {
+  display: block;
+  width: 130px;
+  height: 60px;
+  margin: 70px auto;
+  position: relative;
+  background: #ced8da;
+ /* Old browsers */
+  background: -moz-linear-gradient(left,  #ced8da 0%, #d8e0e3 29%, #ccd4d7 34%, #d4dcdf 62%, #fff9f4 68%, #e1e9ec 74%, #b7bfc2 100%);
+ /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ced8da), color-stop(29%,#d8e0e3), color-stop(34%,#ccd4d7), color-stop(62%,#d4dcdf), color-stop(68%,#fff9f4), color-stop(74%,#e1e9ec), color-stop(100%,#b7bfc2));
+ /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #ced8da 0%,#d8e0e3 29%,#ccd4d7 34%,#d4dcdf 62%,#fff9f4 68%,#e1e9ec 74%,#b7bfc2 100%);
+ /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #ced8da 0%,#d8e0e3 29%,#ccd4d7 34%,#d4dcdf 62%,#fff9f4 68%,#e1e9ec 74%,#b7bfc2 100%);
+ /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #ced8da 0%,#d8e0e3 29%,#ccd4d7 34%,#d4dcdf 62%,#fff9f4 68%,#e1e9ec 74%,#b7bfc2 100%);
+ /* IE10+ */
+  background: linear-gradient(to right,  #ced8da 0%,#d8e0e3 29%,#ccd4d7 34%,#d4dcdf 62%,#fff9f4 68%,#e1e9ec 74%,#b7bfc2 100%);
+ /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ced8da', endColorstr='#b7bfc2',GradientType=1 );
+ /* IE6-9 */
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  border-radius: 0.35em;
+  box-shadow: 0 0 1px 2px rgba(0,0,0,0.7),
+    inset 0 2px 0 rgba(255,255,255,0.6),
+    inset 0 -1px 0 1px rgba(0,0,0,0.3),
+    0 8px 10px rgba(0,0,0,0.15);
+}
+
+.switchwhite:before {
+  display: block;
+  position: absolute;
+  left: -35px;
+  right: -35px;
+  top: -25px;
+  bottom: -25px;
+  z-index: -2;
+  content: "";
+  border-radius: 0.4em;
+  background: #d5dde0;
+  background: linear-gradient(#d7dfe2, #bcc7cd);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.6),
+    inset 0 -1px 1px 1px rgba(0,0,0,0.3),
+    0 0 8px 2px rgba(0,0,0,0.2),
+    0 2px 4px 2px rgba(0,0,0,0.1);
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+}
+
+.switchwhite:after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #788b91;
+  margin-top: -8px;
+  z-index: -1;
+  box-shadow: inset 0 -1px 8px rgba(0,0,0,0.7),
+    inset 0 -2px 2px rgba(0,0,0,0.2),
+    0 1px 0 white,
+    0 -1px 0 rgba(0,0,0,0.5),
+    -47px 32px 15px 13px rgba(0,0,0,0.25);
+}
+
+#switchwhite:checked ~ .switchwhite {
+  background: #b7bfc2;
+ /* Old browsers */
+  background: -moz-linear-gradient(left, #b7bfc2 0%, #e1e9ec 26%, #fff9f4 32%, #d4dcdf 38%, #ccd4d7 66%, #d8e0e3 71%, #ced8da 100%);
+ /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#b7bfc2), color-stop(26%,#e1e9ec), color-stop(32%,#fff9f4), color-stop(38%,#d4dcdf), color-stop(66%,#ccd4d7), color-stop(71%,#d8e0e3), color-stop(100%,#ced8da));
+ /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #b7bfc2 0%,#e1e9ec 26%,#fff9f4 32%,#d4dcdf 38%,#ccd4d7 66%,#d8e0e3 71%,#ced8da 100%);
+ /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #b7bfc2 0%,#e1e9ec 26%,#fff9f4 32%,#d4dcdf 38%,#ccd4d7 66%,#d8e0e3 71%,#ced8da 100%);
+ /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #b7bfc2 0%,#e1e9ec 26%,#fff9f4 32%,#d4dcdf 38%,#ccd4d7 66%,#d8e0e3 71%,#ced8da 100%);
+ /* IE10+ */
+  background: linear-gradient(to right, #b7bfc2 0%,#e1e9ec 26%,#fff9f4 32%,#d4dcdf 38%,#ccd4d7 66%,#d8e0e3 71%,#ced8da 100%);
+ /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7bfc2', endColorstr='#ced8da',GradientType=1 );
+ /* IE6-9 */
+}
+
+#switchwhite:checked ~ .switchwhite:after {
+  background: #b1ffff;
+  box-shadow: inset 0 -1px 8px rgba(0,0,0,0.7),
+    inset 0 -2px 2px rgba(0,0,0,0.2),
+    0 1px 0 white,
+    0 -1px 0 rgba(0,0,0,0.5),
+    -110px 32px 15px 13px rgba(0,0,0,0.25);
+}
+</style>
