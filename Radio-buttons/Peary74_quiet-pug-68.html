@@ -1,0 +1,189 @@
+<div class="radio-input">
+    <label class="radio-component">
+        <input value="value-1" name="RadioV" class="radiostyle" id="value-1" type="radio">
+      
+      <span class="RadioBtn">
+        <div class="radioTxt1"> Sun &nbsp; </div>
+         <span class="crater Krt2"></span>
+              
+    </span></label>
+    <label class="radio-component">
+        <input value="value-2" name="RadioV" class="radiostyle" id="value-2" type="radio">
+          
+      
+        <span class="RadioBtn2">
+          <div class="radioTxt2">Moon</div>
+              <span class="crater Krt1"></span>
+              <span class="crater Krt2"></span>
+              <span class="crater Krt3"></span>
+          </span>
+      
+    </label>
+    <label class="radio-component">
+        <input value="value-3" name="RadioV" class="radiostyle" id="value-3" type="radio">
+      
+          <span class="RadioBtn3">
+            <div class="radioTxt3">Dark</div>
+             
+              <span class="crater Krt3"></span>
+          </span>
+            
+    </label>
+  </div>
+<style>
+/* From Uiverse.io by Peary74 - Tags: radio */
+.radio-component {
+  display: flex;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radiostyle {
+  display: none;
+}
+
+.radioTxt1 {
+  padding: 10px 40px;
+  color: #fd9800;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.radioTxt2 {
+  padding: 10px 40px;
+  color: #7e7e7e;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.radioTxt3 {
+  padding: 10px 40px;
+  color: #181818;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.radio-component .RadioBtn:hover {
+  background: #ffdf6a;
+  border-radius: 100px;
+}
+
+.radio-component .RadioBtn2:hover {
+  background: #cacaca;
+  border-radius: 100px;
+}
+
+.radio-component .RadioBtn3:hover {
+  background: #313239;
+  border-radius: 100px;
+}
+
+.radiostyle:checked~ .RadioBtn {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: 30px;
+  width: 44px;
+  height: 44px;
+  background-color: #ffd401;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg);
+}
+
+.radiostyle:checked~ .RadioBtn2 {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: 30px;
+  width: 44px;
+  height: 44px;
+  background-color: #e8e8e8;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg);
+}
+
+.radiostyle:checked~ .RadioBtn3 {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: 30px;
+  width: 44px;
+  height: 44px;
+  background-color: #000;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, .3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg);
+}
+
+.RadioBtn .crater {
+  position: absolute;
+  background-color: #ffbb00;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+  border-radius: 100%;
+}
+
+.RadioBtn2 .crater {
+  position: absolute;
+  background-color: #b4b4b4;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+  border-radius: 100%;
+}
+
+.RadioBtn3 .crater {
+  position: absolute;
+  background-color: #2e2f33;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+  border-radius: 100%;
+}
+
+.radio-component .Krt1 {
+  top: 18px;
+  left: 10px;
+  width: 4px;
+  height: 4px;
+}
+
+.radio-component .Krt2 {
+  top: 28px;
+  left: 22px;
+  width: 6px;
+  height: 6px;
+}
+
+.radio-component .Krt3 {
+  top: 10px;
+  left: 25px;
+  width: 8px;
+  height: 8px;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+</style>
