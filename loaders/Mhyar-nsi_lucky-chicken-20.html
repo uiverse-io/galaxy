@@ -1,0 +1,76 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by Mhyar-nsi - Tags: loader */
+.loader {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 10px;
+}
+
+@keyframes loader-bubbles {
+  0% {
+    box-shadow: 0 -10px #3b82f6,
+                3px 0 #3b82f6,
+                5px 0 #3b82f6;
+  }
+
+  30% {
+    box-shadow: 3px -20px rgba(239,223,255,0),
+                5px -10px #3b82f6,
+                5px 0 #3b82f6;
+  }
+
+  60% {
+    box-shadow: 3px 0 rgba(239,223,255,0),
+                4px -20px rgba(239,223,255,0),
+                3px -10px #3b82f6;
+  }
+
+  61% {
+    box-shadow: 3px 0 #3b82f6,
+                4px -20px rgba(239,223,255,0),
+                3px -10px #3b82f6;
+  }
+
+  100% {
+    box-shadow: 0 -10px #3b82f6,
+                4px -20px rgba(239,223,255,0),
+                5px -20px rgba(239,223,255,0);
+  }
+}
+
+.loader {
+  width: 10px;
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: #3b82f6;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+}
+
+.loader:before {
+  top: -8px;
+  left: -13px;
+  width: 0;
+  height: 0;
+  border: 18px solid transparent;
+  border-bottom: 20px solid #3b82f6;
+  border-radius: 3px;
+}
+
+.loader:after {
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 50%;
+  animation: loader-bubbles 1s linear infinite forwards;
+}
+</style>
