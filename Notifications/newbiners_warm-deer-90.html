@@ -1,0 +1,99 @@
+<div class="notification">
+  <span>L</span>
+  <span>E</span>
+  <span>V</span>
+  <span>E</span>
+  <span>L</span>
+  <span>U</span>
+  <span>P</span>
+  <span>!</span>
+</div>
+<style>
+/* From Uiverse.io by newbiners - Tags: notification */
+.notification {
+  width: 250px;
+  height: 60px;
+  background: rgb(146, 146, 146);
+  border-radius: 14px;
+  font-size: 2.3em;
+  font-weight: 700;
+  color: black;
+  text-shadow: 2px 2px yellow;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.notification span {
+  -webkit-animation: levelup 2s ease infinite;
+  animation: levelup 2s ease infinite;
+}
+
+.notification span:nth-child(2) {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+.notification span:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.notification span:nth-child(4) {
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+
+.notification span:nth-child(5) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.notification span:nth-child(6) {
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s;
+}
+
+.notification span:nth-child(7) {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.notification span:nth-child(8) {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s;
+}
+
+@-webkit-keyframes levelup {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes levelup {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+</style>
