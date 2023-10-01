@@ -1,0 +1,116 @@
+<div class="installer">
+	<label for="progressLinux"><input id="progressLinux" type="radio"><span></span></label>
+</div>
+<style>
+/* From Uiverse.io by JkHuger - Tags: button, progress, progress bar, download */
+.installer {
+  width: 200px;
+  height: 40px;
+}
+
+.installer label {
+  position: absolute;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.installer label input {
+  display: none;
+}
+
+.installer label span {
+  position: absolute;
+  height: 40px;
+  width: 200px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background: #3F8EFC;
+  border-radius: 5px;
+}
+
+.installer label input:checked ~ span {
+  background: #87E544;
+  animation: downloadSuccess 3.1s ease;
+}
+
+.installer label span:after {
+  content: 'DOWNLOAD';
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  left: 10%;
+}
+
+.installer label input:checked ~ span:after {
+  content: 'Thank you!';
+  animation: downloadState 3s;
+}
+
+.installer label span:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  background: rgba(255,255,255,.2);
+}
+
+.installer label input:checked ~ span:before {
+  animation: downloadProgress 3s cubic-bezier(.67,.13,.1,.81);
+}
+
+@keyframes downloadSuccess {
+  0%, 90% {
+    background: #3F8EFC;
+  }
+
+  100% {
+    background: #87E544;
+  }
+}
+
+@keyframes downloadState {
+  0%, 95% {
+    content: 'DOWNLOADING...'
+  }
+
+  100% {
+    content: 'Thank you for download!'
+  }
+}
+
+@keyframes downloadProgress {
+  0% {
+    width: 5%;
+    opacity: 1;
+  }
+
+  35% {
+    width: 17%;
+  }
+
+  64% {
+    width: 51%;
+  }
+
+  81% {
+    width: 70%;
+  }
+
+  90% {
+    width: 86%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+</style>
