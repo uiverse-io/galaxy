@@ -1,0 +1,46 @@
+<div class="svg-wrapper">
+  <svg height="60" width="190" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="190"></rect>
+    </svg>
+    <div class="text">Subscribe</div>
+</div>
+<style>
+/* From Uiverse.io by AmIt-DasIT - Tags: button, add, btn */
+.svg-wrapper {
+  position: relative;
+  width: 190px;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shape {
+  stroke-dasharray: 100 300;
+  stroke-dashoffset: -297;
+  fill: transparent;
+  stroke: rgb(220, 20, 60);
+  stroke-width: 5px;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.text {
+  font-size: 22px;
+  top: -52px;
+  position: relative;
+  font-weight: 600;
+  color: white;
+}
+
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+.svg-wrapper:hover {
+  background-color: rgba(220, 20, 60, 0.2);
+  transition: 1s;
+}
+
+
+</style>
