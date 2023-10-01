@@ -1,0 +1,74 @@
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+  <span class="knob"></span>
+</label>
+
+<style>
+/* From Uiverse.io by elijahwgummer-poc - Tags: simple, switch, yes, no, animated, start/stop, wobble  */
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: #ff6b6b;
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.switch input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider:before {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.knob {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.switch input:checked ~ .knob {
+  transform: translateX(27px) translateY(-50%);
+}
+
+</style>
