@@ -1,0 +1,104 @@
+
+  <div class="radio-group">
+    <input class="radio-input" name="radio-group" id="radio1" type="radio">
+    <label class="radio-label" for="radio1">
+      <span class="radio-inner-circle"></span>
+      Option 1
+    </label>
+    
+    <input class="radio-input" name="radio-group" id="radio2" type="radio">
+    <label class="radio-label" for="radio2">
+      <span class="radio-inner-circle"></span>
+      Option 2
+    </label>
+    
+    <input class="radio-input" name="radio-group" id="radio3" type="radio">
+    <label class="radio-label" for="radio3">
+      <span class="radio-inner-circle"></span>
+      Option 3
+    </label>
+  </div>
+
+
+
+<style>
+/* From Uiverse.io by coding-masala - Tags: radio, advanced */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.radio-label:hover {
+  background-color: #e6e6e6;
+}
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-input:checked + .radio-label {
+  background-color: #ffc3c3;
+  border-color: #ff1111;
+}
+
+.radio-input:focus + .radio-label {
+  outline: 2px solid #ff1111;
+}
+
+.radio-inner-circle {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #888;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.radio-label:hover .radio-inner-circle {
+  border-color: #555;
+}
+
+.radio-input:checked + .radio-label .radio-inner-circle {
+  border-color: #ff1111;
+}
+
+.radio-input:checked + .radio-label .radio-inner-circle::after {
+  content: '';
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #ff1111;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+    
+</style>
