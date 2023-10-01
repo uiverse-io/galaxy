@@ -1,0 +1,512 @@
+<div class="notification">
+  <div class="text">
+    <strong>LEVEL UP !!!</strong>
+    <strong>CONGRATULATIONS !!!</strong>
+  </div>
+
+  <div class="crystal-border">
+    <div class="crystal">
+    </div>
+  </div>
+
+  <div class="progress-ring-m7">
+  </div>
+  <div class="progress-ring-m7-inner">
+  </div>
+
+  <svg height="100" width="100" class="progress-ring">
+    <circle cy="50" cx="50" r="38" fill="transparent" stroke-width="7"></circle>
+  </svg>
+
+  <svg height="100" width="104" class="progress-ring-two">
+    <circle cy="50" cx="50" r="45" fill="transparent" stroke-width="13"></circle>
+  </svg>
+  <svg height="100" width="100" class="progress-ring-two">
+    <circle cy="50" cx="50" r="37" fill="transparent" stroke-width="10"></circle>
+  </svg>
+
+  <div class="wings">
+  </div>
+
+  <div class="shield">
+    <div class="shield-up">
+      <div class="shield-top-right">
+        <div class="shield-top-right-inside">
+        </div>
+      </div>
+      <div class="shield-top-left">
+        <div class="shield-top-left-inside">
+        </div>
+      </div>
+    </div>
+
+    <div class="shield-down">
+      <div class="shield-bottom-right">
+        <div class="shield-bottom-right-inside">
+        </div>
+      </div>
+      <div class="shield-bottom-left">
+        <div class="shield-bottom-left-inside">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="line-center-border">
+    <div class="line-center"></div>
+  </div>
+</div>
+
+
+<style>
+/* From Uiverse.io by StealthWorm - Tags: notification */
+.notification {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  transition: all 3s ease;
+}
+
+.text {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  top: 1.5rem;
+}
+
+strong {
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.438);
+  animation: gradient 5s ease infinite;
+}
+
+.notification:hover .text {
+  opacity: 1;
+  transition: 1s;
+  transition-delay: 3s;
+  transform: translateY(-1.5rem);
+}
+
+.notification:hover .crystal {
+  animation: pulse_crystal 1s ease;
+  transition: 1s;
+  transform: scale(1.3);
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  background: conic-gradient(#3fb2ff 0%, #261caf 45%, #44d2eb 50%, #fdfdfd 100%);
+  clip-path: polygon(50% 0, 84% 30%, 84% 70%, 50% 100%, 15% 70%, 15% 30%);
+}
+
+.notification:hover .crystal-border {
+  transition: 1s;
+  clip-path: polygon(50% 0, 90% 30%, 90% 70%, 50% 100%, 10% 70%, 10% 30%);
+}
+
+.crystal-border {
+  z-index: 3;
+  display: flex;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: #000000;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.crystal {
+  inset: 12px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: conic-gradient(#ca22b9 0%, #792e83 45%, #ff26e9 50%, #ffffff 100%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transition: all 1s ease;
+}
+
+.line-center-border {
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  clip-path: polygon(50% 20%, 60% 18%, 60% 80%, 50% 90%, 40% 80%, 40% 18%);
+}
+
+.line-center {
+  display: flex;
+  position: absolute;
+  margin: 4px;
+  width: 3rem;
+  top: 1.8rem;
+  height: 7.7rem;
+  transition: 2s;
+  opacity: 0;
+  background: linear-gradient(90deg, #796f1c 50%, #c7b82f 50%);
+  clip-path: polygon(50% 5%, 60% 8%, 60% 87%, 50% 90%, 40% 87%, 40% 8%);
+}
+
+.notification:hover .line-center {
+  z-index: 1;
+  opacity: 1;
+}
+
+.progress-ring {
+  z-index: 2;
+  position: absolute;
+  top: 22%;
+  stroke-dasharray: 135 120%;
+  stroke: #113736;
+  border-radius: 50%;
+  transform: rotate(-12deg);
+  transition: all 4s ease;
+}
+
+.notification:hover .progress-ring__blue {
+  transition: all 2s ease;
+  stroke-dasharray: 13 5;
+}
+
+.progress-ring-m7 {
+  z-index: 1;
+  visibility: hidden;
+  width: 7rem;
+  height: 5.5rem;
+  top: 28%;
+  background: transparent;
+  position: absolute;
+  border-radius: 50%;
+  border-style: double;
+  border: 8px solid #b9a80f;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.progress-ring-m7-inner {
+  z-index: 1;
+  visibility: hidden;
+  display: flex;
+  box-sizing: content-box;
+  width: 6rem;
+  height: 4.5rem;
+  background: transparent;
+  position: absolute;
+  border-radius: 50%;
+  border-style: dashed;
+  border: 6px dashed #113736;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.notification:hover .progress-ring-m7 {
+  visibility: visible;
+  animation: pulse_m7 1.5s ease-in-out;
+}
+
+.notification:hover .progress-ring-m7-inner {
+  visibility: visible;
+  transition: all 3s ease;
+  animation: pulse_m7 1.5s ease-in-out;
+}
+
+.progress-ring-two:nth-of-type(2) {
+  z-index: 1;
+  position: absolute;
+  top: 20%;
+  stroke-dasharray: 140 100;
+  stroke: #b9a80f;
+  border-radius: 50%;
+  transform: rotate(27deg);
+}
+
+.progress-ring-two:nth-of-type(3) {
+  z-index: 1;
+  position: absolute;
+  top: 22%;
+  stroke-dasharray: 140 100;
+  stroke: #b9a80f;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+.notification:hover svg {
+  animation: pulse_svg 3s ease;
+}
+
+.wings {
+  z-index: 1;
+  position: absolute;
+  top: 20%;
+  width: 10rem;
+  height: 8rem;
+  clip-path: polygon(
+  0% 0%, 28% 27%, 32% 31%, 27% 40%, 25% 50%, 
+  30% 60%, 47% 67%, 45% 67%, 57% 66%, 64% 64%, 
+  70% 59%, 70% 46%, 70% 46%, 75% 40%, 
+
+  70% 26%, 100% 0%, 100% 10%, 95% 14%,
+
+  95% 19%, 90% 23%, 90% 29%, 69% 50%, 
+  72% 56%, 69.38% 62%, 65% 65%, 57.5% 66%, 50% 67%, 41% 67%, 
+  32% 64%, 
+  
+  28% 49%, 10% 30%, 10% 22%, 5% 18%, 5% 13%, 0% 9%
+  );
+  background-color: #b9a80f;
+  transition: all px2s ease;
+}
+
+.notification:hover .wings {
+  transform: scale(1.2);
+  animation: pulse_wing 3s ease;
+}
+
+.notification:hover .shield {
+  animation: pulse 2s ease;
+}
+
+.notification:hover .shield-bottom-left {
+  left: 3.5rem;
+}
+
+.notification:hover .shield-bottom-right {
+  left: 6.2rem;
+}
+
+.shield {
+  z-index: 4;
+  display: flex;
+  position: absolute;
+  width: fit-content;
+  top: 19%;
+  left: 17%;
+  flex-direction: column;
+  gap: 3rem;
+  transition: all 2s ease;
+}
+
+.shield-up, 
+.shield-down {
+  display: flex;
+  position: relative;
+}
+
+.shield-bottom-left {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  width: 3.4rem;
+  height: 5rem;
+  left: 4rem;
+  clip-path: polygon(22% 12%, 60% 36%, 60% 90%, 22% 64%);
+  background-color: #696115;
+}
+
+.shield-bottom-right {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  width: 3.4rem;
+  height: 5rem;
+  left: 5.7rem;
+  clip-path: polygon(62% 12%, 20% 36%, 20% 90%, 62% 64%);
+  background-color: #696115;
+}
+
+.shield-bottom-right-inside {
+  clip-path: polygon(62% 12%, 20% 36%, 20% 90%, 62% 64%);
+}
+
+.shield-bottom-left-inside {
+  clip-path: polygon(22% 12%, 60% 36%, 60% 90%, 22% 64%);
+}
+
+.shield-bottom-left-inside,
+.shield-bottom-right-inside {
+  position: absolute;
+  background-color: #b9a80f;
+  inset: 5px;
+}
+
+.shield-top-left {
+  display: flex;
+  position: absolute;
+  width: 3.4rem;
+  height: 4rem;
+  left: 4rem;
+  clip-path: polygon(1% 10%, 10% 0%, 58% 20%, 58% 72%, 40% 86%, 18% 70%, 18% 74%, 22% 65%, 25% 55%, 22% 41%, 18% 31%, 10% 20%);
+  background-color: #696115;
+}
+
+.shield-top-right {
+  display: flex;
+  position: absolute;
+  width: 3.4rem;
+  height: 4rem;
+  left: 5rem;
+  clip-path: polygon(100% 10%, 90% 0%, 42% 20%, 42% 70%, 60% 85%, 80% 70%, 76% 60%, 75% 55%, 75% 55%, 78% 41%, 82% 31%, 90% 20%);
+  background-color: #696115;
+}
+
+.notification:hover .shield-top-left {
+  left: 3.6rem;
+  clip-path: polygon(1% 10%, 10% 0%, 58% 20%, 58% 70%, 45% 78% , 45% 95%, 15% 70%, 15% 68%, 22% 66%, 25% 55%, 22% 41%, 18% 31%, 10% 20%);
+}
+
+.notification:hover .shield-top-right {
+  left: 5.4rem;
+  clip-path: polygon(100% 10%, 90% 0%, 42% 20%, 42% 70%, 55% 78%, 55% 95%, 84% 75%, 78% 68%, 79% 69%, 75% 55%, 78% 41%, 82% 31%, 90% 20%);
+}
+
+.notification:hover .shield-top-right-inside {
+  clip-path: polygon(100% 10%, 90% 0%, 42% 20%, 42% 70%, 55% 78%, 55% 95%, 84% 75%, 78% 68%, 79% 69%, 75% 55%, 78% 41%, 82% 31%, 90% 20%);
+}
+
+.notification:hover .shield-top-left-inside {
+  clip-path: polygon(1% 10%, 10% 0%, 58% 20%, 58% 70%, 45% 78% , 45% 95%, 15% 70%, 15% 68%, 22% 66%, 25% 55%, 22% 41%, 18% 31%, 10% 20%);
+}
+
+.shield-top-right-inside {
+  clip-path: polygon(100% 10%, 90% 0%, 42% 20%, 42% 70%, 60% 85%, 80% 70%, 76% 60%, 75% 55%, 75% 55%, 78% 41%, 82% 31%, 90% 20%);
+}
+
+.shield-top-left-inside {
+  clip-path: polygon(1% 10%, 10% 0%, 58% 20%, 58% 72%, 40% 86%, 18% 70%, 18% 74%, 22% 65%, 25% 55%, 22% 41%, 18% 31%, 10% 20%);
+}
+
+.shield-top-left-inside,
+.shield-top-right-inside {
+  position: absolute;
+  background-color: #b9a80f;
+  inset: 4px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.3);
+    left: 7%;
+    filter: brightness(150%);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse_wing {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.3);
+    filter: brightness(150%);
+  }
+
+  100% {
+    transform: scale(1.2);
+    filter: brightness(100%);
+  }
+}
+
+@keyframes pulse_svg {
+  0% {
+    filter: brightness(100%);
+  }
+
+  70% {
+    filter: brightness(150%);
+  }
+
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+@keyframes pulse_m7 {
+  0% {
+    filter: brightness(100%);
+    visibility: hidden;
+    transform: scale(1);
+  }
+
+  70% {
+    filter: brightness(150%);
+    visibility: visible;
+    transform: scale(1.3);
+  }
+
+  100% {
+    filter: brightness(100%);
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse_crystal {
+  0% {
+    transform: scale(1);
+    transform: rotateY(3rad);
+  }
+
+  70% {
+    transform: scale(1.5);
+    filter: brightness(180%);
+    transform: rotateY(10rad);
+  }
+
+  100% {
+    transform: scale(1.3);
+    filter: brightness(100%);
+    transform: rotateY(80rad);
+  }
+}
+
+@keyframes show {
+  0% {
+    visibility: hidden;
+    transform: translateY(0);
+  }
+
+  100% {
+    visibility: visible;
+    transform: translateY(5rem);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+</style>
