@@ -1,0 +1,94 @@
+<form class="form">
+    <input placeholder="Email address or phone number" class="input" type="text">
+    <input placeholder="Password" class="input" type="password" id="password"> 
+    <button id="loginBtn">Log in</button>
+    <a id="forgotPassword" href="#">Forgotten password?</a>
+    <button class="create" id="createAccountBtn">Create new account</button>
+</form>
+<style>
+/* From Uiverse.io by iamriishav - Tags: form */
+.form {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.input {
+  font-size: 15px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2), 0 .5px .5px rgba(0, 0, 0, .2);
+  outline: none;
+}
+
+.input:focus {
+  outline: 1.2px solid #1877f2;
+}
+
+#loginBtn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 20px;
+  align-self: center;
+  background: #1877f2;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#loginBtn:hover {
+  background: #196fe0;
+}
+
+#forgotPassword {
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 13px;
+  align-self: center;
+  font-weight: bold;
+  color: #1877f2;
+}
+
+#forgotPassword::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: .5px;
+  bottom: -25px;
+  left: 0;
+  background: #dadde1;
+}
+
+#forgotPassword:hover {
+  text-decoration: underline;
+}
+
+#createAccountBtn {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding: 15px 15px;
+  align-self: center;
+  background: #42b72a;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#createAccountBtn:hover {
+  background: #34a61d;
+}
+</style>
