@@ -1,0 +1,61 @@
+<label class="switch">
+  <input class="checkbox" type="checkbox">
+  <span class="slider"></span>
+</label>
+<style>
+/* From Uiverse.io by radwakhalil22 - Tags: gradient, switch, checkbox, glow, animated */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch .checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px 2px #222831, -2px -2px 2px 2px #393E46, -2px 2px 2px 2px #00ADB5, 2px -2px 2px 2px #EEEEEE;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  transition: .4s;
+}
+
+.checkbox:checked + .slider:before {
+  box-shadow: 2px 2px 2px 2px #222831, -2px -2px 2px 2px #393E46, -2px 2px 2px 2px #00ADB5, 2px -2px 2px 2px #EEEEEE;
+}
+
+.checkbox:checked + .slider {
+  background-color: #afa2a2;
+  box-shadow: 2px 2px 2px 2px #222831, -2px -2px 2px 2px #393E46, -2px 2px 2px 2px #00ADB5, 2px -2px 2px 2px #EEEEEE;
+}
+
+.checkbox:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+</style>
