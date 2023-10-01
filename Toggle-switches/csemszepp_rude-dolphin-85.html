@@ -1,0 +1,126 @@
+<label class="switch">
+	<input type="checkbox" class="chbox">
+	<div class="slider slider--0">ON</div>
+	<div class="slider slider--1">
+		<div></div>
+		<div></div>
+	</div>
+	<div class="slider slider--2"></div>
+	<div class="slider slider--3">OFF</div>
+</label>
+<style>
+/* From Uiverse.io by csemszepp - Source: codepen.io/narohan/pen/dyNwjJL - Tags: switch, checkbox, cool checkbox */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #dcdcdc;
+  background: #e0e0e0;
+  box-shadow: 7px 7px 23px #bebebe, -7px -7px 23px #ffffff;
+  overflow: hidden;
+  border-radius: 60px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.chbox:checked + .slider:before {
+  background: white;
+  box-shadow: none;
+}
+
+.chbox:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.slider {
+  color: #9a9a9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.slider--0 {
+  color: white;
+  font-weight: 600;
+  background-color: #49d84e;
+}
+
+.slider--1 div {
+  transition: 0.5s;
+}
+
+.slider--1 div {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+}
+
+.chbox:checked ~ .slider--1 div:first-child {
+  transform: translateY(-100%);
+  transition-delay: 1s;
+}
+
+.chbox:checked ~ .slider--1 div:last-child {
+  transform: translateY(100%);
+  transition-delay: 1s;
+}
+
+.chbox:checked ~ .slider--2 {
+  transform: translateX(100%);
+  transition-delay: 0.5s;
+}
+
+.chbox:checked ~ .slider--3 {
+  transform: translateX(-100%);
+  transition-delay: 0s;
+}
+
+.slider--1 div:first-child {
+  transform: translateY(0);
+  top: 0;
+  background-color: #f3f3f3;
+  transition-delay: 0s;
+}
+
+.slider--1 div:last-child {
+  transform: translateY(0);
+  bottom: 0;
+  background-color: #f3f3f3;
+  border-top: 1px solid #e0e0e0;
+  transition-delay: 0s;
+}
+
+.slider--2 {
+  background-color: #e6e6e6;
+  transition-delay: 0.5s;
+  transform: translateX(0);
+  border-left: 1px solid #d2d2d2;
+}
+
+.slider--3 {
+  background-color: #d2d2d2;
+  transition-delay: 1s;
+  transform: translatex(0);
+  border-right: 1px solid #d2d2d2;
+}
+
+</style>
