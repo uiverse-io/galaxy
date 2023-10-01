@@ -1,0 +1,128 @@
+<div class="notification">
+  <div class="icon">
+    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" version="1.1" class="icon" viewBox="0 0 1024 1024"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"><path fill="#E9E8FF" d="M512 512m-480 0a480 480 0 1 0 960 0 480 480 0 1 0-960 0Z"></path><path fill="#8880FE" d="M723.2 704c-25.6 0-51.2-12.8-70.4-32L582.4 582.4H435.2l-38.4 64c-19.2 32-51.2 57.6-89.6 57.6-57.6 0-102.4-44.8-102.4-102.4v-12.8V576l25.6-166.4c6.4-70.4 57.6-121.6 128-121.6 32 0 70.4 12.8 89.6 38.4 25.6 0 89.6-6.4 128 0 25.6-25.6 57.6-32 89.6-32 51.2 0 96 32 115.2 83.2v12.8l38.4 179.2c0 6.4 6.4 19.2 6.4 32 0 51.2-44.8 102.4-102.4 102.4z"></path><path fill="#FFFFFF" d="M716.8 460.8c-12.8 0-19.2-12.8-19.2-19.2s6.4-19.2 19.2-19.2c12.8 0 19.2 12.8 19.2 19.2s-6.4 19.2-19.2 19.2z m-108.8 0c-12.8 0-19.2-12.8-19.2-19.2s6.4-19.2 19.2-19.2c12.8 0 19.2 12.8 19.2 19.2s-6.4 19.2-19.2 19.2z m51.2 57.6c-6.4 0-19.2-6.4-19.2-19.2s6.4-19.2 19.2-19.2 19.2 12.8 19.2 19.2-6.4 19.2-19.2 19.2z m0-115.2c-6.4 0-19.2-6.4-19.2-19.2s6.4-19.2 19.2-19.2 19.2 12.8 19.2 19.2-6.4 19.2-19.2 19.2zM345.6 416h-51.2V448h51.2v51.2h32V448h51.2v-32h-51.2v-51.2h-32z"></path></g></svg>
+  </div>
+  <div class="messages">
+    <span class="title">Well done!</span>
+    <span class="description">New level reached.</span>
+    <span class="level">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#fff" d="M15 16L12.1937 13.1937V13.1937C12.0867 13.0867 11.9133 13.0867 11.8063 13.1937V13.1937L9 16"></path> <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#fff" d="M15 11L12.1505 8.15049V8.15049C12.0674 8.06738 11.9326 8.06738 11.8495 8.15049V8.15049L9 11"></path> </g></svg>
+      lvl. 8
+      </span>
+      
+  </div>
+  <div class="action">
+    <button>Next</button>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: notification */
+.notification {
+  width: 300px;
+  height: 70px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #212121;
+  box-shadow: 0px 42px 53px 13px rgba(0,0,0,0.1);
+  padding: 2px;
+  position: relative;
+  animation: appear .6s linear alternate-reverse infinite;
+  transition: all .6s ease;
+}
+
+.icon {
+  height: 100%;
+  transition: transform .6s ease;
+}
+
+.messages {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4px;
+}
+
+.title {
+  font-size: 0.95rem;
+  line-height: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #494949;
+}
+
+.description {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.level {
+  color: #7d5cf5;
+  font-weight: 600;
+  background-color: #7d5cf53f;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 0;
+  width: max-content;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.level svg {
+  height: 140%;
+  background-color: #7d5cf5;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+
+.action {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action button {
+  padding: 0.5rem  1rem;
+  background-color: #7d5cf5;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: none;
+  height: 40px;
+  transition: all .6s ease;
+  margin-right: 6px;
+}
+
+.notification:hover .icon {
+  transform: rotate(45deg);
+}
+
+.action button:hover {
+  height: 100%;
+  margin-right: 0;
+}
+
+.action button:active {
+  background-color: #4dec48;
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0.98);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+</style>
