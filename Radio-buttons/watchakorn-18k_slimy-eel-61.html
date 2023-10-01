@@ -1,0 +1,80 @@
+<div class="radio-input">
+  <input value="value-1" name="value-radio" id="value-1" type="radio">
+  <label for="value-1"></label>
+  <input value="value-2" name="value-radio" id="value-2" type="radio">
+  <label for="value-2"></label>
+  <input value="value-3" name="value-radio" id="value-3" type="radio">
+  <label for="value-3"></label>
+</div>
+<style>
+/* From Uiverse.io by watchakorn-18k - Tags: radio */
+.radio-input {
+  scale: 2;
+}
+
+.radio-input input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-input label {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.radio-input label::before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #f35;
+  box-shadow: 0px 0px 5px -1px rgb(255, 51, 85) inset,0px 0px 5px -1px rgb(255, 51, 85);
+}
+
+.radio-input input[type="radio"]:checked + label::before {
+  background-color: #f35;
+}
+
+.radio-input ::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    rgb(134, 14, 34) 80%,
+    rgb(20, 11, 116) 100%);
+  box-shadow: 0px 0px 5px -1px #f35 inset,0px 0px 5px -1px #f35;
+  scale: 1.2;
+  transition: transform 0.25s ease-in-out;
+}
+
+.radio-input label:hover::before {
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #f35 50%,
+    #43e 100%);
+  border: 0px;
+  box-shadow: 0px 0px 5px -1px #43e inset,0px 0px 5px -1px #43e;
+}
+
+.radio-input label:hover::after {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+
+
+
+</style>
