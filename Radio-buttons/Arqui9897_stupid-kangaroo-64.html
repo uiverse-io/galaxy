@@ -1,0 +1,120 @@
+
+  <label>
+    <input checked="" name="example" class="option-input radio circlegg" type="radio">
+  </label>
+  <label>
+    <input name="example" class="option-input radio circlegg" type="radio">
+  </label>
+  <label>
+    <input name="example" class="option-input radio circlegg" type="radio">
+  </label>
+
+<style>
+/* From Uiverse.io by Arqui9897 - Tags: radio */
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  z-index: 1000;
+}
+
+.option-input:hover {
+  background: #fa9115;
+}
+
+.option-input:checked {
+  background: #faa91b;
+}
+
+.option-input:checked::before {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.radio {
+  border-radius: 50%;
+}
+
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.circlegg {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, yellow),
+    linear-gradient(#040404, #0b0707);
+  animation: rotate 1.5s linear infinite;
+}
+
+.circlegg:before,
+.circlegg:after {
+  content: " ";
+  position: absolute;
+  inset: 4px;
+  background: linear-gradient(#181818, #1f1c1c);
+  border-radius: inherit;
+}
+
+.circlegg:before {
+  background: linear-gradient(45deg, transparent, transparent 40%, rgb(206, 91, 49));
+  filter: blur(25px);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+</style>
