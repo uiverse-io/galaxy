@@ -1,0 +1,85 @@
+<div class="container">
+  <button class="button">
+    <p>PREMIUM</p>
+  </button>
+</div>
+<style>
+/* From Uiverse.io by KSAplay - Tags: button */
+.container {
+  transition: 200ms ease;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  border-width: 0;
+  border-radius: 1em;
+  background-color: #19171C;
+  transition: 500ms ease;
+}
+
+.button p {
+  font-size: 20px;
+  font-weight: bold;
+  background: rgb(137,60,21);
+  background: linear-gradient(90deg, rgba(137,60,21,1) 0%, rgba(255,222,68,1) 17%, rgba(177,116,30,1) 24%, rgba(255,231,82,1) 40%, rgba(224,147,38,1) 50%, rgba(228,150,42,1) 59%, rgba(176,120,27,1) 70%, rgba(239,179,51,1) 85%, rgba(135,58,26,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button::before {
+  position: absolute;
+  content: '';
+  width: 190px;
+  height: 50px;
+  border-radius: 1em;
+  background-size: 100%;
+  background: rgb(137,60,21);
+  background: linear-gradient(90deg, rgba(137,60,21,1) 0%, rgba(255,222,68,1) 17%, rgba(177,116,30,1) 24%, rgba(255,231,82,1) 40%, rgba(224,147,38,1) 50%, rgba(228,150,42,1) 59%, rgba(176,120,27,1) 70%, rgba(239,179,51,1) 85%, rgba(135,58,26,1) 100%);
+  z-index: -1;
+}
+
+.container:hover .button::before {
+  animation: golden 5s infinite alternate ease-in-out;
+}
+
+.container:hover .button p {
+  animation: golden 5s infinite alternate ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.1);
+}
+
+.container:active {
+  transform: scale(1);
+}
+
+.container:active .button::before {
+  animation: golden 1s infinite alternate ease-in-out;
+}
+
+.container:active .button p {
+  animation: golden 1s infinite alternate ease-in-out;
+}
+
+@keyframes golden {
+  0% {
+    background-size: 100%;
+    background-position: 50%;
+  }
+
+  50% {
+    background-size: 500%;
+    background-position: 0%;
+  }
+
+  100% {
+    background-size: 200%;
+    background-position: 100%;
+  }
+}
+</style>
