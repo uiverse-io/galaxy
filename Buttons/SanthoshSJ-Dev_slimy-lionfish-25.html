@@ -1,0 +1,472 @@
+<div class="container">
+  <button class="button">
+    <div class="plate"></div>
+    <div class="plate"></div>
+    <div class="plate"></div>
+    <div class="plate"></div>
+    <div class="plate"></div>
+    <div class="button__wrapper">
+      <span class="button__text">Battery</span>
+    </div>
+    <div class="button__box">
+      <div class="inner inner__top"></div>
+      <div class="inner inner__front"></div>
+      <div class="inner inner__bottom"></div>
+      <div class="inner inner__back"></div>
+      <div class="inner inner__left"></div>
+      <div class="inner inner__right"></div>
+    </div>
+  </button>
+</div>
+<style>
+/* From Uiverse.io by SanthoshSJ-Dev - Tags: glassmorphism, button, colorful, battery */
+.button {
+  display: flex;
+  position: relative;
+  width: 200px;
+  height: 60px;
+  text-decoration: none;
+  perspective: 600px;
+  background: linear-gradient(#ffffff1a 0%, #ffffff00 30%, #ffffff00 70%, #ffffff1a);
+  box-shadow: 0 0 32px #000000;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.button::before {
+  top: 0;
+  transform-origin: top center;
+  transform: rotateX(70deg);
+  background: linear-gradient(135deg, #ffffff4d 10%, #ffffff00 60%);
+}
+
+.button::after {
+  bottom: 0;
+  transform-origin: bottom center;
+  transform: rotateX(-110deg);
+  background: radial-gradient(#ffffff00 40%, #ffffff1a);
+}
+
+.button__wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#ffffff66 0%, #ffffff00 30%, #ffffff00 70%, #ffffff33);
+  transform: translate3d(0, 27px, 74px);
+  perspective: 600px;
+}
+
+.button__text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff33;
+  transition: all ease-in-out 1s;
+}
+
+.button__text::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 60px;
+  background: linear-gradient(25deg, #ffffff1a, #ffffff00);
+  clip-path: path('M230,0H0V80H146.96c0-35.33,33.95-65.83,83.04-80Z');
+}
+
+.button__text::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+  left: 4px;
+  width: 272px;
+  height: 40px;
+  background: linear-gradient(25deg, #ffffff4d, #ffffff00);
+  clip-path: path('M272,9.22V0H0V40H.32C48.19,22.59,151.14,10.26,272,9.22Z');
+}
+
+.button__wrapper::before,
+.button__wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 84px;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff33 0%, #ffffff00 30%, #ffffff00 70%, #ffffff33);
+  background: radial-gradient(#ffffff00 40%, #ffffff1a);
+}
+
+.button__wrapper::before {
+  left: 0;
+  transform-origin: left center;
+  transform: rotateY(90deg) skewY(-20deg);
+}
+
+.button__wrapper::after {
+  right: 0;
+  transform-origin: right center;
+  transform: rotateY(-90deg) skewY(20deg);
+}
+
+.button__box {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  bottom: 0;
+  margin: auto 0;
+  width: 180px;
+  height: 49px;
+  transform: translate3d(0, 4px, 10px);
+  perspective: 600px;
+}
+
+.inner {
+  transition: all ease-in-out 1s;
+}
+
+.inner__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #64646433;
+  perspective: 600px;
+}
+
+.inner__top {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transform-origin: top left;
+  transform: rotateX(70deg);
+  background: #646464cc;
+}
+
+.inner__front {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transform-origin: top left;
+  transform: translate3d(0, 24px, 68px);
+  background: #646464cc;
+}
+
+.inner__bottom {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transform-origin: bottom left;
+  transform: rotateX(-110deg);
+  background: #64646433;
+}
+
+.inner__left {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 68px;
+  height: 100%;
+  transform-origin: center left;
+  transform: rotateY(-90deg) skewY(20deg);
+  background: rgba(255, 0, 0, 0);
+  transition: all linear .01s;
+}
+
+.inner__right {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 68px;
+  height: 100%;
+  transform-origin: center left;
+  transform: rotateY(-90deg) skewY(20deg);
+  background: rgba(255, 0, 0, 0);
+}
+
+.button:hover .inner__top,
+.button:hover .inner__front,
+.button:hover .inner__bottom,
+.button:hover .inner__back {
+  width: 100%;
+}
+
+.button:hover .inner__left {
+  background: #64646480;
+}
+
+.button:hover .inner__right {
+  left: 100%;
+  background: #64646480;
+}
+
+.button:hover .button__text {
+  color: #ffffff;
+}
+
+.plate {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: -20px;
+  width: 320px;
+  height: 120px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.plate:nth-child(1) {
+  animation-name: plate_1;
+}
+
+.plate:nth-child(2) {
+  animation-name: plate_2;
+}
+
+.plate:nth-child(3) {
+  animation-name: plate_3;
+}
+
+.plate:nth-child(4) {
+  animation-name: plate_4;
+}
+
+.plate:nth-child(5) {
+  animation-name: plate_5;
+}
+
+.button:hover .plate {
+  animation-play-state: paused;
+}
+
+.plate:nth-child(1):hover~.button__box .inner__top,
+.plate:nth-child(1):hover~.button__box .inner__front {
+  background: #d8003ccc;
+}
+
+.plate:nth-child(1):hover~.button__box .inner__left,
+.plate:nth-child(1):hover~.button__box .inner__right {
+  background: #d8003c80;
+}
+
+.plate:nth-child(1):hover~.button__box .inner__back,
+.plate:nth-child(1):hover~.button__box .inner__bottom {
+  background: #d8003c33;
+}
+
+.plate:nth-child(2):hover~.button__box .inner__top,
+.plate:nth-child(2):hover~.button__box .inner__front {
+  background: #0064becc;
+}
+
+.plate:nth-child(2):hover~.button__box .inner__left,
+.plate:nth-child(2):hover~.button__box .inner__right {
+  background: #0064be80;
+}
+
+.plate:nth-child(2):hover~.button__box .inner__back,
+.plate:nth-child(2):hover~.button__box .inner__bottom {
+  background: #0064be33;
+}
+
+.plate:nth-child(3):hover~.button__box .inner__top,
+.plate:nth-child(3):hover~.button__box .inner__front {
+  background: #00aa64cc;
+}
+
+.plate:nth-child(3):hover~.button__box .inner__left,
+.plate:nth-child(3):hover~.button__box .inner__right {
+  background: #00aa6480;
+}
+
+.plate:nth-child(3):hover~.button__box .inner__back,
+.plate:nth-child(3):hover~.button__box .inner__bottom {
+  background: #00aa6433;
+}
+
+.plate:nth-child(4):hover~.button__box .inner__top,
+.plate:nth-child(4):hover~.button__box .inner__front {
+  background: #ffe614cc;
+}
+
+.plate:nth-child(4):hover~.button__box .inner__left,
+.plate:nth-child(4):hover~.button__box .inner__right {
+  background: #ffe61480;
+}
+
+.plate:nth-child(4):hover~.button__box .inner__back,
+.plate:nth-child(4):hover~.button__box .inner__bottom {
+  background: #ffe61433;
+}
+
+.plate:nth-child(5):hover~.button__box .inner__top,
+.plate:nth-child(5):hover~.button__box .inner__front {
+  background: #9b32ffcc;
+}
+
+.plate:nth-child(5):hover~.button__box .inner__left,
+.plate:nth-child(5):hover~.button__box .inner__right {
+  background: #9b32ff80;
+}
+
+.plate:nth-child(5):hover~.button__box .inner__back,
+.plate:nth-child(5):hover~.button__box .inner__bottom {
+  background: #9b32ff33;
+}
+
+@keyframes plate_1 {
+  0% {
+    transform: scale(1);
+  }
+
+  19.9% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes plate_2 {
+  0% {
+    transform: scale(0);
+  }
+
+  19.9% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  39.9% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes plate_3 {
+  0% {
+    transform: scale(0);
+  }
+
+  39.9% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  59.9% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes plate_4 {
+  0% {
+    transform: scale(0);
+  }
+
+  59.9% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  79.9% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes plate_5 {
+  0% {
+    transform: scale(0);
+  }
+
+  79.9% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  padding: 50px 50px 80px 50px;
+  border-radius: 10px;
+}
+</style>
