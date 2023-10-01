@@ -1,0 +1,103 @@
+<div class="spinner-container">
+  <div class="spinner-inner">
+    <div class="spinner-outer">
+      <div class="spinner-inner-1"></div>
+      <div class="spinner-inner-2"></div>
+      <div class="spinner-inner-3"></div>
+      <div class="spinner-inner-4"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by MyNameJeremy - Tags: loader */
+.spinner-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.spinner-inner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2), -10px -10px 20px 0px rgba(255, 255, 255, 0.5);
+}
+
+.spinner-outer {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.5), 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  animation: spinner-rotate_51023 2s ease infinite;
+}
+
+.spinner-inner-1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0
+  0.2), -10px -10px 20px 0px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  animation: spinner-rotate_51023 2s ease infinite;
+}
+
+.spinner-inner-2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2), -10px -10px 20px 0px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  animation: spinner-rotate_51023 2s ease infinite;
+}
+
+.spinner-inner-3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2), -10px -10px 20px 0px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  animation: spinner-rotate_51023 2s ease infinite;
+}
+
+.spinner-inner-4 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2), -10px -10px 20px 0px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  animation: spinner-rotate_51023 2s ease infinite;
+}
+
+@keyframes spinner-rotate_51023 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
