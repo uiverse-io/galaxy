@@ -1,0 +1,132 @@
+<div class="box">
+  <div class="radio-input">
+    <input name="challenge" value="Option 1" type="radio" id="1id">
+    <label for="1id">Never</label><br>
+    <input name="challenge" value="Option 2" type="radio" id="2id">
+    <label for="2id">Stop</label><br>
+    <input name="challenge" value="Option 3" type="radio" id="3id">
+    <label for="3id">Dreaming </label><br>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by wizard503 - Tags: radio */
+.box {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background: tra;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 400px;
+  height: 450px;
+  background: linear-gradient(0deg,transparent,transparent,#2df4e9,#2df4e9,#48fb00);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 5s linear infinite;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 400px;
+  height: 450px;
+  background: linear-gradient(0deg,transparent,transparent,#f07f90,#f07f90,#c70000);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 5s linear infinite;
+  animation-delay: -2.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box .radio-input {
+  position: absolute;
+  inset: 4px;
+  background-color: #161616;
+  background-image: radial-gradient(ellipse at center, #eb3be3 0%, #231f55 70%);
+  background-size: 100% 100%;
+  animation: noise 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  border-radius: 10px;
+  padding: 50px 0px;
+  z-index: 2;
+  display: flex;
+}
+
+@keyframes noise {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    background-position: 0 0;
+  }
+
+  10% {
+    background-position: -5px -5px;
+  }
+
+  30% {
+    background-position: 5px -5px;
+  }
+
+  50% {
+    background-position: -5px 5px;
+  }
+
+  70% {
+    background-position: 5px 5px;
+  }
+}
+
+.radio-input input {
+  appearance: none;
+  width: 1.3em;
+  height: 1.3em;
+  margin: 12px;
+  font-size: inherit;
+  color: currentColor;
+  border: 0.2em solid #33f8ff;
+  box-shadow: 2px 2px 1px 0px rgb(7, 15, 63),4px 4px 5px 1px #690253 inset;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-input input:checked {
+  width: 1.2em;
+  height: 1.2em;
+  appearance: none;
+  border-radius: 0%;
+  rotate: 45deg;
+  border: 0.2em solid #ff0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transform: scale(1.4);
+  transition: 120ms transform ease-in-out;
+  box-shadow: 9px 9px 10px 1px #5f0875 inset,12px -12px 10px 1px #2df4e9 inset,0 0 20px #ff0,0 0 20px #ff0;
+}
+
+label {
+  cursor: pointer;
+  padding-top: 5%;
+  font-size: 15px;
+  font-weight: bold;
+  text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.2);
+  transition: color 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+</style>
