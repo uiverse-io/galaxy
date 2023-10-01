@@ -1,0 +1,142 @@
+<form class="form">
+    <label for="01">One</label>
+    <input id="01" type="radio" name="r" value="1" checked="">
+    <label for="02">Two</label>
+    <input id="02" type="radio" name="r" value="2">
+    <label for="03">Three</label>
+    <input id="03" type="radio" name="r" value="3">
+</form>
+
+<style>
+/* From Uiverse.io by Pradeepsaranbishnoi - Tags: radio */
+.form {
+  --background: #ffffff;
+  --text: #414856;
+  --radio: #7C96B2;
+  --radio-checked: #4F29F0;
+  --radio-size: 20px;
+  --width: 150px;
+  --height: 140px;
+  --border-radius: 10px;
+  background: var(--background);
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  color: var(--text);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: auto var(--radio-size);
+  align-items: center;
+}
+
+.form label {
+  cursor: pointer;
+}
+
+.form input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  height: var(--radio-size);
+  width: var(--radio-size);
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  border: 2px solid var(--radio);
+  background: transparent;
+  border-radius: 50%;
+  display: grid;
+  justify-self: end;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  transition: border .5s ease;
+}
+
+.form input[type="radio"]::before, .form input[type="radio"]::after {
+  content: "";
+  display: flex;
+  justify-self: center;
+  border-radius: 50%;
+}
+
+.form input[type="radio"]::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  z-index: 1;
+  opacity: var(--opacity, 1);
+}
+
+.form input[type="radio"]::after {
+  position: relative;
+  width: calc(100% /2);
+  height: calc(100% /2);
+  background: var(--radio-checked);
+  top: var(--y, 100%);
+  transition: top 0.5s cubic-bezier(0.48, 1.97, 0.5, 0.63);
+}
+
+.form input[type="radio"]:checked {
+  --radio: var(--radio-checked);
+}
+
+.form input[type="radio"]:checked::after {
+  --y: 0%;
+  animation: stretch-animate .3s ease-out .17s;
+}
+
+.form input[type="radio"]:checked::before {
+  --opacity: 0;
+}
+
+.form input[type="radio"]:checked ~ input[type="radio"]::after {
+  --y: -100%;
+}
+
+.form input[type="radio"]:not(:checked)::before {
+  --opacity: 1;
+  transition: opacity 0s linear .5s;
+}
+
+@keyframes stretch-animate {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  28% {
+    transform: scale(1.15, 0.85);
+  }
+
+  50% {
+    transform: scale(0.9, 1.1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.socials {
+  position: fixed;
+  display: block;
+  left: 20px;
+  bottom: 20px;
+}
+
+.socials > a {
+  display: block;
+  width: 30px;
+  opacity: .2;
+  transform: scale(var(--scale, 0.8));
+  transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
+}
+
+.socials > a:hover {
+  --scale: 1;
+}
+
+</style>
