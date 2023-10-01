@@ -1,0 +1,56 @@
+<div class="inputContainer">
+  <input required="" class="customInput" type="text">
+  <label class="inputLabel">Your Name</label>
+  <div class="inputUnderline"></div>
+</div>
+
+<style>
+/* From Uiverse.io by doniaskima - Tags: input, css input, cool input */
+.inputContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.customInput {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #007bff;
+}
+
+.customInput:focus,
+.customInput:not(:placeholder-shown) {
+  border-color: #0056b3;
+}
+
+.inputLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  padding: 5px;
+  font-size: 16px;
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.customInput:focus + .inputLabel,
+.customInput:not(:placeholder-shown) + .inputLabel {
+  transform: translateY(-100%) translateX(-5px) scale(0.8);
+}
+
+.inputUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
+
+</style>
