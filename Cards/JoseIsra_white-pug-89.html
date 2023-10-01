@@ -1,0 +1,65 @@
+   <div class="card">
+       <div class="content">
+           <div class="front">
+               <h3 class="title">Hey</h3>
+               <p class="subtitle">Hover me :)</p>
+           </div>
+
+           <div class="back">
+               <p class="description">
+                   Cool description so you can read it too my friend
+               </p>
+           </div>
+       </div>
+   </div>
+<style>
+/* From Uiverse.io by JoseIsra - Tags: card, flip */
+.card {
+  width: 12rem;
+  cursor: pointer;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  transition: all 2.25s;
+  background-color: rgb(127, 204, 240);
+  padding: 5em;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY(0.5turn);
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.title {
+  transform: translateZ(5rem);
+  font-size: 2rem;
+}
+
+.subtitle {
+  transform: translateZ(2rem);
+}
+
+.back {
+  transform: rotateY(0.5turn);
+  background-color: #009bff;
+}
+
+.description {
+  transform: translateZ(3rem);
+}
+
+</style>
