@@ -1,0 +1,129 @@
+<button class="button">
+  <div class="bloom-container">
+    <div class="button-container-main">
+      <div class="button-inner">
+        <div class="back"></div>
+        <div class="front">
+          <svg viewBox="0 0 512 512" class="svg" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+        </div>
+      </div>
+      <div class="button-glass">
+        <div class="back"></div>
+        <div class="front"></div>
+      </div>
+    </div>
+    <div class="bloom bloom1"></div>
+    <div class="bloom bloom2">
+  </div>
+  </div></button>
+<style>
+/* From Uiverse.io by Smit-Prajapati - Tags: gradient, button, hover effect, glass button */
+.button {
+  background: none;
+  border: none;
+}
+
+.button .bloom-container {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background: none;
+}
+
+.button .bloom-container .button-container-main {
+  width: 110px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-content: center;
+  border-right: 5px solid white;
+  border-left: 5px solid rgba(128, 128, 128, 0.147);
+  transform: rotate(-45deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.button .bloom-container .button-container-main .button-inner {
+  height: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.5) -10px 5px 10px 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+.button .bloom-container .button-container-main .button-inner .back {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(60deg, rgb(1, 85, 103) 0%, rgb(147, 245, 255) 100%);
+}
+
+.button .bloom-container .button-container-main .button-inner .front {
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: linear-gradient(60deg, rgb(0, 103, 140) 0%, rgb(58, 209, 233) 100%);
+  display: grid;
+  place-content: center;
+}
+
+.button .bloom-container .button-container-main .button-inner .front .svg {
+  fill: #ffffff;
+  opacity: 0.5;
+  width: 30px;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+  transition: all 0.2s ease-in;
+}
+
+.button .bloom-container .button-container-main .button-glass {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.888) 100%);
+  transform: translate(0%, -50%) rotate(0deg);
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in-out;
+}
+
+.button .bloom-container .bloom {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  background: white;
+}
+
+.button .bloom-container .bloom1 {
+  top: 10px;
+  right: 20px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 10px 10px, rgb(255, 255, 255) 0px 0px 20px 20px;
+}
+
+.button .bloom-container .bloom2 {
+  bottom: 10px;
+  left: 20px;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 10px 10px, rgba(255, 255, 255, 0.5) 0px 0px 30px 20px;
+}
+
+.button .bloom-container:hover {
+  transform: scale(1.1);
+}
+
+.button .bloom-container:hover .button-container-main .button-glass {
+  transform: translate(0%, -40%);
+}
+
+.button .bloom-container:hover .button-container-main .button-inner .front .svg {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px white);
+}
+
+.button .bloom-container:active {
+  transform: scale(0.7);
+}
+
+.button .bloom-container:active .button-container-main .button-inner {
+  transform: scale(1.2);
+}
+</style>
