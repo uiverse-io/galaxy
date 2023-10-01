@@ -1,0 +1,41 @@
+    <div class="border"><div class="content"></div></div>
+<style>
+/* From Uiverse.io by yariklnv - Tags: card, box, div */
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.border {
+  background-image: linear-gradient(to left, red, blue);
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.border::before {
+  background-image: linear-gradient(to left, red, blue);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100px;
+  width: 100px;
+  scale: 1.1;
+  filter: blur(25px);
+  animation: rotate 4s linear infinite;
+  border-radius: 100px;
+}
+
+.content {
+  background-color: #111;
+  width: 100px;
+  height: 100px;
+  border-radius: 19px;
+  scale: 0.9;
+}
+</style>
