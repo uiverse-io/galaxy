@@ -1,0 +1,83 @@
+<div class="flipswitch">
+    <input checked="" id="fs" class="flipswitch-cb" name="flipswitch" type="checkbox">
+    <label for="fs" class="flipswitch-label">
+        <div class="flipswitch-inner"></div>
+        <div class="flipswitch-switch"></div>
+    </label>
+</div>
+
+<style>
+/* From Uiverse.io by Bodyhc - Tags: switch, click, buttons */
+.flipswitch {
+  position: relative;
+  width: 100px;
+}
+
+.flipswitch input[type=checkbox] {
+  display: none;
+}
+
+.flipswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #999999;
+  border-radius: 50px;
+}
+
+.flipswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.flipswitch-inner:before, .flipswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 20px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.flipswitch-inner:before {
+  content: "ON";
+  padding-left: 18px;
+  background-color: #437A99;
+  color: #FFFFFF;
+}
+
+.flipswitch-inner:after {
+  content: "OFF";
+  padding-right: 18px;
+  background-color: #FFFFFF;
+  color: #437A99;
+  text-align: right;
+}
+
+.flipswitch-switch {
+  width: 35px;
+  margin: -2.5px;
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 67px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+  margin-left: 0;
+}
+
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+  right: 0;
+}
+
+</style>
