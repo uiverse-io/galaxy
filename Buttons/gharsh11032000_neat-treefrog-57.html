@@ -1,0 +1,88 @@
+<button class="button">
+  <span>Contact</span>
+</button>
+<style>
+/* From Uiverse.io by gharsh11032000 - Tags: gradient, button, hover effect */
+.button {
+  position: relative;
+  text-decoration: none;
+  color: #e8e8e8;
+  padding: 15px 30px;
+  width: 170px;
+  height: 60px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.button span , .button span::before {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.button span::before {
+  content: 'Hello!';
+  top: -100%;
+}
+
+.button:before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid #e8e8e8;
+  border-left: 2px solid #e8e8e8;
+}
+
+.button:after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #e8e8e8;
+  border-right: 2px solid #e8e8e8;
+}
+
+.button:after,
+.button:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.button:hover {
+  box-shadow: 0 0 30px rgba(248 ,155, 41,0.4),
+  0 0 30px rgba(255, 15, 123,0.4);
+  ;
+}
+
+.button:hover:before,
+.button:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+.button:hover span {
+  top: 100%;
+}
+
+.button:active {
+  scale: 0.95;
+  box-shadow: 0 0 10px rgba(248 ,155, 41,0.4),
+  0 0 10px rgba(255, 15, 123,0.4);
+  ;
+}
+
+
+</style>
