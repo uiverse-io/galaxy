@@ -1,0 +1,77 @@
+<label class="container">
+  <input type="checkbox" checked="checked">
+  <div class="circle">
+    <div class="led"></div>
+    <span class="engine-text">ENGINE</span>
+    <span class="start-text">START</span>
+    <span class="stop-text">STOP</span>
+  </div>
+</label>
+<style>
+/* From Uiverse.io by nanda248 - Tags: checkbox, engine, start/stop */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox checkmark=outer-circle */
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  border: 6px solid #838996;
+  background-color: #282828;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.circle span {
+  color: #e5e4e2;
+  font-size: small;
+}
+
+.circle .led {
+  width: 1em;
+  height: 0.2em;
+  background-color: #BBBBBB;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.engine-text {
+  margin-top: 0.75em;
+  font-weight: 500;
+}
+
+.start-text, .stop-text {
+  font-weight: 600;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .circle .led {
+  background-color: #FDDA16;
+  box-shadow: #FDDA16 0px 1px 0px, #FDDA16 0px 0px 8px;
+}
+
+.container input:checked ~ .circle {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+   rgba(14, 30, 37, 0.32) 0px 2px 16px 0px,
+   inset 3px 3px 8px 1px #485871,
+   inset -3px -3px 8px 1px #485871;
+}
+</style>
