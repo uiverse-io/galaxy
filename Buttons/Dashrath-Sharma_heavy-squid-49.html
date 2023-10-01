@@ -1,0 +1,58 @@
+<button>
+  Button
+</button>
+<style>
+/* From Uiverse.io by Dashrath-Sharma - Tags: button, slide */
+button {
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 1em 2em;
+  position: relative;
+  color: #14213d;
+  background: #f1f1f1;
+  display: grid;
+  font-weight: 700;
+  place-items: center;
+  transition: color 350ms linear 650ms;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+button:hover {
+  color: #fca311;
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 0;
+  height: 6%;
+}
+
+button::before {
+  background: #fca311;
+  transition: width 350ms, height 350ms linear 650ms;
+}
+
+button:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+button:after {
+  background: #14213d;
+  transition: width 350ms linear 175ms, height 350ms linear 650ms;
+}
+
+button:hover::after {
+  width: 95%;
+  height: 100%;
+}
+</style>
