@@ -1,0 +1,38 @@
+<button>
+  Hover Me!
+</button>
+<style>
+/* From Uiverse.io by sunnyshaikh - Tags: button */
+button {
+  position: relative;
+  background: #FBD148;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  padding: 1rem 3rem;
+  font-size: 1em;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+button::before {
+  position: absolute;
+  content: '';
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  transform: translate(-5px, -5px);
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(84, 84, 84);
+  transition: .25s ease;
+}
+
+button:hover {
+  transform: translate(-5px, -5px);
+}
+
+button:hover::before {
+  transform: translate(5px, 5px);
+}
+</style>
