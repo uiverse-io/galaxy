@@ -1,0 +1,187 @@
+<div class="plane-button">
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <button>
+        <div class="plane">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path style="fill: #091607;stroke-width: 1px;stroke: hsl(0deg 0% 100%);" d="M21 14.58c0-.36-.19-.69-.49-.89L13 9V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-7.51 4.69c-.3.19-.49.53-.49.89 0 .7.68 1.21 1.36 1L10 13.5V19l-1.8 1.35c-.13.09-.2.24-.2.4v.59c0 .33.32.57.64.48L11.5 21l2.86.82c.32.09.64-.15.64-.48v-.59c0-.16-.07-.31-.2-.4L13 19v-5.5l6.64 2.08c.68.21 1.36-.3 1.36-1z"></path>
+            </svg>
+        </div>
+        <span class="loading"> <i></i> <i></i> <i></i></span>
+        <span class="title">Buy a ticket</span>
+        <span class="approved">Approved</span>
+    </button>
+</div>
+<style>
+/* From Uiverse.io by barisdogansutcu - Tags: button */
+button {
+  width: 180px;
+  height: 55px;
+  border-radius: 50px;
+  border: solid 4px rgba(255, 255, 255, 0);
+  background-clip: padding-box;
+  box-shadow: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
+  background-color: hsl(241deg 44% 49%);
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  position: relative;
+  cursor: pointer;
+  color: white;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  z-index: 0;
+}
+
+.loading i {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  display: inline-flex;
+  border-radius: 100%;
+  animation-name: loading5234;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+@keyframes loading5234 {
+  100% {
+    opacity: 0;
+  }
+}
+
+input:checked + button {
+  transition-delay: 4s;
+  background-color: #31cb20;
+  box-shadow: 0 4px 20px -2px rgb(49 203 32);
+}
+
+.title, .approved {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  display: block;
+  font-size: 15px;
+}
+
+button .title {
+  background-color: hsl(241deg 44% 49%);
+  width: 90%;
+}
+
+input:checked + button .approved {
+  transition-delay: 4s;
+  visibility: visible;
+  opacity: 1;
+  background-color: #31cb20;
+  width: 90%;
+}
+
+input:checked + button .title {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+input:not(:checked) + button .approved {
+  visibility: hidden;
+  opacity: 1;
+}
+
+input {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 999;
+  outline: none;
+  width: 210px;
+  height: 60px;
+  border-radius: 50px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.plane {
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 9;
+  top: 0;
+  transition: none;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.plane svg {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform: rotate(90deg) translate(-50%,-40%) scale(1);
+  transition: all 0s ease;
+  fill: #3c4a57;
+}
+
+input:checked + button .plane {
+  animation: airplane-route 4s forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0);
+}
+
+@keyframes airplane-route {
+  0% {
+    left: -300px;
+    opacity: 1;
+    transform: scale(2);
+  }
+
+  20% {
+    left: 0px;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  40% {
+    left: 100%;
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+
+  60% {
+    left: 100%;
+    opacity: 1;
+    transform: translateX(-100%) translateY(-6%) rotate(180deg);
+  }
+
+  80% {
+    left: 0%;
+    opacity: 1;
+    top: -6px;
+    transform: translateX(0%) rotate(180deg);
+  }
+
+  100% {
+    left: 0%;
+    opacity: 1;
+    transform: translateX(0%) rotate(360deg);
+  }
+}
+
+</style>
