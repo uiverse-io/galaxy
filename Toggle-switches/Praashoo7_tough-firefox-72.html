@@ -1,0 +1,50 @@
+<label class="container">
+  <input type="checkbox">
+  <div class="checkmark">
+    <div class="switch"></div>
+  </div>
+</label>
+<style>
+/* From Uiverse.io by Praashoo7 - Tags: switch, on, off, light, realistic */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 6em;
+  width: 3em;
+  background-color: #ccc;
+}
+
+.switch {
+  position: relative;
+  height: 5.4em;
+  width: 2.4em;
+  top: .3em;
+  left: .3em;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 2px, rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px -8px 0px inset;
+}
+
+.container input:checked ~ .checkmark .switch {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px -6px 0px inset;
+  transform: rotateX(180deg);
+}
+</style>
