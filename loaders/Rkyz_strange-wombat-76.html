@@ -1,0 +1,101 @@
+<div class="loader">
+ <div class="dot-one"></div> 
+ <div class="dot-two">-  -</div> 
+ <div class="dot-three"></div> 
+</div>
+<style>
+/* From Uiverse.io by Rkyz - Tags: animation, loader, animal */
+.loader {
+  height: 50px;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.dot-two {
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 4px;
+  color: white;
+}
+
+.dot-one,
+.dot-three {
+  background-color: black;
+  height: 30px;
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
+  animation: flap-wings 1s infinite ease-in-out;
+}
+
+.dot-two {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: black;
+  animation: flap-wings 1s infinite ease-in-out;
+  animation-delay: 0.1s;
+}
+
+.dot-two::before,
+.dot-two::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+}
+
+.dot-two::before {
+  height: 20px;
+  width: 10px;
+  bottom: 20px;
+  left: 1px;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-20deg);
+}
+
+.dot-two::after {
+  height: 20px;
+  width: 10px;
+  bottom: 20px;
+  left: 19px;
+  transform: rotate(20deg);
+  border-radius: 50% 50% 0 0;
+}
+
+.dot-one::before,
+.dot-one::after,
+.dot-three::before,
+.dot-three::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+}
+
+.dot-one::before,
+.dot-three::before {
+  height: 30px;
+  width: 20px;
+  top: 10px;
+  left: 0;
+  background-color: #e8e8e8;
+ /*chnage this if u need dark mode to #212121 if need light mode #e8e8e8*/
+  border-radius: 50% 50% 0 0;
+}
+
+@keyframes flap-wings {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+</style>
