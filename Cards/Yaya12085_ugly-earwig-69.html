@@ -1,0 +1,42 @@
+<div class="papper" draggable="true"></div>
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: card, paper, realistic */
+.papper {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  background-image: linear-gradient(#ffffff 1.1rem, #ccc 1.2rem);
+  background-size: 100% 1.2rem;
+  border-radius: 10px;
+  cursor: move;
+}
+
+.papper::before,
+.papper::after {
+  position: absolute;
+  content: "";
+  bottom: 10px;
+  width: 40%;
+  height: 10px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.papper::before {
+  left: 15px;
+  transform: skew(-5deg) rotate(-5deg);
+}
+
+.papper::after {
+  right: 15px;
+  transform: skew(5deg) rotate(5deg);
+}
+
+.papper:hover::before,
+.papper:hover::after {
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+</style>
