@@ -1,0 +1,64 @@
+<button class="c-button">
+  <span class="c-main">
+    <span class="c-ico"><span class="c-blur"></span> <span class="ico-text">+</span></span>
+    button
+  </span>
+</button>
+
+<style>
+/* From Uiverse.io by zebra76966 - Tags: button, dark, 3d button */
+button {
+  border: none;
+}
+
+.c-button {
+  background: linear-gradient(140deg, rgba(75, 118, 200, 1) 0%, rgba(31, 70, 145, 1) 100%);
+  border-radius: 45px;
+  font-size: 25px;
+  text-align: left;
+  padding: 11px 0px 11px 0px;
+  border: 4px solid rgb(37, 37, 37) !important;
+  border-style: outset;
+  box-shadow: -6px -5px 18px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.c-button .c-main {
+  border-radius: 45px;
+  color: rgba(255, 255, 255, 1);
+  padding: 11px 25px 11px 2px;
+  box-shadow: inset 0px 0px 5px rgba(17, 17, 17, 0);
+  transition: all 0.5s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.c-ico .c-blur {
+  background: linear-gradient(318deg, rgba(75, 118, 200, 1) 0%, rgba(31, 70, 145, 1) 100%);
+  border-radius: 100%;
+  margin-left: 0;
+  padding: 8px 23px;
+  filter: blur(1px);
+  text-align: center;
+}
+
+.c-ico {
+  position: relative;
+  margin-right: 20px;
+}
+
+.c-ico .ico-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hovering */
+
+.c-button .c-main:hover {
+  box-shadow: inset 0px 0px 5px rgba(17, 17, 17, 0.6);
+  border: 1px solid rgba(26, 26, 26,0.5);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+</style>
