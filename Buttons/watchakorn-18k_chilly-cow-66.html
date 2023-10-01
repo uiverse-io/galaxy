@@ -1,0 +1,38 @@
+<button class="btn-space space">
+  Button
+</button>
+<style>
+/* From Uiverse.io by watchakorn-18k - Tags: gradient, button, transition */
+.btn-space {
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 500% auto;
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.103);
+  border-radius: 10px;
+}
+
+.btn-space:hover {
+  background-position: right center;
+  border-image-source: linear-gradient(90deg, #d53a9d,#743ad5 );
+  -webkit-box-shadow: 0 0 20px #743ad5;
+  box-shadow: 0 0 20px #743ad5;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 10px #d53a9d;
+}
+
+.space {
+  background-image: -webkit-gradient(linear, left top, right top, from(#743ad5), color-stop(51%, #d53a9d), to(#743ad5));
+  background-image: linear-gradient(to right, #743ad5 0%, #d53a9d 51%, #743ad5 100%);
+  border-image-source: linear-gradient(45deg, #743ad5, #d53a9d );
+  border-image-outset: 1em;
+}
+
+
+
+
+</style>
