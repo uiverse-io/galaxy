@@ -1,0 +1,67 @@
+<label class="checkbox">
+  <input type="checkbox">
+  <span class="checkmark"></span>
+  <span class="text">Agree</span>
+</label>
+
+<style>
+/* From Uiverse.io by JOBOYA - Tags: checkbox */
+.checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #666;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox:hover .checkmark {
+  transform: translateX(-20px) translateY(-2px) rotate(10deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: #666;
+  border-color: #666;
+}
+
+.checkbox input:checked ~ .checkmark:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.text {
+  margin-left: 40px;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+</style>
