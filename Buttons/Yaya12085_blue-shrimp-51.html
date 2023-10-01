@@ -1,0 +1,60 @@
+<button class="btn">
+  <svg>
+    <defs>
+        <linearGradient id="gradiant">
+            <stop stop-color="#FF8282" offset="0%"></stop>
+            <stop stop-color="#E178ED" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+     <rect height="50" width="150" stroke="url(#gradiant)" fill="none"></rect>
+  </svg>
+    <span>Button</span>
+</button>
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: button */
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 17px;
+  border: none;
+  outline: none;
+}
+
+.btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn svg rect {
+  stroke-width: 3;
+  stroke-dasharray: 0,0;
+  stroke-dashoffset: 0;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.btn span {
+  background: rgba(255,130,130,1);
+  background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn:hover svg rect {
+  stroke-width: 4;
+  stroke-dasharray: 196, 543;
+  stroke-dashoffset: 437;
+}
+
+</style>
