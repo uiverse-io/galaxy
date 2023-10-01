@@ -1,0 +1,47 @@
+ <button>
+     <span>HoverMe</span>
+     <span>HoverMe</span>
+ </button>
+<style>
+/* From Uiverse.io by omar-alghaish - Tags: button */
+button {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  box-shadow: 0 5px 25px rgba(0, 0,0, .25);
+  border: none;
+}
+
+button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: #002faf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 17px;
+}
+
+button span:nth-child(2) {
+  background: #fff;
+  color: #002ba0;
+  overflow: hidden;
+  z-index: 2;
+  transition: .5s;
+  clip-path: polygon(50% 0%, 100% 0%,100% 100%,50% 100%,50% 53%);
+}
+
+button span:nth-child(2):hover {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 0 50%);
+}
+
+button span:nth-child(1):hover ~ span:nth-child(2) {
+  clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%, 100%50%);
+}
+</style>
