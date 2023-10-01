@@ -1,0 +1,118 @@
+<div class="card">
+  <div class="date-time-container">
+    <time class="date-time" datetime="2022-10-10">
+      <span>2022</span>
+      <span class="separator"></span>
+      <span>Oct 10</span>
+    </time>
+  </div>
+  <div class="content">
+  
+    <div class="infos">
+      <a href="#">
+        <span class="title">
+         How to make this blog card ?
+        </span>
+      </a>
+
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+        dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+        sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+        voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+        Molestias explicabo corporis voluptatem?
+      </p>
+    </div>
+
+      <a class="action" href="#">
+        Read Blog
+      </a>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: card */
+.card {
+  box-sizing: border-box;
+  display: flex;
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 1);
+  transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.081);
+}
+
+.date-time-container {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  padding: 0.5rem;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 1rem;
+  gap: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(17, 24, 39, 1);
+}
+
+.separator {
+  width: 1px;
+  flex: 1 1 0%;
+  background-color: rgba(17, 24, 39, 0.1);
+}
+
+.content {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infos {
+  border-left: 1px solid rgba(17, 24, 39, 0.1);
+  padding: 1rem;
+}
+
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18.72px;
+  color: rgba(17, 24, 39, 1);
+}
+
+.description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgba(55, 65, 81, 1);
+}
+
+.action {
+  display: block;
+  background-color: rgba(253, 224, 71, 1);
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(17, 24, 39, 1);
+  transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action:hover {
+  background-color: rgba(250, 204, 21, 1);
+}
+</style>
