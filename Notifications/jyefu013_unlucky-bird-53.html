@@ -1,0 +1,83 @@
+<button class="btn">
+  <span class="default-text">New Level Unlocked!</span>
+  <span class="hover-text">Congrats!</span>
+</button>
+
+<style>
+/* From Uiverse.io by jyefu013 - Tags: notification */
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: black;
+  color: rgb(238, 255, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.default-text {
+  z-index: 1;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.btn:hover .default-text {
+  opacity: 0;
+}
+
+.btn:hover .hover-text {
+  opacity: 1;
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:hover::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  animation: fireworks 1s linear forwards;
+}
+
+@keyframes fireworks {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+</style>
