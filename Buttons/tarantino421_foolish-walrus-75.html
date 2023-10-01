@@ -1,0 +1,89 @@
+<div class="box">
+  <button class="button">RAIN</button>
+  <div class="rain">
+    <span style="--i: 15" class="raindrop"></span>
+    <span style="--i: 8" class="raindrop"></span>
+    <span style="--i: 19" class="raindrop"></span>
+    <span style="--i: 9" class="raindrop"></span>
+    <span style="--i: 12" class="raindrop"></span>
+    <span style="--i: 14" class="raindrop"></span>
+    <span style="--i: 11" class="raindrop"></span>
+    <span style="--i: 18" class="raindrop"></span>
+    <span style="--i: 16" class="raindrop"></span>
+    <span style="--i: 9" class="raindrop"></span>
+    <span style="--i: 19" class="raindrop"></span>
+    <span style="--i: 17" class="raindrop"></span>
+    <span style="--i: 9" class="raindrop"></span>
+    <span style="--i: 20" class="raindrop"></span>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by tarantino421 - Tags: button, hover button, rain */
+.box {
+  --clr-shadow__border: #5987a3;
+  --clr-text: #F6F4EB;
+  --clr-rain: #192333;
+  --clr-raindrop: #E9F8F9;
+  --size: 3rem;
+  position: relative;
+  outline: 1px solid var(--clr-shadow__border);
+}
+
+.button {
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: transparent;
+  padding: calc(var(--size) / 3) var(--size);
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text);
+  letter-spacing: 0.2rem;
+  text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+  -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+}
+
+.rain {
+  width: 100%;
+  height: 100%;
+  bottom: 0%;
+  gap: 0.6rem;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  background: var(--clr-rain);
+}
+
+.box:hover .rain {
+  opacity: 1;
+}
+
+.raindrop {
+  height: 1.4rem;
+  min-width: 0.1rem;
+  box-shadow: 60px 100px var(--clr-raindrop),-40px -90px var(--clr-raindrop);
+  background-color: var(--clr-raindrop);
+  animation: rain-animation calc(0.05s * var(--i)) linear infinite;
+  opacity: .3;
+}
+
+@keyframes rain-animation {
+  0% {
+    transform: rotate(20deg) translateY(calc(-100% * var(--i)));
+  }
+
+  100% {
+    transform: rotate(20deg) translateY(calc(100% * var(--i)));
+  }
+}
+
+
+
+
+
+
+
+
+</style>
