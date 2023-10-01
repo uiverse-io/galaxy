@@ -1,0 +1,102 @@
+<div class="triangles">
+  <div class="tri invert"></div>
+  <div class="tri invert"></div>
+  <div class="tri"></div>
+  <div class="tri invert"></div>
+  <div class="tri invert"></div>
+  <div class="tri"></div>
+  <div class="tri invert"></div>
+  <div class="tri"></div>
+  <div class="tri invert"></div>
+</div>
+<style>
+/* From Uiverse.io by Nawsome - Tags: loader */
+.triangles {
+  transform: translate(-50%, -50%);
+  height: 81px;
+  width: 90px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.tri {
+  position: absolute;
+  animation: pulse_51 750ms ease-in infinite;
+  border-top: 27px solid #215A6D;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 0px;
+}
+
+.tri.invert {
+  border-top: 0px;
+  border-bottom: 27px solid #215A6D;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.tri:nth-child(1) {
+  left: 30px;
+}
+
+.tri:nth-child(2) {
+  left: 15px;
+  top: 27px;
+  animation-delay: -125ms;
+}
+
+.tri:nth-child(3) {
+  left: 30px;
+  top: 27px;
+}
+
+.tri:nth-child(4) {
+  left: 45px;
+  top: 27px;
+  animation-delay: -625ms;
+}
+
+.tri:nth-child(5) {
+  top: 54px;
+  animation-delay: -250ms;
+}
+
+.tri:nth-child(6) {
+  top: 54px;
+  left: 15px;
+  animation-delay: -250ms;
+}
+
+.tri:nth-child(7) {
+  top: 54px;
+  left: 30px;
+  animation-delay: -375ms;
+}
+
+.tri:nth-child(8) {
+  top: 54px;
+  left: 45px;
+  animation-delay: -500ms;
+}
+
+.tri:nth-child(9) {
+  top: 54px;
+  left: 60px;
+  animation-delay: -500ms;
+}
+
+@keyframes pulse_51 {
+  0% {
+    opacity: 1;
+  }
+
+  16.666% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+</style>
