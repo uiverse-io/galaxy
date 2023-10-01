@@ -1,0 +1,32 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by doniaskima - Tags: simple, neumorphism, flashy, loader */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 100px;
+  height: 45px;
+  position: relative;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  box-shadow: 0 0 0 50px;
+  clip-path: polygon(-50px -20px,10% -12px,20% 0,calc(50% - 15px) 0,calc(50% - 10px) -20px,calc(50% - 8px) -15px,calc(50% + 8px) -15px,calc(50% + 10px) -20px,calc(50% + 15px) 0,80% 0,90% -12px,calc(100% + 50px) -20px,100% 80%,calc(100% + 10px) calc(100% + 10px),60% 100%,50% calc(100% + 15px),40% 100%,-10px calc(100% + 10px),0 80%);
+}
+
+.loader:after {
+  animation: l9 1s infinite;
+  transform: perspective(300px) translateZ(0px)
+}
+
+@keyframes l9 {
+  to {
+    transform: perspective(300px) translateZ(100px);
+    opacity: 0
+  }
+}
+</style>
