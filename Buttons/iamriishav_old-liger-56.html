@@ -1,0 +1,60 @@
+<button>
+  <span>
+  Hover me
+  </span>
+</button>
+<style>
+/* From Uiverse.io by iamriishav - Tags: button */
+button {
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  z-index: 1;
+  position: relative;
+  -webkit-box-shadow: 0 5px 15px rgba(33, 33, 33, .2);
+  box-shadow: 0 5px 15px rgba(33, 33, 33, .2);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button > span {
+  z-index: 2;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #212121;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+}
+
+button:hover {
+  color: #e8e8e8;
+}
+
+button:hover::before {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+}
+</style>
