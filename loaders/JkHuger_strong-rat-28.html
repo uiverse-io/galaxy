@@ -1,0 +1,57 @@
+<div class="spinner"></div>
+<style>
+/* From Uiverse.io by JkHuger - Tags: loader */
+.spinner {
+  box-shadow: 0 0 0 7px #42a5f5, inset 0 0 0 1px #42a5f5;
+  position: relative;
+  height: 50px;
+  width: 230px;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: rotate_5132 6s linear infinite;
+}
+
+.spinner:before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #42a5f5;
+  animation: load_5123 6s linear infinite;
+}
+
+@keyframes rotate_5132 {
+  0%,
+  42% {
+    transform: rotate(0deg);
+  }
+
+  48%,
+  92% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load_5123 {
+  0% {
+    width: 0;
+  }
+
+  40%,
+  50% {
+    width: 100%;
+  }
+
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+</style>
