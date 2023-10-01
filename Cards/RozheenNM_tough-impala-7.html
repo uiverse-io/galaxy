@@ -1,0 +1,105 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by RozheenNM - Tags: button, card, day */
+.one-div {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10mm;
+  animation: flip-and-rotate 8s ease-in-out infinite;
+  transform-origin: center;
+  background: linear-gradient(135deg, #f7af6c, #fa8b8b, #f75bea);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.one-div::before,
+.one-div::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 80%;
+  background-color: rgb(255, 193, 122);
+  box-shadow: #33577e;
+  border-radius: 100%;
+  transform: translate(-50%, -80%) rotate(90deg);
+}
+
+.one-div::before {
+  top: 50%;
+  left: 50%;
+}
+
+.one-div::after {
+  bottom: 50%;
+  right: 50%;
+}
+
+.one-div::before,
+.one-div::after {
+  animation: move 1.2s infinite cubic-bezier(0.68, -0.55, 0.265, 1.88);
+}
+
+@keyframes move {
+  0% {
+    transform: translate(50%, 50%) rotate(45deg) scale(0.8);
+  }
+
+  50% {
+    transform: translate(50%, 50%) rotate(45deg) scale(1.2);
+  }
+
+  100% {
+    transform: translate(50%, 50%) rotate(45deg) scale(0.8);
+  }
+}
+
+@keyframes flip-and-rotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+    background: linear-gradient(135deg, #f7af6c, #fa8b8b, #f75bea);
+  }
+
+  10% {
+    transform: scale(1) rotate(10deg);
+    background: linear-gradient(135deg, #7bbbd4, #33577e, #00061b);
+  }
+
+  20% {
+    transform: scale(1) rotate(20deg);
+    background: linear-gradient(135deg, #f7af6c, #fa8b8b, #f75bea);
+  }
+
+  30% {
+    transform: scale(1) rotate(-30deg);
+    background: linear-gradient(135deg, #6cb2ce, #3d93a8, #00061b);
+  }
+
+  40% {
+    transform: scale(1) rotate(40deg);
+    background: linear-gradient(135deg, #f7af6c, #fa8b8b, #f75bea);
+  }
+
+  50% {
+    transform: scale(1) rotate(-5deg);
+    background: linear-gradient(135deg, #64b5d4, #184d85, #00061b);
+  }
+
+  60% {
+    transform: scale(1) rotate(60deg);
+    background: linear-gradient(135deg, #f7af6c, #fa8b8b, #f75bea);
+  }
+
+  70% {
+    transform: scale(1) rotate(70deg);
+    background: linear-gradient(135deg, #081c24, #041527, #00061b);
+  }
+
+  100% {
+    transform: scale(1) rotate(-360deg);
+    background: linear-gradient(135deg, #f7af6c, #fa8b8b, #f75bea);
+  }
+}
+
+</style>
