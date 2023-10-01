@@ -1,0 +1,74 @@
+<button class="button">hover me !</button>
+
+<style>
+/* From Uiverse.io by KhaledMatalkah - Tags: button, hover, transition, transform */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ff4081;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(255, 64, 129, 0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.button:hover {
+  background-color: #e91e63;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover::before {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.button:hover::after {
+  opacity: 1;
+}
+
+.button:active {
+  background-color: #e91e63;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transform: translateY(2px);
+}
+
+</style>
