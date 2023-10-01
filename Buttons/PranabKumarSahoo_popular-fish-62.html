@@ -1,0 +1,52 @@
+<button>
+  <span>Button</span>
+</button>
+<style>
+/* From Uiverse.io by PranabKumarSahoo - Tags: button */
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #560af0;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+
+button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.2s;
+}
+
+button:hover span {
+  padding-right: 15px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button:hover {
+  color: #560af0;
+  background-color: #FFFFFF;
+  box-shadow: 4px 5px 17px -4px #560af0;
+}
+</style>
