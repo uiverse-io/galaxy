@@ -1,0 +1,75 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by Shoh2008 - Tags: loader */
+.loader {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  margin: -64px auto 0;
+  background-color: #ccc;
+  background-image: radial-gradient(#fff 4px, #0000  0),
+                    radial-gradient(#fff 4px, #0000  0),
+                    radial-gradient(#fff 4px, #0000  0),
+                    radial-gradient(#fff 4px, #0000  0);
+  background-position: 24px center, 8px center, -8px center, -24px center;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) inset;
+  animation: flash 1s linear infinite;
+}
+
+.loader::before , .loader::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #ccc;
+  border-top-color: #0000;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 18px;
+  background: #fff;
+}
+
+.loader::before {
+  width: 0px;
+  height: 64px;
+  transform: translate(-50% , 18px);
+}
+
+@keyframes flash {
+  0% {
+    background-image: radial-gradient(#DDD 4px, #0000  0),
+        radial-gradient(#DDD 4px, #0000  0),
+        radial-gradient(#DDD 4px, #0000  0),
+        radial-gradient(#DDD 4px, #0000  0);
+  }
+
+  25% {
+    background-image: radial-gradient(#DDD 4px, #0000  0),
+      radial-gradient(#DDD 4px, #0000  0),
+      radial-gradient(#DDD 4px, #0000  0),
+      radial-gradient(#fff 4px, #0000  0);
+  }
+
+  50% {
+    background-image: radial-gradient(#DDD 4px, #0000  0),
+      radial-gradient(#DDD 4px, #0000  0),
+      radial-gradient(#fff 4px, #0000  0),
+      radial-gradient(#fff 4px, #0000  0);
+  }
+
+  75% {
+    background-image: radial-gradient(#DDD 4px, #0000  0),
+        radial-gradient(#fff 4px, #0000  0),
+        radial-gradient(#fff 4px, #0000  0),
+        radial-gradient(#fff 4px, #0000  0);
+  }
+
+  100% {
+    background-image: radial-gradient(#fff 4px, #0000  0),
+        radial-gradient(#fff 4px, #0000  0),
+        radial-gradient(#fff 4px, #0000  0),
+        radial-gradient(#fff 4px, #0000  0);
+  }
+}
+</style>
