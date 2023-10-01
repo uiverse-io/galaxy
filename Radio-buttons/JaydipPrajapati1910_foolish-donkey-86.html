@@ -1,0 +1,63 @@
+<div class="radio-input">
+ <input type="radio" id="value-1" name="value-radio" value="value-1">
+  <div class="circle">
+   </div> 
+ <input checked="" type="radio" id="value-2" name="value-radio" value="value-2">
+  <div class="circle">
+  </div> 
+ <input type="radio" id="value-3" name="value-radio" value="value-3">
+  <div class="circle">
+  </div>
+</div>  
+
+
+
+
+<style>
+/* From Uiverse.io by JaydipPrajapati1910 - Tags: yellow, radio, radio-buttons */
+.radio-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-input input {
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  border-radius: 50%;
+  transition: .4s ease-in-out;
+}
+
+.radio-input input:hover {
+  scale: 1.2;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.radio-input .circle {
+  position: relative;
+  top: 0.01em;
+  left: -1.1em;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: yellow;
+  scale: 0;
+  border-radius: 10px;
+  transition: .4s ease-in-out;
+}
+
+.radio-input input:checked {
+  box-shadow: none;
+  border: 1px solid yellow;
+}
+
+.radio-input input:checked + .circle {
+  transform: rotate(360deg);
+  scale: 1;
+}
+
+
+</style>
