@@ -1,0 +1,133 @@
+<div class="container">
+  <div class="box">
+    <div class="content">
+      
+    </div>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by Gerente-S4V1T4R - Tags: card */
+.container {
+  --background: linear-gradient(to left, #880505 0%, #f36b11 100%);
+  width: 190px;
+  height: 254px;
+  padding: 4px;
+  border-radius: 5px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  background: var(--background);
+  position: relative;
+}
+
+.container .box {
+  position: relative;
+  width: 190px;
+  height: 244px;
+  background: #1b1b1b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.container .box .content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container .box .content .icon {
+  width: 50px;
+  height: 50px;
+  -webkit-box-shadow: 0 0 0 4px #e6e6e6,
+    0 0 0 6px rgb(212, 10, 10);
+  box-shadow: 0 0 0 4px #e6e6e6,
+    0 0 0 6px rgb(212, 10, 10);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 2.5em;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.container .box::before {
+  content: '';
+  position: absolute;
+  inset: -10px 50px;
+  border-top: 4px solid rgb(99, 89, 247);
+  z-index: -1;
+  border-bottom: 4px solid rgb(65, 44, 250);
+  z-index: -1;
+  z-index: -1;
+  -webkit-transform: skewY(15deg);
+  -ms-transform: skewY(15deg);
+  transform: skewY(15deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.container .box:hover::before {
+  -webkit-transform: skewY(0deg);
+  -ms-transform: skewY(0deg);
+  transform: skewY(0deg);
+  inset: -10px 40px;
+}
+
+.container .box::after {
+  content: '';
+  position: absolute;
+  inset: 60px -10px;
+  border-left: 4px solid #880505;
+  z-index: -1;
+  border-right: 4px solid #aa551d;
+  z-index: -1;
+  -webkit-transform: skew(15deg);
+  -ms-transform: skew(15deg);
+  transform: skew(15deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.container .box:hover::after {
+  -webkit-transform: skew(0deg);
+  -ms-transform: skew(0deg);
+  transform: skew(0deg);
+  inset: 40px -10px;
+}
+
+.container .box .content {
+  border-radius: 50%;
+}
+
+</style>
