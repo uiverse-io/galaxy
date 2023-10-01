@@ -1,0 +1,103 @@
+<button>
+  Button
+</button>
+<style>
+/* From Uiverse.io by MuhammadHasann - Tags: button */
+button {
+  position: relative;
+  padding: 18px 55px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(87deg, #6d67e4, #7743db, #4e31aa, #6d67e4, #6d67e4);
+  background-size: 600% 600%;
+  border: 3px solid #7743db;
+  border-radius: 8px;
+  /* filter: drop-shadow(0 0 4px #9F73AB); */
+  box-shadow: inset 0 0 10px 1px #7743db, 0 0 10px 5px #7743db;
+  cursor: pointer;
+  transition: all 0.5s;
+  animation: GradientAnimation 25s ease infinite;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  width: 202px;
+  height: 54px;
+  top: 0;
+  left: -17px;
+  border: 5px solid #453c67;
+  border-width: 0 2px 4px 0;
+  border-radius: 100%;
+  filter: drop-shadow(0px 0px 6px rgba(78, 49, 180, 1));
+  transform: rotate(-30deg);
+  animation: LinerAfter 15s ease infinite;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: 0;
+  left: -20px;
+  border: 5px solid #6d67e4;
+  border-width: 0 12px 8px 4px;
+  border-radius: 100%;
+  filter: drop-shadow(0px 0px 6px rgba(109, 103, 228, 1));
+  /* box-shadow: inset 0 0 10px 1px #4E31AA, 0 0 10px 5px #4E31AA; */
+  transform: rotate(-30deg);
+  transition: all 0.5s;
+  animation: LinerBefore 15s ease infinite;
+}
+
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes LinerAfter {
+  0% {
+    left: -27px;
+    height: 54px;
+  }
+
+  50% {
+    left: -7px;
+    height: 37px;
+  }
+
+  100% {
+    left: -27px;
+    height: 54px;
+  }
+}
+
+@keyframes LinerBefore {
+  0% {
+    left: -30px;
+    height: 50px;
+  }
+
+  50% {
+    left: -10px;
+    height: 33px;
+  }
+
+  100% {
+    left: -30px;
+    height: 50px;
+  }
+}
+
+</style>
