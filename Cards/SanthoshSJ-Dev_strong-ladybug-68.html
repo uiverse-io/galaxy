@@ -1,0 +1,82 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by SanthoshSJ-Dev - Tags: card, challenge, sea, bottle */
+.one-div {
+  width: 300px;
+  height: 200px;
+  display: grid;
+  position: relative;
+  margin: auto 0 0;
+  background: radial-gradient(circle 44px at top,#0000 94%,#5dc1e4) 0 40px, radial-gradient(circle 44px at top,#0000 94%,#008cd9) 0 0;
+  background-size: 80px 100%;
+  background-repeat: repeat-x;
+  animation: a 1s infinite linear;
+  border-radius: 20px;
+  transition: height 1s;
+  cursor: pointer;
+}
+
+.one-div:hover {
+  height: 350px;
+}
+
+.one-div:before {
+  content: "";
+  width: 100%;
+  z-index: 1;
+  background: radial-gradient(circle 44px at top,#0000 94%,#b0e5f3) 0 70px;
+  background-size: 80px 100%;
+  background-repeat: repeat-x;
+  animation: b 1s infinite linear;
+  border-radius: 20px;
+}
+
+.one-div:after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 150px;
+  background: linear-gradient(#f0caa3 0 0) bottom/16% 67%, linear-gradient(#33b54d 0 0) 50% 50%/54% 12%, radial-gradient(farthest-side at bottom left,#33b54d 98%,#0000) 100% 48%/25% 12%, radial-gradient(farthest-side at bottom right,#33b54d 98%,#0000) 0 48%/25% 12%, radial-gradient(farthest-side at top left,#0000 98%,#33b54d) 16% 30%/31% 20%, radial-gradient(farthest-side at top right,#0000 98%,#33b54d) 87% 30%/31% 20%, linear-gradient(#a87d53 0 0) top/20% 8%,linear-gradient(#33b54d 0 0)50% 7%/37% 8%, linear-gradient(#33b54d 0 0) bottom/100% 50%, linear-gradient(#33b54d 0 0) center/20% 100%;
+  background-repeat: no-repeat;
+  border-radius: 0 0 20px 20px;
+  left: calc(50% - 35px);
+  top: 0px;
+  transform: rotate(45deg);
+  animation: c 1s infinite linear;
+}
+
+@keyframes a {
+  50% {
+    background-position: -40px 15px,45px 10px
+  }
+
+  100% {
+    background-position: -80px 40px,80px 0px
+  }
+}
+
+@keyframes b {
+  50% {
+    background-position: 40px 45px
+  }
+
+  100% {
+    background-position: 80px 70px
+  }
+}
+
+@keyframes c {
+  0%,100% {
+    transform: translate(0,0) rotate(40deg)
+  }
+
+  33% {
+    transform: translate(10px,-20px) rotate(50deg)
+  }
+
+  66% {
+    transform: translate(5px,-10px) rotate(30deg)
+  }
+}
+
+</style>
