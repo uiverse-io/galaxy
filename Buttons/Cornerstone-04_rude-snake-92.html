@@ -1,0 +1,43 @@
+<button>
+    Hover
+</button>
+<style>
+/* From Uiverse.io by Cornerstone-04 - Tags: button */
+button {
+  display: flex;
+  align-items: center;
+  color: #000;
+  background: none;
+  border: none;
+  padding: 12px 18px;
+  position: relative;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: monospace;
+  transition: linear .3s;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(calc(100% + 4px));
+  width: 45px;
+  height: 45px;
+  background-color: #dc143c;
+  border-radius: 50px;
+  transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), width .25s cubic-bezier(0, 0, .5, 2);
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 100%;
+  transform: translateY(-50%) translateX(-18px);
+  transition: transform .25s cubic-bezier(0,0,.5,2);
+}
+</style>
