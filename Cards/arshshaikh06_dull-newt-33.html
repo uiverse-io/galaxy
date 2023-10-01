@@ -1,0 +1,202 @@
+<div class="container">
+  <div class="palette">
+    <div id="color1" class="color">
+      <span>#CECE5A</span>
+    </div>
+    <div id="color2" class="color">
+      <span>#FFE17B</span>
+    </div>
+    <div id="color3" class="color">
+      <span>#FD8D14</span>
+    </div>
+    <div id="color4" class="color">
+      <span>#C51605</span>
+    </div>
+    <div id="color-code">
+      <div id="color-code-bg"></div>
+      <div id="color-code-text"></div>
+    </div>
+  </div>
+<div id="footer">
+<div id="bookmarks">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+</svg>
+    <span>53421</span>
+    </div>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="1"></circle>
+  <circle cx="19" cy="12" r="1"></circle>
+  <circle cx="5" cy="12" r="1"></circle>
+</svg>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by arshshaikh06 - Tags: card, fluid, animated, colorful, palette, card hover */
+.container {
+  width: 300px;
+  height: 340px;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 10px 20px #dbdbdb;
+  font-family: sans-serif;
+  background: white;
+  pointer-events: none;
+}
+
+.palette {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.palette:hover > #color-code {
+  opacity: 0;
+}
+
+.color {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform-origin: center;
+  transition: 0.3s ease-in-out;
+  box-sizing: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color span {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#color1 {
+  background: #CECE5A;
+  rotate: 45deg;
+  translate: 212.13px 0;
+  outline: 0 solid #CECE5A;
+  z-index: 9;
+}
+
+#color1:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #CECE5A;
+}
+
+#color2 {
+  background: #FFE17B;
+  rotate: 45deg;
+  translate: 0 212.13px;
+  outline: 0 solid #FFE17B;
+  z-index: 9;
+}
+
+#color2:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FFE17B;
+}
+
+#color2 span {
+  color: #1A1A1A;
+}
+
+#color3 {
+  background: #FD8D14;
+  rotate: 45deg;
+  translate: -212.13px 0;
+  outline: 0 solid #FD8D14;
+  z-index: 9;
+}
+
+#color3:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FD8D14;
+}
+
+#color4 {
+  background: #C51605;
+  rotate: 45deg;
+  translate: 0 -212.13px;
+  outline: 0 solid #C51605;
+  z-index: 9;
+}
+
+#color4:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #C51605;
+}
+
+#color-code {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  translate: 130px 130px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 199;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+#color-code-bg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  filter: blur(10px);
+}
+
+#color-code-text {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#color-code-text::after {
+  content: "v2";
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #1a1a1a;
+}
+
+#footer {
+  height: 12%;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+  box-sizing: border-box;
+  color: #bebebe;
+}
+
+#footer svg {
+  scale: 0.75;
+}
+
+#footer #bookmarks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: smaller;
+}
+</style>
