@@ -1,0 +1,120 @@
+<label class="switch">
+  <input type="checkbox" class="cb">
+  <span class="toggle">
+    <span class="left">OFF</span>  
+    <span class="right">ON</span>  
+  </span>
+</label>
+<style>
+/* From Uiverse.io by BernardoCuevas - Source: Ricardo Tsang - Tags: 3d switch, damper, on&off */
+.switch {
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  width: 6em;
+  height: 3em;
+}
+
+.switch .cb {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: #3d3d3d;
+  border-radius: .1em;
+  transition: 10s;
+  font-weight: 700;
+  overflow: hidden;
+  box-shadow: -.3em 0 0 0 #3d3d3d,-.3em .3em 0 0 #3d3d3d,.3em 0 0 0 #3d3d3d,.3em .3em 0 0 #3d3d3d,0 .3em 0 0 #3d3d3d;
+}
+
+.toggle > .left {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 88%;
+  background-color: #ffffffcc;
+  color: #ff0000da;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  transform-origin: right;
+  transform: rotateX(10deg);
+  transform-style: preserve-3d;
+  transition: all 150ms;
+}
+
+.left::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(112, 112, 112);
+  transform-origin: center left;
+  transform: rotateY(90deg);
+}
+
+.left::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(112, 112, 112);
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+}
+
+.toggle > .right {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 88%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(206, 206, 206);
+  right: 1px;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  transform-origin: left;
+  transform: rotateX(10deg) rotateY(-30deg);
+  transform-style: preserve-3d;
+  transition: all 150ms;
+}
+
+.right::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(112, 112, 112);
+  transform-origin: center right;
+  transform: rotateY(-90deg);
+}
+
+.right::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(112, 112, 112);
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+}
+
+.switch input:checked + .toggle > .left {
+  transform: rotateX(10deg) rotateY(30deg);
+  color: rgb(206, 206, 206);
+}
+
+.switch input:checked + .toggle > .right {
+  transform: rotateX(10deg) rotateY(0deg);
+  color: #33b833;
+}
+</style>
