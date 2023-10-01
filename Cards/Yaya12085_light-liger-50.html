@@ -1,0 +1,123 @@
+
+<div class="card">
+    <div class="infos">
+        <div class="image"></div>
+        <div class="info">
+            <div>
+                <p class="name">
+                    John Doe
+                </p>
+                <p class="function">
+                    Front-end dev 
+                </p>
+            </div>
+            <div class="stats">
+                    <p class="flex flex-col">
+                        Articles
+                        <span class="state-value">
+                            34
+                        </span>
+                    </p>
+                    <p class="flex">
+                        Followers
+                        <span class="state-value">
+                            455
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+    <button class="request" type="button">
+            Add friend
+        </button>
+</div>
+
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: card */
+.card {
+  max-width: 320px;
+  border-radius: 1rem;
+  background-color: rgba(31, 41, 55, 1);
+  padding: 1rem;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.image {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 0.5rem;
+  background-color: rgb(118, 36, 194);
+  background: linear-gradient(to bottom right, rgb(118, 36, 194), rgb(185, 128, 240));
+}
+
+.info {
+  height: 7rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.function {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1);
+}
+
+.stats {
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(0, 0, 0, 1);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 4px;
+}
+
+.state-value {
+  font-weight: 700;
+  color: rgb(118, 36, 194);
+}
+
+.request {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transition: all .3s ease;
+}
+
+.request:hover {
+  background-color: rgb(118, 36, 194);
+  color: #fff;
+}
+
+</style>
