@@ -1,0 +1,39 @@
+<div class="spinner"></div>
+
+<style>
+/* From Uiverse.io by AHMED-MIT - Tags: loader */
+.spinner {
+  position: relative;
+  width: 35.2px;
+  height: 35.2px;
+}
+
+.spinner::before,
+.spinner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: spinner-b4c8mmhg 0.5s backwards, spinner-49opz7hg 1.25s 0.5s infinite ease;
+  border: 8.8px solid #000000;
+  border-radius: 50%;
+  box-shadow: 0 -52.8px 0 -8.8px #000000;
+  position: absolute;
+}
+
+.spinner::after {
+  animation-delay: 0s, 1.25s;
+}
+
+@keyframes spinner-b4c8mmhg {
+  from {
+    box-shadow: 0 0 0 -8.8px #000000;
+  }
+}
+
+@keyframes spinner-49opz7hg {
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
