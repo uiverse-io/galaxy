@@ -1,0 +1,148 @@
+<div class="container">
+	<article class="card">
+		<a class="card__link" href="#">
+		
+			
+			<div class="card__icon">
+				<svg viewBox="0 0 1129 994">
+					<g stroke-width="41" stroke="#999" fill-rule="nonzero" fill="none">
+						<path d="M564.5 212.437L95.67 873.5h937.66L564.5 212.437z"></path>
+						<path d="M564.5 407.47L163.638 973.5h801.724L564.5 407.47z"></path>
+						<path d="M564.5 35.409L39.699 774.5H1089.3L564.5 35.409z"></path>
+					</g>
+				</svg>
+			</div>
+
+			
+			<div class="card__media">
+				<svg viewBox="0 0 1129 994">
+					<g stroke-width="41" stroke="#F5F5F5" fill-rule="nonzero" fill="none">
+						<path d="M564.5 212.437L95.67 873.5h937.66L564.5 212.437z"></path>
+						<path d="M564.5 407.47L163.638 973.5h801.724L564.5 407.47z"></path>
+						<path d="M564.5 35.409L39.699 774.5H1089.3L564.5 35.409z"></path>
+					</g>
+				</svg>
+			</div>
+
+			
+			<div class="card__header">
+				<p class="card__header-title">Title of Card</p>
+				<p class="card__header-meta">Subtitle</p>
+				<div class="card__header-icon">
+					<svg viewBox="0 0 28 25">
+						<path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" fill="#fff"></path>
+					</svg>
+				</div>
+			</div>
+			
+		</a>
+	</article>
+</div>
+<style>
+/* From Uiverse.io by Shoh2008 - Tags: card */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(50%);
+  }
+
+  90% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 20em;
+  background-color: #292929;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px 10px rgba(black, .2);
+}
+
+.card__link {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.card__icon {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover .card__icon {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.card__media {
+  padding: 2em 0;
+}
+
+.card__media	svg path {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  transform-origin: center center;
+}
+
+.card:hover svg path {
+  animation: fadeInScale .3s ease-in-out forwards;
+}
+
+.card:hover 	svg path:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.card:hover 	svg path:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.card__header {
+  position: relative;
+}
+
+.card__header-title {
+  margin: 0 0 .25em;
+  color: white;
+}
+
+.card__header-meta {
+  margin: 0;
+  color: #999;
+}
+
+.card__header-icon {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -1em;
+  transform: translateX(-20%);
+  width: 2em;
+  height: 2em;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover .card__header-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+</style>
