@@ -1,0 +1,103 @@
+<div class="loader">
+  <div class="cube">
+    <div class="face1"></div>
+    <div class="face2"></div>
+    <div class="face3"></div>
+    <div class="face4"></div>
+    <div class="face5"></div>
+    <div class="face6"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Pradeepsaranbishnoi - Tags: loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cube {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform-style: preserve-3d;
+  animation: rotate-cube 2s infinite;
+}
+
+.face1,
+.face2,
+.face3,
+.face4,
+.face5,
+.face6 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid #00BFFF;
+  box-sizing: border-box;
+}
+
+.face1 {
+  transform: rotateY(0deg) translateZ(25px);
+  animation: change-color 2s infinite;
+}
+
+.face2 {
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+.face3 {
+  transform: rotateY(90deg) translateZ(25px);
+  animation: change-color 2s infinite;
+}
+
+.face4 {
+  transform: rotateY(180deg) translateZ(25px);
+  animation: change-color 2s infinite;
+}
+
+.face5 {
+  transform: rotateX(-90deg) translateZ(25px);
+}
+
+.face6 {
+  transform: rotateY(-90deg) translateZ(25px);
+  animation: change-color 2s infinite;
+}
+
+@keyframes rotate-cube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes change-color {
+  0% {
+    background-color: #00BFFF;
+  }
+
+  25% {
+    background-color: #FF1493;
+  }
+
+  50% {
+    background-color: #32CD32;
+  }
+
+  75% {
+    background-color: #FFA500;
+  }
+
+  100% {
+    background-color: #00BFFF;
+  }
+}
+
+</style>
