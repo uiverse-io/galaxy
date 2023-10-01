@@ -1,0 +1,86 @@
+<div class="input-container">
+    <input placeholder="email" type="text" class="input">
+    <span>@gmail.com</span>
+</div>
+<style>
+/* From Uiverse.io by Yaya12085 - Tags: email, input */
+.input-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 290px;
+}
+
+.input-container > span,
+.input-container .input {
+  white-space: nowrap;
+  display: block;
+}
+
+.input-container > span,
+.input-container .input:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.input-container > span,
+.input-container .input {
+  border-radius: 0 6px 6px 0;
+}
+
+.input-container > span,
+.input-container .input {
+  margin-left: -1px;
+}
+
+.input-container .input {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.input-container span {
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #6b7385;
+  background: #d4def5;
+  border: 1px solid #CDD9ED;
+  font-weight: bold;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.input-container:focus-within > span {
+  color: #fff;
+  background-color: #148cd1;
+  border-color: #148cd1;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  color: #99A3BA;
+  border: 1px solid  #CDD9ED;
+  background: #fff;
+  transition: border 0.3s ease;
+}
+
+.input::placeholder {
+  color: #CBD1DC;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #148cd1;
+}
+</style>
