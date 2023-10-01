@@ -1,0 +1,41 @@
+<button>Button</button>
+<style>
+/* From Uiverse.io by PozDevill - Tags: button */
+button {
+  position: relative;
+  font-family: 'Heebo', sans-serif;
+  padding: 12px 40px;
+  border: 0;
+  background: rgb(148, 1, 1);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.562);
+  transform: scale(1.01);
+  box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.575);
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 50%;
+  height: 100%;
+  transform: rotate(80deg);
+  background: #ffffff77;
+  filter: blur(10px);
+  transition: 0.6s ease-in-out;
+}
+
+button:hover::after {
+  left: 100%;
+}
+</style>
