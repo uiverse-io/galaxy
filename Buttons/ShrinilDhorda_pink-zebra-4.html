@@ -1,0 +1,138 @@
+ <button class="crushbtn">
+    crush
+    <div class="heart1">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+        </svg>
+    </div>
+    <div class="heart2">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+        </svg>
+    </div>
+    <div class="heart3">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+        </svg>
+    </div>
+</button>
+<style>
+/* From Uiverse.io by ShrinilDhorda - Tags: gradient, button, active, modern, blur filter, svg, crush */
+.crushbtn {
+  font-size: 2rem;
+  padding: 0.7rem 2.4rem;
+  letter-spacing: .3rem;
+  border-radius: 1.5rem;
+  position: relative;
+  background-color: #e8e8e8;
+  color: red;
+  border: none;
+  text-shadow: 0 0 3px #ff6e6e;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.7s;
+  z-index: 2;
+}
+
+.heart1 svg {
+  position: absolute;
+  left: 4.5rem;
+  top: 1.8rem;
+  opacity: 0;
+  fill: red;
+  stroke: none;
+  transition: 0.7s;
+  width: 2rem;
+  height: 2rem;
+  animation: move1 5s ease-in-out infinite alternate-reverse;
+}
+
+.heart2 svg {
+  position: absolute;
+  left: 0.8rem;
+  opacity: 0;
+  top: 0.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: red;
+  stroke: none;
+  transform: rotate(-20deg );
+  animation: move2 5s ease infinite alternate-reverse;
+}
+
+.heart3 svg {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  opacity: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  transform: rotate(20deg);
+  fill: red;
+  stroke: none;
+  z-index: -1;
+  animation: move3 5s ease infinite alternate-reverse;
+}
+
+@keyframes move1 {
+  0% {
+    top: 2rem;
+  }
+
+  50% {
+    top: 4rem;
+  }
+
+  100% {
+    top: 2rem;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    top: 0.3rem;
+  }
+
+  50% {
+    top: 1.5rem;
+  }
+
+  100% {
+    top: 0.3rem;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    top: 1.5rem;
+  }
+
+  50% {
+    top: .6rem;
+  }
+
+  100% {
+    top: 1.5rem;
+  }
+}
+
+.crushbtn:hover .heart1 svg,
+.crushbtn:hover .heart2 svg,
+.crushbtn:hover .heart3 svg {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px #ff6e6e)
+}
+
+.crushbtn:hover {
+  color: red;
+  box-shadow: 0 0 10px inset #ff6e6e;
+  scale: 105%;
+}
+
+.crushbtn:active {
+  scale: 100%;
+}
+</style>
