@@ -1,0 +1,63 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by Lakshay-art - Tags: card, hover effect, aeroplane, single-div */
+.one-div {
+  height: 200px;
+  width: 200px;
+  background-image: radial-gradient(circle, black 25%,rgb(69, 11, 11) 45%, red 46%, black , red);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 50%;
+}
+
+.one-div::before {
+  content: '';
+  height: 60px;
+  width: 420px;
+  bottom: -20px;
+  left: -100px;
+  position: absolute;
+  z-index: -10;
+  transition: all 1s linear;
+  transform-origin: 50% 0%;
+  isolation: isolate;
+  background-image: linear-gradient(180deg,rgb(255, 179, 0) 20%,rgb(244, 205, 205),rgb(255, 179, 0) 30%,rgb(5, 56, 99) 90%);
+  border-radius: 30px 30px 70% 70%;
+}
+
+.one-div::after {
+  content: '';
+  position: absolute;
+  height: 280px;
+  width: 30px;
+  border-radius: 50%;
+  top: -30px;
+  left: 85px;
+  background-image: linear-gradient(0deg,rgb(255, 179, 0), #777 25px,#eee, #777 calc(100% - 25px) , rgb(255, 179, 0));
+  animation: propeller 1.5s infinite linear;
+  z-index: 1;
+}
+
+.one-div:hover::after {
+  animation: propeller .35s infinite linear;
+}
+
+.one-div:hover::before {
+  /* animation: propeller 1.5s infinite linear; */
+  transform: rotate(20deg);
+  left: -110px;
+}
+
+@keyframes propeller {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rev-propeller {
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+</style>
