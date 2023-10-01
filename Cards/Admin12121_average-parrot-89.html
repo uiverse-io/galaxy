@@ -1,0 +1,124 @@
+<div class="main">
+<div class="card">
+  <div class="card-content">
+    <div class="h3"><span>UI</span>VERSE</div>
+    <div class="h1">Love to Code.</div>
+    <p class="p">Love to spend hours in codeing and get lost in own fantasy world of code, the feeling 😂🚀😊 </p>
+  </div>
+</div>
+</div>
+<style>
+/* From Uiverse.io by Admin12121 - Tags: card, cardhover , card animation */
+.h3 span {
+  font-weight: 800;
+  background: linear-gradient(125deg, #b663ff, #13c1ef);
+  text-transform: uppercase;
+  -webkit-background-cLip: text;
+  -webkit-text-filL-coLor: transparent;
+}
+
+.h3::after {
+  content: '';
+  margin-top: -5px;
+  height: 3px;
+  width: 25%;
+  background: linear-gradient(125deg, #b663ff, #13c1ef);
+  display: block;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 80%;
+  position: relative;
+  background-color: rgb(16 16 16);
+  border: 1px solid rgb(255 255 255 / 5%);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.card:after {
+  content: "";
+  height: 70px;
+  width: 1px;
+  position: absolute;
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent, mediumslateblue,transparent);
+  box-shadow: 0 0 30px mediumslateblue;
+  opacity: 0;
+}
+
+.card:after {
+  top: 65%;
+  opacity: 0;
+}
+
+.card:hover:after {
+  top: 25%;
+  opacity: 1;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1px, 
+    transparent 1px
+  );
+  background-position: 50% 50%;
+  background-size: 1.1rem 1.1rem;
+  padding: 2.3rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card-content .h1,.h3,.p {
+  text-align: center;
+}
+
+.card-content .h1 {
+  color: rgb(250 249 246);
+  font-size: 2.6rem;
+}
+
+.card-content  .h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.card-content  .p {
+  color: rgb(255 255 255 / 75%);
+  line-height: 1.3rem;
+}
+
+@media(max-width: 700px) {
+  .card {
+    width: calc(100% - 2rem);
+    margin: 0rem 1rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
+  }
+}
+
+@media(max-width: 600px) {
+  .card-content {
+    padding: 3rem;
+  }
+
+  .card-content  .h1 {
+    font-size: 2.2rem;
+  }
+}
+
+</style>
