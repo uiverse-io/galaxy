@@ -1,0 +1,381 @@
+<div class="orbit">
+  
+  <ul class="orbit-wrap">
+    
+    <li class="orbit-center">
+      <i class="orbit-center__icon fa fa-code"></i>
+    </li>
+
+    <li>
+      <ul class="ring-0">
+        <li><i class="orbit-icon fa fa-git"></i></li>
+        <li><i class="orbit-icon fa fa-free-code-camp"></i></li>
+        <li><i class="orbit-icon fa fa-meetup"></i></li>
+        <li><i class="orbit-icon fa fa-codepen"></i></li>
+      </ul>
+    </li>
+
+    <li>
+      <ul class="ring-1">
+        <li><i class="orbit-icon fa fa-podcast"></i></li>
+        <li><i class="orbit-icon fa fa-css3"></i></li>
+        <li><i class="orbit-icon fa fa-html5"></i></li>
+      </ul>
+    </li>
+    <li>
+      <ul class="ring-2">
+        <li><i class="orbit-icon fa fa-windows"></i></li>
+        <li><i class="orbit-icon fa fa-safari"></i></li>
+        <li><i class="orbit-icon fa fa-edge"></i></li>
+        <li><i class="orbit-icon fa fa-linux"></i></li>
+        <li><i class="orbit-icon fa fa-apple"></i></li>
+        <li><i class="orbit-icon fa fa-chrome"></i></li>
+        <li><i class="orbit-icon fa fa-android"></i></li>
+        <li><i class="orbit-icon fa fa-firefox"></i></li>
+      </ul>
+    </li>
+    <li>
+      <ul class="ring-3">
+        <li><i class="orbit-icon fa fa-coffee"></i></li>
+        <li><i class="orbit-icon fa fa-terminal"></i></li>
+        <li><i class="orbit-icon fa fa-heart-o"></i></li>
+      </ul>
+    </li>
+
+  </ul>
+  
+</div>
+<style>
+/* From Uiverse.io by VashonG - Tags: loader, orbit */
+.orbit {
+  float: left;
+  width: 100%;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.orbit-icon {
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.6em;
+  font-size: 1.2em;
+  border-radius: 50%;
+  background: #ccc;
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+
+.orbit-wrap {
+  height: 40em;
+  list-style: none;
+  font-size: 1.3em;
+}
+
+.orbit-wrap > li {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit-wrap > li:hover ul {
+  border-width: 2px;
+  border-color: #fff;
+}
+
+.orbit-wrap > li:hover ~ li ul {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.orbit-wrap > li:hover ~ li ul li {
+  opacity: 0.4;
+}
+
+ul[class^=ring] {
+  transition: all 300ms ease-in-out;
+}
+
+ul[class^=ring] li {
+  transition: all 300ms ease-in-out;
+}
+
+.ring-0 {
+  width: 25em;
+  height: 25em;
+  animation: clockwiseRotate 35s linear infinite;
+}
+
+.ring-0 i {
+  animation: counterClockwiseRotate 35s linear infinite;
+}
+
+.ring-0 > *:nth-of-type(1) {
+  transform: rotate(95deg) translate(12.5em) rotate(-95deg);
+}
+
+.ring-0 > *:nth-of-type(2) {
+  transform: rotate(190deg) translate(12.5em) rotate(-190deg);
+}
+
+.ring-0 > *:nth-of-type(3) {
+  transform: rotate(285deg) translate(12.5em) rotate(-285deg);
+}
+
+.ring-0 > *:nth-of-type(4) {
+  transform: rotate(380deg) translate(12.5em) rotate(-380deg);
+}
+
+.ring-1 {
+  width: 20em;
+  height: 20em;
+  animation: clockwiseRotate 30s linear infinite;
+}
+
+.ring-1 i {
+  animation: counterClockwiseRotate 30s linear infinite;
+}
+
+.ring-1 > *:nth-of-type(1) {
+  transform: rotate(126.6666666667deg) translate(10em) rotate(-126.6666666667deg);
+}
+
+.ring-1 > *:nth-of-type(2) {
+  transform: rotate(253.3333333333deg) translate(10em) rotate(-253.3333333333deg);
+}
+
+.ring-1 > *:nth-of-type(3) {
+  transform: rotate(380deg) translate(10em) rotate(-380deg);
+}
+
+.ring-2 {
+  width: 15em;
+  height: 15em;
+  animation: clockwiseRotate 25s linear infinite;
+}
+
+.ring-2 i {
+  animation: counterClockwiseRotate 25s linear infinite;
+}
+
+.ring-2 > *:nth-of-type(1) {
+  transform: rotate(47.5deg) translate(7.5em) rotate(-47.5deg);
+}
+
+.ring-2 > *:nth-of-type(2) {
+  transform: rotate(95deg) translate(7.5em) rotate(-95deg);
+}
+
+.ring-2 > *:nth-of-type(3) {
+  transform: rotate(142.5deg) translate(7.5em) rotate(-142.5deg);
+}
+
+.ring-2 > *:nth-of-type(4) {
+  transform: rotate(190deg) translate(7.5em) rotate(-190deg);
+}
+
+.ring-2 > *:nth-of-type(5) {
+  transform: rotate(237.5deg) translate(7.5em) rotate(-237.5deg);
+}
+
+.ring-2 > *:nth-of-type(6) {
+  transform: rotate(285deg) translate(7.5em) rotate(-285deg);
+}
+
+.ring-2 > *:nth-of-type(7) {
+  transform: rotate(332.5deg) translate(7.5em) rotate(-332.5deg);
+}
+
+.ring-2 > *:nth-of-type(8) {
+  transform: rotate(380deg) translate(7.5em) rotate(-380deg);
+}
+
+.ring-3 {
+  width: 10em;
+  height: 10em;
+  animation: clockwiseRotate 20s linear infinite;
+}
+
+.ring-3 i {
+  animation: counterClockwiseRotate 20s linear infinite;
+}
+
+.ring-3 > *:nth-of-type(1) {
+  transform: rotate(126.6666666667deg) translate(5em) rotate(-126.6666666667deg);
+}
+
+.ring-3 > *:nth-of-type(2) {
+  transform: rotate(253.3333333333deg) translate(5em) rotate(-253.3333333333deg);
+}
+
+.ring-3 > *:nth-of-type(3) {
+  transform: rotate(380deg) translate(5em) rotate(-380deg);
+}
+
+ul[class^=ring] {
+  border: solid 1px rgba(33, 150, 243, 0.8);
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+}
+
+ul[class^=ring] li {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  margin: -0.8em;
+}
+/*
+ center;
+ */
+.orbit-center {
+  z-index: 5;
+  font-size: 2em;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+  background: hotpink;
+  border-radius: 50%;
+}
+
+.orbit-center:hover .orbit-center__icon {
+  transform: rotateZ(0deg);
+}
+
+.orbit-center__icon {
+  transform: rotateZ(-360deg);
+  transition: all 300ms ease-in-out;
+}
+
+.orbit-wrap > li.orbit-center:hover ~ li > ul {
+  width: 0;
+  height: 0;
+}
+
+.orbit-wrap > li.orbit-center:hover ~ li > ul * {
+  transform: translate(0, 0);
+}
+/* 
+ animations 
+ */
+@keyframes clockwiseRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterClockwiseRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/* 
+ icons 
+ */
+.fa-heart-o {
+  background: #b71c1c;
+  color: white;
+}
+
+.fa-coffee {
+  background: #4CAF50;
+  color: #CDDC39;
+}
+
+.fa-safari {
+  background: white;
+  color: darkslateblue;
+}
+
+.fa-firefox {
+  background: #1565c0;
+  color: #ff8f00;
+}
+
+.fa-chrome {
+  background: #fbc02d;
+  color: #ef6c00;
+}
+
+.fa-edge {
+  background: #03a9f4;
+  color: white;
+}
+
+.fa-android {
+  background: snow;
+  color: limegreen;
+}
+
+.fa-apple {
+  background: #444;
+  color: white;
+}
+
+.fa-linux {
+  background: white;
+  color: #222;
+}
+
+.fa-windows {
+  background: white;
+  color: #03a9f4;
+}
+
+.fa-terminal {
+  background: #222;
+  color: #fff;
+}
+
+.fa-html5 {
+  background: white;
+  color: #e65100;
+}
+
+.fa-css3 {
+  background: white;
+  color: #2196f3;
+}
+
+.fa-git {
+  background: #222;
+  color: white;
+}
+
+.fa-free-code-camp {
+  background: green;
+  color: white;
+}
+
+.fa-meetup {
+  background: red;
+  color: white;
+}
+
+.fa-podcast {
+  background: red;
+  color: white;
+}
+
+.fa-codepen {
+  background: #333;
+  color: white;
+}
+
+
+
+</style>
