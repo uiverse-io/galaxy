@@ -1,0 +1,109 @@
+<div class="check">
+  <input id="check" type="checkbox">
+  <label for="check"></label>
+</div>
+<style>
+/* From Uiverse.io by Custyyyy - Tags: switch */
+.check {
+ position: relative;
+ background: linear-gradient(90deg, #f19af3, #f099b5);
+ line-height: 0;
+ font-size: 25px;
+}
+
+.check input[type="checkbox"],
+.check label,
+.check label::before,
+.check label::after {
+ appearance: none;
+ display: inline-block;
+ font-size: inherit;
+ border-radius: 1em;
+ border: 0;
+ transition: .35s ease-in-out;
+ box-sizing: border-box;
+ cursor: pointer;
+}
+
+.check {
+ appearance: none;
+ display: inline-block;
+ border-radius: 1em;
+ border: 0;
+ transition: .35s ease-in-out;
+ box-sizing: border-box;
+ cursor: pointer;
+}
+
+.check label {
+ width: 2.2em;
+ height: 1em;
+ background: #d7d7d7;
+ overflow: hidden;
+}
+
+.check input[type="checkbox"] {
+ position: absolute;
+ z-index: 1;
+ width: .8em;
+ height: .8em;
+ top: .1em;
+ left: .1em;
+ background: linear-gradient(45deg, #dedede, #ffffff);
+ box-shadow: 0 6px 7px rgba(0,0,0,0.3);
+ outline: none;
+}
+
+.check input[type="checkbox"]:checked {
+ left: 1.3em;
+}
+
+.check input[type="checkbox"]:checked + label {
+ background: transparent;
+}
+
+.check label::before,
+.check label::after {
+ content: "· ·";
+ position: absolute;
+ overflow: hidden;
+ left: .50em;
+ top: .5em;
+ height: 1em;
+ letter-spacing: -.04em;
+ color: #9b9b9b;
+ font-family: "Times New Roman", serif;
+ z-index: 2;
+ font-size: .6em;
+ border-radius: 0;
+ transform-origin: 0 0 -.5em;
+ backface-visibility: hidden;
+}
+
+.check label::after {
+ content: "?";
+ top: .65em;
+ left: .6em;
+ height: .1em;
+ width: .35em;
+ font-size: .2em;
+ transform-origin: 0 0 -.4em;
+}
+
+.check input[type="checkbox"]:checked + label::before,
+.check input[type="checkbox"]:checked + label::after {
+ left: 2.55em;
+ top: .4em;
+ line-height: .1em;
+ transform: rotateY(360deg);
+}
+
+.check input[type="checkbox"]:checked + label::after {
+ height: .16em;
+ top: .55em;
+ left: 2.6em;
+ font-size: .6em;
+ line-height: 0;
+}
+
+</style>
