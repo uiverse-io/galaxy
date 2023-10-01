@@ -1,0 +1,44 @@
+<button class="button">
+ ㅤ JOIN NOW
+</button>
+<style>
+/* From Uiverse.io by JaydipPrajapati1910 - Tags: blue, button, join now, buttons */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #0000FF;
+  font-size: 17px;
+  border-radius: 5px;
+  width: 160px;
+  height: 40px;
+  border: 1px solid #0000FF;
+  position: relative;
+  transition: 0.3s;
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+.button::before {
+  content: "FREE";
+  display: block;
+  font-size: 13px;
+  background-color: #0000FF;
+  color: #fff;
+  border-radius: 3px;
+  padding: 3px 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-5px, -30%);
+  transition: .3s;
+}
+
+.button:hover::before {
+  transform: translate(-5px, -50%);
+}
+
+
+</style>
