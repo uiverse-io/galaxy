@@ -1,0 +1,82 @@
+<div class="card">
+  <div class="img-card">
+  </div>
+  <div class="add-cart">Add to Cart</div>
+  <div class="info-card">
+    <p><strong>Lorem ipsum</strong></p>
+    <p>Price : 15$</p>
+  </div>
+  
+</div>
+<style>
+/* From Uiverse.io by garerim - Tags: card */
+.card {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #fff;
+  border: solid 4px #333;
+  box-shadow: -5px 5px #333;
+  transition: all .2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  margin: 10px 10px 0 0;
+  box-shadow: 0px 0px #333;
+}
+
+.card .img-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter .2s 1s ease-in-out;
+}
+
+.card:hover .img-card {
+  filter: blur(1px);
+}
+
+.card .add-cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 250px;
+  font-weight: bold;
+  font-size: 19px;
+  opacity: 0;
+}
+
+.card:hover .add-cart {
+  opacity: 1;
+  transition: opacity .3s 1s ease-in-out;
+}
+
+.card .info-card {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: solid 1px #333;
+}
+
+.card .info-card p {
+  font-size: 14px;
+  margin: 5px;
+}
+
+
+</style>
