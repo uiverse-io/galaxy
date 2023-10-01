@@ -1,0 +1,107 @@
+<div class="box-avatar">
+  <div class="avatar">
+      <svg class="avatar-icon" viewBox="0 0 17 15">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+      </svg>
+    </div>
+</div>
+  <div class="notification">    
+    <div class="notification-info">
+      <p class="notification-text"> <span class="highlight">Player</span> reached <b>level 15!</b> </p>
+    </div>
+  </div>
+<style>
+/* From Uiverse.io by alexruix - Tags: notification */
+.notification {
+  display: flex;
+  width: 0;
+  background: #ddd;
+  border-radius: 10px;
+  animation: slideIn 1s ease-in-out 1.25s forwards;
+}
+
+.notification-info {
+  display: inline-flex;
+  overflow: hidden;
+  background-color: #181818;
+  color: #fff;
+  width: 100%;
+  border-radius: 12px 8px 8px 12px;
+  padding-left: 16px;
+  align-items: center;
+}
+
+.notification-text {
+  opacity: 0;
+  padding: 10px 8px;
+  white-space: nowrap;
+  animation: textInfo 1s ease-in-out 1.5s forwards;
+}
+
+.highlight {
+  color: #ffc300;
+}
+
+.box-avatar {
+  background-color: #181818;
+  padding: 6px;
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  margin-right: -20px;
+  box-shadow: 6.2px 3.1px 38.2px -6px rgba(0, 0, 0, 0.2), 63px 32px 176px -6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.avatar {
+  background-color: #FDA203;
+  padding: .6em;
+  border-radius: 50%;
+}
+
+.avatar-icon {
+  width: 100%;
+  height: 100%;
+  fill: white;
+  animation: grow 2s ease-in-out 3;
+}
+
+/*Animations*/
+@keyframes slideIn {
+  0% {
+    width: 0;
+    padding: 2px;
+  }
+
+  100% {
+    width: 250px;
+    padding: 2px;
+  }
+}
+
+@keyframes textInfo {
+  0% {
+    opacity: 0%;
+    margin-left: -20em;
+  }
+
+  100% {
+    opacity: 100%;
+    margin-left: 0;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(100%) translateY(0%);
+  }
+
+  50% {
+    transform: scale(100%) translateY(-10%);
+  }
+
+  100% {
+    transform: scale(100%) translateY(0%);
+  }
+}
+</style>
