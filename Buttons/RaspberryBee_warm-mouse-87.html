@@ -1,0 +1,46 @@
+<button class="button">
+  Send
+</button>
+<style>
+/* From Uiverse.io by RaspberryBee - Tags: send, button, rounded */
+.button {
+  height: 2em;
+  width: 5em;
+  border-radius: 1em;
+  border: 0.1rem solid transparent;
+  background-color: rgb(64, 146, 239);
+  transition: 0.3s;
+  font-size: 1em;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.05) rotate(3deg);
+}
+
+.button:active {
+  animation: borderMove 0.5s forwards;
+  transform: scale(0.9) rotate(-3deg);
+  background-color: rgb(0, 0, 0);
+  color: rgb(64, 146, 239);
+  border: 0.1rem solid rgb(38, 103, 224);
+}
+
+@keyframes borderMove {
+  0% {
+    border-width: 0.1rem;
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    border-width: 0.4rem;
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  100% {
+    border-width: 0.15rem;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+</style>
