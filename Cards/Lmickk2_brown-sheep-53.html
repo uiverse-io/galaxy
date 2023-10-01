@@ -1,0 +1,98 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by Lmickk2 - Tags: card, hover, light&dark, one-div */
+.one-div {
+  width: 8em;
+  height: 12em;
+  background-color: rgb(69, 152, 201);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.one-div::before {
+  content: "One";
+  position: absolute;
+  top: 0;
+  width: 8em;
+  height: 12em;
+  background-color: rgb(235, 110, 101);
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.one-div::after {
+  content: "Div";
+  position: absolute;
+  top: 0;
+  width: 8em;
+  height: 12em;
+  background-color: rgb(230, 190, 10);
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.one-div:hover:before {
+  left: -7em;
+  margin-top: 1em;
+  transform: rotate(-15deg);
+  animation: slide-left 0.8s;
+  transition: 0.5s ease-in-out;
+}
+
+.one-div:hover:after {
+  right: -7em;
+  margin-top: 1em;
+  transform: rotate(15deg);
+  animation: slide-right 0.8s;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes slide-left {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -3em;
+  }
+
+  100% {
+    left: -7em;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -3em;
+  }
+
+  100% {
+    right: -7em;
+  }
+}
+
+.one-div:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
+}
+
+.one-div:hover::after {
+  box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.596);
+}
+
+.one-div:hover::before {
+  box-shadow: -3px 1px 10px rgba(0, 0, 0, 0.596);
+}
+
+</style>
