@@ -1,0 +1,106 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by bociKond - Tags: animation, card, clock, pulse, box-shadow, AM/PM, wrist, watch */
+.one-div {
+  --white: rgb(200,200,200);
+  --black: rgb(50,50,50);
+  --clr: #7BF1A8;
+  --clr1: #b4facf;
+  --clr2: #3E363F;
+  background-color: var(--clr2);
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  position: relative;
+  transition: all 300ms;
+  animation: shadow 1.5s infinite linear;
+}
+
+.one-div:hover {
+  background-color: var(--clr);
+  box-shadow: 0 0 100px var(--clr);
+  border-radius: 1rem;
+  border: 10px solid var(--clr1);
+}
+
+.one-div:hover::before {
+  border-radius: 1rem;
+  color: var(--clr2);
+  font-weight: 900;
+  clip-path: polygon(0% 0%, 100.1% 0%, 91% 50%, 100.1% 100.3%, 0% 100.3%);
+}
+
+.one-div:hover::after {
+  animation-play-state: running;
+}
+
+.one-div::before {
+  content: '14:30pm';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  border: 10px solid var(--clr2);
+  font-size: 2rem;
+  color: var(--clr);
+  transition: all 300ms;
+}
+
+.one-div::after {
+  content: '';
+  position: absolute;
+  background-image: repeating-linear-gradient(0deg, var(--black), var(--black) 4px, transparent 4px, transparent);
+  background-size: 16px 16px;
+  background-position: center;
+  background-color: var(--white);
+  width: 140px;
+  height: 450px;
+  border-radius: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -2;
+  border-left: 10px solid var(--clr2);
+  border-right: 10px solid var(--clr2);
+  transition: all 300ms;
+  animation: height 1.5s infinite linear;
+  animation-play-state: paused;
+}
+
+@keyframes height {
+  from {
+    height: 450px;
+  }
+
+  50% {
+    height: 400px;
+  }
+
+  to {
+    height: 450px;
+  }
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: 0 0 100px var(--clr);
+  }
+
+  50% {
+    box-shadow: 0 0 100px 50px var(--clr);
+  }
+
+  to {
+    box-shadow: 0 0 100px var(--clr);
+  }
+}
+</style>
