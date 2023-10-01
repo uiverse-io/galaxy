@@ -1,0 +1,52 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by vikas7754 - Tags: bubble, drop, water drop */
+.one-div {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 57% 43% 37% 63% / 45% 52% 48% 52%;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 
+                      15px 25px 10px rgba(0, 0, 0, 0.1), 
+                      15px 20px 20px rgba(0, 0, 0, 0.05), 
+                inset -10px -10px 15px rgba(237, 237, 237, 0.9);
+  animation: anim 1s infinite alternate;
+}
+
+.one-div:before {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 35px;
+  width: 20px;
+  height: 20px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+  background: #FFF
+}
+
+.one-div:after {
+  content: '';
+  position: absolute;
+  left: 60px;
+  top: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+  background: #ffffff
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+    height: 150px;
+    width: 150px;
+  }
+
+  100% {
+    transform: translateY(40px);
+    height: 135px;
+    width: 160px;
+  }
+}
+</style>
