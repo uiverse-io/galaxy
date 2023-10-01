@@ -1,0 +1,251 @@
+<div class="container">
+    <div class="top-left"></div>
+    <div class="top-right"></div>
+    <div class="bottom-left"></div>
+    <div class="bottom-right"></div>
+</div>
+<style>
+/* From Uiverse.io by fanishah - Tags: loader */
+.container {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+.container div {
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  left: 50px;
+  display: block;
+  position: absolute;
+}
+
+.top-left {
+  animation: tl 7.5s ease infinite
+}
+
+.top-right {
+  animation: tr 7.5s ease infinite
+}
+
+.bottom-left {
+  animation: bl 7.5s ease infinite
+}
+
+.bottom-right {
+  animation: br 7.5s ease infinite
+}
+
+.container div:before,
+.container div:after {
+  display: block;
+  position: absolute;
+  content: ""
+}
+
+.container div:before {
+  width: 50px;
+  height: 50px
+}
+
+.top-left:before {
+  background: rgb(251, 189, 4);
+  top: 0;
+  left: 0;
+  border-radius: 100% 0 0 0
+}
+
+.top-right:before {
+  background: rgb(234, 67, 52);
+  top: 0;
+  right: 0;
+  border-radius: 0 100% 0 0
+}
+
+.bottom-left:before {
+  background: rgb(52, 168, 83);
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 0 100%
+}
+
+.bottom-right:before {
+  background: rgb(67, 135, 244);
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 100% 0
+}
+
+.container div:after {
+  background: rgb(33, 33, 33);
+  width: 25px;
+  height: 25px;
+  z-index: 1
+}
+
+.top-left:after {
+  top: 25px;
+  left: 25px;
+  border-radius: 100% 0 0 0
+}
+
+.top-right:after {
+  top: 25px;
+  right: 25px;
+  border-radius: 0 100% 0 0
+}
+
+.bottom-left:after {
+  bottom: 25px;
+  left: 25px;
+  border-radius: 0 0 0 100%
+}
+
+.bottom-right:after {
+  bottom: 25px;
+  right: 25px;
+  border-radius: 0 0 100% 0
+}
+
+@keyframes tl {
+  0%,96%,100% {
+    transform: rotate(0deg)
+  }
+
+  12% {
+    transform: rotate(-45deg)
+  }
+
+  24% {
+    transform: rotate(-90deg)
+  }
+
+  36% {
+    transform: rotate(-135deg)
+  }
+
+  48% {
+    left: 50px;
+    transform: rotate(-180deg)
+  }
+
+  60% {
+    left: 125px;
+    opacity: 1;
+    transform: rotate(-135deg)
+  }
+
+  61%,95% {
+    opacity: 0
+  }
+}
+
+@keyframes tr {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  12% {
+    transform: rotate(-45deg)
+  }
+
+  24% {
+    transform: rotate(-90deg)
+  }
+
+  36% {
+    transform: rotate(-135deg)
+  }
+
+  48% {
+    transform: rotate(-180deg)
+  }
+
+  60% {
+    transform: rotate(-225deg)
+  }
+
+  72% {
+    transform: rotate(-270deg)
+  }
+
+  84% {
+    transform: rotate(-315deg)
+  }
+
+  96%,100% {
+    transform: rotate(-360deg)
+  }
+}
+
+@keyframes bl {
+  0%,100% {
+    transform: rotate(0deg)
+  }
+
+  12% {
+    transform: rotate(-45deg)
+  }
+
+  24% {
+    left: 50px;
+    transform: rotate(-90deg)
+  }
+
+  36% {
+    left: 125px;
+    opacity: 1;
+    transform: rotate(-45deg)
+  }
+
+  37%,83% {
+    opacity: 0
+  }
+
+  84% {
+    left: -25px;
+    opacity: 1;
+    transform: rotate(-45deg)
+  }
+
+  96% {
+    left: 50px;
+    transform: rotate(0deg)
+  }
+}
+
+@keyframes br {
+  0%,96%,100% {
+    transform: rotate(0deg)
+  }
+
+  12% {
+    left: 125px;
+    opacity: 1;
+    transform: rotate(45deg)
+  }
+
+  13%,59% {
+    opacity: 0
+  }
+
+  60% {
+    left: -25px;
+    opacity: 1;
+    transform: rotate(45deg)
+  }
+
+  72% {
+    left: 50px;
+    transform: rotate(90deg)
+  }
+
+  84% {
+    transform: rotate(45deg)
+  }
+}
+</style>
