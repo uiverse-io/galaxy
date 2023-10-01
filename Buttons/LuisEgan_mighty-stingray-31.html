@@ -1,0 +1,343 @@
+<button>
+  <svg id="rocket" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 416.449 416.449" xml:space="preserve">
+    <g id="tip">
+      <path d="M399.76,16.699c10.12,37.84,8.67,78.13-4.34,115.28h-0.01L284.48,21.049v-0.01      C321.63,8.029,361.92,6.579,399.76,16.699z"></path>
+    </g>
+    <g id="rocket-body">
+      <path d="M90.21,207.929l87.14-101.42h0.01l33.71-39.24c21.43-21.43,46.6-36.84,73.41-46.23v0.01      l110.93,110.93h0.01c-9.39,26.81-24.8,51.98-46.23,73.41l-39.24,33.71l-101.43,87.14l-29.57-29.57l-29.58-29.58l-29.58-29.58z"></path>
+    </g>
+    <g id="wings">
+      <path id="wings-top" d="M309.95,239.099c1.74,45.6-14.8,91.78-49.61,126.59c-10.69,10.68-22.44,19.65-34.93,26.89      l-16.89-66.34L309.95,239.099z"></path>
+      <path id="wings-bottom" d="M177.35,106.509l-87.14,101.42l-66.33-16.88c7.24-12.49,16.21-24.24,26.89-34.93      C85.58,121.309,131.74,104.769,177.35,106.509z"></path>
+    </g>
+    <g id="rocket-body-bottom">
+      <path d="M208.52,326.239l-39.94,14.71c-10.98,4.05-23.31,1.34-31.58-6.94l-6.85-6.85l48.8-30.49      L208.52,326.239z"></path>
+      <polygon points="178.95,296.669 130.15,327.159 130.14,327.159 109.72,306.739 149.37,267.089"></polygon>
+      <polygon points="149.37,267.089 109.72,306.739 89.3,286.309 119.79,237.509"></polygon>
+      <path d="M119.79,237.509l-30.49,48.8l-6.86-6.85c-8.27-8.28-10.98-20.6-6.94-31.58l14.71-39.95      L119.79,237.509z"></path>
+    </g>
+    <g id="flames">
+      <path d="M28.88,339.459c-2.559,0-5.119-0.977-7.071-2.929c-3.905-3.905-3.905-10.237,0-14.143      l20.54-20.54c3.905-3.904,10.237-3.904,14.143,0c3.905,3.905,3.905,10.237,0,14.143l-20.54,20.54      C33.999,338.482,31.44,339.459,28.88,339.459z"></path>
+      <path d="M10,416.439c-2.56,0-5.119-0.977-7.072-2.93c-3.905-3.905-3.904-10.237,0.001-14.142l68.47-68.46      c3.905-3.904,10.237-3.904,14.142,0.001c3.905,3.905,3.904,10.237-0.002,14.142l-68.47,68.46      C15.118,415.463,12.559,416.439,10,416.439z"></path>
+      <path d="M73.29,411.259c-2.56,0-5.118-0.977-7.071-2.929c-3.905-3.905-3.905-10.237,0-14.143      l34.23-34.229c3.905-3.904,10.237-3.903,14.142,0c3.905,3.905,3.905,10.237,0,14.143l-34.23,34.229      C78.409,410.282,75.849,411.259,73.29,411.259z"></path>
+    </g>
+  </svg>
+
+  <div id="smoke">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</button>
+<style>
+/* From Uiverse.io by LuisEgan - Tags: button */
+button {
+  background-color: transparent;
+  position: relative;
+  border: none;
+}
+
+button::before {
+  content: "Ready";
+  animation: .55s cubic-bezier(1,-0.06,.61,.45);
+  color: rgb(87, 78, 78);
+  font-size: 1.3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(43%);
+  z-index: 1;
+}
+
+/* COLORS */
+
+#tip > path {
+  fill: #5b5eb3;
+}
+
+#rocket-body > path {
+  fill: #cccac6;
+  stroke: #cccac6
+}
+
+#wings > path {
+  fill: #cccac6;
+  stroke: #cccac6
+}
+
+#rocket-body-bottom > path,
+#rocket-body-bottom > polygon {
+  fill: #514737;
+  stroke: #514737;
+}
+
+#flames :nth-child(2n+1) {
+  fill: red;
+}
+
+#flames :nth-child(2n) {
+  fill: yellow;
+}
+
+/* SMOKE */
+
+#smoke > span {
+  position: absolute;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background-color: gray;
+  top: 50%;
+  z-index: -1;
+  animation: .5s linear infinite;
+  display: none;
+}
+
+#smoke :nth-child(1) {
+  top: 40%;
+  animation-name: smoke-1;
+  animation-delay: 3ms;
+  animation-duration: 1s;
+}
+
+#smoke :nth-child(2) {
+  top: 45%;
+  animation-name: smoke-2;
+  animation-duration: 1.3s;
+}
+
+#smoke :nth-child(3) {
+  top: 42%;
+  animation-name: smoke-3;
+  animation-delay: 3ms;
+  animation-duration: 1.6s;
+}
+
+#smoke :nth-child(4) {
+  top: 43%;
+  animation-name: smoke-1;
+  animation-duration: .7s;
+}
+
+#smoke :nth-child(5) {
+  top: 46%;
+  animation-name: smoke-2;
+  animation-delay: 3ms;
+  animation-duration: 1s;
+}
+
+#smoke :nth-child(6) {
+  top: 48%;
+  animation-name: smoke-3;
+  animation-duration: 1.2s;
+}
+
+/* SET ANIMATIONS */
+
+#rocket {
+  animation: .55s cubic-bezier(1,-0.06,.61,.45);
+  height: 150px;
+  transform: translateX(-20px) rotateZ(45deg);
+}
+
+svg #flames > path {
+  animation: 1.2s linear infinite forwards;
+  transform-origin: center center;
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+svg #wings-top {
+  animation: .6s linear forwards;
+  animation-name: close-wing-top;
+}
+
+svg #wings-bottom {
+  animation: .6s linear forwards;
+  animation-name: close-wing-bottom;
+}
+
+/* HOVER */
+
+button:hover::before {
+  content: "Set";
+}
+
+button:hover #wings-top,
+button:focus #wings-top {
+  animation-name: open-wing-top;
+}
+
+button:hover #wings-bottom,
+button:focus #wings-bottom {
+  animation-name: open-wing-bottom;
+}
+
+button:hover #smoke > span {
+  display: block;
+}
+
+/* FOCUS */
+
+button:focus::before {
+  content: "Go!";
+  animation-name: launch-text;
+}
+
+button:focus #rocket {
+  animation-name: launch_149;
+}
+
+button:focus #flames > path {
+  animation-name: flames;
+  animation-play-state: running;
+}
+
+button:focus #smoke > span {
+  display: none;
+}
+
+/* ANIMATIONS KEYFRAMES */
+
+@keyframes launch_149 {
+  from {
+    transform: translateX(-20px) rotateZ(45deg);
+  }
+
+  to {
+    transform: translateX(2000px) rotateZ(45deg);
+  }
+}
+
+@keyframes launch-text {
+  from {
+    transform: translateY(43%);
+  }
+
+  to {
+    transform: translateY(43%) translateX(2000px);
+  }
+}
+
+@keyframes open-wing-top {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes open-wing-bottom {
+  from {
+    transform: translateX(100px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes close-wing-top {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes close-wing-bottom {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(100px);
+  }
+}
+
+@keyframes flames {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale(.89);
+  }
+
+  50% {
+    transform: scale(.95);
+  }
+
+  70% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes smoke-1 {
+  0% {
+    opacity: .3;
+    transform: translate(0, 0);
+  }
+
+  60% {
+    opacity: .3;
+    transform: translate(-15px, -10px);
+  }
+
+  100% {
+    opacity: .1;
+    transform: translate(-25px, 5px);
+  }
+}
+
+@keyframes smoke-2 {
+  0% {
+    opacity: .3;
+    transform: translate(0, 0);
+  }
+
+  60% {
+    opacity: .3;
+    transform: translate(-10px, -3px);
+  }
+
+  100% {
+    opacity: .1;
+    transform: translate(-30px, 9px);
+  }
+}
+
+@keyframes smoke-3 {
+  0% {
+    opacity: .3;
+    transform: translate(0, 0);
+  }
+
+  60% {
+    opacity: .3;
+    transform: translate(-5px, 5px);
+  }
+
+  100% {
+    opacity: .1;
+    transform: translate(-20px, -5px);
+  }
+}
+</style>
