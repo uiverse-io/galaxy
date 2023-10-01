@@ -1,0 +1,67 @@
+<div class="notification">
+  <span>Congratulatioins Champion!</span>
+  <div id="level">
+    <div class="one">↑</div>
+    <div id="lvl">Level 10</div>
+    <div class="one">↑</div>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by ActiveIceDigital - Tags: notification */
+@keyframes ud {
+  0% {
+    transform: translateY(-1px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-1px);
+    opacity: 0;
+  }
+}
+
+.notification {
+  width: 250px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 14px;
+  padding: 5px 15px;
+  text-align: center;
+  box-shadow: 2px 2px 0px 1px rgba(255, 0, 0, 0.5) inset, 
+  -2px -2px 0px 1px rgba(255, 0, 0, 0.8) inset,
+  0px 2px 5px 0px rgba(0, 0, 0, .25);
+}
+
+#lvl {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.notification > span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#level {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.one {
+  display: inline-block;
+  font-size: 25px;
+  line-height: 25px;
+  animation: ud 1s ease-in-out infinite;
+  color: rgba(255, 0, 0, 0.95);
+}
+</style>
