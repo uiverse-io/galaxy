@@ -1,0 +1,76 @@
+<div class="loader">
+    <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100">
+            <ellipse transform="rotate(-21.283 49.994 75.642)" cx="50" cy="75.651" rx="19.347" ry="16.432" fill="currentColor"></ellipse>
+            <path fill="currentColor" d="M58.474 7.5h10.258v63.568H58.474z"></path>
+        </svg>
+    </span>
+    <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100">
+            <ellipse transform="rotate(-21.283 49.994 75.642)" cx="50" cy="75.651" rx="19.347" ry="16.432" fill="currentColor"></ellipse>
+            <path fill="currentColor" d="M58.474 7.5h10.258v63.568H58.474z"></path>
+        </svg>
+    </span>
+    <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100">
+            <ellipse transform="rotate(-21.283 49.994 75.642)" cx="50" cy="75.651" rx="19.347" ry="16.432" fill="currentColor"></ellipse>
+            <path fill="currentColor" d="M58.474 7.5h10.258v63.568H58.474z"></path>
+        </svg>
+    </span>
+</div>
+<style>
+/* From Uiverse.io by DarrylNoakes - Tags: loader */
+.loader {
+  --icon-count: 3;
+  --inner-height: 4em;
+  --ratio: 2/3;
+ /* Customizable */
+  --period: 1s;
+ /* Customizable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--inner-height);
+  width: calc(var(--inner-height) * var(--ratio) * var(--icon-count));
+}
+
+.loader .icon {
+  width: calc(100% / var(--icon-count));
+  height: calc(100% * var(--ratio));
+  animation: loader-bounce02 var(--period) infinite linear;
+}
+
+/*
+ * animation delay = (n - 1) / steps * period
+ */
+
+.loader .icon:nth-of-type(2) {
+  animation-delay: calc(1 / 5 * var(--period));
+}
+
+.loader .icon:nth-of-type(3) {
+  animation-delay: calc(2 / 5 * var(--period));
+}
+
+@keyframes loader-bounce02 {
+  20% {
+    /* Raise */
+    transform: translateY(calc(-50% * (1 - var(--ratio))));
+  }
+
+  40% {
+    /* Lower */
+    transform: translateY(calc(50% * (1 - var(--ratio))));
+  }
+
+  60% {
+    /* Keep centered */
+    transform: translateY(0);
+  }
+
+  80% {
+    /* Keep centered */
+    transform: translateY(0);
+  }
+}
+</style>
