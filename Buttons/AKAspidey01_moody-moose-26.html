@@ -1,0 +1,50 @@
+<div class="main-section">
+  <button class="first-button"> Hover Me </button>
+  <button class="second-button"> <svg viewBox="0 0 24 24" width="20" height="20" stroke="#ffd300" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Add To Cart</button>
+</div>
+
+<style>
+/* From Uiverse.io by AKAspidey01 - Tags: button, add */
+.first-button {
+  background: rgb(115, 15, 209);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1em;
+  min-height: 60px;
+  width: 200px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.6s;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+.main-section:hover .second-button , .main-section:hover .first-button {
+  transform: translateY(-60px);
+}
+
+.second-button {
+  background: rgb(209, 15, 57);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1em;
+  min-height: 60px;
+  width: 200px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.6s;
+}
+
+</style>
