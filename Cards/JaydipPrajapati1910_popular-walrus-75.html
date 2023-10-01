@@ -1,0 +1,103 @@
+<ul>
+  <li>
+    <a href="#">
+      <span>
+     Hover Me
+      </span>
+    </a>
+  </li> 
+  </ul>
+<style>
+/* From Uiverse.io by JaydipPrajapati1910 - Tags: 3d, card, shadow, box-shadow */
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+ul li a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  letter-spacing: 1px;
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: px;
+  font-weight: 900;
+}
+
+ul li a {
+  text-decoration: none;
+  display: block;
+  width: 200px;
+  height: 250px;
+  background: #333;
+  padding-left: 20px;
+  transform: rotate(-30deg) skew(25deg) translate(0,0);
+  transition-duration: .5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+
+ul li a:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #444;
+  transition-duration: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #444;
+  transition-duration: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+
+ul li:hover span {
+  color: #fff;
+}
+
+ul li:hover:nth-child(1) a {
+  background: #00aced;
+}
+
+ul li:hover:nth-child(1) a:before {
+  background: #097aa5;
+}
+
+ul li:hover:nth-child(1) a:after {
+  background: #53b9e0;
+}
+
+
+
+</style>
