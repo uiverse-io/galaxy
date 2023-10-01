@@ -1,0 +1,50 @@
+<div class="card">
+    <p>
+        Hover Me
+    </p>
+</div>
+<style>
+/* From Uiverse.io by Ali-Tahmazi99 - Tags: card */
+.card {
+  width: 200px;
+  height: 300px;
+  background: #f8f9fa;
+  position: relative;
+  box-shadow: 15px 15px 50px #adb5bd75;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.card p {
+  transition: all 0.3s ease-in;
+  margin-top: 40px;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.card:hover p {
+  transform: scale(1.5);
+  color: #f8f9fa;
+}
+
+.card::before {
+  content: '';
+  width: 100%;
+  height: 0;
+  background: #3f72ff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+      /* Or Top */
+  transition: 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.card:hover::before {
+  height: 100%;
+}
+</style>
