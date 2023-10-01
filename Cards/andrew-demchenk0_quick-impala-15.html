@@ -1,0 +1,67 @@
+<div class="card">
+  <div class="card__content">your content here ↓<div>
+</div></div></div>
+<style>
+/* From Uiverse.io by andrew-demchenk0 - Tags: animation, 3d, card, border */
+.card {
+  width: 190px;
+  height: 254px;
+  background: lightgrey;
+  position: relative;
+  transform: skewY(-10deg);
+  border: 5px solid #6d74e3;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.card::before {
+  content: '';
+  width: 10px;
+  height: 254px;
+  background: #6d74e3;
+  position: absolute;
+  top: -5px;
+  left: -14.7px;
+  transform-origin: right;
+  transform: skewY(45deg);
+  border: none;
+  transition: all 0.5s;
+}
+
+.card::after {
+  content: '';
+  height: 10px;
+  width: 190px;
+  background: #6d74e3;
+  position: absolute;
+  top: -14.7px;
+  left: -5px;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  border: none;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: skewY(0deg);
+}
+
+.card:hover::before {
+  width: 0px;
+  height: 249px;
+  left: 0;
+  top: 0.1px;
+}
+
+.card:hover::after {
+  width: 184px;
+  height: 0px;
+  left: 0.1px;
+  top: 0;
+}
+
+.card__content {
+  padding: 10px;
+  color: #323232;
+}
+</style>
