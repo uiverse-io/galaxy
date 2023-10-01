@@ -1,0 +1,56 @@
+<button>
+  <p>Submit</p>
+</button>
+<style>
+/* From Uiverse.io by satyamchaudharydev - Tags: button */
+button {
+ border: none;
+ width: 140px;
+ height: 55px;
+ color: #fff;
+ font-family: "Arial";
+ letter-spacing: 1.2px;
+ font-weight: bold;
+ z-index: 1;
+ display: flex;
+ background: #000;
+ position: relative;
+}
+
+button p {
+ margin: 0 auto;
+ align-self: center;
+ font-size: 1.5em;
+ text-align: center;
+}
+
+button::after, button::before {
+ position: absolute;
+ content: "";
+ width: 100%;
+ z-index: -1;
+ height: 10%;
+ clip-path: polygon(0% 74%, 4% 75%, 8% 76%, 11% 77%, 15% 78%, 20% 78%, 25% 77%, 32% 77%, 37% 75%, 40% 74%, 43% 74%, 46% 73%, 52% 72%, 57% 72%, 65% 74%, 66% 75%, 71% 78%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%);
+ background: #97c45d;
+ transition: 0.2s cubic-bezier(.02,.02,.23,.73);
+}
+
+button::after {
+ bottom: 0;
+}
+
+button::before {
+ transform: rotate(180deg);
+}
+
+button:hover::after {
+ clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
+ height: 30%;
+}
+
+button:hover::before {
+ clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
+ height: 100%;
+}
+
+</style>
