@@ -1,0 +1,74 @@
+<div class="card">
+  <span class="title">All tags</span>
+  <div class="card__tags">
+    <ul class="tag">
+      <li class="tag__name">JS</li>
+      <li class="tag__name">wordpress</li>
+      <li class="tag__name">uiverse</li>
+      <li class="tag__name">Css</li>
+      <li class="tag__name">html</li>
+      <li class="tag__name">go</li>
+      <li class="tag__name">java</li>
+      <li class="tag__name">ux/ui</li>
+      <li class="tag__name">figma</li> 
+    </ul>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by Javierrocadev - Tags: green, card, hover effect, tags */
+.card {
+  width: 290px;
+  height: 300px;
+  background: #ecf39e;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #31572c;
+  border-radius: 15px;
+  box-shadow: -20px 20px 0px -5px #31572c;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.7em;
+}
+
+.tag__name {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.1em;
+  background-color: #31572c;
+  padding: 6px 23px 9px;
+  border-radius: 70em;
+  margin: 8px 6px 8px 0;
+  margin-left: 0px;
+  position: relative;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.tag__name::before,.tag__name::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #90a955;
+}
+
+.tag__name::before {
+  left: 7px;
+}
+
+.tag__name::after {
+  right: 7px;
+}
+
+.tag__name:hover {
+  transform: scale(1.1);
+  background-color: #51572c;
+}
+</style>
