@@ -1,0 +1,95 @@
+<button>
+  <span class="txt">submit</span>
+  <span class="txt2">sent!</span>
+  <span class="loader-container">
+    <span class="loader"></span>
+  </span>
+</button>
+<style>
+/* From Uiverse.io by KINGFRESS - Tags: button, progress bar */
+button {
+  background-color: transparent;
+  width: 13em;
+  height: 3.3em;
+  border: 2px solid #1abc9c;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1abc9c;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button .txt {
+  transition: .4s ease-in-out;
+  position: absolute;
+}
+
+button .txt2 {
+  transform: translateY(1em) scale(0);
+  color: #212121;
+  position: absolute;
+}
+
+button .loader-container {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  overflow: hidden;
+}
+
+button .loader-container .loader {
+  height: 100%;
+  width: 100%;
+  background-color: #1abc9c;
+  border-radius: inherit;
+  transform: translateX(-13em);
+}
+
+button:focus {
+  transition: .4s ease-in-out .4s;
+  animation: scaling 1.5s ease-in-out 0s 1 both;
+}
+
+button:focus .txt {
+  position: absolute;
+  transform: translateY(-5em);
+  transition: .4s ease-in-out;
+}
+
+button:focus .txt2 {
+  transform: translateY(0) scale(1);
+  transition: .3s ease-in-out 1.7s;
+}
+
+button:focus .loader {
+  display: block;
+  transform: translate(0);
+  transition: .8s cubic-bezier(0,.4,1,.28) .4s;
+  animation: loading;
+}
+
+@keyframes scaling {
+  20% {
+    height: 1.5em;
+  }
+
+  80% {
+    height: 1.5em;
+  }
+
+  100% {
+    height: 3.3em;
+  }
+}
+</style>
