@@ -1,0 +1,33 @@
+<div class="box"></div>
+<style>
+/* From Uiverse.io by Saiyed-Tanvir - Tags: loader, box, blocky, box-shadow */
+.box {
+  height: 5cm;
+  width: 5cm;
+  border: 5px solid #ffa600;
+  box-shadow: inset 0 0 0 #ffa600;
+  animation: load 2s ease-in-out infinite;
+}
+
+@keyframes load {
+  0% {
+    box-shadow: inset -2.5cm -2.5cm 0 #ffa600;
+  }
+
+  25% {
+    box-shadow: inset 2.5cm -2.5cm 0 #ffa600;
+  }
+
+  50% {
+    box-shadow: inset 2.5cm 2.5cm 0 #ffa600;
+  }
+
+  75% {
+    box-shadow: inset -2.5cm 2.5cm 0 #ffa600;
+  }
+
+  100% {
+    box-shadow: inset -2.5cm -2.5cm 0 #ffa600;
+  }
+}
+</style>
