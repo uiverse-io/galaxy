@@ -1,0 +1,92 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by Saad3092003 - Tags: animation, card, hover, shadow, animated, hover effect, css effect, box-shadow, one-div */
+.one-div {
+  position: relative;
+  height: 250px;
+  width: 200px;
+  background-color: rgb(15, 15, 15);
+  transform-style: preserve-3d;
+  animation: rot 2s infinite ease;
+  border-radius: 20px;
+  box-shadow: 0 0 50px 0px white ,inset 0 0 50px 0px white;
+  transition: 1s;
+}
+
+.one-div::after {
+  content: 'D I V';
+  font-size: 30px;
+  text-shadow: 5px 5px 1px black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  color: white;
+}
+
+.one-div:hover.one-div::after {
+  font-size: 40px;
+}
+
+.one-div::before {
+  content: 'UIVERSE';
+  color: white;
+  font-size: 25px;
+  letter-spacing: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -20px;
+  left: 40px;
+  background-color: rgb(25, 25, 25);
+  width: 220px;
+  height: 270px;
+  transform: translateY(50px) translateZ(50px);
+  border-radius: 20px;
+  filter: blur(0px);
+  transition: 0.5s;
+  box-shadow: 0 0 5px 0px black, -3px -3px 10px 3px rgb(25,25,25),inset 0px 0px 40px -20px black;
+}
+
+.one-div:active.one-div::after {
+  text-shadow: 0 0 0 black;
+  transition: 0.5s;
+  transform: translateY(5px) translateZ(5px);
+}
+
+.one-div:hover.one-div::before {
+  font-size: 10px;
+  width: 250px;
+  height: 300px;
+  transform: translateZ(-50px) translateY(50px);
+  box-shadow: 0 0 5px 0px black, -3px -3px 10px 3px rgb(25,25,25),inset 0px 0px 40px -20px;
+}
+
+.one-div:hover {
+  height: 300px;
+  width: 250px;
+  box-shadow: 0 0 5px 0px black,inset -3px -3px 10px 3px rgb(25,25,25),inset 3px 3px 20px 3px black;
+  cursor: pointer;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotateX(-15deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotateX(-15deg) translateY(-10px);
+  }
+
+  100% {
+    transform: rotateX(-15deg) translateY(0px);
+  }
+}
+
+</style>
