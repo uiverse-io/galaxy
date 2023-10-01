@@ -1,0 +1,54 @@
+<div class="checkbox-wrapper-37">
+  <input id="terms-checkbox-37" name="checkbox" type="checkbox">
+  <label class="terms-label" for="terms-checkbox-37">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" class="checkbox-svg">
+      <mask fill="white" id="path-1-inside-1_476_5-37">
+        <rect height="200" width="200"></rect>
+      </mask>
+      <rect mask="url(#path-1-inside-1_476_5-37)" stroke-width="40" class="checkbox-box" height="200" width="200"></rect>
+      <path stroke-width="15" d="M52 111.018L76.9867 136L149 64" class="checkbox-tick"></path>
+    </svg>
+    <span class="label-text">Checkbox</span>
+  </label>
+</div>
+<style>
+/* From Uiverse.io by Shoh2008 - Tags: checkbox */
+.checkbox-wrapper-37 input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-wrapper-37 .terms-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper-37 .terms-label .label-text {
+  margin-left: 10px;
+}
+
+.checkbox-wrapper-37 .checkbox-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.checkbox-wrapper-37 .checkbox-box {
+  fill: #fff;
+  stroke: #ff7a00;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-wrapper-37 .checkbox-tick {
+  stroke: #ff7a00;
+  stroke-dasharray: 172;
+  stroke-dashoffset: 172;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-wrapper-37 input[type="checkbox"]:checked + .terms-label .checkbox-box,
+  .checkbox-wrapper-37 input[type="checkbox"]:checked + .terms-label .checkbox-tick {
+  stroke-dashoffset: 0;
+}
+</style>
