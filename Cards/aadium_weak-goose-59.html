@@ -1,0 +1,130 @@
+<div class="post-card">
+  <textarea placeholder="What's on your mind?"></textarea>
+  <hr>
+  <div class="button-row" id="first">
+    <button class="upload">
+      Upload
+    </button>
+    <button class="live-video">
+      Live Video
+    </button>
+    <button class="life-event">
+      Life Event
+    </button>
+  </div>
+  <div class="button-row" id="second">
+    <button class="people">
+      People
+    </button>
+    <button class="location">
+      Location
+    </button>
+    <button class="feeling">
+      Feeling
+    </button>
+  </div>
+  <button class="post">Post</button>
+</div>
+<style>
+/* From Uiverse.io by aadium - Tags: card */
+.post-card {
+  width: 260px;
+  height: 340px;
+  background: #1f1f1f;
+  box-shadow: 10px 10px 20px #0c0c0c, 
+              -10px -10px 20px #333333;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-card textarea {
+  resize: none;
+  width: 100%;
+  height: 40%;
+  padding: 5px;
+  font-family: Sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+hr {
+  border: 1px solid #464646;
+  width: 100%;
+  border-radius: 10em;
+}
+
+.button-row {
+  margin-top: 7px;
+  margin-bottom: 3px;
+}
+
+.button-row button {
+  border-radius: 10px;
+  border: none;
+  width: 77px;
+  height: 58px;
+  font-family: Sans-serif;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.button-row button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.upload {
+  font-size: 14px;
+  background: linear-gradient(180deg, #cecb00 0%, #ef4949 100%);
+}
+
+.feeling {
+  font-size: 14px;
+  background: linear-gradient(180deg, #31c300 0%, #ab7811 100%);
+}
+
+.life-event {
+  font-size: 13.7px;
+  background: linear-gradient(180deg, #ff1024 0%, #ffb34a 100%);
+}
+
+.people {
+  font-size: 13.5px;
+  background: linear-gradient(180deg, #0095b7 0%, #5012ba 100%);
+}
+
+.location {
+  font-size: 14px;
+  background: linear-gradient(180deg, #c329c9 0%, #2b5dff 100%);
+}
+
+.live-video {
+  font-size: 13.8px;
+  background: linear-gradient(180deg, #c800ff 0%, #ff076a 51%, #ff6c6c 100%);
+}
+
+.post {
+  width: 100%;
+  padding: 10px;
+  margin-top: 7px;
+  border: none;
+  border-radius: 11px;
+  font-size: 18px;
+  font-family: Sans-serif;
+  color: #fff;
+  background-size: 200% 100%;
+  background-image: linear-gradient(145deg, #ff00e1, #0000ff, #00d9ff);
+  transition: 0.3s ease-out;
+}
+
+.post:hover {
+  background-position: 99%;
+}
+</style>
