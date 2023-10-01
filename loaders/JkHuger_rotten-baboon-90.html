@@ -1,0 +1,55 @@
+<div class="loader">
+        <span></span>
+</div>
+
+<style>
+/* From Uiverse.io by JkHuger - Tags: loader */
+.loader {
+  position: relative;
+  overflow: hidden;
+  box-shadow: -5px -5px -5px rgba(255, 255, 255, 0.1),
+                10px 10px 10px rgba(0, 0, 0, 0.4),
+                inset -5px -5px -5px rgba(255, 255, 255, 0.2),
+                inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.loader:before {
+  position: absolute;
+  content: '';
+  z-index: 10;
+  opacity: 10;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  background-color: #010113;
+  border-radius: 50%;
+  box-shadow: -5px -5px -5px rgba(255, 255, 255, 0.1),
+    10px 10px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px -5px rgba(255, 255, 255, 0.2),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.loader span {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  filter: blur(20px);
+  border-radius: 50%;
+  background: linear-gradient(#0e11d4, #0b8f84, #d81587);
+  animation: loader_41 0.6s linear infinite;
+}
+
+@keyframes loader_41 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
