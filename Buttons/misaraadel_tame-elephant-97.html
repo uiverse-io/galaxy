@@ -1,0 +1,90 @@
+<a class="custom-btn secondary-color" href="#">
+  <span>
+    hover me
+  </span>
+</a>
+<style>
+/* From Uiverse.io by misaraadel - Tags: button, clip-path, hover effect, clip, button hover effect , hover idea, hover me, clip path animation */
+.custom-btn {
+  width: 220px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  z-index: 9;
+  border: 1px solid #5BA50E;
+  gap: 10px;
+  text-decoration: none;
+  background-color: #5BA50E;
+}
+
+.custom-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);
+  z-index: -1;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.custom-btn span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.custom-btn:hover::after {
+  animation: sideClip 0.5s linear;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 1;
+}
+
+.custom-btn:hover span {
+  animation: storm 0.4s linear both;
+  color: #5BA50E;
+}
+
+@keyframes sideClip {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);
+  }
+
+  50% {
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+</style>
