@@ -1,0 +1,29 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by bernethe - Tags: loader */
+.loader {
+  clear: both;
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem auto;
+  border: 0.0625rem #000 solid;
+  border-radius: 0.25rem;
+  position: relative;
+  background: linear-gradient(45deg, transparent 49%, #000 50%, #000 50%, transparent 51%, transparent),
+				linear-gradient(-45deg, transparent 49%, #000 50%, #000 50%, transparent 51%, transparent);
+  background-size: 1rem 1rem;
+  background-position: 0% 0%;
+  -webkit-animation: spTexture 1s infinite linear;
+  animation: spTexture 1s infinite linear;
+}
+
+@keyframes spTexture {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -1rem 0;
+  }
+}
+</style>
