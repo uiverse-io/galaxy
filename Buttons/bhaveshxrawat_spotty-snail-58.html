@@ -1,0 +1,41 @@
+<button><span> Grab it!</span>
+</button>
+<style>
+/* From Uiverse.io by bhaveshxrawat - Tags: button */
+button {
+ border: none;
+ padding: 0.7em 2em;
+ font-size: 18px;
+ font-family: inherit;
+ background-blend-mode: multiply;
+ color: rgb(235, 234, 234);
+ border-radius: 9px;
+ background: linear-gradient(225deg, #181818, #2e2e2e);
+ box-shadow: -5px 5px 10px #191919,
+             5px -5px 10px #292929;
+}
+
+button:hover {
+ background: #212121;
+ transition: background 1s ease;
+ box-shadow: -5px 5px 10px #191919,
+             5px -5px 10px #292929;
+}
+
+button:active {
+ transition: box-shadow .1s ease;
+ border-radius: 9px;
+ background: #212121;
+ box-shadow: inset -5px 5px 10px #191919,
+              inset 5px -5px 10px #292929;
+}
+
+span {
+ opacity: 0.5;
+ transition: opacity 0.2s ease;
+}
+
+button:hover span {
+ opacity: 0.7;
+}
+</style>
