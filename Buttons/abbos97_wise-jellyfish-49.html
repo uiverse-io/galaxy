@@ -1,0 +1,49 @@
+<button class="moves-button">Hover me</button>
+
+<style>
+/* From Uiverse.io by abbos97 - Tags: gradient, button */
+.moves-button {
+  padding: 10px 20px;
+  color: #000;
+  font-weight: 900;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border: 3px solid transparent;
+  border-image: linear-gradient(90deg, #f3f 20%, rgb(49, 18, 187) 60%);
+  border-image-slice: 1;
+}
+
+.moves-button::after {
+  content: 'Button';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(245, 108, 245) 20%, rgb(119, 91, 245) 60%);
+  transition: transform 0.3s ease-out;
+  pointer-events: none;
+  color: #fff;
+}
+
+.moves-button:hover::after {
+  transform: translateX(-100%);
+}
+
+.moves-button:focus {
+  outline: none;
+}
+
+/* Optional styling for the button on click */
+.moves-button:active {
+  transform: translateY(2px);
+}
+
+</style>
