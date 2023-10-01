@@ -1,0 +1,38 @@
+<div class="radio-input">
+  <input value="value-1" name="value-radio" id="value-1" type="radio">
+  <input value="value-2" name="value-radio" id="value-2" type="radio">
+  <input value="value-3" name="value-radio" id="value-3" type="radio">
+</div>
+<style>
+/* From Uiverse.io by andretellao - Tags: radio */
+.radio-input input {
+  appearance: none;
+  background-color: transparent;
+  margin: 15px;
+  font: inherit;
+  color: currentColor;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.2em solid #33f8ff;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.radio-input input::before {
+  content: "";
+  width: 1.65em;
+  height: 1.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #dd33ff;
+  box-shadow: 0 0 20px #dd33ff;
+}
+
+.radio-input input:checked::before {
+  transform: scale(1.02);
+}
+</style>
