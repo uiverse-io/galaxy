@@ -1,0 +1,50 @@
+<button class="button">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none" class="svg-icon"><g stroke-width="2" stroke-linecap="round" stroke="#ff342b"><rect y="3" x="9" width="6" rx="3" height="11"></rect><path d="m12 18v3"></path><path d="m8 21h8"></path><path d="m19 11c0 3.866-3.134 7-7 7-3.86599 0-7-3.134-7-7"></path></g></svg>
+  <span class="lable">Record</span>
+</button>
+<style>
+/* From Uiverse.io by andrew-demchenk0 - Tags: icon, black, button, Microphone, record, opacity */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 8px;
+  height: 40px;
+  width: 114px;
+  border: none;
+  background: #1b1b1cde;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.lable {
+  line-height: 20px;
+  font-size: 17px;
+  color: #FF342B;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background: #1b1b1c;
+}
+
+.button:hover .svg-icon {
+  animation: scale 1s linear infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05) rotate(10deg);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+</style>
