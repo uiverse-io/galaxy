@@ -1,0 +1,63 @@
+<div class="level-up">
+  <span class="text">LEVEL UP!</span>
+</div>
+
+<style>
+/* From Uiverse.io by tursynbek - Tags: notification */
+.level-up {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff5733;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.text {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s infinite;
+}
+
+.level-up:hover {
+  background-color: #ffffff;
+  color: #ff5733;
+  transform: scale(1.1);
+}
+
+.level-up:hover .text {
+  animation: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.level-up:hover::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ff5733;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 5px);
+  animation: bounce 0.5s infinite;
+}
+
+</style>
