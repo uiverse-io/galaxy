@@ -1,0 +1,46 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by Shoh2008 - Tags: loader */
+.loader {
+  position: relative;
+  border: 24px solid;
+  border-color: red  transparent red transparent;
+  animation: rotate_000 2s linear infinite;
+}
+
+.loader:before,
+      .loader:after {
+  content: "";
+  display: block;
+  border: 24px solid transparent;
+  border-left-color: red;
+  position: absolute;
+  left: -24px;
+  top: -24px;
+  animation: prix 1s infinite ease-in;
+  transform-origin: 0% 100%;
+}
+
+.loader:before {
+  border-color: transparent red transparent transparent;
+  transform-origin: 100% 0%;
+  animation-delay: 0.5s;
+}
+
+@keyframes rotate_000 {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes prix {
+  20% , 80% {
+    transform: rotate(0)
+  }
+
+  50% {
+    transform: rotate(-90deg)
+  }
+}
+    
+</style>
