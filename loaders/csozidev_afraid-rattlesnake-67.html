@@ -1,0 +1,117 @@
+<div class="loader">
+  <div class="square">
+    <div class="mini_square sq-1"></div>
+    <div class="mini_square sq-2"></div>
+    <div class="mini_square"></div>
+    <div class="mini_square sq-4"></div>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by csozidev - Tags: simple, animation, loader */
+/* Simple loader made by: csozi | Website: www.csozi.hu*/
+
+.square {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 100px;
+  box-sizing: content-box;
+  animation: load-big 4s infinite;
+  transform-origin: 0px 100px;
+}
+
+.mini_square {
+  box-sizing: border-box;
+  height: 50px;
+  width: 50px;
+  background-color: darkcyan;
+}
+
+.sq-1 {
+  animation: load-left-top 4s infinite;
+}
+
+.sq-2 {
+  animation: load-right-top 4s infinite;
+}
+
+.sq-4 {
+  animation: load-right-bottom 4s infinite;
+}
+
+@keyframes load-right-bottom {
+  0% {
+    translate: -50px 0px;
+  }
+
+  25% {
+    translate: 0px 0px;
+  }
+
+  100% {
+    translate: 0px 0px;
+  }
+}
+
+@keyframes load-right-top {
+  0% {
+    translate: -50px 50px;
+  }
+
+  25% {
+    translate: 0px 50px;
+  }
+
+  50% {
+    translate: 0px 0px;
+  }
+
+  100% {
+    translate: 0px 0px;
+  }
+}
+
+@keyframes load-left-top {
+  0% {
+    translate: 0px 50px;
+  }
+
+  25% {
+    translate: 50px 50px;
+  }
+
+  50% {
+    translate: 50px 0px;
+  }
+
+  75% {
+    translate: 0px 0px;
+  }
+
+  100% {
+    translate: 0px 0px;
+  }
+}
+
+@keyframes load-big {
+  0% {
+    scale: 1;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  74% {
+    scale: 1;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  75% {
+    scale: 1;
+    background-color: darkcyan;
+  }
+
+  100% {
+    scale: 0.5;
+    background-color: darkcyan;
+  }
+}
+</style>
