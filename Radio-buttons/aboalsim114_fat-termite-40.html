@@ -1,0 +1,129 @@
+<div class="container">
+  <div class="line"></div>
+  <label class="label" for="alien">
+    <input id="alien" type="radio" name="future-is-here" checked="">
+    <div class="button">
+      <span class="shadow"></span>
+  <span class="edge"></span>
+  <span class="front text">
+  </span>
+    </div>
+  </label>
+  <label class="label" for="bear">
+    <input id="bear" type="radio" name="future-is-here">
+    <div class="button">
+      <span class="shadow"></span>
+  <span class="edge"></span>
+  <span class="front text">
+  </span>
+    </div>
+  </label>
+  <label class="label" for="mickey">
+    <input id="mickey" type="radio" name="future-is-here">
+    <div class="button">
+      <span class="shadow"></span>
+  <span class="edge"></span>
+  <span class="front text">
+  </span>
+    </div>
+  </label>
+</div>
+<style>
+/* From Uiverse.io by aboalsim114 - Tags: radio */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  position: relative;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.button::before {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.button::after {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+.label input {
+  display: none;
+}
+
+.label input:checked + .button {
+  background: linear-gradient(135deg, #FF5722 0%, #FF7043 100%);
+  box-shadow: 0 10px 20px rgba(255, 87, 34, 0.4);
+}
+
+.label input:checked + .button::before {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.label input:checked + .button::after {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.shadow {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.front {
+  position: relative;
+  z-index: 1;
+}
+
+</style>
