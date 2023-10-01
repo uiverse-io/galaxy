@@ -1,0 +1,80 @@
+<div class="card">
+  <div class="card__icons">
+    <svg class="svg-icon" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+    <path d="M50,35.7V50L60.7,60.7M82.1,50A32.1,32.1,0,1,1,50,17.9,32.1,32.1,0,0,1,82.1,50Z" stroke-width="8">
+    </path>
+    </svg>
+    <svg class="svg-icon" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+      <path d="M17.7,28.5H82.3a5.4,5.4,0,0,0,5.4-5.4,5.4,5.4,0,0,0-5.4-5.4H17.7a5.4,5.4,0,0,0-5.4,5.4A5.4,5.4,0,0,0,17.7,28.5Z" fill-rule="evenodd">
+      </path>
+      <path d="M82.3,44.6H17.7a5.4,5.4,0,0,0,0,10.8H82.3a5.4,5.4,0,1,0,0-10.8Z" fill-rule="evenodd">
+      </path>
+      <path d="M50,71.5H17.7a5.4,5.4,0,0,0-5.4,5.4,5.4,5.4,0,0,0,5.4,5.4H50a5.4,5.4,0,0,0,5.4-5.4A5.4,5.4,0,0,0,50,71.5Z" fill-rule="evenodd">
+      </path>
+    </svg>
+  </div>
+  <div class="card__time">
+  <p>10:12</p>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Javierrocadev - Tags: youtube, card, video, cardhover , card hover, music player */
+.card {
+  width: 260px;
+  height: 170px;
+  background-color: #ffb3b3;
+  border-radius: 15px;
+  border: 1px solid rgb(156, 151, 151);
+  position: relative;
+  transition: all .3s ease;
+}
+
+.card__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10px;
+  padding-top: 10px;
+  gap: 10px;
+  opacity: 0;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.card__time {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: lighter;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2px 8px;
+  color: whitesmoke;
+  background-color: rgb(77, 67, 67);
+}
+
+.svg-icon {
+  background-color: rgb(77, 67, 67);
+  fill: #ece6e6;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  padding: 2px;
+  transition: all .5s ease-in-out;
+}
+
+.card:hover {
+  opacity: 0.8;
+  animation: video 5s ease;
+}
+
+.card:hover .card__icons {
+  opacity: 1;
+}
+
+</style>
