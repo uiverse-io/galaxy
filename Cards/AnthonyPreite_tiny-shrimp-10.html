@@ -1,0 +1,100 @@
+
+<div class="cards__inner">
+  <div class="cards__card card">
+    <p class="card__heading">Free Plan</p>
+    <p class="card__price">$0/month</p>
+    <ul class="card_bullets flow" role="list">
+      <li>Access to all features</li>
+      <li>Unlimited storage</li>
+      <li>No ads</li>
+    </ul>
+    <a class="card__cta cta" href="#basic">Get Started</a>
+  </div>
+  <div class="overlay cards__inner"></div>
+</div>
+
+<style>
+/* From Uiverse.io by AnthonyPreite - Source: Nothing4U - Tags: purple, gradient, card, Colored, blue&pink, Glowing, GlowingHoverCard, Pricing */
+.main__heading {
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-bottom: 0.75em;
+  text-align: center;
+  color: #eceff1;
+}
+
+.cards {
+  position: relative;
+}
+
+.card {
+  --flow-space: 0.5em;
+  --hsl: var(--hue), var(--saturation), var(--lightness);
+  flex: 1 1 14rem;
+  padding: 1.5em 2em;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  align-items: start;
+  gap: 1.25em;
+  color: #eceff1;
+  background-color: #2b2b2b;
+  border: 1px solid #eceff133;
+  border-radius: 15px;
+}
+
+.card:nth-child(1) {
+  --hue: 165;
+  --saturation: 82.26%;
+  --lightness: 51.37%;
+}
+
+.card__bullets {
+  line-height: 1.4;
+}
+
+.card__heading {
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+.card__price {
+  font-size: 1.75em;
+  font-weight: 700;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.25em);
+}
+
+.cta {
+  display: block;
+  align-self: end;
+  margin: 1em 0 0.5em 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  outline: 1px solid white;
+  padding: 0.7em;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card:hover {
+  --lightness: 80%;
+  background: #ffffff80;
+  color: #000;
+  outline: 1px solid rgb(255, 255, 255);
+  box-shadow: inset 0 0 80px whitesmoke, inset 20px 0 80px rgba(255, 0, 255, 0.747),
+    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+  transition: all ease-in-out 0.3s;
+}
+
+.card:hover > .cta {
+  outline: none;
+  background-color: #0d0d0d;
+}
+
+</style>
