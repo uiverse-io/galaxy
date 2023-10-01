@@ -1,0 +1,56 @@
+<button class="button">
+  Click here ..
+</button>
+<style>
+/* From Uiverse.io by rrr63 - Tags: button, hover, scale */
+.button {
+  padding: 10px 35px;
+  background-color: #EBF5EE;
+  font-weight: bolder;
+  border: 0px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all .2s ease-in-out .1s;
+}
+
+.button:hover {
+  background-color: #EBF5EE;
+  transform: scale(1.2) rotate(5deg);
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  background-color: #78A1BB;
+  height: 180%;
+  top: -30%;
+  left: -40%;
+  transform: rotateZ(20deg);
+  width: 40px;
+  transition: left .2s ease-in-out, left 0s;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  background-color: #283044;
+  height: 180%;
+  top: -30%;
+  left: -40%;
+  transform: translateX(-40px) rotateZ(20deg);
+  width: 40px;
+  transition: left .2s ease-in-out, left 0s;
+}
+
+.button:hover:after {
+  left: 150%;
+  transition: left .3s ease-in-out;
+}
+
+.button:hover:before {
+  left: 150%;
+  transition: left .3s ease-in-out;
+}
+</style>
