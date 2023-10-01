@@ -1,0 +1,52 @@
+<button class="comic-button">Click me!</button>
+
+<style>
+/* From Uiverse.io by Gautammsharma - Tags: button */
+.comic-button {
+  background-color: #ffed4b;
+  border: none;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 #fff;
+  box-shadow: 4px 4px 0 #000;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.comic-button:before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 150%;
+  height: 150%;
+  background-color: rgba(0,0,0,0.2);
+  transform: rotate(45deg);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.comic-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.comic-button:hover:before {
+  opacity: 1;
+}
+
+.comic-button:active {
+  transform: translate(0px, 0px);
+  box-shadow: 4px 4px 0 #000;
+}
+
+.comic-button:active:before {
+  opacity: 0;
+}
+
+</style>
