@@ -1,0 +1,66 @@
+<input id="toggle_checkbox" type="checkbox">
+<label for="toggle_checkbox"></label>
+<style>
+/* From Uiverse.io by JkHuger - Tags: switch */
+#toggle_checkbox {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  left: 0;
+  display: block;
+  width: 70px;
+  height: 35px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+label:before {
+  top: 4px;
+  left: 4px;
+  width: 27px;
+  height: 27px;
+  border: 2px solid red;
+}
+
+label:after {
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 35px;
+  border: 2px solid #143240;
+}
+
+label:before,
+label:after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transition: 0.5s ease top, 0.5s ease left, 0.5s ease right, 0.5s ease width,
+    0.5s ease height, 0.5s ease border-color;
+}
+
+#toggle_checkbox:checked + label:before {
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 35px;
+  border-color: #143240;
+  border: 2px solid #143240
+}
+
+#toggle_checkbox:checked + label:after {
+  top: 4px;
+  right: 4px;
+  width: 27px;
+  height: 27px;
+  border-color: red;
+  border: 2px solid red;
+}
+
+</style>
