@@ -1,0 +1,104 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by roroland - Tags: 3d, pink, button, card, animated */
+.one-div {
+  --color1: #db41a5;
+  --color2: pink;
+  --color3: #fff;
+  --color4: #ffaae2;
+  --time: 5;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 1s ease-out;
+  transform: perspective(400px);
+  transform-style: preserve-3d;
+  z-index: 0;
+}
+
+.one-div:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 100px var(--color2));
+  scale: 1.2;
+}
+
+.one-div:hover::after {
+  scale: 0;
+  opacity: 0;
+}
+
+.one-div:hover::before {
+  color: var(--color4);
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0, .5), 0px 3px 50px rgba(0,0,0, .15), inset 0 0 1px 1px #000;
+  text-shadow: 0 1px 5px #000;
+}
+
+.one-div:active {
+  transition: all .1s ease-out;
+  scale: .99;
+}
+
+.one-div:active::before {
+  transition: all .1s ease-out;
+  color: white;
+}
+
+.one-div::after,
+.one-div::before {
+  padding: 1em;
+  grid-column: 1/-1;
+  grid-row: 1 / 1;
+  position: relative;
+  transition: all 1s ease-out .3s;
+}
+
+.one-div::before {
+  animation: fade calc(var(--time) * 1s) ease-out infinite calc(var(--time) * .5s);
+  content: 'Single div button';
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, var(--color1) 30%, var(--color2) 95%, var(--color3) 99%);
+}
+
+.one-div::after {
+  animation: rotate calc(var(--time) * 1s) ease-out infinite;
+  display: block;
+  width: calc(100% - 2rem);
+  outline-color: var(--color4);
+  outline-width: .5em;
+  outline-offset: .9em;
+  outline-style: solid;
+  content: '';
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: x -90deg;
+  }
+
+  0%, 50% {
+    filter: blur(0px) drop-shadow(0px 0px 60px var(--color3)) opacity(100%);
+  }
+
+  100% {
+    rotate: x 90deg;
+    filter: blur(4px) drop-shadow(0px 0px 30px var(--color2)) opacity(80%);
+  }
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+}
+</style>
