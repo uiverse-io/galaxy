@@ -1,0 +1,55 @@
+<button class="button">
+  Hover Me!
+</button>
+<style>
+/* From Uiverse.io by KhaledMatalkah - Tags: button, hover, transition, fill up */
+.button {
+  display: inline-block;
+  padding: 15px 32px;
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(53, 53, 53);
+  background: transparent;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: blanchedalmond;
+  transition: left 0.8s ease-in-out;
+  z-index: -1;
+}
+
+.button:hover:before {
+  left: 0%;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.8s ease-in-out;
+  z-index: -1;
+}
+
+.button:hover:after {
+  background-color: transparent;
+}
+
+</style>
