@@ -1,0 +1,276 @@
+<div class="card">
+  <div class="card-title">Profile Card</div>
+    <div class="card-info">
+      <span>
+        <svg class="avatar" viewBox="-5 -10 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.37164 12H3C1.34315 12 0 13.3431 0 15V21C0 22.6569 1.34315 24 3 24H17C18.6569 24 20 22.6569 20 21V15C20 13.3431 18.6569 12 17 12H14.6284C14.5071 12.1347 14.3785 12.2646 14.2426 12.3891C13.1174 13.4205 11.5913 14 10 14C8.4087 14 6.88258 13.4205 5.75736 12.3891C5.62152 12.2646 5.49286 12.1347 5.37164 12Z" fill="#D9D9D9"></path>
+        <path d="M16 6.5C16 7.95869 15.3679 9.35764 14.2426 10.3891C13.1174 11.4205 11.5913 12 10 12C8.4087 12 6.88258 11.4205 5.75736 10.3891C4.63214 9.35764 4 7.95869 4 6.5L6.34017 6.5C6.34017 7.38976 6.72576 8.24308 7.41211 8.87223C8.09846 9.50139 9.02935 9.85485 10 9.85485C10.9706 9.85484 11.9015 9.50139 12.5879 8.87223C13.2742 8.24308 13.6598 7.38976 13.6598 6.5H16Z" fill="#D9D9D9"></path>
+        <path d="M16 5.5C16 4.04131 15.3679 2.64236 14.2426 1.61091C13.1174 0.579463 11.5913 1.10128e-07 10 0C8.4087 -1.10128e-07 6.88258 0.579462 5.75736 1.61091C4.63214 2.64236 4 4.04131 4 5.5L4.85269 5.5C4.85269 4.24861 5.395 3.04848 6.3603 2.16361C7.32561 1.27875 8.63485 0.781634 10 0.781634C11.3652 0.781634 12.6744 1.27875 13.6397 2.16361C14.605 3.04848 15.1473 4.24861 15.1473 5.5H16Z" fill="#D9D9D9"></path>
+        </svg>
+      </span>
+      <p>Bio description with some interesting data about yourself...</p>
+      <label class="btn" for="toggle">
+        Social networks
+      </label>
+      <input id="toggle" type="checkbox">
+    </div>
+    <ul class="card-links">
+      <li>
+        <a href="">LinkedIn</a>
+      </li>
+      <li>
+        <a href="">Twitter</a>
+      </li>
+      <li>
+        <a href="">Facebook</a>
+      </li>
+    </ul>
+</div>
+<style>
+/* From Uiverse.io by roroland - Tags: card */
+.card {
+  --cardbg: 245, 245, 245;
+  --cardBase: 235, 16, 206;
+  --cardText: 100, 100, 100;
+  --cardTextBtn: 106, 16, 88;
+  --cardsquares: 156, 113, 227;
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 3em rgba(var(--cardBase), .25),
+  inset 0 -.25em 1px rgba(var(--cardBase), .125);
+  border-radius: 4px;
+  background: rgba(var(--cardbg), 1);
+  position: relative;
+  width: 220px;
+  height: 310px;
+  perspective: 1000px;
+  z-index: 0;
+  transition: all 1s ease-out;
+}
+
+.card:hover {
+  filter: grayscale(0%);
+  scale: 1.025;
+  box-shadow: 0 0 5em rgba(var(--cardBase), .5);
+}
+
+.card::after,
+.card::before {
+  content: '';
+  width: 200px;
+  height: 50%;
+  display: block;
+  background-color: rgba(var(--cardsquares), .5);
+  filter: blur(10px);
+  position: absolute;
+  transition: all 5s ease-out;
+  opacity: .1;
+  z-index: 0;
+}
+
+.card:hover::after,
+.card:hover::before {
+  opacity: .5;
+  rotate: 60deg;
+}
+
+.card:hover::after {
+  translate: 100% 0;
+}
+
+.card:hover::before {
+  translate: -100% 0;
+}
+
+.card .card-title {
+  color: rgba(var(--cardText), .75);
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: .5em;
+  position: relative;
+  transition: all .3s ease-out;
+  z-index: 100;
+  text-shadow: 0px 0px 0px rgba(var(--cardText), .25);
+}
+
+.card:hover h3 {
+  color: rgba(var(--cardText), 1);
+  text-shadow: 0px 8px 5px rgba(var(--cardText), .35);
+}
+
+.card:hover span {
+  filter: grayscale(0%);
+}
+
+/* Inner card */
+.card-info::after {
+  left: -6rem;
+  bottom: 0;
+}
+
+.card-info::before {
+  right: -6rem;
+  top: 1rem;
+}
+
+/* Avatar container */
+.card-info span {
+  color: rgba(var(--cardBase), 1);
+  display: flex;
+  place-items: center;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(var(--cardBase), .5);
+  height: 80px;
+  width: 50%;
+  box-shadow: inset 0px 2px 4px rgba(var(--cardBase), .95),
+  inset 0px 2px 40px rgba(var(--cardbg), .95);
+  position: relative;
+  transition: all .3s ease-out .1s;
+  filter: grayscale(75%);
+  z-index: 0;
+}
+
+.card-info span:hover .avatar {
+  scale: 1.5;
+}
+
+.avatar {
+  transition: all .3s ease-out;
+  position: relative;
+}
+
+/* Inner card container and UI */
+.card-info {
+  --angle: 0deg;
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  padding: 1em;
+  margin: 0 .75em;
+  color: rgba(var(--cardText), 1);
+  background-color: rgba(250, 246, 246, 1);
+  transition: all .5s ease-out;
+  animation: animateBorder 10s linear infinite reverse;
+  border: .15em solid;
+  position: relative;
+  z-index: 10;
+  border-image: linear-gradient(var(--angle), rgba(var(--cardbg), 1), rgba(var(--cardBase), .5), rgba(var(--cardbg), 1)) 1;
+}
+
+.card-info p {
+  color: rgba(var(--cardText), 1);
+  line-height: 1.25em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  font-size: 1em;
+  margin: 1em 0;
+  transition: all .3s ease-out .3s;
+}
+
+.card-info .btn {
+  display: block;
+  padding: 8px 16px;
+  background-color: rgba(var(--cardBase), .35);
+  color: rgba(var(--cardTextBtn), .75);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: .85em;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-info .btn:hover {
+  cursor: pointer;
+  background-color: rgba(var(--cardsquares), .35);
+}
+
+.card-info .btn:active {
+  box-shadow: inset 0px -2px 3px rgba(var(--cardBase), .25);
+}
+
+/* Card links container */
+.card-links {
+  transition: all .3s linear;
+  opacity: 0;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  position: relative;
+  top: -2rem;
+  list-style: none;
+  color: rgba(var(--cardText), 1);
+  font-size: .75em
+}
+
+.card-links a {
+  transition: color .3s ease-out;
+}
+
+.card-links a:hover {
+  color: rgba(var(--cardBase), .75);
+}
+
+/* Card chckbox active state */
+.card input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.card:hover:has(#toggle:checked) .card-title {
+  text-shadow: 0px 2px 5px rgba(var(--cardText), .35);
+}
+
+.card:has(#toggle:checked) {
+  border-radius: 10px;
+  height: 295px;
+}
+
+.card:has(#toggle:checked) .card-info > *:not(.btn):not(span) {
+  opacity: 0;
+}
+
+.card:has(#toggle:checked) .card-info {
+  translate: 0 -20%;
+  border-width: 1px;
+  border: none;
+  box-shadow: inset 0 0 5px rgba(var(--cardBase), .5),
+  inset 0px 0px 2px rgba(var(--cardText), .25),
+  inset 0px 30px 40px rgba(var(--cardBase), .25);
+  border-radius: 10px;
+}
+
+.card:has(#toggle:checked) .card-info span {
+  translate: 0 75%;
+}
+
+.card:has(#toggle:checked) .card-info p {
+  transition: all .1s ease-out;
+}
+
+.card:has(#toggle:checked) .card-links {
+  opacity: 1;
+  top: -2rem;
+}
+
+.card #toggle {
+  visibility: hidden;
+}
+
+@keyframes animateBorder {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+</style>
