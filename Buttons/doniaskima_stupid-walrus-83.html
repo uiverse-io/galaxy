@@ -1,0 +1,106 @@
+<button class="btn-9"><span>Button</span></button>
+
+<style>
+/* From Uiverse.io by doniaskima - Tags: button, animated bar loader, DoubleTriangle  */
+.btn-9,
+.btn-9 *,
+.btn-9 :after,
+.btn-9 :before,
+.btn-9:after,
+.btn-9:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-9 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-9:disabled {
+  cursor: default;
+}
+
+.btn-9:-moz-focusring {
+  outline: auto;
+}
+
+.btn-9 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-9 [hidden] {
+  display: none;
+}
+
+.btn-9 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+
+.btn-9 span {
+  mix-blend-mode: difference;
+}
+
+.btn-9:after,
+.btn-9:before {
+  --tilt: 1.2rem;
+  background: #fff;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    0 100%
+  );
+  content: "";
+  display: block;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: calc(100% + var(--tilt));
+}
+
+.btn-9:after {
+  left: 100%;
+  transform: translateX(var(--progress, 0)) rotate(180deg);
+  z-index: -1;
+}
+
+.btn-9:hover:before {
+  --progress: 100%;
+}
+
+.btn-9:hover:after {
+  --progress: -100%;
+}
+
+</style>
