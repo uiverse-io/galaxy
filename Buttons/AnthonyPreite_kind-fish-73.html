@@ -1,0 +1,67 @@
+    <button class="button">
+      I'm a Button
+    </button>
+
+<style>
+/* From Uiverse.io by AnthonyPreite - Tags: gradient, button */
+.button {
+  position: relative;
+  height: 50px;
+  width: 130px;
+  border: none;
+  outline: none;
+  color: white;
+  background: #0f0f0f;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Gruppo', sans-serif;
+  transition: all .2s ease-out;
+}
+
+.button:before {
+  position: absolute;
+  content: '';
+  top: -4px;
+  left: -4px;
+  height: calc(100% + 8px);
+  width: calc(100% + 8px);
+  border-radius: 6px;
+  z-index: -1;
+  opacity: 1;
+  background: linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 25%, hsla(141, 54%, 86%, 1)50%);
+  background-size: 400%;
+  transition: opacity 1s ease-in-out;
+  animation: animate 20s linear infinite;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  color: #0f0f0f;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+.button:active {
+  background: none;
+  color: #000000;
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+</style>
