@@ -1,0 +1,54 @@
+<form class="subscribe-form">
+    <input type="email" placeholder="example@mail.com" class="subscribe-input">
+    <button class="subscribe-btn">Submit</button>
+</form>
+<style>
+/* From Uiverse.io by andrew-demchenk0 - Tags: email, form, submit, outlined, subscribe */
+.subscribe-form {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.subscribe-input {
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  border: 2px solid var(--main-color);
+  border-right: 0;
+  border-radius: 5px 0 0 5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--font-color);
+  background: var(--bg-color);
+}
+
+.subscribe-btn {
+  width: 100px;
+  height: 100%;
+  border: 2px solid var(--main-focus);
+  border-radius: 0 5px 5px 0;
+  background-color: var(--main-focus);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.subscribe-input:focus {
+  outline: none;
+  border: 2px solid var(--main-focus);
+  border-right: 0;
+}
+    
+</style>
