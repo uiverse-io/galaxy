@@ -1,0 +1,172 @@
+<div class="notification">
+  <div class="shinner">
+    <div class="mover"></div>
+    <div class="mover2"></div>
+  </div>
+  <svg version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" height="121.46" width="122.88" class="wing">
+ <g>
+  <g id="svg_1">
+   <path class="st0" d="m12.35,121.46c-8.01,-9.72 -11.92,-19.29 -12.31,-28.71c-0.82,-19.74 10.88,-34.47 28.26,-45.08c18.28,-11.16 37.08,-13.93 55.36,-22.25c9.13,-4.15 20.02,-10.95 38.14,-25.42c5.92,15.69 -12.92,40.9 -43.52,54.23c9.48,0.37 19.69,-2.54 30.85,-9.74c-0.76,19.94 -16.46,32.21 -51.3,36.95c7.33,2.45 16.09,2.58 27.27,-0.58c-10.77,35.95 -55.2,10.2 -72.75,40.6l0,0z" fill-rule="evenodd" clip-rule="evenodd" id="svg_2" fill="#fff"></path>
+  </g>
+ </g>
+</svg>
+
+<svg version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" height="121.46" width="122.88" class="wing1">
+ <g>
+  <g id="svg_1">
+   <path class="st0" d="m12.35,121.46c-8.01,-9.72 -11.92,-19.29 -12.31,-28.71c-0.82,-19.74 10.88,-34.47 28.26,-45.08c18.28,-11.16 37.08,-13.93 55.36,-22.25c9.13,-4.15 20.02,-10.95 38.14,-25.42c5.92,15.69 -12.92,40.9 -43.52,54.23c9.48,0.37 19.69,-2.54 30.85,-9.74c-0.76,19.94 -16.46,32.21 -51.3,36.95c7.33,2.45 16.09,2.58 27.27,-0.58c-10.77,35.95 -55.2,10.2 -72.75,40.6l0,0z" fill-rule="evenodd" clip-rule="evenodd" id="svg_2" fill="#fff"></path>
+  </g>
+ </g>
+</svg>
+  <div></div>
+  <p class="levelup">LEVEL UP!</p>
+  <p class="congrats">Congratulations!</p>
+  <div class="bg"></div>
+    
+</div>
+<style>
+/* From Uiverse.io by Sameer2244 - Tags: notification */
+.notification {
+  width: 250px;
+  height: 60px;
+  background: rgb(255, 255, 255);
+  border-radius: 14px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.377);
+}
+
+.shinner {
+  position: absolute;
+  width: 250px;
+  height: 60px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 0.5rem;
+}
+
+.mover {
+  position: absolute;
+  border-top: 60px solid rgba(255, 255, 255, 0.4);
+  border-right: 30px solid transparent;
+  left: 50px;
+  filter: blur( 4px );
+  animation: shine 2s infinite ease-in-out;
+}
+
+.mover2 {
+  content: "";
+  position: absolute;
+  border-top: 60px solid rgba(255, 255, 255, 0.4);
+  border-left: 30px solid transparent;
+  transform: scaleY(-1);
+  left: 20px;
+  filter: blur( 4px );
+  animation: shine2 2s infinite ease-in-out;
+}
+
+.levelup {
+  color: rgb(18, 175, 4);
+  text-align: center;
+  padding-top: 0.6rem;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  z-index: 3;
+}
+
+.congrats {
+  font-family: cursive;
+  font-size: 1.5rem;
+  color: rgb(240, 240, 240);
+  text-align: center;
+  padding-top: 1rem;
+  text-shadow: 1px 4px 7px rgb(7, 7, 7);
+}
+
+.wing {
+  transform: translate(150px,-100px);
+  position: absolute;
+  z-index: -1;
+  animation: winganime 2s ease-in-out infinite;
+}
+
+.wing1 {
+  transform: translate(-30px,-100px) scaleX(-1);
+  position: absolute;
+  z-index: -1;
+  animation: winganime2 2s ease-in-out infinite;
+}
+
+.bg {
+  background: rgb(223, 223, 105);
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  z-index: -2;
+  border-radius: 50%;
+  box-shadow: rgb(252, 255, 54,0.7) 0px 4px 105px, rgb(252, 255, 54,0.7) 0px -24px 130px, rgb(252, 255, 54,0.7) 0px 4px 446px, rgb(252, 255, 54,0.7) 0px 12px 13px, rgb(252, 255, 54,0.7) 0px -3px 5px;
+  animation: rot 2.5s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes rot {
+  0% {
+    transform: translate(50%,-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(50%,-50%) rotate(360deg);
+  }
+}
+
+@keyframes winganime {
+  0% {
+    transform: translate(150px,-100px) rotateY(0deg);
+  }
+
+  50% {
+    transform: translate(150px,-95px) rotateY(25deg);
+  }
+
+  100% {
+    transform: translate(150px,-100px) rotateY(0deg);
+  }
+}
+
+@keyframes winganime2 {
+  0% {
+    transform: translate(-30px,-100px) rotateY(0deg) scaleX(-1);
+  }
+
+  50% {
+    transform: translate(-30px,-95px) rotateY(-25deg) scaleX(-1);
+  }
+
+  100% {
+    transform: translate(-30px,-100px) rotateY(0deg) scaleX(-1);
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -50px;
+  }
+
+  100% {
+    left: 300px;
+  }
+}
+
+@keyframes shine2 {
+  0% {
+    left: -20px;
+  }
+
+  100% {
+    left: 270px;
+  }
+}
+</style>
