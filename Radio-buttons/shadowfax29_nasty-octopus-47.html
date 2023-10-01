@@ -1,0 +1,178 @@
+<div class="radio-inputs">
+  <div class="radio1" id="one">
+    <input type="radio" name="radio">
+    <div class="obj1"></div>
+    <span class="name">EARTH</span>
+  </div>
+  <div class="radio2" id="two">
+    <input type="radio" name="radio">
+    <div class="obj2"></div>
+    <span class="name">MARS</span>
+  </div>
+      
+  <div class="radio3" id="three">
+    <input type="radio" name="radio">
+    <div class="obj3"></div>
+    <span class="name">MOON</span>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by shadowfax29 - Tags: radio, planet, simple radio */
+.radio-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.074);
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 210px;
+  height: 40px;
+  font-size: 14px;
+  box-size: border-box;
+}
+
+.obj1 {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  filter: blur(4px);
+  z-index: -5;
+  background: linear-gradient(blue,rgb(224, 107, 224));
+  border-radius: 50%;
+  overflow: hidden;
+} /* adjust position accordingly */
+
+.obj2 {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  filter: blur(4px);
+  z-index: -5;
+  background: linear-gradient(red,orange);
+  border-radius: 50%;
+} /* adjust position accordingly */
+
+.obj3 {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  filter: blur(4px);
+  z-index: -5;
+  background-color: grey;
+  border-radius: 50%;
+} /* adjust position accordingly */
+
+.radio1 , .radio2 , .radio3 {
+  flex: 1;
+  width: 70px;
+  height: 30px;
+}
+
+.radio1 input ,
+.radio2 input ,
+.radio3 input {
+  width: 30px;
+  height: 30px;
+  appearance: none;
+  z-index: 2;
+  cursor: pointer;
+  margin-left: 22px;
+}
+
+.radio1 .name ,
+
+.radio2 .name ,
+
+.radio3 .name {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  bottom: 2.6em;
+  padding: .5rem 0;
+  color: rgba(51, 65, 85, 1);
+  transition: all .15s ease-in-out;
+  font-weight: 200;
+  height: 40px;
+  z-index: -2;
+}
+
+.radio1  input:checked ~ .name {
+  color: white;
+  background: linear-gradient(blue,green);
+  font-weight: 600;
+}
+
+.radio2  input:checked ~ .name {
+  color: white;
+  background: linear-gradient(red,orange);
+  font-weight: 600;
+}
+
+.radio3  input:checked ~ .name {
+  color: white;
+  background-color: grey;
+  font-weight: 600;
+}
+
+#one input:checked ~ .obj1,
+#two input:checked ~ .obj2 ,
+#three input:checked ~ .obj3 {
+  animation: shake 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  20% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  30% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  40% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  50% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  60% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  70% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  80% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  90% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+</style>
