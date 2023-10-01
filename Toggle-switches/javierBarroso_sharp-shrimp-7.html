@@ -1,0 +1,77 @@
+
+<div class="container">
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+</div>
+<style>
+/* From Uiverse.io by javierBarroso - Tags: animation, switch, toggle */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  box-shadow: 0px 5px 20px #11111166;
+  background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+  transform: rotate(-90deg);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  transition: .4s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: .2s;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196F3;
+  transform: rotate(90deg);
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transition-delay: .2s;
+  transform: translateX(1.5em);
+}
+</style>
