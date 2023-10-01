@@ -1,0 +1,44 @@
+  <div class="button">
+    <div class="button__front">rocket</div>
+    <div class="button__back">roll</div>
+  </div>
+<style>
+/* From Uiverse.io by vishalparajuli - Tags: button, 3d button, 3d card */
+.button {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  perspective: 800px;
+}
+
+.button__front,
+  .button__back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #3498db;
+  border-radius: 5px;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+}
+
+.button__back {
+  background-color: #e74c3c;
+  transform: rotateY(180deg);
+}
+
+.button:hover .button__front {
+  transform: rotateY(-180deg);
+}
+
+.button:hover .button__back {
+  transform: rotateY(0);
+}
+</style>
