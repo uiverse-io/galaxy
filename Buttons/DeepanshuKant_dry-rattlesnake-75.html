@@ -1,0 +1,57 @@
+ <button class="btn">
+   Button
+</button>
+<style>
+/* From Uiverse.io by DeepanshuKant - Tags: button */
+.btn {
+  position: relative;
+  padding: 1rem 2.5rem;
+  color: #ffd739;
+  font-size: 1em;
+  background-color: #27045b;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition-property: all;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #6807f9;
+  box-shadow: 0px 14px 56px -11px #6807f9;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  border-radius: 100px;
+  right: 2rem;
+  bottom: 37%;
+  animation: 0.5s both ease-in-out infinite;
+}
+
+.btn:hover::before {
+  animation-name: bounce_591;
+  transition: all 0.3s ease;
+}
+
+@keyframes bounce_591 {
+  0% {
+    bottom: 37%;
+  }
+
+  50% {
+    bottom: 70%;
+  }
+
+  100% {
+    bottom: 37%;
+  }
+}
+</style>
