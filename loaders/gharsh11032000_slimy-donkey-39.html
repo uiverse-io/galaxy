@@ -1,0 +1,35 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by gharsh11032000 - Tags: gradient, loader, circle loader */
+.loader {
+  width: 5em;
+  height: 5em;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  animation: spin 3s infinite;
+}
+
+.loader::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: rotate(-360deg);
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+</style>
