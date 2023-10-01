@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="card">
+    hover
+  </div>
+</div>
+<style>
+/* From Uiverse.io by boryanakrasteva - Tags: glassmorphism, card */
+.container {
+  width: 190px;
+  height: 254px;
+  background: transparent;
+  position: relative;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.438);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card {
+  cursor: default;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #212121;
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  transition: all ease .3s;
+}
+
+.container::after,
+.container::before {
+  width: 100px;
+  height: 100px;
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  transition: .5s linear;
+}
+
+.container::after {
+  top: -20px;
+  left: -20px;
+  background-color: rgba(125, 214, 66, 0.603);
+  animation: animFirst 5s linear infinite;
+}
+
+.container::before {
+  background-color: rgb(226, 223, 54);
+  top: 70%;
+  left: 70%;
+  animation: animSecond 5s linear infinite;
+  animation-delay: 3s;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 10px rgba(0, 77, 32, 0.432)
+}
+
+.container:hover::after {
+  left: 80px;
+  transform: scale(1.2);
+}
+
+.container:hover::before {
+  left: -10px;
+  transform: scale(1.2);
+}
+</style>
