@@ -1,0 +1,214 @@
+    <section class="product-container product-1">
+      <div class="card">
+        <div class="photo"></div>
+        <div class="content">
+          <div class="title">GeForce RTX 4090</div>
+          <div class="bg-title">RTX</div>
+          <div class="feature size">
+            <div>size :</div>
+            <span>S</span>
+            <span>M</span>
+            <span>L</span>
+          </div>
+          <div class="feature color">
+            <div>color :</div>
+            <span>pink</span>
+            <span class="tt">blue</span>
+            <span class="ttt">green</span>
+          </div>
+          <button class="btn-buy">buy now</button>
+        </div>
+      </div>
+    </section>
+
+<style>
+/* From Uiverse.io by Admin12121 - Tags: animated, card animation, card hover, 3d card */
+.product-container {
+  position: relative;
+}
+
+.card {
+  font-family: Lato, sans-serif;
+  position: relative;
+  width: 290px;
+  height: 400px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--product-color);
+  clip-path: circle(150px at 80% 20%);
+  transition: .5s ease-in-out;
+}
+
+.card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.title {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 12px;
+}
+
+.bg-title {
+  font-size: 10em;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(255,255,255,.04);
+  position: absolute;
+  max-width: 120%;
+  top: -150%;
+  transition: .6s;
+}
+
+.card:hover .bg-title {
+  transform: translateY(60%);
+}
+
+.photo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 100%;
+  height: 220px;
+  transition: .5s;
+}
+
+.card:hover .photo {
+  top: 0%;
+  transform: translateY(0%);
+}
+
+.photo img {
+  position: absolute;
+  width: 220px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  transition: .5s;
+}
+
+.card:hover .photo img {
+  width: 260px;
+  top: 56%;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 5;
+}
+
+.card:hover .content {
+  height: 190px;
+}
+
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: .5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card:hover .feature {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+.feature div {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.feature span {
+  min-width: 20px;
+  padding: 0 4px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: .4s;
+  border-radius: 4px;
+  cursor: pointer
+}
+
+.feature span:hover {
+  color: #000;
+  background: var(--product-color);
+}
+
+.btn-buy {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  cursor: pointer;
+  outline: none;
+}
+
+.card:hover .btn-buy {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card:hover .btn-buy:hover {
+  background: var(--product-color);
+  transition-delay: 0;
+  transition: 0.05s;
+}
+
+.product-1 {
+  --product-color: #EB6CA4;
+}
+
+.size span {
+  cursor: pointer;
+  z-index: 50;
+}
+
+.feature .tt:hover {
+  background: #038dff;
+}
+
+.feature .ttt:hover {
+  background: #09ff0d;
+}
+</style>
