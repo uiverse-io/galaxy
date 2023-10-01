@@ -1,0 +1,93 @@
+<article class="card">
+    <div class="card-img">
+        <div class="card-imgs pv delete"></div>
+    </div>
+    <div class="project-info">
+        <div class="flex">
+            <div class="project-title">Moi</div>
+            <span class="tag">description</span>
+        </div>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span>
+        <a class="account">Project</a>
+    </div>
+</article>
+<style>
+/* From Uiverse.io by Kagamiie - Tags: card, about me, profilecard */
+.project-info {
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: -50px;
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: black;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account {
+  font-weight: bold;
+}
+
+.tag {
+  font-weight: lighter;
+  color: grey;
+}
+
+/*DELETE THIS TWO LINE*/
+.delete {
+  background-color: #b2b2fd;
+}
+
+.card-img div {
+  width: 90%;
+}
+/*IF USING IMAGES*/
+
+.card {
+  background-color: white;
+  color: black;
+  width: 270px;
+  max-height: 250px;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card-img {
+  position: relative;
+  top: -50px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Change the .card-img div to .card-img img to use img*/
+.card-img a, .card-img div {
+  height: 100px;
+  width: 85%;
+  /* Change this width here to change the width of the color/image */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.pv:hover {
+  transform: scale(1.12);
+}
+
+.card-imgs {
+  transition: all 0.5s;
+}
+</style>
