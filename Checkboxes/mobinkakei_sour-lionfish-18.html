@@ -1,0 +1,41 @@
+<label class="checkbox-wrapper">
+<input checked="" type="checkbox" id="check" hidden="">
+<label for="check" class="checkmark"></label>
+</label>
+<style>
+/* From Uiverse.io by mobinkakei - Tags: checkbox */
+.checkmark {
+ display: block;
+ width: 30px;
+ height: 30px;
+ background-color: #ddd;
+ border-radius: 10px;
+ position: relative;
+ transition: background-color 0.4s;
+ overflow: hidden;
+ cursor: pointer;
+}
+
+#check:checked ~ .checkmark {
+ background-color: #08bb68;
+}
+
+.checkmark::after {
+ content: "";
+ position: absolute;
+ width: 5px;
+ height: 10px;
+ border-right: 3px solid #fff;
+ border-bottom: 3px solid #fff;
+ top: 44%;
+ left: 50%;
+ transform: translate(-50%, -50%) rotateZ(40deg) scale(10);
+ opacity: 0;
+ transition: all 0.4s;
+}
+
+#check:checked ~ .checkmark::after {
+ opacity: 1;
+ transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
+}
+</style>
