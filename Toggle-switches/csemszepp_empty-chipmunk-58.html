@@ -1,0 +1,231 @@
+
+    <div class="switch">
+        <label for="toggle">
+            <div class="background"></div>
+            <input checked="" type="checkbox" class="toggle-switch" id="toggle">
+            <div class="cookie">
+                <span class="cookie-part-1"></span>
+                <span class="cookie-part-2"></span>
+                <span class="cookie-part-3"></span>
+                <span class="cookie-part-4"></span>
+                <span class="chocolate-chips-1a"></span>
+                <span class="chocolate-chips-1b"></span>
+                <span class="chocolate-chips-1c"></span>
+                <span class="chocolate-chips-1d"></span>
+                <span class="chocolate-chips-2a"></span>
+                <span class="chocolate-chips-2b"></span>
+                <span class="chocolate-chips-2c"></span>
+                <span class="chocolate-chips-2d"></span>
+                <span class="chocolate-chips-2e"></span>
+                <span class="chocolate-chips-3a"></span>
+                <span class="chocolate-chips-3b"></span>
+                <span class="chocolate-chips-3c"></span>
+                <span class="chocolate-chips-4a"></span>
+                <span class="chocolate-chips-4b"></span>
+                <span class="chocolate-chips-4c"></span>
+            </div>
+        </label>
+    </div>
+<style>
+/* From Uiverse.io by csemszepp - Source: https://codepen.io/agalliat/pen/RwrEqOG - Tags: switch, toggle switch */
+.container {
+  height: 100%;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  height: 25%;
+  font-family: Cookie;
+  font-size: 48pt;
+  text-align: center;
+}
+
+.switch {
+  --cookie-size: 3em;
+  --outer-border: 0.5em;
+  --inner-border: 0.5em;
+  --border-color: #d8a04d;
+  --height: calc(var(--cookie-size) + (2 * (var(--outer-border) + var(--inner-border))));
+  --width: calc(var(--height) * 2);
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+}
+
+.switch input {
+  display: none;
+}
+
+.switch label {
+  cursor: pointer;
+}
+
+.switch input:checked ~ .cookie {
+  transform: translateX(calc(var(--width) / 2)) rotate(360deg);
+  color: #d8a04d;
+  background-color: currentColor;
+}
+
+.switch input:checked ~ .cookie span[class^="cookie-part-"],
+.switch input:checked ~ .cookie span[class^="chocolate-chips-"] {
+  transform: translate(0px, 0px);
+}
+
+.background {
+  height: 100%;
+  border-radius: calc(var(--width) / 4);
+  border: var(--outer-border) solid var(--border-color);
+  background: linear-gradient(to right, #484848 0%,#202020 100%);
+}
+
+.cookie {
+  --chip-size: calc(var(--cookie-size) / 8);
+  --split-offset: calc(var(--cookie-size) / 24);
+  position: absolute;
+  top: calc(var(--outer-border) + var(--inner-border));
+  left: calc(var(--outer-border) + var(--inner-border));
+  ;
+    width: var(--cookie-size);
+  height: var(--cookie-size);
+  border-radius: 50%;
+  transition: transform 1s linear;
+}
+
+.cookie span[class^="cookie-part-"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: #d8a04d;
+  background-color: currentColor;
+}
+
+.cookie-part-1 {
+  clip-path: polygon(0% 0%, 55% 0%, 52% 8%, 55% 10%, 55% 16%, 52% 19%, 52% 24%, 47% 26%, 45% 30%, 50% 33%, 47% 37%, 47% 42%, 51% 47%, 47% 49%, 40% 50%, 34% 50%, 30% 53%, 25% 53%, 20% 56%, 16% 56%, 14% 61%, 0% 60%);
+  transform: translate(calc(var(--split-offset) * -1), calc(var(--split-offset) * -1));
+}
+
+.cookie-part-2 {
+  clip-path: polygon(55% 0%, 100% 0%, 100% 72%, 88% 68%, 84% 61%, 78% 60%, 77% 56%, 75% 53%, 71% 55%, 66% 50%, 63% 47%, 58% 49%, 56% 44%, 51% 47%, 47% 42%, 47% 37%, 50% 33%, 45% 30%, 47% 26%, 52% 24%, 52% 19%, 55% 16%, 55% 10%, 52% 8%);
+  transform: translate(calc(var(--split-offset) * 1), calc(var(--split-offset) * -1));
+}
+
+.cookie-part-3 {
+  clip-path: polygon(0% 60%, 14% 61%, 16% 56%, 20% 56%, 25% 53%, 30% 53%, 34% 50%, 40% 50%, 47% 49%, 51% 47%, 55% 53%, 60% 56%, 56% 62%, 53% 67%, 57% 72%, 57% 81%, 57% 87%, 63% 92%, 60% 100%, 0% 100%);
+  transform: translate(calc(var(--split-offset) * -1), calc(var(--split-offset) * 1));
+}
+
+.cookie-part-4 {
+  clip-path: polygon(100% 100%, 100% 72%, 88% 68%, 84% 61%, 78% 60%, 77% 56%, 75% 53%, 71% 55%, 66% 50%, 63% 47%, 58% 49%, 56% 44%, 51% 47%, 55% 53%, 60% 56%, 56% 62%, 53% 67%, 57% 72%, 57% 81%, 57% 87%, 63% 92%, 60% 100%);
+  transform: translate(calc(var(--split-offset) * 1), calc(var(--split-offset) * 1));
+}
+
+.cookie span[class^="chocolate-chips-"] {
+  position: absolute;
+  color: #754e27;
+  background-color: #865729;
+  height: var(--chip-size);
+  width: var(--chip-size);
+  border-radius: 50%;
+  box-shadow: inset -0.35em 0;
+}
+
+.cookie .chocolate-chips-1a {
+  top: 41%;
+  left: 5%;
+}
+
+.cookie .chocolate-chips-1b {
+  top: 20%;
+  left: 18%;
+}
+
+.cookie .chocolate-chips-1c {
+  top: 35%;
+  left: 33%;
+}
+
+.cookie .chocolate-chips-1d {
+  top: 6%;
+  left: 39%;
+}
+
+.cookie .chocolate-chips-2a {
+  --chip-size: calc(var(--cookie-size) / 10);
+  top: 24%;
+  right: 35%;
+}
+
+.cookie .chocolate-chips-2b {
+  top: 36%;
+  right: 23%;
+}
+
+.cookie .chocolate-chips-2c {
+  top: 7%;
+  right: 29%;
+}
+
+.cookie .chocolate-chips-2d {
+  top: 42%;
+  right: 7%;
+}
+
+.cookie .chocolate-chips-2e {
+  top: 19%;
+  right: 12%;
+}
+
+.cookie .chocolate-chips-3a {
+  --chip-size: calc(var(--cookie-size) / 6);
+  bottom: 24%;
+  left: 18%;
+}
+
+.cookie .chocolate-chips-3b {
+  bottom: 34%;
+  left: 42%;
+}
+
+.cookie .chocolate-chips-3c {
+  bottom: 9%;
+  left: 39%;
+}
+
+.cookie .chocolate-chips-4a {
+  bottom: 27%;
+  right: 29%;
+}
+
+.cookie .chocolate-chips-4b {
+  bottom: 12%;
+  right: 23%;
+}
+
+.cookie .chocolate-chips-4c {
+  --chip-size: calc(var(--cookie-size) / 12);
+  bottom: 28%;
+  right: 17%;
+}
+
+.cookie span[class^="chocolate-chips-1"] {
+  transform: translate(calc(var(--split-offset) * -1), calc(var(--split-offset) * -1));
+}
+
+.cookie span[class^="chocolate-chips-2"] {
+  transform: translate(calc(var(--split-offset) * 1), calc(var(--split-offset) * -1));
+}
+
+.cookie span[class^="chocolate-chips-3"] {
+  transform: translate(calc(var(--split-offset) * -1), calc(var(--split-offset) * 1));
+}
+
+.cookie span[class^="chocolate-chips-4"] {
+  transform: translate(calc(var(--split-offset) * 1), calc(var(--split-offset) * 1));
+}
+
+</style>
