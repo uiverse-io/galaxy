@@ -1,0 +1,49 @@
+<button class="btn"><span>鬼滅の刃</span></button>
+
+<style>
+/* From Uiverse.io by PriyanshuGupta28 - Tags: button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f44336;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #f44336;
+  text-shadow: 0 0 5px #f44336;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.btn span {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover span {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+</style>
