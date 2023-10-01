@@ -1,0 +1,37 @@
+<button class="menu__icon">
+</button>
+<style>
+/* From Uiverse.io by ArturCodeCraft - Tags: icon, apple, button, menu, menuicon, menu button , hamburger menu */
+/* <reset-style> ============================ */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+/* <main-style> ============================ */
+.menu__icon {
+  width: 2rem;
+  height: 2rem;
+  padding: .25rem;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgb(29, 29, 31, .7);
+  border: solid 1px rgba(66,66,69,0.7);
+}
+
+.menu__icon::before {
+  display: block;
+  content: "+";
+  color: rgb(245, 245, 247);
+  font-size: 1.125rem;
+  font-weight: 400;
+  transition: transform .3s ease-out;
+  transform-origin: center;
+}
+
+.menu__icon:hover::before {
+  transform: rotate(45deg) scale(1.08);
+}
+</style>
