@@ -1,0 +1,228 @@
+
+<div class="ball"></div>
+<div class="shape"></div>
+<style>
+/* From Uiverse.io by csemszepp - Source: https://codepen.io/cobra_winfrey/pen/xyRaeK - Tags: loader, cool loader */
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: calc(50% - 25px);
+  animation: bounce 3s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+.ball:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 100%;
+  animation: bounce2 3s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: scaleY(0.75) scaleX(1.25);
+  }
+
+  14.25% {
+    transform: scaleY(1);
+  }
+
+  28.5% {
+    transform: scaleY(0.75) scaleX(1.25);
+  }
+
+  42.75% {
+    transform: scaleY(1);
+  }
+
+  57% {
+    transform: scaleY(0.75) scaleX(1.25);
+  }
+
+  71.25% {
+    transform: scaleY(1);
+  }
+
+  80% {
+    transform: scaleY(0.75) scaleX(1.25);
+  }
+
+  90% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0.75) scaleX(1.25);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+
+  14.25% {
+    transform: translateY(-150px);
+  }
+
+  28.5% {
+    transform: translateY(-7.5px);
+  }
+
+  42.75% {
+    transform: translateY(-170px);
+  }
+
+  57% {
+    transform: translateY(-27.5px);
+  }
+
+  71.25% {
+    transform: translateY(-180px);
+  }
+
+  80% {
+    transform: translateY(-35px);
+  }
+
+  90% {
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.shape {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: calc(50% - 150px);
+  top: calc(50% - 75px);
+  animation: shapes2 3s ease-in-out infinite;
+}
+
+@keyframes shapes2 {
+  0% {
+    transform: rotate(90deg) translateX(-20px);
+  }
+
+  14.25% {
+    transform: rotate(90deg) translateX(-20px);
+  }
+
+  28.5% {
+    transform: rotate(135deg);
+  }
+
+  42.75% {
+    transform: rotate(162deg);
+  }
+
+  57% {
+    transform: rotate(180deg);
+  }
+
+  71.25% {
+    transform: rotate(245.5deg);
+  }
+
+  80% {
+    transform: rotate(336.5deg);
+  }
+
+  100% {
+    transform: rotate(90deg) translateX(-20px);
+  }
+}
+
+.shape:before, .shape:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #fdb20f;
+  animation: shapes 3s ease-in-out infinite;
+  clip-path: polygon(20% 21%, 50% 8%, 80% 21%, 90% 50%, 80% 80%, 50% 91%, 21% 79%, 8% 51%);
+}
+
+.shape:after {
+  width: 90%;
+  height: 90%;
+  background: repeating-linear-gradient(to right, #fff, #fff 2px, #fdb20f 2px, #fdb20f 5px);
+  top: 5%;
+  left: 5%;
+  background-position: 20px 30px;
+}
+
+@keyframes shapes {
+  0% {
+    clip-path: polygon(91% 50%, 91% 50%, 29% 86%, 30% 86%, 30% 86%, 30% 86%, 30% 14%, 30% 14%);
+    background-position: 20px 30px;
+  }
+
+  14.25% {
+    clip-path: polygon(91% 50%, 91% 50%, 29% 86%, 30% 86%, 30% 86%, 30% 86%, 30% 14%, 30% 14%);
+    background-position: 120px 30px;
+  }
+
+  28.5% {
+    clip-path: polygon(91% 50%, 91% 50%, 50% 91%, 50% 91%, 50% 91%, 50% 91%, 9% 50%, 50% 9%);
+    background-position: 20px 30px;
+  }
+
+  42.75% {
+    clip-path: polygon(63% 11%, 91% 50%, 63% 89%, 63% 89%, 63% 89%, 63% 89%, 16% 74%, 16% 26%);
+    background-position: -120px 30px;
+  }
+
+  57% {
+    clip-path: polygon(29% 14%, 71% 14%, 91% 50%, 91% 50%, 71% 86%, 71% 86%, 30% 86%, 9% 50%);
+    background-position: 20px 30px;
+  }
+
+  71.25% {
+    clip-path: polygon(13% 32%, 41% 10%, 76% 18%, 91% 50%, 76% 83%, 76% 83%, 41% 90%, 13% 68%);
+    background-position: 120px 30px;
+  }
+
+  80% {
+    clip-path: polygon(20% 21%, 50% 8%, 80% 21%, 90% 50%, 80% 80%, 50% 91%, 21% 79%, 8% 51%);
+    background-position: 20px 30px;
+  }
+
+  83% {
+    clip-path: polygon(13% 32%, 41% 10%, 76% 18%, 91% 50%, 76% 83%, 76% 83%, 41% 90%, 13% 68%);
+    background-position: 20px 30px;
+  }
+
+  86% {
+    clip-path: polygon(29% 14%, 71% 14%, 91% 50%, 91% 50%, 71% 86%, 71% 86%, 30% 86%, 9% 50%);
+    background-position: 20px 30px;
+  }
+
+  89% {
+    clip-path: polygon(63% 11%, 91% 50%, 63% 89%, 63% 89%, 63% 89%, 63% 89%, 16% 74%, 16% 26%);
+    background-position: 20px 30px;
+  }
+
+  92% {
+    clip-path: polygon(91% 50%, 91% 50%, 50% 91%, 50% 91%, 50% 91%, 50% 91%, 9% 50%, 50% 9%);
+  }
+
+  95% {
+    clip-path: polygon(91% 50%, 91% 50%, 29% 86%, 30% 86%, 30% 86%, 30% 86%, 30% 14%, 30% 14%);
+  }
+
+  100% {
+    clip-path: polygon(91% 50%, 91% 50%, 29% 86%, 30% 86%, 30% 86%, 30% 86%, 30% 14%, 30% 14%);
+  }
+}
+</style>
