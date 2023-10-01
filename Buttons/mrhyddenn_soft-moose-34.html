@@ -1,0 +1,117 @@
+<div class="button">
+    <a class="first"> Keep hovering me </a>
+    <a class="slidein"> Welcome to uiverse</a>
+    <a class="slidein two"> Keep going </a>
+    <a class="slidein three"> Create on uiverse </a>
+    <a class="slidein four"> Save favorite </a>
+    <a class="slidein five"> ...and enjoy! </a>
+    <a class="slidein six"> Respect us.</a>
+    <a class="slidein seven"> and we will you. </a>
+    <a class="slidein eight"> Happy coding. </a>
+    <a class="slidein nine"> ...and thanks. </a>
+    <a class="slidein ten"> uiverse.io </a>
+</div>
+<style>
+/* From Uiverse.io by mrhyddenn - Tags: button */
+.button {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  display: block;
+  width: 200px;
+  border: none;
+  font-size: 12px;
+  height: 45px;
+  text-decoration: none;
+  font-weight: 600;
+  overflow: hidden;
+  box-shadow: 0 10px 50px #006eff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.button .ten {
+  line-height: 52px;
+}
+
+.button:hover .slidein {
+  left: 0%;
+}
+
+.button:hover .two {
+  left: 0%;
+  transition-delay: 1.5s;
+}
+
+.button:hover .three {
+  left: 0%;
+  transition-delay: 3s;
+}
+
+.button:hover .four {
+  left: 0%;
+  transition-delay: 4.5s;
+}
+
+.button:hover .five {
+  left: 0%;
+  transition-delay: 6s;
+}
+
+.button:hover .six {
+  left: 0%;
+  transition-delay: 7.5s;
+}
+
+.button:hover .seven {
+  left: 0%;
+  transition-delay: 9s;
+}
+
+.button:hover .eight {
+  left: 0%;
+  transition-delay: 10.5s;
+}
+
+.button:hover .nine {
+  left: 0%;
+  transition-delay: 12s;
+}
+
+.button:hover .ten {
+  left: 0%;
+  transition-delay: 14s;
+}
+
+.button .slidein {
+  background: #3398ff;
+  left: -100%;
+  z-index: 2;
+}
+
+.button a {
+  text-transform: uppercase;
+  transition: left 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  background: #006eff;
+  position: absolute;
+  font-weight: bold;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.slidein:nth-child( even) {
+  background: #348bfc !important;
+}
+
+.slidein:nth-child( odd) {
+  background: #0873ff !important;
+}
+</style>
