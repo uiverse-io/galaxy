@@ -1,0 +1,28 @@
+<div class="custom-loader"></div>
+<style>
+/* From Uiverse.io by cohencoo - Tags: loading, loader, download, downloading */
+.custom-loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #F4BF00;
+  border: 2px solid;
+  position: relative;
+}
+
+.custom-loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: #F4BF00;
+  animation: p6 2s infinite;
+}
+
+@keyframes p6 {
+  100% {
+    inset: 0
+  }
+}
+</style>
