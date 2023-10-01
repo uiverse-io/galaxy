@@ -1,0 +1,78 @@
+<div class="checkbox-wrapper-65">
+  <label for="cbk1-65">
+    <input id="cbk1-65" type="checkbox">
+    <span class="cbx">
+      <svg viewBox="0 0 12 11" height="11px" width="12px">
+        <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+      </svg>
+    </span>
+    <span>Checkbox</span>
+  </label>
+</div>
+
+
+
+<style>
+/* From Uiverse.io by PriyanshuGupta28 - Tags: checkbox, cool checkbox, circle-checkbox */
+.checkbox-wrapper-65 *,
+  .checkbox-wrapper-65 ::after,
+  .checkbox-wrapper-65 ::before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-65 .cbx {
+  position: relative;
+  display: block;
+  float: left;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: #1c4780;
+  background-image: linear-gradient(#0f698d, #1d3c6b);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.15), inset 0 -1px 1px rgba(0,0,0,0.15);
+  transition: all 0.15s ease;
+}
+
+.checkbox-wrapper-65 .cbx svg {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 17;
+  stroke-dashoffset: 17;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-65 .cbx + span {
+  float: left;
+  margin-left: 6px;
+}
+
+.checkbox-wrapper-65 {
+  user-select: none;
+}
+
+.checkbox-wrapper-65 label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.checkbox-wrapper-65 input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-65 input[type="checkbox"]:checked + .cbx {
+  background-color: #606062;
+  background-image: linear-gradient(#2584d2, #1d52c1);
+}
+
+.checkbox-wrapper-65 input[type="checkbox"]:checked + .cbx svg {
+  stroke-dashoffset: 0;
+  transition: all 0.15s ease;
+}
+</style>
