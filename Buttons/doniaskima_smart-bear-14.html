@@ -1,0 +1,116 @@
+<button class="btn-11"><span>Button</span></button>
+
+<style>
+/* From Uiverse.io by doniaskima - Tags: button, design, Button design */
+.btn-11,
+.btn-11 *,
+.btn-11 :after,
+.btn-11 :before,
+.btn-11:after,
+.btn-11:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-11 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-11:disabled {
+  cursor: default;
+}
+
+.btn-11:-moz-focusring {
+  outline: auto;
+}
+
+.btn-11 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-11 [hidden] {
+  display: none;
+}
+
+.btn-11 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+
+.btn-11 span {
+  mix-blend-mode: difference;
+}
+
+.btn-11:before {
+  -webkit-animation: bg-scroll 3s linear infinite;
+  animation: bg-scroll 3s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  background: repeating-linear-gradient(
+    45deg,
+    hsla(0, 0%, 100%, 0.2),
+    hsla(0, 0%, 100%, 0.2) 0.7%,
+    transparent 0,
+    transparent 4%
+  );
+  content: "";
+  display: block;
+  height: 300%;
+  left: -100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s, background-color 0.2s;
+  width: 300%;
+}
+
+.btn-11:hover:before {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+}
+
+.btn-11:active:before {
+  background-color: #fff;
+}
+
+@-webkit-keyframes bg-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(33%);
+  }
+}
+
+@keyframes bg-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(33%);
+  }
+}
+
+</style>
