@@ -1,0 +1,89 @@
+<div class="card">
+    <div class="img img1"></div>
+    <div class="img img2"></div>
+    <div class="card__content">
+        <span class="name">John Doe</span>
+        <span class="job">Software engineer</span>
+    </div>
+</div>
+<style>
+/* From Uiverse.io by AbanoubMagdy1 - Tags: card */
+.card {
+  border: .05rem solid black;
+  height: 210px;
+  width: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover .img1 {
+  transform: scale(1.5, 1.2) translate(5px, -30px) rotate(5deg);
+}
+
+.card:hover .img1::before {
+  transition: transform 1s 0.4s;
+  transform: translateX(400px) skewX(-10deg);
+}
+
+.card:hover .img2 {
+  transform: translateY(120%);
+}
+
+.card .img {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgb(65, 122, 255), rgb(23, 65, 193));
+  background-size: 100% 200%;
+  transition: 0.3s all;
+}
+
+.card .img1 {
+  top: 0;
+  right: 0;
+  position: relative;
+}
+
+.card .img1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;
+  height: 100%;
+  width: 10px;
+  transform: skewX(-10deg);
+  background-image: linear-gradient(to right, rgb(32, 151, 248), rgba(255, 255, 255, 0.9));
+}
+
+.card .img2 {
+  bottom: 0;
+  right: 0;
+  background-position: bottom center;
+}
+
+.card__content {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  transform: translateX(-130%);
+  transition: .5s ease-in-out transform .3s;
+  position: relative;
+  z-index: -1;
+}
+
+.card__content span {
+  display: block;
+}
+
+.card__content .name {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.card__content .job {
+  color: #B2B2B2;
+}
+
+.card:hover .card__content {
+  transform: translateX(0);
+}
+</style>
