@@ -1,0 +1,47 @@
+<button class="custom-button">Click me</button>
+
+<style>
+/* From Uiverse.io by Progee45 - Tags: orange, button, animated, hover effect, fancy */
+.custom-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  z-index: -1;
+}
+
+.custom-button:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translate(-50%, -50%) scale(1.2);
+}
+
+.custom-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-button:hover {
+  background-color: #ff5722;
+}
+
+</style>
