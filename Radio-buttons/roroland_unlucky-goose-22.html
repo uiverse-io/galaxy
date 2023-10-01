@@ -1,0 +1,175 @@
+<div class="radio-input">
+  <div>
+    <label for="circrad1">
+    <input value="circvalue-1" id="circrad1" name="namcircle" type="radio" checked="">
+    </label>
+    <label for="circrad2">
+    <input value="circvalue-2" id="circrad2" name="namcircle" type="radio">
+    </label>
+    <label for="circrad3">
+    <input value="circvalue-3" id="circrad3" name="namcircle" type="radio">
+    </label>
+  </div>
+  <div class="circ-container">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by roroland - Tags: radio */
+.radio-input {
+  --base: rgb(119, 119, 119);
+  --ring: rgb(187, 176, 19);
+  --center: rgb(192, 165, 14);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  place-items: center;
+  place-content: center;
+  aspect-ratio: 1;
+  position: relative;
+  width: 50%;
+  height: 50%;
+}
+
+.radio-input > div {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 0;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+.radio-input input[type="radio"] {
+  appearance: none;
+  outline: 2px solid var(--base);
+  box-shadow: 0 0 1.5em white;
+  padding: .5em;
+  border-radius: 50%;
+  width: .35rem;
+  height: .35rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 1s ease-out;
+  z-index: 10;
+}
+
+.radio-input input[type="radio"]:hover {
+  scale: 1.25;
+}
+
+.radio-input input[type="radio"]:checked {
+  scale: 2;
+  outline: 2px solid var(--ring);
+  box-shadow: 0 0 1.5em white,  inset 0 0 .75em var(--center);
+  filter: blur(2px);
+}
+
+.radio-input div {
+  position: relative;
+}
+
+.radio-input .circ-container > * {
+  animation: spin 2.5s linear infinite;
+  background-color: rgb(255, 255, 255);
+  transition: all .3s ease-out;
+}
+
+.radio-input:has(input[type="radio"]:checked) div .circle {
+  --size: .3rem;
+  --offset: 6rem;
+  --toCheck: '';
+  --circWidth: 2.185rem;
+  --items: 8;
+  width: var(--size);
+  pointer-events: none;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--ring);
+  position: absolute;
+  left: var(--toCheck);
+  top: calc(var(--size) * -.5);
+  transform: translate(
+    calc(cos(var(--angle)) * var(--offset)),
+    calc(sin(var(--angle)) * var(--offset))
+  );
+}
+
+.circle:nth-of-type(1) {
+  --angle: calc(1 * (360deg / var(--items)));
+}
+
+.circle:nth-of-type(2) {
+  --angle: calc(2 * (360deg / var(--items)));
+}
+
+.circle:nth-of-type(3) {
+  --angle: calc(3 * (360deg / var(--items)));
+}
+
+.circle:nth-of-type(4) {
+  --angle: calc(4 * (360deg / var(--items)));
+}
+
+.circle:nth-of-type(5) {
+  --angle: calc(5 * (360deg / var(--items)));
+}
+
+.circle:nth-of-type(6) {
+  --angle: calc(6 * (360deg / var(--items)));
+}
+
+.circle:nth-of-type(7) {
+  --angle: calc(7 * (360deg / var(--items)));
+}
+
+.circle:nth-of-type(8) {
+  --angle: calc(8 * (360deg / var(--items)));
+}
+
+.radio-input div:has(label:nth-of-type(1) input[type="radio"]:checked) ~ div .circle {
+  --toCheck: calc(var(--circWidth) * -1.525 + var(--size));
+}
+
+.radio-input  div:has(label:nth-of-type(2) input[type="radio"]:checked) ~ div .circle {
+  --toCheck: calc(var(--size) * -.5);
+}
+
+.radio-input div:has(label:nth-of-type(3) input[type="radio"]:checked) ~ div .circle {
+  --toCheck: calc(var(--circWidth) * 1.5 - var(--size) * 2);
+}
+
+@keyframes spin {
+  0% {
+    rotate: 360deg;
+    scale: .5;
+    background-color: white;
+  }
+
+  50% {
+    scale: 1;
+    background-color: white;
+  }
+
+  60% {
+    scale: .25;
+    background-color: var(--center);
+  }
+
+  100% {
+    rotate: -360deg;
+    scale: .5;
+    background-color: var(--ring);
+    ;
+  }
+}
+
+</style>
