@@ -1,0 +1,57 @@
+ <div class="container">
+        <input type="text" required="required">
+        <label>You'r name</label>
+        <i></i>
+    </div>
+<style>
+/* From Uiverse.io by Akshdeep74644 - Tags: input */
+.container {
+  position: relative;
+  width: 200px;
+}
+
+.container input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #222;
+  padding: 8px;
+}
+
+.container label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(105, 105, 105, 0.7);
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: .5s;
+  font-weight: bold;
+}
+
+.container input:valid ~ label,
+.container input:focus ~ label {
+  color: rgb(10, 131, 212);
+  transform: translateY(-15px);
+  font-size: .6rem;
+}
+
+.container i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #222;
+}
+
+.container i:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff1b69, #ff0, #2196f3, #9c27b0, #ff1b69);
+  animation: animate 3s linear infinite;
+}
+</style>
