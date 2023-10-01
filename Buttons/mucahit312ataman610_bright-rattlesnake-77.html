@@ -1,0 +1,54 @@
+<button class="button">Buton</button>
+
+<style>
+/* From Uiverse.io by mucahit312ataman610 - Tags: button, hover */
+.button {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --border-color: #000;
+  background-color: var(--primary-color);
+  border: 2px solid var(--border-color);
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  transform: translate(-50%, 0) scale(0);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover::before {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+</style>
