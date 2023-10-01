@@ -1,0 +1,34 @@
+<a href="#" class="menu__link">
+  Hover me!
+</a>
+<style>
+/* From Uiverse.io by ArturCodeCraft - Tags: button, links, btn */
+/* <reset-style> ============================ */
+a {
+  text-decoration: none;
+}
+/* <main-style> ============================ */
+.menu__link {
+  color: #fff;
+  line-height: 2;
+  position: relative;
+  padding-right: 4px;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu__link::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%) rotate(45deg);
+}
+</style>
