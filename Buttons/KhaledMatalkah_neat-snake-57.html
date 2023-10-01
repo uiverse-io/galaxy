@@ -1,0 +1,33 @@
+<button class="button">Hover Me!</button>
+<style>
+/* From Uiverse.io by KhaledMatalkah - Tags: button, hover, transition */
+.button {
+  display: inline-block;
+  position: relative;
+  padding: 13px 20px;
+  border: none;
+  background: rgba(51, 50, 50, 0.287);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.14) 50%, transparent 100%);
+  transition: left 0.3s ease;
+}
+
+.button:hover:before {
+  left: 100%;
+}
+
+</style>
