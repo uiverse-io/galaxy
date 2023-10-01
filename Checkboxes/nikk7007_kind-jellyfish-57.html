@@ -1,0 +1,69 @@
+<label class="cont">
+  <input type="checkbox" checked="">
+  <span></span>
+</label>
+<style>
+/* From Uiverse.io by nikk7007 - Tags: checkbox */
+.cont {
+ display: flex;
+ align-items: center;
+ transform: scale(1);
+}
+
+input[type="checkbox"] {
+ height: 1.7rem;
+ width: 1.7rem;
+ margin: 5px;
+ display: inline-block;
+ appearance: none;
+ position: relative;
+ background-color: #F2ECFF;
+ border-radius: 15%;
+ cursor: pointer;
+ overflow: hidden;
+}
+
+input[type="checkbox"]::after {
+ content: '';
+ display: block;
+ height: 0.9rem;
+ width: .4rem;
+ border-bottom: .31rem solid #a0ffe7;
+ border-right: .31rem solid #a0ffe7;
+ opacity: 0;
+ transform: rotate(45deg) translate(-50%, -50%);
+ position: absolute;
+ top: 45%;
+ left: 21%;
+ transition: .25s ease;
+}
+
+input[type="checkbox"]::before {
+ content: '';
+ display: block;
+ height: 0;
+ width: 0;
+ background-color: #00C896;
+ border-radius: 50%;
+ opacity: .5;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transition: .3s ease;
+}
+
+input[type="checkbox"]:checked::before {
+ height: 130%;
+ width: 130%;
+ opacity: 100%;
+}
+
+input[type="checkbox"]:checked::after {
+ opacity: 100%;
+}
+
+span {
+ font-size: 2rem;
+}
+</style>
