@@ -1,0 +1,82 @@
+<input type="checkbox" id="checkboxInput">
+    <label for="checkboxInput" class="bookmark">
+<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" class="svgIcon"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path></svg>
+    </label>
+
+
+
+
+
+<style>
+/* From Uiverse.io by vinodjangid07 - Tags: checkbox, save, click effect, bookmark */
+.bookmark {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#checkboxInput {
+  display: none;
+}
+
+.svgIcon {
+  height: 30px;
+}
+
+.svgIcon path {
+  fill: rgb(153, 153, 153);
+}
+
+.bookmark::before {
+  content: "\002B";
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+  top: 1px;
+}
+
+#checkboxInput:checked + .bookmark::before {
+  content: "\2713";
+  font-size: 0.70em;
+  top: 5px;
+}
+
+#checkboxInput:checked + .bookmark .svgIcon path {
+  fill: rgb(121, 199, 3);
+}
+
+#checkboxInput:active + .bookmark .svgIcon path {
+  fill: rgb(204, 204, 204);
+}
+
+.bookmark::after {
+  content: "";
+  background-color: rgba(56, 105, 0, 0.342);
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#checkboxInput:checked + .bookmark::after {
+  animation: puff-out-center .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+
+@keyframes puff-out-center {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(9);
+    filter: blur(1px);
+    opacity: 0;
+  }
+}
+
+</style>
