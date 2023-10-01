@@ -1,0 +1,73 @@
+<form class="container" action="#">
+<input placeholder="im an input!" class="input" name="text" type="text">
+<button class="button" type="submit">submit</button>
+</form>
+<style>
+/* From Uiverse.io by devestter - Tags: input, about me, clean, btn */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  user-select: none;
+}
+
+.text {
+  font-size: 0.8rem;
+  text-align: left;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.input {
+  border-radius: 8px;
+  padding: 7px 16px;
+  box-shadow: rgba(77, 79, 82, 0.2) 0px 8px 24px;
+  border: 2px solid rgb(184, 180, 180);
+  font-size: 0.8rem;
+  outline: none;
+  transition: 0.5s ease;
+}
+
+.input:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-color: rgb(138, 175, 255);
+}
+
+.input:focus {
+  border: 2px solid rgb(57, 120, 255);
+  box-shadow: rgba(133, 130, 130, 0.1) 0px 4px 12px;
+  transform: scale(0.99);
+}
+
+.input::placeholder {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.button {
+  padding: 6px 15px;
+  text-align: center;
+  color: rgb(95, 87, 87);
+  cursor: pointer;
+  background-color: white;
+  border-radius: 6px;
+  border: none;
+  transition: 0.5s;
+  width: 100%;
+  margin-top: 7px;
+  font-size: 13px;
+  box-shadow: rgba(104, 100, 100, 0.1) 0px 4px 6px -1px, rgba(49, 42, 42, 0.06) 0px 2px 4px -1px;
+}
+
+.button:hover {
+  border-radius: 7px;
+  background-color: rgb(243, 242, 242);
+  border-color: rgb(236, 232, 232);
+}
+
+
+
+</style>
