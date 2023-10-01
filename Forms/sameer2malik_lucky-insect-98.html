@@ -1,0 +1,123 @@
+<div class="container">
+
+       
+    <div class="hero">
+       <form action="" class="form">
+<div class="logo">Instagram</div>
+        <input type="email" name="email" id="email" required="" class="input" placeholder="Phone, email address or username">
+    <input type="password" name="password" id="password" required="" class="input" placeholder="Password">   
+    <input type="submit" value="Log in" class="input submit">
+    <p class="forgotten">Forgotten your login details ? <a href="#">Get help with signing in.</a></p>
+    <div class="or">or</div>
+<div class="input btn">Login with facebook </div>    
+<p class="signup">Don't have an account ? <a href="#">SignUp</a></p>
+</form>
+    </div>
+</div>
+<style>
+/* From Uiverse.io by sameer2malik - Tags: neumorphism, instagram, form */
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.hero {
+  padding: 60px 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.input {
+  padding: 1rem 1.2rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  display: block;
+  width: 80%;
+  border: none;
+  box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
+    6px 6px 6px rgba(255, 255, 255, 0.781);
+  outline: none;
+  background-color: inherit;
+  color: rgb(161, 161, 161);
+  font-size: inherit;
+}
+
+.submit , .btn {
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(209, 209, 209, 0.705);
+  color: rgb(112, 112, 112);
+  cursor: pointer;
+}
+
+.btn {
+  text-align: center;
+  color: black;
+}
+
+.logo {
+  font-size: 3rem;
+  color: black;
+  font-weight: 600;
+  margin: 30px;
+}
+
+::placeholder {
+  color: rgb(161, 161, 161);
+}
+
+.forgotten {
+  text-align: center;
+  font-size: .8rem;
+  width: 80%;
+  color: gray;
+  margin: 15px 0;
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.or {
+  position: relative;
+  font-weight: bold;
+  color: rgb(112, 112, 112);
+}
+
+.or::before , .or::after {
+  position: absolute;
+  content: '';
+  width: 700%;
+  height: 1px;
+  top: 50%;
+  margin: 0 6px;
+  background-color: rgba(0, 0, 0, 0.479);
+}
+
+.or::before {
+  right: 100%;
+}
+
+.or::after {
+}
+
+.signup {
+  color: gray;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+</style>
