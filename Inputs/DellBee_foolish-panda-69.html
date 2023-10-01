@@ -1,0 +1,109 @@
+<div class="input-container">
+        <input required="" id="input" type="text">
+        <label class="label" for="input">Enter Text</label>
+        <div class="underline"></div>
+        <div class="sideline"></div>
+        <div class="upperline"></div>
+        <div class="line"></div>
+    </div>
+<style>
+/* From Uiverse.io by DellBee - Tags: input */
+/* use it in dark theme */
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 190px;
+}
+
+.input-container input[type="text"] {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-bottom: 2px solid #a5a2a2;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+.label {
+  transition: all 0.3s ease;
+  color: #d3d2d2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus~.label,
+        .input-container input[type="text"]:valid~.label {
+  top: -20px;
+  transition: 0.3s;
+  color: rgb(172, 46, 172);
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 4px;
+  left: -7px;
+  height: 2px;
+  width: 110%;
+  background-color: rgb(172, 46, 172);
+  transform: scaleX(0);
+}
+
+.input-container .sideline {
+  position: relative;
+  bottom: 15px;
+  right: 18px;
+  height: 2px;
+  width: 18%;
+  background-color: rgb(172, 46, 172);
+  transform: scaleX(0);
+  rotate: 90deg;
+}
+
+.input-container .upperline {
+  position: absolute;
+  bottom: 30px;
+  left: -8px;
+  height: 2px;
+  width: 110%;
+  background-color: rgb(172, 46, 172);
+  transform: scaleX(0);
+}
+
+.input-container .line {
+  position: relative;
+  bottom: 17px;
+  left: 178px;
+  height: 2px;
+  width: 18%;
+  background-color: rgb(172, 46, 172);
+  transform: scaleX(0);
+  rotate: 90deg;
+}
+
+.input-container input[type="text"]:focus~.underline,
+        .input-container input[type="text"]:valid~.underline {
+  transform: scaleX(1);
+  transition: 1s;
+}
+
+.input-container input[type="text"]:focus~.sideline,
+        .input-container input[type="text"]:valid~.sideline {
+  transform: scaleX(1);
+  transition: 1s;
+}
+
+.input-container input[type="text"]:focus~.upperline,
+        .input-container input[type="text"]:valid~.upperline {
+  transform: scaleX(1);
+  transition: 1s;
+}
+
+.input-container input[type="text"]:focus~.line,
+        .input-container input[type="text"]:valid~.line {
+  transform: scaleX(1);
+  transition: 1s;
+}
+</style>
