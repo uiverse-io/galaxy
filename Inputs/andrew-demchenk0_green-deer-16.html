@@ -1,0 +1,61 @@
+<label class="wrapper">
+  <input type="text" placeholder="Input label" name="text" class="input">
+  <span class="placeholder">Input label</span>
+</label>
+
+
+<style>
+/* From Uiverse.io by andrew-demchenk0 - Tags: input */
+.wrapper {
+  position: relative;
+}
+
+.input {
+  width: 190px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px #323232 solid;
+  padding: 5px 15px;
+  background-color: #e8e8e8;
+  font-size: 15;
+  font-weight: 500;
+}
+
+.placeholder {
+  width: 65%;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  color: blueviolet;
+  background-color: #e8e8e8;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.input::placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.input:focus + .placeholder {
+  opacity: 1;
+}
+
+.input:focus {
+  outline: 2px solid blueviolet;
+  border: none;
+  color: blueviolet;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+}
+
+</style>
