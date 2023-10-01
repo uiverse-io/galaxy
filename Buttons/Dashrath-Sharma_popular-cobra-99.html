@@ -1,0 +1,75 @@
+<button class="button">
+  Button
+  <span></span>
+  <span></span>
+</button>
+<style>
+/* From Uiverse.io by Dashrath-Sharma - Tags: button, active, animated, border, btn, advanced, cool btn, transparent */
+.button {
+  position: relative;
+  font-size: 17px;
+  font-weight: 800;
+  color: #c77dff;
+  padding: 1em 2em;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-shadow: 1px 1px 20px #e0aaff;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #c77dff;
+  transition: width .3s .6s;
+}
+
+.button::before {
+  top: 0;
+  left: 0;
+  transform-origin: top;
+}
+
+.button::after {
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom;
+}
+
+.button:hover::before,
+.button:hover::after {
+  width: 65%;
+}
+
+.button span {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #c77dff;
+  transition: width .3s, transform .3s .3s;
+  transform: rotate(22.3deg);
+}
+
+.button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.button span:nth-child(2) {
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
+}
+
+.button:hover span {
+  width: 55%;
+  transform: rotate(50deg);
+}
+</style>
