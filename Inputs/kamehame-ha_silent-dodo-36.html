@@ -1,0 +1,41 @@
+<div class="input-container">
+  <p class="bash-text">
+    <span class="user">user</span><span class="vm">@ui-verse</span>:<span class="char">~</span>$
+  </p>
+  <input class="input" placeholder="sudo rm -rf css/" type="text">
+</div>
+<style>
+/* From Uiverse.io by kamehame-ha - Tags: input, clean, bash, cmd, linux */
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #0F172A;
+  padding: 10px 15px;
+  gap: 5px;
+  border-radius: 20px;
+}
+
+.input-container .bash-text {
+  font-size: .8rem;
+  color: white;
+}
+
+.input-container .bash-text .user {
+  color: #E879F9;
+}
+
+.input-container .bash-text .vm {
+  color: #2DD4BF;
+}
+
+.input-container .bash-text .char {
+  color: #A78BFA;
+}
+
+.input-container input[type=text].input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+</style>
