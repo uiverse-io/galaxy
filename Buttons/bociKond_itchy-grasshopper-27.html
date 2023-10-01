@@ -1,0 +1,97 @@
+<button class="button">
+      <span class="top">
+        <p>Explore More</p>
+        <p class="before">&nbsp;</p>
+      </span>
+      <span class="bottom"> &nbsp; </span>
+    </button>
+<style>
+/* From Uiverse.io by bociKond - Source: https://www.leagueoflegends.com/en-gb/ I designed the button from the client application which button is for the Soul Fighter event - Tags: button, transition, transform */
+.button {
+  --white: #e8e8e8;
+  --border-clr: #fff;
+  --button-bg-clr: #151515;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  background-color: var(--button-bg-clr);
+  border-width: 10px 3px 3px 3px;
+  border-color: var(--border-clr);
+  border-style: solid;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 350ms ease-in-out;
+}
+
+button:hover {
+  --border-clr: #f55c1b;
+  transform: translate(-7px, -7px);
+}
+
+button:hover .top::before {
+  filter: saturate(1);
+  opacity: 1;
+}
+
+button:hover .top::after {
+  opacity: 0;
+}
+
+.top {
+  color: var(--white);
+  /* background-color: white; */
+  margin: 0.75rem 0.5rem;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+}
+
+.top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f55c1b;
+  background: linear-gradient(0deg, #f55c1b 0%, #ffffff 100%);
+  filter: saturate(0);
+  z-index: -2;
+  transition: 350ms ease-in-out;
+  opacity: 0;
+}
+
+.top .before {
+  position: absolute;
+  inset: 2px;
+  z-index: -1;
+  background-color: var(--button-bg-clr);
+}
+
+.top::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: var(--button-bg-clr);
+  filter: saturate(0);
+  z-index: -1;
+  transition: 350ms ease-in-out;
+  border: 2px solid var(--white);
+  transition: 350ms ease-in-out;
+}
+
+.bottom {
+  background: repeating-conic-gradient(
+    from 45deg,
+    #616161 0% 25%,
+    #3f3f3f 0% 50%
+  );
+  background-size: 16px 16px;
+  background-color: #3f3f3f;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+</style>
