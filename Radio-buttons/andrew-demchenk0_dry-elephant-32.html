@@ -1,0 +1,146 @@
+<div class="wrapper">
+  <div class="card">
+    <input class="input" type="radio" name="card" value="basic">
+    <span class="check"></span>
+    <label class="label">
+      <div class="title">BASIC</div>
+      <div class="price">
+        <span class="span">$</span>
+        15
+        <span class="span">/month</span>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input class="input" type="radio" name="card" value="standart">
+    <span class="check"></span>
+    <label class="label">
+      <div class="title">STANDART</div>
+      <div class="price">
+        <span class="span">$</span>
+        30
+        <span class="span">/month</span>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input class="input" type="radio" name="card" value="premium">
+    <span class="check"></span>
+    <label class="label">
+      <div class="title">PREMIUM</div>
+      <div class="price">
+        <span class="span">$</span>
+        60
+        <span class="span">/month</span>
+      </div>
+    </label>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by andrew-demchenk0 - Tags: radio */
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.input {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  z-index: 10;
+  box-shadow: 1px 1px 10px #aaaaaa,
+              -1px -1px 10px #ffffff;
+}
+
+.input + .check::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d0d0d0;
+  border-radius: 50%;
+  background-color: #E8E8E8;
+}
+
+.input:checked + .check::after {
+  content: '';
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255,0,0,0.7);
+  border-radius: 50%;
+}
+
+.input[value="standart"]:checked + .check::after {
+  background-color: rgba(255,165,0,0.7);
+}
+
+.input[value="premium"]:checked + .check::after {
+  background-color: rgba(0,128,0,0.7);
+}
+
+.input[value="basic"]:checked {
+  border: 1.5px solid rgba(255,0,0,0.7);
+}
+
+.input[value="standart"]:checked {
+  border: 1.5px solid rgba(255,165,0,0.7);
+}
+
+.input[value="premium"]:checked {
+  border: 1.5px solid rgba(0,128,0,0.7);
+}
+
+.label {
+  color: #323232;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.label .title {
+  margin: 15px 0 0 15px;
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+.label .price {
+  margin: 20px 0 0 15px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.label .span {
+  color: gray;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+</style>
