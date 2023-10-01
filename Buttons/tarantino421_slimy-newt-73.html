@@ -1,0 +1,95 @@
+<div class="box">
+  <button class="button">SNOW</button>
+  <div class="snowfall">
+    <span style="--i: 12" class="snowflake"></span>
+    <span style="--i: 31" class="snowflake"></span>
+    <span style="--i: 18" class="snowflake"></span>
+    <span style="--i: 9" class="snowflake"></span>
+    <span style="--i: 41" class="snowflake"></span>
+    <span style="--i: 22" class="snowflake"></span>
+    <span style="--i: 16" class="snowflake"></span>
+    <span style="--i: 35" class="snowflake"></span>
+    <span style="--i: 9" class="snowflake"></span>
+    <span style="--i: 14" class="snowflake"></span>
+    <span style="--i: 19" class="snowflake"></span>
+    <span style="--i: 6" class="snowflake"></span>
+    <span style="--i: 53" class="snowflake"></span>
+    <span style="--i: 26" class="snowflake"></span>
+    <span style="--i: 34" class="snowflake"></span>
+    <span style="--i: 18" class="snowflake"></span>
+    <span style="--i: 8" class="snowflake"></span>
+  </div>
+</div>
+<style>
+/* From Uiverse.io by tarantino421 - Tags: button, hover button, snow */
+.box {
+  --clr-shadow__border: #0096fa;
+  --clr-text: #F6F4EB;
+  --clr-snowflake: #F6F4EB;
+  --clr-snowfall: #91C8E4;
+  --size: 3rem;
+  position: relative;
+  outline: 1px solid var(--clr-shadow__border);
+}
+
+.button {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: calc(var(--size) / 3) var(--size);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text);
+  text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+  -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+}
+
+.snowfall {
+  width: 100%;
+  height: 100%;
+  bottom: 0%;
+  gap: 0.3rem;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient( to bottom, var(--clr-snowfall), #ffffff);
+}
+
+.box:hover .snowfall {
+  opacity: 1;
+}
+
+.snowflake {
+  height: 0.3rem;
+  width: 0.3rem;
+  box-shadow: -30px -50px var(--clr-snowflake);
+  background-color: var(--clr-snowflake);
+  animation: snowfall-animation calc(0.1s * var(--i)) linear infinite;
+  opacity: 1;
+}
+
+@keyframes snowfall-animation {
+  0% {
+    transform: translateY(calc(-103% * var(--i)));
+  }
+
+  100% {
+    transform: translateY(calc(100% * var(--i)));
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+</style>
