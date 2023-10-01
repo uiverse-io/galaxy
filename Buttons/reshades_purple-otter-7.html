@@ -1,0 +1,49 @@
+<button class="button">
+  <p class="text">Button</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="svg">
+    <path class="path" transform="translate(100 100)" d="M56.8,-23.9C61.7,-3.2,45.7,18.8,26.5,31.7C7.2,44.6,-15.2,48.2,-35.5,36.5C-55.8,24.7,-73.9,-2.6,-67.6,-25.2C-61.3,-47.7,-30.6,-65.6,-2.4,-64.8C25.9,-64.1,51.8,-44.7,56.8,-23.9Z" fill="#4073ff"></path>
+  </svg>
+</button>
+<style>
+/* From Uiverse.io by reshades - Tags: button, animated, glass button */
+.button {
+  width: 10em;
+  height: 3em;
+  background-color: #e8e8e810;
+  color: #e8e8e8;
+  border: 1.2px solid #e8e8e870;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  border: 1.2px solid #4073ff;
+  background-color: #00000000;
+}
+
+.text {
+  margin-top: 10px
+}
+
+.svg {
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 70%;
+  width: 6em;
+  animation: anim 3s infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(-60px);
+  }
+
+  50% {
+    transform: translateY(-35px);
+  }
+
+  100% {
+    transform: translateY(-60px);
+  }
+}
+</style>
