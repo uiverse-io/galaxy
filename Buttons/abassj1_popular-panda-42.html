@@ -1,0 +1,60 @@
+<button class="button"> Button
+</button>
+<style>
+/* From Uiverse.io by abassj1 - Tags: button */
+/* Modified code from @gagan-gv */
+.button {
+ padding: 1em 2em;
+ font-size: 17px;
+ background: transparent;
+ border: none;
+ position: relative;
+ color: yellow;
+ z-index: 1;
+}
+
+.button::after,
+ .button::before {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ z-index: -99999;
+ transition: all .4s;
+}
+
+.button::before {
+ transform: translate(0%, 0%);
+ width: 100%;
+ height: 100%;
+ background: darkslategray;
+ border-radius: 50px;
+}
+
+.button::after {
+ transform: translate(0px, 0px);
+ width: 10px;
+ height: 10px;
+ background: #ffffff15;
+ backdrop-filter: blur(5px);
+ border-radius: 50px;
+}
+
+.button:hover::before {
+ transform: translate(5%, 20%);
+ width: 10px;
+ height: 10px;
+}
+
+.button:hover::after {
+ border-radius: 50px;
+ transform: translate(0, 0);
+ width: 100%;
+ height: 100%;
+}
+
+.button:active::after {
+ transition: 0s;
+ transform: translate(0, 5%);
+}
+</style>
