@@ -1,0 +1,116 @@
+<div class="one-div"></div>
+<style>
+/* From Uiverse.io by andrew-demchenk0 - Tags: gradient, spinner, animated, uiverse, transition, spin, ui, points, creator points */
+.one-div {
+  cursor: help;
+  position: relative;
+  width: 185px;
+  height: 30px;
+  border-radius: 10px;
+  background: linear-gradient(120deg,
+    #BF66FF 0%, 
+    #6248FF 3%,
+    #00DDEB 95%
+    );
+  animation: spin 4s linear infinite;
+  transform: translateY(100px);
+  box-shadow: 0px 10px 25px -10px #4E67FB;
+  transform-style: preserve-3d;
+  transition: all 0.4s;
+}
+
+.one-div::before {
+  content: 'U';
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 200px;
+  display: inline-block;
+  background-image: linear-gradient(140deg,
+    #BF66FF 10%, 
+    #6248FF 70%,
+    #00DDEB 100%
+    );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  bottom: 10px;
+  left: -10px;
+}
+
+.one-div::after {
+  display: block;
+  content: '';
+  width: 35px;
+  height: 147px;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(140deg,
+    #BF66FF -100%, 
+    #6248FF 40%,
+    #00DDEB 100%
+    );
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg) translateY(100%);
+  }
+
+  100% {
+    transform: rotateY(360deg) translateY(100%);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: translateY(-20%) rotateY(0);
+  }
+
+  100% {
+    transform: translateY(-20%) rotateY(360deg);
+  }
+}
+
+.one-div:active {
+  cursor: wait;
+  width: 100px;
+  height: 100px;
+  border-radius: 200px;
+  animation: spin2 2.5s linear infinite;
+  background: linear-gradient(145deg,
+    #BF66FF 10%, 
+    #6248FF 50%,
+    #00DDEB 100%
+  );
+}
+
+.one-div:active::before {
+  font-size: 0px;
+  left: 10px;
+  top: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  /* background: #e8e8e8; */
+  background: #212121;
+}
+
+.one-div:active::after {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  transform: rotate(45deg);
+  border: 10px solid;
+  border-image: linear-gradient(85deg,
+    #BF66FF -50%, 
+    #6248FF 80%,
+    #00DDEB 150%
+    )1;
+  border-radius: 0;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+</style>
