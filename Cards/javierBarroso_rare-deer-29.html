@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card">Good morning</div>
+</div>
+<style>
+/* From Uiverse.io by javierBarroso - Source: pedertanberg - Tags: simple, animation, card, shadow, hover effect, css */
+.card {
+  width: 150px;
+  height: 200px;
+  background: #ffffff;
+  transition: box-shadow .3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  transform: rotateX(30deg) rotateY(-10deg) rotateZ(30deg);
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: rgba(255,255,255,0.5) 5px 10px ,
+  rgba(255,255,255,0.4) 10px 20px ,
+  rgba(255,255,255,0.3) 15px 30px;
+}
+
+.container {
+  transform-style: preserve-3d;
+  perspective: 250px;
+}
+</style>
