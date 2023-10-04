@@ -1,0 +1,84 @@
+<div id="cal-body">
+            <div class="input">
+                <input type="text">
+            </div>
+            <div style="padding-top: 40px;">
+
+                <div class="buttons">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>+</button>
+                </div>
+                <div class="buttons">
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>-</button>
+                </div>
+                <div class="buttons">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>*</button>
+                </div>
+                <div class="buttons">
+                    <button>.</button>
+                    <button>0</button>
+                    <button style="width: 140px;">=</button>
+                    
+                </div>
+            </div>
+        </div>
+<style>
+/* From Uiverse.io by Satwinder04 - Tags: button, card, calculator */
+#cal-body {
+  width: 400px;
+  border-radius: 20px;
+  background: #dde1e7;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  padding: 45px;
+  scale: 0.6;
+}
+
+.input input {
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  background: #dde1e7;
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  border: 0;
+  color: rgb(116, 116, 116);
+  font-size: 2.5rem;
+  padding: 0 30px;
+}
+
+.input input:focus {
+  outline: none;
+  background: #dde1e7;
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+}
+
+.buttons button {
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border: 0;
+  font-size: 2rem;
+  border-radius: 50px;
+  background: #dde1e7;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  color: rgb(137, 137, 137);
+}
+
+.buttons button:focus {
+  background: #dde1e7;
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+}
+
+.buttons {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+</style>
