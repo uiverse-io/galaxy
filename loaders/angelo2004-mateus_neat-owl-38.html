@@ -1,0 +1,46 @@
+<div class="loader">
+  <span></span>
+</div>
+<style>
+/* From Uiverse.io by angelo2004-mateus - Tags: material design, neumorphism, animation, loader, animated, gradients */
+.loader {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94, 104, 121, 0.137);
+}
+
+.loader:before {
+  height: 4rem;
+  width: 4rem;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: #ececec;
+  border-radius: 50%;
+  border: 2px solid #e2e1e1;
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+}
+
+.loader span {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, rgb(89, 92, 252), rgb(226, 57, 241));
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
