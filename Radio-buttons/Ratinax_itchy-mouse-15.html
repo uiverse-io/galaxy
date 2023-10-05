@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="fire">
+        <label class="label red">
+            <input type="radio" checked="checked" name="radio" class="input">
+        </label>
+        <label class="label orange">
+            <input type="radio" name="radio" class="input">
+        </label>
+        <label class="label green">
+            <input type="radio" name="radio" class="input">
+        </label>
+        <span class="selection"></span>
+    </div>
+</div>
+<style>
+/* From Uiverse.io by Ratinax - Tags: radio, buttons, traffic light, traffic-light */
+.container {
+  scale: 0.7;
+}
+
+.fire {
+  width: 2em;
+  height: 6.5em;
+  background-color: black;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-top: .25em;
+  margin-bottom: .25em;
+  border-top: .2em solid black;
+  cursor: pointer;
+}
+
+.input {
+  display: none;
+}
+
+.label.red {
+  background-color: #990000;
+  box-shadow: 0 0 2em #990000;
+}
+
+.label.orange {
+  background-color: #999900;
+  box-shadow: 0 0 2em #999900;
+}
+
+.label.green {
+  background-color: #009900;
+  box-shadow: 0 0 2em #009900;
+}
+
+.label.red:hover {
+  background-color: red;
+}
+
+.label.orange:hover {
+  background-color: orange;
+}
+
+.label.green:hover {
+  background-color: lime;
+}
+
+.label.red:has(input:checked) {
+  background-color: red;
+  box-shadow: 0 0 2em red;
+}
+
+.label.orange:has(input:checked) {
+  background-color: orange;
+  box-shadow: 0 0 2em orange;
+}
+
+.label.green:has(input:checked) {
+  background-color: lime;
+  box-shadow: 0 0 2em lime;
+}
+</style>
