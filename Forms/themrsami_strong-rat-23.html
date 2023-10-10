@@ -1,0 +1,43 @@
+<!-- From Uiverse.io by themrsami - Tags: form, tailwind, tailwindcss, themrsami, darkversion, dream form -->
+<div class="mt-4 flex flex-col bg-gray-900 rounded-lg p-4">
+  <h2 class="text-white font-bold text-2xl">AI Story Maker Dream Form</h2>
+
+  <div class="mt-4">
+    <label class="text-white" for="title">Title</label>
+    <input placeholder="Enter a title for your dream" class="w-full bg-gray-800 rounded-md border-gray-700 text-white px-2 py-1" type="text">
+  </div>
+
+  <div class="mt-4">
+    <label class="text-white" for="description">Description</label>
+    <textarea placeholder="Describe your dream in detail" class="w-full bg-gray-800 rounded-md border-gray-700 text-white px-2 py-1" id="description"></textarea>
+  </div>
+
+  <div class="mt-4 flex flex-row space-x-2">
+    <div class="flex-1">
+      <label class="text-white" for="emotions">Emotions</label>
+      <input placeholder="What emotions did you feel during your dream?" class="w-full bg-gray-800 rounded-md border-gray-700 text-white px-2 py-1" id="emotions" type="text">
+    </div>
+
+    <div class="flex-1">
+      <label class="text-white" for="symbols">Symbols</label>
+      <input placeholder="Did you see any symbols in your dream?" class="w-full bg-gray-800 rounded-md border-gray-700 text-white px-2 py-1" id="symbols" type="text">
+    </div>
+  </div>
+
+  <div class="mt-4 flex flex-row space-x-2">
+    <div class="flex-1">
+      <label class="text-white" for="themes">Themes</label>
+      <input placeholder="What themes do you think your dream might be about?" class="w-full bg-gray-800 rounded-md border-gray-700 text-white px-2 py-1" id="themes" type="text">
+    </div>
+  </div>
+
+  <div class="mt-4 flex justify-end">
+    <button class="bg-teal-500 text-white rounded-md px-4 py-1 hover:bg-teal-600 hover:text-white" id="generate-button" type="button">Generate</button>
+  </div>
+
+  <div class="mt-4">
+    <textarea placeholder="Your AI-generated story will appear here" class="w-full bg-gray-800 rounded-md border-gray-700 text-white px-2 py-1 h-48" id="story-output"></textarea>
+  </div>
+</div>
+
+
