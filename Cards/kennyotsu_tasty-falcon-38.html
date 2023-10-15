@@ -6,19 +6,10 @@
   <div class="prompt-id567">
     <div class="token-container">
 
-    <svg width="50" height="50" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18V18ZM10 5.05L14.95 10L10 14.95L5.05 10L10 5.05V5.05ZM10 7.879L7.879 10L10 12.121L12.121 10L10 7.879V7.879Z" fill="url(#paint0_linear_713_51)"></path>
-      <defs>
-      <linearGradient id="paint0_linear_713_51" x1="0" y1="0" x2="16.4204" y2="22.6007" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#AF40FF"></stop>
-      <stop offset="0.5" stop-color="#5B42F3"></stop>
-      <stop offset="1" stop-color="#00DDEB"></stop>
-      </linearGradient>
-      </defs>
-    </svg>
+    <svg viewBox="0 0 24 24" fill="none" class="creator-points" xmlns="http://www.w3.org/2000/svg"><path d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784 14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701 3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476 19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091 12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466 16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402 15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864 19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528 16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68 20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z" fill="currentColor"></path></svg>
     </div>
     <div class="blurry-splash"></div>
-    <p>Hover For Free*<br><span class="bold-567">Uiverse Points</span> </p>
+    <p>Hover For Free*<br><span class="bold-567">Creator Points</span> </p>
     <p class="really-small-text">*at the expense of your sanity</p>
   </div>
 </div>
@@ -27,7 +18,8 @@
 .card-id567 {
   width: 190px;
   height: 190px;
-  background: rgb(255, 255, 255);
+  background: rgb(22, 22, 22);
+  color: white;
   border-radius: 1rem;
   padding: 1rem;
   position: relative;
@@ -40,12 +32,18 @@
 
 .card-id567 svg path {
   transition: 300ms ease;
-  stroke: rgb(20, 20, 20);
   opacity: 0;
 }
 
 .bold-567 {
   font-weight: bold;
+}
+
+.creator-points {
+  width: 3.25rem;
+  height: 3rem;
+  color: rgb(167 139 250);
+    /* w-5 h-5 mr-2 text-indigo-400 */
 }
 
 .blurry-splash {
@@ -59,13 +57,13 @@
   opacity: 70%;
   filter: blur(15px);
   background: linear-gradient(
-    120deg, rgb(119, 0, 255)
-    , rgb(22, 94, 250), rgb(44, 226, 250));
+      120deg, rgba(167, 139, 250, 0.24)
+      , rgba(167, 139, 250, 0.384), rgba(167, 139, 250, 0.226));
 }
 
 .prompt-id567 {
   position: absolute;
-  color: rgb(29, 29, 29);
+  color: rgb(173, 173, 173);
   text-align: center;
 }
 
@@ -80,6 +78,7 @@
 
 .card-id567:hover {
   cursor: none;
+  background-color: white;
 }
 
 .card-id567:hover .prompt-id567 {
