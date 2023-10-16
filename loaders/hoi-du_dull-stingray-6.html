@@ -1,0 +1,77 @@
+<div class="loader"></div>
+<style>
+/* From Uiverse.io by hoi-du - Tags: white, loading, loader, spinner, spin, css */
+<!DOCTYPE html>
+<html>
+<head>
+    <title>loading forever</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+  background-color: black;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: white;
+  margin: 10px;
+  border-radius: 0%;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: loadingAnimation;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(0deg);
+  }
+
+  12.5% {
+    border-radius: 0% 50% 50% 50%;
+  }
+
+  25% {
+    border-radius: 0% 0% 50% 50%;
+    transform: rotate(90deg);
+  }
+
+  37.5% {
+    border-radius: 0% 0% 0% 50%;
+  }
+
+  50% {
+    border-radius: 0% 0% 0% 0%;
+    transform: rotate(180deg);
+  }
+
+  62.5% {
+    border-radius: 50% 0% 0% 0%;
+  }
+
+  75% {
+    border-radius: 50% 50% 0% 0%;
+    transform: rotate(270deg);
+  }
+
+  87.5% {
+    border-radius: 50% 50% 50% 0%;
+  }
+
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <span class="loading">
+
+</body>
+</html>
+</style>
