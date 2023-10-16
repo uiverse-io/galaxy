@@ -1,18 +1,28 @@
-<div class="loader">
-       <p>loading</p>
-       <div class="words">
-           <span class="word">buttons</span>
-           <span class="word">forms</span>
-           <span class="word">switches</span>
-           <span class="word">cards</span>
-           <span class="word">buttons</span>
-       </div>
+<div class="card">
+  <div class="loader">
+    <p>loading</p>
+    <div class="words">
+      <span class="word">buttons</span>
+      <span class="word">forms</span>
+      <span class="word">switches</span>
+      <span class="word">cards</span>
+      <span class="word">buttons</span>
+    </div>
+  </div>
 </div>
+
 <style>
 /* From Uiverse.io by kennyotsu - Tags: simple */
+.card {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: #212121;
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
 .loader {
   color: rgb(124, 124, 124);
-  font-family: "Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 25px;
   -webkit-box-sizing: content-box;
@@ -27,6 +37,19 @@
 
 .words {
   overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
 }
 
 .word {
@@ -39,8 +62,8 @@
 
 @keyframes spin_4991 {
   10% {
-    -webkit-transform: translateY(-105%);
-    transform: translateY(-105%);
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
   }
 
   25% {
@@ -49,8 +72,8 @@
   }
 
   35% {
-    -webkit-transform: translateY(-205%);
-    transform: translateY(-205%);
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
   }
 
   50% {
@@ -59,8 +82,8 @@
   }
 
   60% {
-    -webkit-transform: translateY(-305%);
-    transform: translateY(-305%);
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
   }
 
   75% {
@@ -69,8 +92,8 @@
   }
 
   85% {
-    -webkit-transform: translateY(-405%);
-    transform: translateY(-405%);
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
   }
 
   100% {
