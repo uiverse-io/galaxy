@@ -1,0 +1,33 @@
+<div class="container"></div>
+
+<style>
+/* From Uiverse.io by csemszepp - Source: https://github.com/Afif13 - Tags: simple, material design, pattern */
+.container {
+  width: 100%;
+  height: 100%;
+  --s: 100px; /* control the size */
+  --c1: #f8b195;
+  --c2: #355c7d;
+
+  --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%,
+    var(--c1) 36% 44%, var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%,
+    var(--c1) 76% 84%, var(--c2) 86% 94%;
+  background: radial-gradient(
+      100% 100% at 100% 0,
+      var(--c1) 4%,
+      var(--_g),
+      #0008 96%,
+      #0000
+    ),
+    radial-gradient(
+        100% 100% at 0 100%,
+        #0000,
+        #0008 4%,
+        var(--_g),
+        var(--c1) 96%
+      )
+      var(--c1);
+  background-size: var(--s) var(--s);
+}
+
+</style>
