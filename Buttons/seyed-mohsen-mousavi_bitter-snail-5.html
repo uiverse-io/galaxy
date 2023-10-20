@@ -1,0 +1,40 @@
+<button class="button">3D Button</button>
+
+<style>
+/* From Uiverse.io by seyed-mohsen-mousavi  - Tags: 3d, black, button, dark, shadow, rotate, box-shadow */
+.button {
+  background: rgba(55, 51, 51, 0.49);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  outline: none;
+  border: none;
+  padding: 20px;
+  transform: rotate3d(1, 1, 1, 320deg);
+  filter: drop-shadow(1px 1px 8px black);
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+.button:hover {
+  transform: rotate3d(1, 1, 1, 360deg);
+  animation: shadow 1s both;
+}
+@keyframes shadow {
+  0% {
+    filter: drop-shadow(1px 1px 8px black);
+  }
+  25% {
+    filter: drop-shadow(1px 1px 5px black);
+  }
+  50% {
+    filter: drop-shadow(1px 1px 2px black);
+  }
+  100% {
+    filter: drop-shadow(1px 1px 2px black);
+  }
+}
+
+</style>
+    
