@@ -1,0 +1,124 @@
+<div class="card">
+  <div class="details">
+    <div class="cardHeader">CSS Hover Animation</div>
+    <div class="cardText">
+      Welcome to this card where i have made use of the "Hover" effect to add
+      some really cool interactions to it. Enjoy
+    </div>
+    <div class="button">Learn More</div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by xantha01  - Website: https://youtu.be/5DEq5cWNYt8 - Name: Kevin powell - Tags: card, hover, card hover, pattern */
+.card {
+  background: rgba(172, 7, 226, 0.5);
+  position: relative;
+  max-width: 250px;
+  height: 350px;
+  border-radius: 5px;
+  padding: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 7.5px;
+  transition: 0.5s ease;
+  color: white;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+        35.36% 35.36% at 100% 25%,
+        #0000 66%,
+        #c79013 68% 70%,
+        #0000 72%
+      )
+      32px 32px / calc(2 * 32px) calc(2 * 32px),
+    radial-gradient(
+        35.36% 35.36% at 0 75%,
+        #0000 66%,
+        #c79013 68% 70%,
+        #0000 72%
+      )
+      32px 32px / calc(2 * 32px) calc(2 * 32px),
+    radial-gradient(
+        35.36% 35.36% at 100% 25%,
+        #0000 66%,
+        #c79013 68% 70%,
+        #0000 72%
+      )
+      0 0 / calc(2 * 32px) calc(2 * 32px),
+    radial-gradient(
+        35.36% 35.36% at 0 75%,
+        #0000 66%,
+        #c79013 68% 70%,
+        #0000 72%
+      )
+      0 0 / calc(2 * 32px) calc(2 * 32px),
+    repeating-conic-gradient(#295b3f 0 25%, #0000 0 50%) 0 0 / calc(2 * 32px)
+      calc(2 * 32px),
+    radial-gradient(#0000 66%, #c79013 68% 70%, #0000 72%) 0 calc(32px / 2) /
+      32px 32px #295b3f;
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+
+.card:hover::after {
+  opacity: 0.25;
+}
+
+.cardHeader {
+  text-transform: uppercase;
+  position: relative;
+  width: max-content;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.cardHeader::after {
+  content: "";
+  width: calc(100% + 1rem);
+  height: 2.5px;
+  transform: translateX(calc(-100% - 1rem));
+  background: aqua;
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+}
+
+.details {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transform: translateY(95%);
+  transition: all 0.5s ease;
+}
+
+.button {
+  background-color: aqua;
+  color: black;
+  padding: 2.5px 5px;
+  width: max-content;
+  border-radius: 2.5px;
+}
+.card:hover .details {
+  transform: translateY(0%);
+  transition-delay: 0.5s;
+}
+.card:hover .cardHeader::after {
+  transform: translateX(-1rem);
+  transition: 0.5s ease;
+  opacity: 1;
+}
+.card:hover {
+  transform: scale(1.1);
+  border-radius: 15px;
+}
+
+</style>
+    
