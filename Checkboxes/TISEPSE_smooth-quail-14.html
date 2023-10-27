@@ -1,0 +1,97 @@
+<div>
+  <label class="checkbox-label">
+    <input type="checkbox" class="checkbox" />
+    <span class="container"></span>
+    One</label
+  >
+
+  <label class="checkbox-label">
+    <input type="checkbox" class="checkbox" />
+    <span class="container"></span>
+    Two</label
+  >
+
+  <label class="checkbox-label">
+    <input type="checkbox" class="checkbox" />
+    <span class="container"></span>
+    Three</label
+  >
+
+  <label class="checkbox-label">
+    <input type="checkbox" class="checkbox" />
+    <span class="container"></span>
+    Four</label
+  >
+</div>
+
+<style>
+/* From Uiverse.io by TISEPSE  - Tags: animation, action, checkbox */
+.checkbox-label {
+  font-size: 22px;
+  color: #fefefe;
+  padding: 10px 50px 10px 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  display: flex;
+  position: relative;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.checkbox {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: -22px;
+  appearance: none;
+  border-radius: 5px;
+  background-color: #64ccc5;
+  z-index: 2;
+  transition: all 0.3s;
+}
+
+.container {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 4px;
+  left: -8%;
+  border-radius: 5px;
+  background-color: #dafffb;
+  transition: all 0.3s;
+}
+
+input::before {
+  content: "";
+  background-color: #ffc8c8;
+  position: relative;
+  display: flex;
+  top: 45%;
+  left: 50%;
+  width: 55px;
+  height: 3px;
+  border-radius: 25px;
+  transform: translate(100px, 0px) scale(0);
+  transition: ease-out 0.15s;
+}
+
+.checkbox:checked::before {
+  transform: translateX(2em);
+  top: 12px;
+  transition: ease-out 0.15s;
+}
+
+.checkbox:hover {
+  transform: translate(4px, 4px);
+  transition: ease-out 0.15s;
+  background-color: #ffc8c8;
+}
+
+.checkbox:checked {
+  transform: translate(4px, 4px);
+  transition: ease-out 0.15s;
+  background-color: #ffc8c8;
+}
+
+</style>
+    
