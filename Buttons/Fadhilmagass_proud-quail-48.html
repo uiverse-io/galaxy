@@ -1,0 +1,80 @@
+<button class="space-button">
+  <span class="space-button-text">Explore Space</span>
+  <svg class="space-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 0C8.411 0 5.418 2.993 5.418 6.582c0 3.153 2.443 5.792 5.595 6.473v2.526c0 .748.603 1.352 1.352 1.352s1.352-.604 1.352-1.352V13.05c3.152-.68 5.595-3.32 5.595-6.473C18.582 2.993 15.589 0 12 0zm0 9.288a3.706 3.706 0 1 1 0-7.412 3.706 3.706 0 0 1 0 7.412zM7.292 6.582c0-2.129 1.733-3.862 3.862-3.862s3.862 1.733 3.862 3.862c0 2.129-1.733 3.862-3.862 3.862s-3.862-1.733-3.862-3.862z"></path>
+  </svg>
+</button>
+
+<style>
+/* From Uiverse.io by Fadhilmagass  - Tags: icon, animation, button */
+.space-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0a192f), to(#1c3548));
+  background: linear-gradient(to bottom right, #0a192f, #1c3548);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.space-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  -webkit-transition: width 0.3s ease, height 0.3s ease;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.space-button:hover:before {
+  width: 500px;
+  height: 500px;
+}
+
+.space-button:hover .space-button-icon {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.space-button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#0b5ed7), to(#1c3548));
+  background: linear-gradient(to bottom right, #0b5ed7, #1c3548);
+}
+
+.space-button:active {
+  background-color: #0642ab;
+}
+
+.space-button-text {
+  margin-right: 0.5rem;
+}
+
+.space-button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+  margin-right: 0.5rem;
+}
+
+</style>
+    
