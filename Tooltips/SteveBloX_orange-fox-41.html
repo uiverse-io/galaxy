@@ -1,0 +1,62 @@
+<div class="tooltip-container">
+  <span class="tooltip">
+    <p class="title">Title</p>
+    <p class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+  </span>
+  <span class="text">Material Design Tooltip</span>
+</div>
+
+<style>
+/* From Uiverse.io by SteveBloX  - Tags: material design, tooltip, shadow, md, md3 */
+/* Material Design 3 tooltip */
+.tooltip-container {
+  position: relative;
+  background: #e8def8;
+  color: #1d192b;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  padding: 0.7em 1.8em;
+  font-family: Montserrat, sans-serif;
+  border-radius: 50px;
+}
+.tooltip-container .text {
+  font-weight: bold;
+}
+
+.tooltip {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  background: #f3edf7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+  padding: 17px;
+  border-radius: 12px;
+  color: #49454f;
+  min-width: 312px;
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.tooltip .title {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.tooltip .content {
+  font-size: 0.85em;
+  font-weight: semibold;
+}
+
+</style>
+    
