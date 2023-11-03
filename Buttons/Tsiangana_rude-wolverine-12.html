@@ -1,0 +1,63 @@
+<button class="button">
+  <span class="one">Download 0%</span>
+  <span class="two">100%</span>
+</button>
+
+<style>
+/* From Uiverse.io by Tsiangana  - Tags: simple, gradient, button, download, hover effect */
+.button {
+  width: 140px;
+  height: 45px;
+  border-radius: 30em;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+  background: #ff135a;
+  border: 3px solid #fff;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  transition: 0.6s ease-in;
+}
+
+.button:hover {
+  background: #fff;
+}
+
+.button .two {
+  display: none;
+}
+
+.button::before {
+  content: "";
+  width: 0;
+  height: 50px;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.button:hover::before {
+  width: 140px;
+  transition: 3s linear;
+}
+
+.button:hover .one {
+  display: none;
+}
+
+.button:hover .two {
+  display: inline;
+}
+
+</style>
+    
