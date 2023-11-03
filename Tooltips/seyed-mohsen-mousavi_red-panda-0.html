@@ -1,0 +1,117 @@
+<div class="tooltip-container">
+  <span class="tooltip">
+    <div class="table center">
+      <div class="monitor-wrapper center">
+        <div class="monitor center">
+          <p>
+            Uiverse.io :) Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </p>
+        </div>
+      </div>
+    </div>
+  </span>
+  <span class="text">Tooltip</span>
+</div>
+
+<style>
+/* From Uiverse.io by seyed-mohsen-mousavi  - Tags: tooltip, hover, text */
+/* This is an example, feel free to delete this code */
+.tooltip-container {
+  --background: #050321;
+  position: relative;
+  background: var(--background);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  padding: 0.7em 1.8em;
+  color: white;
+  border: 5px solid #344151;
+  -webkit-transition: border 0.3s ease;
+  -moz-transition: border 0.1s ease;
+  -o-transition: border 0.3s ease;
+  -ms-transition: border 0.3s ease;
+  font-family: monospace;
+  border-radius: 1px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  right: 135%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.tooltip-container:hover {
+  border: 5px solid #cacdd0;
+}
+.text {
+  font-weight: 600;
+}
+.tooltip-container:hover .tooltip {
+  top: -100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* tooltip content */
+.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.table {
+  width: 290px;
+  height: 20px;
+}
+
+.table .monitor-wrapper {
+  background: #050321;
+  width: 270px;
+  height: 30px;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table .monitor-wrapper .monitor {
+  width: 200px;
+  height: 22px;
+  background-color: #344151;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: inset 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table .monitor-wrapper .monitor p {
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  color: #ebb55f;
+}
+
+.tooltip-container:hover .table .monitor-wrapper .monitor p {
+  animation: move 30s infinite linear;
+}
+
+@keyframes move {
+  from {
+    left: 250px;
+  }
+
+  to {
+    left: -4800px;
+  }
+}
+
+</style>
+    
