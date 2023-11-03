@@ -1,0 +1,130 @@
+<div class="tooltip-container">
+  <div class="tooltip">
+    LET'S CREATE!
+    <span class="tooltip-item">1 - Explore</span>
+    <span class="tooltip-item">2 - Have fun!</span>
+  </div>
+  <button class="btn">uiverse</button>
+</div>
+
+<style>
+/* From Uiverse.io by Javierrocadev  - Tags: tooltip, gradient, dark, hover effect, hover button */
+.tooltip-container {
+  --background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  position: relative;
+  color: aliceblue;
+
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  padding: 0.7em 1.8em;
+  border-radius: 16px;
+}
+
+.tooltip {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100px;
+  height: 120px;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  background-color: #212121;
+  color: antiquewhite;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.tooltip-item {
+  z-index: 5;
+  background-color: #171717;
+  border-radius: 4px;
+  padding: 4px;
+  font-weight: bolder;
+  font-size: 6px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.5em;
+  width: 0.5em;
+  top: 0.8em;
+  left: 85%;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  background: var(--background);
+  animation: tooltipBeforeAnimation 4s infinite alternate;
+}
+
+.tooltip::after {
+  position: absolute;
+  content: "";
+  height: 3.6em;
+  width: 3.6em;
+  bottom: -0.8em;
+  border-radius: 999px;
+  filter: blur(8px);
+  right: -5%;
+  background: var(--background);
+  animation: tooltipAnimation 5s infinite alternate;
+}
+
+.btn {
+  background: var(--background);
+  border: none;
+  color: aliceblue;
+  cursor: pointer;
+  background-size: 100%;
+  transition: all 0.2s;
+  font-size: 12px;
+  padding: 0.7em 1.8em;
+  border-radius: 16px;
+  font-weight: 700;
+}
+.btn:hover {
+  background-size: 150%;
+  background-position-x: right;
+}
+
+@keyframes tooltipAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.8);
+  }
+}
+@keyframes tooltipBeforeAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tooltip-container:hover .tooltip {
+  transform: scale(2);
+}
+
+.tooltip-container:hover .tooltip {
+  top: -210%;
+  left: 43%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+</style>
+    
