@@ -1,0 +1,64 @@
+<div class="tooltip-container">
+  <span class="tooltip">Uiverse.io</span>
+  <span class="text">Tooltip</span>
+</div>
+
+<style>
+/* From Uiverse.io by Yassin6up  - Tags: simple, material design, tooltip, subscription, 3d, action, black */
+/* This is an example, feel free to delete this code */
+.tooltip-container {
+  --background: #22d3ee;
+  position: relative;
+  background: var(--background);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  padding: 0.7em 1.8em;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 10px var(--background);
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  background: var(--background);
+  border-radius: 10px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  background: var(--background);
+}
+
+.tooltip-container:hover .tooltip {
+  top: -100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  animation: 1s animated infinite alternate;
+}
+
+@keyframes animated {
+  from {
+    transform: translate(0) translateY(10px);
+  }
+  to {
+    transform: translate(-100%) translateY(0);
+  }
+}
+
+</style>
+    
