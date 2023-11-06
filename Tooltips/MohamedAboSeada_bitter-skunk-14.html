@@ -1,0 +1,102 @@
+<div class="tooltip-container">
+  <div class="tooltip">
+    <p>This is a test</p>
+    <button>Got It</button>
+    <div class="line"></div>
+  </div>
+  <span class="text">Tooltip</span>
+</div>
+
+<style>
+/* From Uiverse.io by MohamedAboSeada  - Tags: simple, tooltip, animation, minimalist, hover, rounded, cube, modern */
+.tooltip-container {
+  position: relative;
+  height: 50px;
+  display: flex;
+  background-color: darkgray;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 rgb(0 0 0 / 80%);
+  width: 200px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.tooltip {
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  opacity: 0;
+  transition: 300ms ease;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px 0;
+  cursor: auto;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  font-style: oblique;
+  flex-direction: column;
+  padding: 10px;
+  width: 200px;
+  animation: opacity;
+  transform: translateX(-50%);
+}
+.tooltip button {
+  outline: none;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.line {
+  position: absolute;
+  width: 3px;
+  height: 25px;
+  background-color: #000;
+  top: 100%;
+  left: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+.line::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.tooltip-container:hover > .tooltip {
+  opacity: 1;
+}
+.tooltip-container:hover > .tooltip > .line {
+  animation: HeightUP 400ms ease;
+}
+@keyframes HeightUP {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 25px;
+  }
+}
+@keyframes opcaityUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
+    
