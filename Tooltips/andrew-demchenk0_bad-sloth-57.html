@@ -1,0 +1,133 @@
+<div class="container">
+  <input type="checkbox" id="showCheckbox" class="toggle-checkbox" />
+  <label for="showCheckbox" class="toggle-label">Show Tooltip</label>
+
+  <div id="popup" class="popup">
+    <label for="showCheckbox" class="close-label"></label>
+    <p>I am looking for a job. Trainee/junior React dev. <br />📍Ukraine.</p>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by andrew-demchenk0  - Tags: tooltip, animation, action, green, button, hover, click, border */
+.container {
+  position: relative;
+  --main-color: #19e68c;
+  --dark-color: #222;
+  --bg-light: #fff;
+  --dark-alternative: #666;
+}
+
+.popup {
+  display: none;
+  padding: 10px 20px;
+  position: absolute;
+  width: 200px;
+  top: -100%;
+  left: -25%;
+  background-color: var(--bg-light);
+  border: 1.5px solid var(--dark-alternative);
+  border-radius: 2px;
+  animation: slideIn 1s;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  position: relative;
+  padding: 10px;
+  background-color: var(--main-color);
+  color: var(--dark-color);
+  font-weight: 600;
+  cursor: help;
+  display: inline-block;
+  border: 2px solid var(--dark-color);
+  border-radius: 3px;
+  box-shadow: 2px 2px var(--dark-color);
+  transition: 0.5s;
+}
+
+.toggle-label::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: pulsate 0.7s infinite;
+}
+
+.toggle-label:hover::before {
+  animation: none;
+}
+
+.toggle-label:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px var(--dark-color);
+}
+
+.close-label {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+}
+.close-label::before {
+  content: "⊗";
+  font-size: 22px;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  color: var(--dark-alternative);
+  cursor: pointer;
+}
+.toggle-checkbox:checked ~ .popup {
+  display: block;
+}
+.toggle-checkbox:checked ~ .toggle-label {
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(-10%);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateX(5%);
+  }
+  90% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 -5px rgba(255, 255, 255, 1);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--dark-color);
+  }
+  100% {
+    box-shadow: 0 0 -5px rgb(255, 255, 255);
+  }
+}
+
+</style>
+    
