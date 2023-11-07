@@ -1,0 +1,82 @@
+<button class="btn">
+  <span class="left-span"></span>
+  <p class="text-btn">Hover me</p>
+  <p class="hidden-text-btn">Thank you!</p>
+  <span class="right-span"></span>
+</button>
+
+<style>
+/* From Uiverse.io by sashadubovyi  - Tags: simple, animation, success, button */
+.btn {
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #f93d21;
+  transition: all 100ms;
+  overflow: hidden;
+  height: 50px;
+  width: 170px;
+}
+
+.left-span {
+  position: absolute;
+  left: 0;
+  height: 50px;
+  width: 15px;
+  border-top: 1px solid #f93d21;
+  border-bottom: 1px solid #f93d21;
+  border-left: 1px solid #f93d21;
+  transition: all 500ms;
+}
+
+.right-span {
+  position: absolute;
+  right: 0;
+  height: 50px;
+  width: 15px;
+  border-top: 1px solid #f93d21;
+  border-bottom: 1px solid #f93d21;
+  border-right: 1px solid #f93d21;
+  transition: all 500ms;
+}
+
+.text-btn {
+  position: absolute;
+  transform: translateX(0px);
+  width: 110px;
+  transition: all 200ms;
+}
+
+.hidden-text-btn {
+  position: absolute;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: all 200ms;
+}
+
+.btn:hover .text-btn {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+
+.btn:hover .hidden-text-btn {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.btn:hover .right-span,
+.btn:hover .left-span {
+  width: 100%;
+}
+
+</style>
+    
