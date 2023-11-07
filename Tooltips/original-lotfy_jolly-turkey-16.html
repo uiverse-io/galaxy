@@ -1,0 +1,57 @@
+<div class="tooltip-container">
+  <span class="tooltip">this is a test</span>
+  <span class="text">Tooltip</span>
+</div>
+
+<style>
+/* From Uiverse.io by original-lotfy  - Tags: simple, material design, glassmorphism, flashy, tooltip, action, purple, pink */
+/* thsi is a test */
+.tooltip-container {
+  --background: #053c85;
+  position: relative;
+  background: linear-gradient(100deg, #9b40fc, #0acbec);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  padding: 0.7em 1.8em;
+  border-radius: 10px;
+}
+
+.tooltip-container > * {
+  border-radius: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  width: 8rem;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  background: linear-gradient(-100deg, #9b40fc, #0acbec);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.9em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  background: #4b5ef1;
+  box-shadow: 0px 0px 7px #0acbec;
+}
+
+.tooltip-container:hover .tooltip {
+  top: -120%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+</style>
+    
