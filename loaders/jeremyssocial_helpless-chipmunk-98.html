@@ -1,0 +1,82 @@
+<div class="cube-loader">
+  <div class="cube cube1"></div>
+  <div class="cube cube2"></div>
+  <div class="cube cube3"></div>
+  <div class="cube cube4"></div>
+</div>
+
+<style>
+/* From Uiverse.io by jeremyssocial  - Tags: animation, loader, cube, light&dark, loading animation, 3d loader */
+.cube-loader {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+.cube {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #333;
+  border: 2px solid #fff;
+  animation: foldCube 2.4s infinite linear;
+}
+
+/* Individual cube positioning */
+.cube1 {
+  top: 0;
+  left: 0;
+  transform-origin: 100% 100%;
+}
+.cube2 {
+  top: 0;
+  right: 0;
+  transform-origin: 0 100%;
+}
+.cube3 {
+  bottom: 0;
+  right: 0;
+  transform-origin: 0 0;
+}
+.cube4 {
+  bottom: 0;
+  left: 0;
+  transform-origin: 100% 0;
+}
+
+/* Keyframes for the folding animation */
+@keyframes foldCube {
+  0%,
+  10% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+/* Animation delay for each cube */
+.cube1 {
+  animation-delay: 0.3s;
+}
+.cube2 {
+  animation-delay: 0.6s;
+}
+.cube3 {
+  animation-delay: 0.9s;
+}
+.cube4 {
+  animation-delay: 1.2s;
+}
+
+</style>
+    
