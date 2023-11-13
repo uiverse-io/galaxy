@@ -1,20 +1,20 @@
 <!-- From Uiverse.io by ayman-ashine  - Tags: animation, form, radio, gender, multicolor, tailwind, selectgender -->
 <div
-  class="flex flex-col items-start gap-4 overflow-hidden rounded-md border border-neutral-200 p-4 shadow-md shadow-[#00000030]"
+  class="flex flex-col items-start gap-4 overflow-hidden rounded-md p-6 shadow-sm shadow-[#00000050]"
 >
   <span
-    class="z-20 text-center font-mono text-base font-black uppercase text-neutral-500"
+    class="text-center font-mono text-base font-black uppercase text-neutral-600"
     >Please select your gender</span
   >
   <div class="flex items-center gap-4">
     <div class="relative flex h-[50px] w-[50px] items-center justify-center">
       <input
-        class="peer absolute z-10 h-full w-full cursor-pointer opacity-0"
         type="radio"
         id="radio"
         name="gender"
         value="male"
-        checked=""
+        checked="on"
+        class="peer z-10 h-full w-full cursor-pointer opacity-0"
       />
       <div
         class="absolute h-full w-full rounded-full bg-blue-100 p-4 shadow-sm shadow-[#00000050] ring-blue-400 duration-300 peer-checked:scale-110 peer-checked:ring-2"
@@ -23,12 +23,12 @@
         class="absolute -z-10 h-full w-full scale-0 rounded-full bg-blue-100 duration-500 peer-checked:scale-[500%]"
       ></div>
       <svg
-        class="absolute stroke-blue-400 duration-300 peer-checked:stroke-blue-600"
         xmlns="http://www.w3.org/2000/svg"
         width="50px"
         height="50px"
         viewBox="0 0 24 24"
         fill="none"
+        class="absolute stroke-blue-400"
       >
         <path
           fill-rule="evenodd"
@@ -45,11 +45,11 @@
     </div>
     <div class="relative flex h-[50px] w-[50px] items-center justify-center">
       <input
-        class="peer absolute z-10 h-full w-full cursor-pointer opacity-0"
         type="radio"
         id="radio"
         name="gender"
         value="female"
+        class="peer z-10 h-full w-full cursor-pointer opacity-0"
       />
       <div
         class="absolute h-full w-full rounded-full bg-pink-100 p-2 shadow-sm shadow-[#00000050] ring-pink-400 duration-300 peer-checked:scale-110 peer-checked:ring-2"
@@ -63,7 +63,7 @@
         height="35px"
         viewBox="0 0 24 24"
         fill="none"
-        class="absolute fill-pink-400 duration-300 peer-checked:fill-pink-600"
+        class="absolute fill-pink-400"
       >
         <path
           fill-rule="evenodd"
@@ -74,10 +74,10 @@
     </div>
     <div class="relative flex h-[50px] w-[50px] items-center justify-center">
       <input
-        class="peer absolute z-10 h-full w-full cursor-pointer opacity-0"
         type="radio"
         name="gender"
         value="none-binary"
+        class="peer z-10 h-full w-full cursor-pointer opacity-0"
       />
       <div
         class="absolute h-full w-full rounded-full bg-purple-100 p-2 shadow-sm shadow-[#00000050] ring-purple-400 duration-300 peer-checked:scale-110 peer-checked:ring-2"
@@ -86,13 +86,13 @@
         class="absolute -z-10 h-full w-full scale-0 rounded-full bg-purple-100 duration-500 peer-checked:scale-[500%]"
       ></div>
       <svg
-        class="absolute fill-purple-400 duration-300 peer-checked:fill-purple-600"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         width="40px"
         height="40px"
         viewBox="0 0 512 512"
         version="1.1"
+        class="absolute fill-purple-400"
       >
         <g id="drop" transform="translate(42.666667, 70.248389)">
           <path
@@ -103,10 +103,10 @@
     </div>
     <div class="relative flex h-[50px] w-[50px] items-center justify-center">
       <input
-        class="peer absolute z-10 h-full w-full cursor-pointer opacity-0"
         type="radio"
         name="gender"
         value="none"
+        class="peer z-10 h-full w-full cursor-pointer opacity-0"
       />
       <div
         class="absolute h-full w-full rounded-full bg-neutral-100 p-2 shadow-sm shadow-[#00000050] ring-neutral-400 duration-300 peer-checked:scale-110 peer-checked:ring-2"
@@ -115,12 +115,12 @@
         class="absolute -z-10 h-full w-full scale-0 rounded-full bg-neutral-100 duration-500 peer-checked:scale-[500%]"
       ></div>
       <svg
-        class="absolute stroke-neutral-400 duration-300 peer-checked:stroke-neutral-600"
         xmlns="http://www.w3.org/2000/svg"
         width="50px"
         height="50px"
         viewBox="0 0 24 24"
         fill="none"
+        class="absolute stroke-neutral-400"
       >
         <path
           id="Vector"
