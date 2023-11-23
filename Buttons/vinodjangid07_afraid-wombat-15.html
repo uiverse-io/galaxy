@@ -1,0 +1,51 @@
+<button class="fullscreen-btn">
+  <svg viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"
+    ></path>
+  </svg>
+  <span class="tooltip">Fullscreen</span>
+</button>
+
+<style>
+/* From Uiverse.io by vinodjangid07  - Tags: tooltip, button, hover effect, fullscreen, full window */
+.fullscreen-btn {
+  width: 25px;
+  height: 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.fullscreen-btn svg {
+  height: 100%;
+}
+.fullscreen-btn:hover {
+  width: 30px;
+  height: 30px;
+  overflow: visible;
+}
+.tooltip {
+  position: absolute;
+  top: -40px;
+  background-color: rgba(0, 0, 0, 0.753);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.fullscreen-btn:hover .tooltip {
+  transform: translateY(2.5px);
+  opacity: 1;
+}
+
+</style>
+    
