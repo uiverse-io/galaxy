@@ -1,0 +1,72 @@
+<label class="container">
+  <input checked="checked" type="checkbox" />
+  <div class="checkmark"></div>
+</label>
+
+<style>
+/* From Uiverse.io by AyuuLima  - Tags: checkbox, click effect, css effect */
+/* Hide the default checkbox */
+.container input {
+  display: none;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 30px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.3em;
+  transition: all 0.25s;
+  --spread: 50px;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #000000;
+  box-shadow: -10px -10px var(--spread) 0px rgb(17, 0, 248),
+    0 -10px var(--spread) 0px rgb(243, 11, 243),
+    10px -10px var(--spread) 0px rgb(253, 228, 0),
+    10px 0 var(--spread) 0px rgb(107, 255, 21),
+    10px 10px var(--spread) 0px rgb(76, 0, 255),
+    0 10px var(--spread) 0px rgb(255, 196, 0),
+    -10px 10px var(--spread) 0px rgb(90, 105, 240);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  transform: rotate(0deg);
+  border: 0.1em solid rgba(0, 0, 0, 0.863);
+  left: 0;
+  top: 0;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 0.25em;
+  transition: all 0.25s, border-width 0.1s;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border-color: rgba(238, 238, 238, 0) white white #fff0;
+  border-width: 0 0.15em 0.15em 0;
+  border-radius: 0em;
+  transform: rotate(45deg);
+}
+
+</style>
+    
