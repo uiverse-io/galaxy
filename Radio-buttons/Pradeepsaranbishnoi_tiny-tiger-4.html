@@ -1,0 +1,97 @@
+<div>
+  <div class="Radio">
+    <input checked="" value="radio1" type="radio" name="radio" id="Radio1" />
+    <label for="Radio1">Bubble 1</label>
+  </div>
+  <div class="Radio">
+    <input value="radio2" type="radio" name="radio" id="Radio2" />
+    <label for="Radio2">Bubble 2</label>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Pradeepsaranbishnoi  - Website: https://codepen.io/DeyJordan/pen/poQvgaz - Name: Jordan - Tags: flashy, green, bubble, radio, click */
+.Radio input[type="radio"] {
+  position: absolute;
+  left: -100px;
+}
+.Radio input[type="radio"] + label {
+  position: relative;
+  display: block;
+  line-height: 3rem;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #61cea5;
+}
+
+.Radio input[type="radio"] + label::before,
+.Radio input[type="radio"] + label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+
+.Radio input[type="radio"] + label {
+  padding-left: 3rem;
+}
+
+.Radio input[type="radio"] + label::before {
+  width: 2rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #61cea5;
+}
+
+.Radio input[type="radio"] + label::after {
+  left: 0.2rem;
+  width: 1.4rem;
+  transform: translateY(-50%) scale(0);
+}
+
+.Radio input[type="radio"]:not(:checked) + label::after {
+  animation: radio 0.5s linear;
+}
+
+.Radio input[type="radio"]:checked + label::after {
+  transform: translateY(-50%) scale(1);
+}
+
+.Radio input[type="radio"] + label::after {
+  aspect-ratio: 1 / 1;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 30%, #fff, rgba(0, 0, 0, 0) 25%),
+    radial-gradient(
+      circle at 60% 55%,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(255, 0, 255, 0.8) 100%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 255, 255, 0.2) 60%,
+      rgba(0, 0, 0, 0) 68%
+    ),
+    radial-gradient(
+      circle at 50% 55%,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(255, 255, 0, 0.2) 45%,
+      rgba(0, 0, 0, 0) 55%
+    );
+}
+
+@keyframes radio {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    transform: translateY(-50%) scale(1.7);
+  }
+}
+
+</style>
+    
