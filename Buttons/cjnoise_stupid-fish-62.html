@@ -1,0 +1,38 @@
+<button class="button">Button</button>
+
+<style>
+/* From Uiverse.io by cjnoise  - Tags: blue, button, animated, 3d button */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #3498db;
+  color: #fff;
+  background-color: #3498db;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: perspective(5px) rotateX(2deg) rotateY(2deg);
+  transition: transform 0.3s;
+  pointer-events: none;
+}
+
+.button:hover::before {
+  transform: perspective(5px) rotateX(0) rotateY(0);
+}
+
+</style>
+    
