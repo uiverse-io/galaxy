@@ -1,31 +1,49 @@
 <div class="container">
-        <div class="heading">SignIn to your account</div>
-        <form action="" class="form">
-            <div class="input-field">
-                <input id="username" name="text" type="text" autocomplete="off" required="">
-                <label for="username">Full Name</label>
-            </div>
-            <div class="input-field">
-                <input id="email" name="email" type="email" autocomplete="off" required="">
-                <label for="email">Email</label>
-            </div>
-            <div class="input-field">
-                <input id="password" name="text" type="password" autocomplete="off" required="">
-                <label for="username">Password</label>
-                
-
-                
-            </div>
-            
-            <div class="btn-container">
-                <button class="btn">Submit</button>
-                <div class="acc-text">New here ? <span style="color : #0000ff; cursor : pointer;">Create Account</span>
-                </div>
-            </div>
-        </form>
+  <div class="heading">SignIn to your account</div>
+  <form class="form" action="">
+    <div class="input-field">
+      <input
+        required=""
+        autocomplete="off"
+        type="text"
+        name="text"
+        id="username"
+      />
+      <label for="username">Full Name</label>
     </div>
+    <div class="input-field">
+      <input
+        required=""
+        autocomplete="off"
+        type="email"
+        name="email"
+        id="email"
+      />
+      <label for="email">Email</label>
+    </div>
+    <div class="input-field">
+      <input
+        required=""
+        autocomplete="off"
+        type="password"
+        name="text"
+        id="password"
+      />
+      <label for="username">Password</label>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn">Submit</button>
+      <div class="acc-text">
+        New here ?
+        <span style="color : #0000ff; cursor : pointer;">Create Account</span>
+      </div>
+    </div>
+  </form>
+</div>
+
 <style>
-/* From Uiverse.io by Spacious74 - Tags: simple, login, subscription, email, minimalist, form, register, signin */
+/* From Uiverse.io by Spacious74  - Tags: simple, login, subscription, email, minimalist, form, register, signin */
 .container {
   border: solid 1px #8d8d8d;
   padding: 20px;
@@ -36,10 +54,11 @@
 .container .heading {
   font-size: 1.3rem;
   margin-bottom: 20px;
+  font-weight: bolder;
 }
 
 .form {
-  width: 400px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -64,14 +83,12 @@
   color: #fff;
   font-weight: bolder;
   transition: all 0.2s ease;
-  box-shadow: 0px 2px 3px #000d3848, 
-    inset 0px 4px 5px #0070f0,
+  box-shadow: 0px 2px 3px #000d3848, inset 0px 4px 5px #0070f0,
     inset 0px -4px 5px #002cbb;
 }
 
 .form .btn:active {
-  box-shadow: inset 0px 4px 5px #0070f0,
-    inset 0px -4px 5px #002cbb;
+  box-shadow: inset 0px 4px 5px #0070f0, inset 0px -4px 5px #002cbb;
   transform: scale(0.995);
 }
 
@@ -98,12 +115,14 @@
   width: 100%;
 }
 
-.input-field  input:focus, .input-field input:valid {
+.input-field input:focus,
+.input-field input:valid {
   outline: none;
   border: solid 1px #0034de;
 }
 
-.input-field  input:focus ~ label, input:valid ~ label {
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
   transform: translateY(-51%) translateX(-10px) scale(0.8);
   background-color: #fff;
   padding: 0px 5px;
@@ -125,4 +144,6 @@
 .form .close {
   display: none;
 }
+
 </style>
+    
