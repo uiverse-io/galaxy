@@ -1,0 +1,122 @@
+<button class="unique-button">
+  <div class="svg-wrap">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+    >
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path
+        fill="currentColor"
+        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+      ></path>
+    </svg>
+  </div>
+  <span>Hover Me</span>
+</button>
+
+<style>
+/* From Uiverse.io by VD232004  - Tags:  */
+.unique-button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #a634db;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.unique-button:hover {
+  transition: 0.3s all ease-in-out;
+  box-shadow: 5px 10px 30px #a634db;
+}
+
+.unique-button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.unique-button:hover span {
+  transform: translateX(7em);
+}
+
+.unique-button .svg-wrap {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+.unique-button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.unique-button:hover svg {
+  transform: translateX(2.5em) rotate(45deg) scale(1.2);
+}
+
+.unique-button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.unique-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 80%;
+  border-bottom-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #2c3e50;
+  transition: all 0.2s ease-in-out;
+}
+
+.unique-button:hover::before {
+  width: 100%;
+}
+
+.unique-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 0;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  background-color: #2c3e50;
+  transition: all 0.3s ease-in-out;
+}
+
+.unique-button:hover::after {
+  height: 100%;
+}
+
+</style>
+    
