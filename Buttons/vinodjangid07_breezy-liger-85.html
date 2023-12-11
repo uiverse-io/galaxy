@@ -1,0 +1,40 @@
+<button class="button">Button</button>
+
+<style>
+/* From Uiverse.io by vinodjangid07  - Tags: animation, gradient, button, hover, hover effect */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  background-size: 200% 200%;
+  background-color: #99fff7;
+  background-image: radial-gradient(
+      at 65% 89%,
+      hsla(249, 100%, 62%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 68% 76%, hsla(334, 100%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 39%, hsla(34, 100%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 12% 37%, hsla(282, 100%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 34% 9%, hsla(201, 100%, 63%, 1) 0px, transparent 50%),
+    radial-gradient(at 89% 18%, hsla(193, 100%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 36% 37%, hsla(251, 100%, 65%, 1) 0px, transparent 50%);
+  background-position: left;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 3s;
+}
+
+.button:hover {
+  background-position: right;
+}
+
+</style>
+    
