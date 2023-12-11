@@ -1,0 +1,105 @@
+<button class="palette-button">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 47 47"
+    class="palette"
+  >
+    <path
+      stroke-width="2"
+      stroke="black"
+      d="M23.5 46C11.0736 46 1 35.9264 1 23.5C1 11.0736 11.0736 1 23.5 1C35.9264 1 46 11.0736 46 23.5C46 24.2461 45.7117 24.7823 45.1652 25.2415C44.5763 25.7365 43.6859 26.1372 42.5263 26.4835C41.3771 26.8267 40.0662 27.0884 38.6848 27.3617L38.6142 27.3757C37.275 27.6407 35.8737 27.9179 34.5961 28.2889C32.0955 29.015 29.5022 30.2591 29.1333 33.106C28.9574 34.463 29.3233 36.0257 30.2167 37.8342C31.0026 39.425 32.2278 41.2689 33.9671 43.4224C30.8413 45.0683 27.2807 46 23.5 46Z"
+    ></path>
+    <circle
+      fill="none"
+      class="color-drop drop1"
+      stroke-width="2"
+      stroke="black"
+      r="3.5"
+      cy="13.5"
+      cx="33.5"
+    ></circle>
+    <circle
+      fill="none"
+      class="color-drop drop2"
+      stroke-width="2"
+      stroke="black"
+      r="3.5"
+      cy="10.5"
+      cx="20.5"
+    ></circle>
+    <circle
+      fill="none"
+      class="color-drop drop3"
+      stroke-width="2"
+      stroke="black"
+      r="3.5"
+      cy="18.5"
+      cx="10.5"
+    ></circle>
+    <circle
+      fill="none"
+      class="color-drop drop4"
+      stroke-width="2"
+      stroke="black"
+      r="3.5"
+      cy="31.5"
+      cx="11.5"
+    ></circle>
+  </svg>
+  Customize
+</button>
+
+<style>
+/* From Uiverse.io by vinodjangid07  - Tags: icon, animation, button, custom, hover effect */
+.palette-button {
+  background-color: #fff;
+  width: 170px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgb(196, 196, 196);
+  transition: all 0.3s;
+}
+.palette {
+  width: 30px;
+  transition: all 0.3s;
+}
+.palette-button:hover .palette {
+  transform: rotate(-45deg);
+}
+.palette path {
+  fill: rgb(255, 163, 183);
+  stroke-width: 0;
+}
+.drop1 {
+  fill: rgb(115, 115, 255);
+  stroke-width: 0;
+}
+.drop2 {
+  fill: red;
+  stroke-width: 0;
+}
+.drop3 {
+  fill: yellow;
+  stroke-width: 0;
+}
+.drop4 {
+  fill: rgb(104, 255, 255);
+  stroke-width: 0;
+}
+.palette-button:hover {
+  transform: scale(1.05);
+  background-color: rgb(176, 115, 255);
+  color: white;
+}
+
+</style>
+    
