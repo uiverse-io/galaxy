@@ -1,0 +1,120 @@
+<div id="div1">
+  <div id="l" style="margin: 33px">
+    <div class="pupil">
+      <div class="p5">
+        <div class="pupl2">
+          <div class="pupil3"></div>
+          <div class="pupil4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="m" style="margin: 33px">
+    <div class="pupil">
+      <div class="p5">
+        <div class="pupl2">
+          <div class="pupil3"></div>
+          <div class="pupil4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Yogeshawghad0477  - Tags: simple, animation, loader, html, css */
+#div1 {
+  width: 100%;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes animateHeight {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 50px;
+  }
+}
+
+#l,
+#m {
+  width: 150px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  border-radius: 0px 200px 0px 200px;
+  -moz-border-radius: 0px 200px 0px 200px;
+  -webkit-border-radius: 0px 200px 0px 200px;
+  border: 1px solid transparent;
+  animation: animateHeight 1s infinite alternate-reverse;
+}
+#m {
+  border-radius: 200px 0px 200px 0px;
+  -moz-border-radius: 200px 0px 200px 0px;
+  -webkit-border-radius: 200px 0px 200px 0px;
+}
+.pupil,
+.pupl2,
+.pupil3,
+.pupil4,
+.p5 {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.158);
+}
+.pupil3,
+.pupil4 {
+  width: 18px;
+  height: 3.5px;
+  overflow: visible;
+}
+
+.pupil {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    rgb(255, 105, 105),
+    rgb(129, 249, 129),
+    rgb(96, 96, 255),
+    rgb(71, 71, 71)
+  );
+}
+.pupl2 {
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(
+    rgb(255, 2, 2),
+    rgb(0, 255, 0),
+    rgb(0, 0, 255),
+    rgb(0, 0, 0)
+  );
+}
+.p5 {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(
+    rgb(252, 71, 71),
+    rgb(70, 249, 70),
+    rgb(63, 63, 254),
+    rgb(48, 47, 47)
+  );
+}
+.pupil3 {
+  width: 5px;
+  height: 18px;
+}
+
+</style>
+    
