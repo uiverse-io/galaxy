@@ -1,0 +1,128 @@
+<div role="radiogroup" class="theme-switcher">
+  <button
+    type="button"
+    role="radio"
+    data-theme-switcher="true"
+    data-active="false"
+    class="theme-switcher_switch"
+    aria-label="Switch to light theme"
+    aria-checked="false"
+  >
+    <svg
+      style="color: currentcolor; width: 16px; height: 16px;"
+      width="24"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke="currentColor"
+      shape-rendering="geometricPrecision"
+      height="24"
+      fill="none"
+      data-testid="geist-icon"
+      class="icon"
+    >
+      <circle r="5" cy="12" cx="12"></circle>
+      <path d="M12 1v2"></path>
+      <path d="M12 21v2"></path>
+      <path d="M4.22 4.22l1.42 1.42"></path>
+      <path d="M18.36 18.36l1.42 1.42"></path>
+      <path d="M1 12h2"></path>
+      <path d="M21 12h2"></path>
+      <path d="M4.22 19.78l1.42-1.42"></path>
+      <path d="M18.36 5.64l1.42-1.42"></path>
+    </svg>
+  </button>
+  <button
+    type="button"
+    role="radio"
+    data-theme-switcher="true"
+    data-active="false"
+    class="theme-switcher_switch"
+    aria-label="Switch to system theme"
+    aria-checked="false"
+  >
+    <svg
+      style="color: currentcolor; width: 16px; height: 16px;"
+      width="24"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke="currentColor"
+      shape-rendering="geometricPrecision"
+      height="24"
+      fill="none"
+      data-testid="geist-icon"
+      class="icon"
+    >
+      <rect ry="2" rx="2" height="14" width="20" y="3" x="2"></rect>
+      <path d="M8 21h8"></path>
+      <path d="M12 17v4"></path>
+    </svg>
+  </button>
+  <button
+    type="button"
+    role="radio"
+    data-theme-switcher="true"
+    data-active="true"
+    class="theme-switcher_switch"
+    aria-label="Switch to dark theme"
+    aria-checked="true"
+  >
+    <svg
+      style="color: currentcolor; width: 16px; height: 16px;"
+      width="24"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke="currentColor"
+      shape-rendering="geometricPrecision"
+      height="24"
+      fill="none"
+      data-testid="geist-icon"
+      class="icon"
+    >
+      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+/* From Uiverse.io by andrew-demchenk0  - Website: https://nextjs.org/learn?utm_source=next-site&utm_medium=homepage-cta&utm_campaign=home - Tags: simple, theme-switch, radio, buttons, template, for js, component */
+.theme-switcher {
+  padding: 3px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  border-radius: 9999px;
+  border: 1px solid grey;
+}
+
+.theme-switcher_switch {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.theme-switcher_switch:hover > .icon {
+  stroke: #323232;
+}
+
+.theme-switcher_switch:active {
+  background-color: rgba(128, 128, 128, 0.35);
+}
+
+.theme-switcher_switch:active > .icon {
+  stroke: white;
+}
+
+</style>
+    
