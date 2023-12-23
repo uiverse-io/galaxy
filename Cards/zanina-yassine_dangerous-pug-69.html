@@ -1,0 +1,145 @@
+<div class="card">
+  <span class="card_title">Loading users</span>
+  <div class="loader"></div>
+  <div class="card_content">
+    <button class="load-more" name="load-more" type="button">Load more</button>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by zanina-yassine  - Tags: blue, minimalist, loading, card, loader, gradients, multicolor, loading animation */
+.card {
+  width: 400px;
+  max-width: 450px;
+  height: fit-content;
+
+  display: grid;
+  grid-template-rows: auto 4px auto;
+
+  padding-bottom: 20px;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01),
+    0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09),
+    0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card_title {
+  display: block;
+
+  padding: 12px 15px;
+
+  color: rgb(70, 70, 76);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.loader {
+  height: 3px;
+  width: 100%;
+
+  position: relative;
+
+  background-color: #e2e4e8;
+  animation: retract 5s cubic-bezier(0.15, 0.83, 0.66, 1) 2s forwards infinite;
+}
+
+.card:has(.load-more:hover) .loader {
+  height: 2px;
+}
+
+.loader::before {
+  content: "";
+
+  height: 100%;
+
+  position: absolute;
+
+  left: 0;
+
+  background: linear-gradient(#4480ff 0%, #115dfc 50%, #0550ed 100%);
+  animation: slide 5s cubic-bezier(0.15, 0.83, 0.66, 1) 2s forwards infinite;
+}
+
+.card_content {
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.load-more {
+  width: fit-content;
+  height: 36px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 15px;
+
+  border-radius: 5px;
+  border: 0;
+
+  background: linear-gradient(180deg, #4480ff 0%, #115dfc 50%, #0550ed 100%);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+
+  box-shadow: 0px 0.5px 0.5px #efefef, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+  transition: all 0.6s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
+}
+
+.load-more:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px 0#054eed6b;
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 20%;
+  }
+  50% {
+    width: 30%;
+  }
+  70% {
+    width: 80%;
+  }
+  90% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes retract {
+  0% {
+    height: 3px;
+  }
+  95% {
+    height: 3px;
+  }
+  100% {
+    height: 1px;
+  }
+}
+
+</style>
+    
