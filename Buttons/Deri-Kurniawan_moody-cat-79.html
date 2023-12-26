@@ -1,0 +1,65 @@
+<button class="button">
+  <span class="button-content">Wavy Button</span>
+</button>
+
+<style>
+/* From Uiverse.io by Deri-Kurniawan  - Tags: blue, button, hover, smooth, hover effect, hoverme, hover button, button hover effect  */
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 14px;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid rgb(221, 218, 218);
+  background: white;
+  font-weight: bold;
+  font-size: 16px;
+  color: #1993e4;
+  transition: all 1.2s linear;
+  cursor: pointer;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, #1993e4, #1993e456);
+  border-radius: 30%;
+  height: 96px;
+  width: 96px;
+  animation: spin infinite linear 1.8s;
+  animation-delay: 0;
+  bottom: -38px;
+  right: -112px;
+  transition: all 1.2s linear;
+  z-index: 0;
+}
+
+.button:hover {
+  color: #fff;
+  transition-duration: 1.2s;
+}
+
+.button:hover::after {
+  right: -60px;
+  bottom: -92px;
+  width: 256px;
+  height: 256px;
+}
+
+.button > .button-content {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+    
