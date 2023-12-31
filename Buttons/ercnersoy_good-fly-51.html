@@ -1,0 +1,43 @@
+<button class="button">hover me !</button>
+
+<style>
+/* From Uiverse.io by ercnersoy  - Tags: simple, purple, minimalist, button */
+.button {
+  cursor: pointer;
+  padding: 1rem 4rem;
+  border: 0;
+  background-color: rebeccapurple;
+  color: white;
+  box-shadow: 0px 10px 0px 0px rgb(68, 37, 99);
+  transition: all 0.9s ease-in-out;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  position: relative;
+}
+.button:hover {
+  box-shadow: 0px 10px 0px 0px rgb(122, 71, 173);
+  background-color: rgb(80, 31, 129);
+}
+.button:active {
+  box-shadow: 0px 5px 0px 0px rgb(122, 71, 173);
+  text-shadow: 0 0px 0px #000;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  box-shadow: 0px 10px 0px 0px rgb(229, 104, 9);
+  width: 0;
+  height: 10px;
+  transition: all 0.9s ease-in-out;
+}
+.button:hover::before {
+  width: 100%;
+}
+
+</style>
+    
