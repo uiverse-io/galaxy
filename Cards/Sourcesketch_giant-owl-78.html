@@ -1,0 +1,144 @@
+<div class="card">
+  <div class="title-1">Card 1</div>
+  <div class="content">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s.
+  </div>
+  <button class="btn">Learn more</button>
+  <div class="bar">
+    <div class="emptybar"></div>
+    <div class="filledbar"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="title-1">Card 2</div>
+  <div class="content">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s.
+  </div>
+  <button class="btn">Learn more</button>
+  <div class="bar">
+    <div class="emptybar"></div>
+    <div class="filledbar"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Sourcesketch  - Tags: neumorphism, animation, card, shadow, futuristic, blur filter, card hover, 3d card */
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #2b223f;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #00000044;
+  margin-left: -80px;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+  text-shadow: 2px 2px 8px #6e5b94;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transform: rotateX(-15deg) rotateY(10deg);
+  transition: 0.4s ease-out;
+}
+
+.title-1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.btn {
+  position: absolute;
+  top: 195px;
+  margin: 0 20px;
+  width: 120px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a2f7c;
+  color: #fff;
+  transition: 0.4s ease-out;
+}
+
+.btn:hover {
+  transition: 0.4s ease-out;
+  background-color: #8a4ff8;
+  color: #ffffff;
+  box-shadow: 0px 0px 20px rgba(157, 71, 255, 0.5),
+    0px 5px 5px -1px rgba(163, 58, 233, 0.25),
+    inset 4px 4px 8px rgba(219, 175, 255, 0.5),
+    inset -4px -4px 8px rgba(137, 19, 216, 0.35);
+}
+
+.bar {
+  position: relative;
+  top: 250px;
+
+  height: 5px;
+  width: 100%;
+}
+
+.emptybar {
+  background-color: #201c29;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: #d059ff;
+  background: linear-gradient(90deg, #6831cfab, #a777ff 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 100%;
+  transition: 0.4s ease-out;
+}
+
+.content {
+  position: absolute;
+  padding: 20px;
+  top: 60px;
+  color: #eae0fd;
+  font-size: 0.7rem;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+</style>
+    
