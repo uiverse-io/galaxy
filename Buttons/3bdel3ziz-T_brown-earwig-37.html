@@ -1,0 +1,69 @@
+<button class="button"></button>
+
+<style>
+/* From Uiverse.io by 3bdel3ziz-T  - Tags: button, hover, smooth, dark, code, hover button, button hover effect , 2d button */
+.button,
+.button::before {
+  box-sizing: border-box;
+  --col-orange: #d17842;
+  --col-white: #fff;
+  --col-dark: #212121;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 600;
+  fill: var(--col-white);
+  color: var(--col-white);
+
+  color: var(col-dark);
+  font-family: "arial";
+}
+.button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  background: var(--col-orange);
+  padding: 8px 50px;
+  position: relative;
+  transition: all 200ms;
+  border-radius: 25px;
+  z-index: 99;
+}
+
+.button:hover {
+  border-color: transparent;
+  color: var(--col-dark);
+  background: transparent;
+}
+
+.button::before {
+  height: fit-content;
+  content: "great work🥳";
+  position: absolute;
+  left: 40px;
+  width: 0;
+  overflow: hidden;
+  transition: all 550ms;
+  text-wrap: nowrap;
+  z-index: -1;
+}
+
+.button:hover::before {
+  width: 135px;
+  color: var(--col-white);
+}
+
+.button::after {
+  content: "hover me";
+  position: relative;
+}
+
+.button:hover::after {
+  display: none;
+}
+
+</style>
+    
