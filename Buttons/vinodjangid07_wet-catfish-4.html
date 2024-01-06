@@ -1,0 +1,132 @@
+<button class="BugButton">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 43 42"
+    class="bugsvg"
+  >
+    <path
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M20 7H23C26.866 7 30 10.134 30 14V28.5C30 33.1944 26.1944 37 21.5 37C16.8056 37 13 33.1944 13 28.5V14C13 10.134 16.134 7 20 7Z"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M18 2V7"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M25 2V7"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M31 22H41"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M2 22H12"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M12.5785 15.2681C3.5016 15.2684 4.99951 12.0004 5 4"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M12.3834 29.3877C3.20782 29.3874 4.72202 32.4736 4.72252 40.0291"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M30.0003 14.8974C39.0545 15.553 37.7958 12.1852 38.3718 4.20521"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="#cfcfcf"
+      d="M29.9944 29.7379C39.147 29.1188 37.8746 32.2993 38.4568 39.8355"
+    ></path>
+  </svg>
+
+  <span class="tooltip">Bug Report</span>
+</button>
+
+<style>
+/* From Uiverse.io by vinodjangid07  - Tags: tooltip, button, hover, hover effect, bug, report */
+.BugButton {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.BugButton svg {
+  width: 44%;
+}
+.BugButton:hover {
+  background-color: rgb(61, 41, 71);
+  overflow: visible;
+}
+.bugsvg path {
+  transition: all 0.2s;
+}
+.BugButton:hover .bugsvg path {
+  stroke: #fff;
+}
+.BugButton:active {
+  transform: scale(0.98);
+}
+.tooltip {
+  --tooltip-color: rgb(41, 41, 41);
+  position: absolute;
+  top: -40px;
+  background-color: var(--tooltip-color);
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 8px 12px;
+  font-weight: 600;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.105);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s;
+  min-width: 100px;
+}
+.tooltip::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  content: "";
+  background-color: var(--tooltip-color);
+  bottom: -10%;
+}
+.BugButton:hover .tooltip {
+  opacity: 1;
+}
+
+</style>
+    
