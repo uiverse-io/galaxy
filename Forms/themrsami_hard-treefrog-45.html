@@ -1,0 +1,215 @@
+<!-- From Uiverse.io by themrsami  - Tags: form, tailwindcss, signup form, facebook clone signup -->
+<div class="mx-auto max-w-[432px] bg-white rounded-md shadow-lg drop-shadow-md">
+  <div class="px-4 py-3 flex justify-between">
+    <div>
+      <h2 class="font-bold" style="font-size: 32px">Sign Up</h2>
+      <p class="text-gray-500" style="font-size: 15px">It's quick and easy.</p>
+    </div>
+    <div style="cursor: pointer" class="text-gray-600">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-7 w-7"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
+      </svg>
+    </div>
+  </div>
+  <hr class="bg-gray-600" />
+  <div class="px-4 pt-3 pb-6 space-y-3">
+    <div class="space-x-3 flex">
+      <input
+        type="text"
+        placeholder="First name"
+        class="flex-1 ring-1 ring-gray-400 rounded-md text-md px-2 py-2 outline-none bg-gray-100 focus:placeholder-gray-500"
+      />
+      <input
+        type="text"
+        placeholder="Surname"
+        class="flex-1 ring-1 ring-gray-400 rounded-md text-md px-2 py-2 outline-none bg-gray-100 focus:placeholder-gray-500"
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        placeholder="Mobile number or email address"
+        class="w-full ring-1 ring-gray-400 rounded-md text-md px-2 py-2 outline-none bg-gray-100 focus:placeholder-gray-500"
+      />
+    </div>
+    <div>
+      <input
+        type="password"
+        placeholder="New password"
+        class="w-full ring-1 ring-gray-400 rounded-md text-md px-2 py-2 outline-none bg-gray-100 focus:placeholder-gray-500"
+      />
+    </div>
+    <div>
+      <div class="text-gray-500" style="font-size: 12px;">
+        Date of birth <a href=""> (?) </a>
+      </div>
+      <div class="mt-1 flex space-x-3">
+        <select
+          name="day"
+          class="text-md flex-1 px-1 py-1.5 ring-1 ring-gray-400 rounded-md outline-none"
+        >
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
+          <option>17</option>
+          <option>18</option>
+          <option>19</option>
+          <option>20</option>
+          <option>21</option>
+          <option>22</option>
+          <option>23</option>
+          <option>24</option>
+          <option>25</option>
+          <option>26</option>
+          <option>27</option>
+          <option>28</option>
+          <option>29</option>
+          <option>30</option>
+          <option>31</option>
+        </select>
+        <select
+          name="month"
+          class="text-md flex-1 px-1 py-1.5 ring-1 ring-gray-400 rounded-md outline-none"
+        >
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+        <select
+          name="year"
+          class="text-md flex-1 px-1 py-1.5 ring-1 ring-gray-400 rounded-md outline-none"
+        >
+          <option>1990</option>
+          <option>1991</option>
+          <option>1992</option>
+          <option>1993</option>
+          <option>1994</option>
+          <option>1995</option>
+          <option>1996</option>
+          <option>1997</option>
+          <option>1998</option>
+          <option>1999</option>
+          <option>2000</option>
+          <option>2001</option>
+          <option>2002</option>
+          <option>2003</option>
+          <option>2004</option>
+          <option>2005</option>
+          <option>2006</option>
+          <option>2007</option>
+          <option>2008</option>
+          <option>2009</option>
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <div class="text-gray-500" style="font-size: 12px;">
+        Gender <a href=""> (?) </a>
+      </div>
+      <div class="mt-1 flex space-x-3">
+        <label
+          for="female"
+          class="flex-1 flex space-x-2 justify-between items-center rounded-md px-2 py-1 border border-gray-400"
+        >
+          <span>Female</span>
+          <input type="radio" id="female" name="gender" />
+        </label>
+        <label
+          for="male"
+          class="flex-1 flex space-x-2 justify-between items-center rounded-md px-2 py-1 border border-gray-400"
+        >
+          <span>Male</span>
+          <input type="radio" id="male" name="gender" />
+        </label>
+        <label
+          for="other"
+          class="flex-1 flex space-x-2 justify-between items-center rounded-md px-2 py-1 border border-gray-400"
+        >
+          <span>Custom</span>
+          <input type="radio" id="other" name="gender" />
+        </label>
+      </div>
+    </div>
+    <div>
+      <p class="text-gray-600" style="font-size: 11px">
+        People who use our service may have uploaded your contact information to
+        Facebook.
+        <a href="" class="hover:text-blue-900 font-medium hover:underline"
+          >Learn more</a
+        >.
+      </p>
+      <p class="text-gray-600 mt-4" style="font-size: 11px">
+        By clicking Sign Up, you agree to our
+        <a href="" class="hover:text-blue-900 font-medium hover:underline"
+          >Terms</a
+        >,
+        <a href="" class="hover:text-blue-900 font-medium hover:underline"
+          >Privacy Policy</a
+        >
+        and
+        <a href="" class="hover:text-blue-900 font-medium hover:underline"
+          >Cookies Policy</a
+        >. You may receive SMS notifications from us and can opt out at any
+        time.
+      </p>
+    </div>
+    <div class="text-center">
+      <button
+        class="text-white font-bold px-16 py-1 rounded-md"
+        style="background-color: #00A400; font-size: 18px;"
+      >
+        Sign Up
+      </button>
+    </div>
+  </div>
+</div>
+
+
+    
