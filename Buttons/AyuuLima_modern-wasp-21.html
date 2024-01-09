@@ -1,0 +1,61 @@
+<button class="button">Button</button>
+
+<style>
+/* From Uiverse.io by AyuuLima  - Tags: simple, material design, neumorphism, animation, gradient, button */
+.button {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 20px;
+  gap: 120px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 3px;
+  top: -4px;
+  margin: auto;
+  width: -128px;
+  height: -48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #10d32a 0%, rgb(119, 235, 235) 100%);
+  z-index: -10;
+  pointer-events: visiblePainted;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #00ff22 0%, rgb(0, 250, 250) 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(15px);
+}
+
+.button:hover::after {
+  filter: blur(40px);
+}
+
+.button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.button:active::before {
+  scale: 0.7;
+}
+
+</style>
+    
