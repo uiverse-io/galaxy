@@ -1,0 +1,46 @@
+<div class="container">
+  <input required="required" class="inp" />
+  <span class="content">Content</span>
+</div>
+
+<style>
+/* From Uiverse.io by jamaldine-hub  - Tags: animation, active, input, dark, light, modern */
+.container {
+  position: relative;
+  width: 250px;
+}
+.container .inp {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid rgba(0, 167, 161, 0.272);
+  outline: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: rgba(0, 167, 181, 0.62);
+  background: rgba(41, 41, 41);
+  font-size: 1em;
+}
+.container .content {
+  position: absolute;
+  left: 0;
+  margin-top: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1em;
+  pointer-events: none;
+  color: rgba(0, 167, 161, 0.272);
+  transition: 0.5s;
+}
+.container input:valid ~ span,
+.container input:focus ~ span {
+  color: rgb(10, 164, 159);
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.9em;
+  padding: 0 10px;
+  background: rgb(41, 41, 41);
+  border-left: 2px solid rgba(0, 167, 161, 0.272);
+  border-right: 2px solid rgba(0, 167, 161, 0.272);
+}
+
+</style>
+    
