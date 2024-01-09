@@ -1,0 +1,77 @@
+<div class="hamburger">
+  <input class="checkbox" type="checkbox" />
+  <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+    <path
+      class="lineTop line"
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="black"
+      d="M6 11L44 11"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="black"
+      d="M6 24H43"
+      class="lineMid line"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-width="4"
+      stroke="black"
+      d="M6 37H43"
+      class="lineBottom line"
+    ></path>
+  </svg>
+</div>
+
+<style>
+/* From Uiverse.io by Subu19  - Tags: animation, button, hamburger, click, menu */
+.hamburger {
+  height: 50px;
+  width: 50px;
+  transform: 0.2s;
+  position: relative;
+}
+.hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.line {
+  transition: 0.5s;
+  stroke-width: 6px;
+  stroke: black;
+}
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+.hamburger .checkbox:checked + svg .line {
+  stroke: crimson;
+}
+.hamburger .checkbox:checked + svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(45deg) translate(-7px, -5px);
+}
+.hamburger .checkbox:checked + svg .lineMid {
+  stroke-dashoffset: 40;
+}
+.hamburger .checkbox:checked + svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+</style>
+    
