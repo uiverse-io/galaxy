@@ -1,0 +1,68 @@
+<button class="button">
+  <p class="btn-txt">Hello !</p>
+</button>
+
+<style>
+/* From Uiverse.io by Gaurav-WebDev  - Tags: simple, button, hover, smooth, btn, hover effect */
+.button {
+  height: 50px;
+  width: 150px;
+  font-weight: 800;
+  border: none;
+  background-color: #3434;
+  color: #ffff;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.7s;
+}
+
+.button::after {
+  content: "Me";
+  height: 100%;
+  width: 50%;
+  background-color: coral;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 10px;
+  box-sizing: border-box;
+  transition: all 0.7s;
+}
+
+.button::before {
+  content: "Hover";
+  height: 100%;
+  width: 50%;
+  background-color: teal;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 10px;
+  box-sizing: border-box;
+  transition: all 0.7s;
+}
+
+.button:hover::after {
+  right: -100px;
+}
+
+.button:hover::before {
+  left: -100px;
+}
+
+.button:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.2);
+}
+
+</style>
+    
