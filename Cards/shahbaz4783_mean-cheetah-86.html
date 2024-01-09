@@ -1,0 +1,121 @@
+<article class="job-card">
+  <div>
+    <p class="text-title">Affiliate and Influencer Marketing</p>
+    <p class="post-date">Posted on 23 Dec, 2023</p>
+  </div>
+
+  <div class="budget-exp">
+    <div>
+      <p class="value">$120</p>
+      <p class="label">Budget</p>
+    </div>
+    <div>
+      <p class="value">Intermediate</p>
+      <p class="label">Experience</p>
+    </div>
+  </div>
+
+  <p class="text-body">
+    Are you a highly motivated and results-driven individual with a passion for
+    affiliate and influencer marketing? Jaspr, a fast-growing company
+    specializing in air quality products, is seeking a dedicated specialist to
+    help us scale our affiliate and influencer marketing efforts, utilizing
+    tools like Hype Auditor.
+  </p>
+
+  <div class="tags">
+    <article>
+      <p>marketing</p>
+      <p>seo</p>
+      <p>content writing</p>
+    </article>
+  </div>
+
+  <div>
+    <a href="/job/<%= job._id %>">
+      <button class="card-btn">See More</button>
+    </a>
+  </div>
+</article>
+
+<style>
+/* From Uiverse.io by shahbaz4783  - Tags: simple, material design, green, card, product, card template */
+.job-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2em;
+  box-shadow: #091e4240 0px 1px 1px, #091e4221 0px 0px 1px 1px;
+  border-radius: 0.6em;
+  padding: 1em;
+  max-width: 30em;
+}
+
+.text-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1.25em;
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.text-body {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.4px;
+}
+
+.post-date {
+  color: #598551;
+}
+
+.budget-exp {
+  display: flex;
+  gap: 5em;
+}
+
+.budget-exp .value {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.budget-exp .label {
+  font-size: 1em;
+  color: #598551;
+}
+
+.card-btn {
+  border: none;
+  font-size: 1rem;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2em;
+  padding: 0.6em 1em;
+}
+
+.card-btn:hover {
+  background-color: #026602;
+}
+
+.tags article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
+
+.tags p {
+  border-radius: 1.2em;
+  padding: 0.2em 0.5em;
+  background-color: #f2f7f2;
+  color: #598551;
+}
+
+</style>
+    
