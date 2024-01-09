@@ -1,0 +1,78 @@
+<div class="cards">
+  <div class="card red">
+    <p class="tip">Hover Me</p>
+  </div>
+  <div class="card blue">
+    <p class="tip">Hover Me</p>
+  </div>
+  <div class="card green">
+    <p class="tip">Hover Me</p>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by mohamedkhire  - Tags: glassmorphism, card, box, transition, card template, cool card */
+.card::before {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  top: 20%;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  background-color: #7090fa4b;
+  position: absolute;
+  filter: blur(10px);
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+}
+
+.cards .red,
+.cards .blue,
+.cards .green {
+  width: 200px;
+  height: 180px;
+  font-family: "CustomFont", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  backdrop-filter: blur(30px);
+  background-color: rgba(65, 65, 65, 0.11);
+  border: 1px solid rgba(144, 161, 255, 0.171);
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: 0.7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9, 0.9);
+}
+
+</style>
+    
