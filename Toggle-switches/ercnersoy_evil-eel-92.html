@@ -1,70 +1,70 @@
 <label class="switch">
-  <input type="checkbox">
+  <input class="ch" type="checkbox" />
   <span class="slider"></span>
 </label>
+
 <style>
-/* From Uiverse.io by ercnersoy - Tags: switch */
+/* From Uiverse.io by ercnersoy  - Tags: simple, switch, creative */
 /* The switch - the box around the slider */
 .switch {
- font-size: 17px;
- position: relative;
- display: inline-block;
- width: 3.5em;
- height: 1.5em;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 1.5em;
 }
 /* Hide default HTML checkbox */
 .switch input {
- opacity: 0;
- width: 0;
- height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 /* The slider */
 .slider {
- position: absolute;
- cursor: pointer;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background-color: #ccc;
- transition: .4s;
- border-radius: 1rem 0rem 1rem;
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 1rem 0rem 1rem;
 }
 
 .slider:before {
- position: absolute;
- content: "";
- height: 1.5em;
- width: 1.4em;
- left: 0em;
- bottom: 0em;
- background-color: white;
- transition: .4s;
- border-radius: 1rem 0rem 1rem;
- border: 3px solid white;
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.4em;
+  left: 0em;
+  bottom: 0em;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 1rem 0rem 1rem;
+  border: 3px solid white;
 }
 
-input:checked + .slider {
- background-color: #72eb67;
+.ch:checked + .slider {
+  background-color: #72eb67;
 }
 
-input:focus + .slider {
- box-shadow: 0 0 1px #2196F3;
+.ch:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked + .slider:before {
- transform: translateX(2.2em);
- background-color: green;
- box-shadow: 0px 0px 40px 5px #72eb67;
- border: 3px solid white;
+.ch:checked + .slider:before {
+  transform: translateX(2.2em);
+  background-color: green;
+  box-shadow: 0px 0px 40px 5px #72eb67;
+  border: 3px solid white;
 }
 
-input:checked + .slider::after {
- content: "|";
- color: white;
- position: absolute;
- right: 0.3rem;
- transform: rotate(45deg);
+.ch:checked + .slider::after {
+  content: "|";
+  color: white;
+  position: absolute;
+  right: 0.3rem;
+  top: -3.3px;
+  transform: rotate(45deg);
 }
 
 </style>
+    
