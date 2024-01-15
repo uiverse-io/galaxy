@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="loader-container">
+    <div class="loader"></div>
+    <div class="loading-text">Loading...</div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by pravusagar  - Tags: loader, smooth, dark, light, neon, game, circle, text animation */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0.6em;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #3498db,
+    #2ecc71,
+    #e74c3c,
+    #f39c12,
+    #3498db
+  );
+  background-size: 900% 900%;
+  animation: changeGradient 10s ease infinite; /* 10s duration, ease timing function, infinite loop */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+@keyframes changeGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff87;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loader {
+  border: 8px solid #ffffff;
+  border-top: 8px solid #0000005f;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  font-size: 20px;
+  color: #121212;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+    
