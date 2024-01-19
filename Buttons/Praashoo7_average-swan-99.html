@@ -1,0 +1,193 @@
+<div class="main">
+  <div class="buttons">
+    <div class="button_pair">
+      <div class="btn">
+        <button class="button1">
+          <svg
+            viewBox="0 -960 960 960"
+            class="svg1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M200-440v-80h560v80H200Z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="btn">
+        <button class="button2">
+          <svg
+            viewBox="0 -960 960 960"
+            xmlns="http://www.w3.org/2000/svg"
+            class="svg2"
+          >
+            <path
+              d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="button_pair">
+      <div class="btn">
+        <button class="button3">
+          <span class="button_text">RECORD</span>
+        </button>
+      </div>
+      <div class="btn">
+        <button class="button4">
+          <span class="button_text">PLAY</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="text">Teenage Engineering [EP-133 K.O. II] - Buttons</div>
+</div>
+
+<style>
+/* From Uiverse.io by Praashoo7  - Tags: neumorphism, button, realistic, buttons, teenage engineering */
+/* Teenage Engineering [EP-133 K.O. II] - Buttons */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.25em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+.button_pair {
+  display: flex;
+  column-gap: 1.5em;
+}
+.button_pair1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9em;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  background-color: #171717;
+  border-radius: 5px;
+}
+
+.button1 {
+  width: 5.7em;
+  height: 5.7em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #c7c3c0;
+  box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px,
+    #ffffff 1.5px 1.5px 2px 0px inset, #c7c3c0 -3.2px -3.2px 8px 0px inset;
+  cursor: pointer;
+  font-family: Montserrat;
+  transition: 0.1s ease-in-out;
+}
+.button2 {
+  width: 5.7em;
+  height: 5.7em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #c7c3c0;
+  box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px,
+    #ffffff 1.5px 1.5px 2px 0px inset, #c7c3c0 -3.2px -3.2px 8px 0px inset;
+  cursor: pointer;
+  font-family: Montserrat;
+  transition: 0.1s ease-in-out;
+}
+.svg1 {
+  fill: #5f5f5f;
+  width: 25px;
+  height: 25px;
+  transition: 0.1s ease-in-out;
+}
+.svg2 {
+  fill: #5f5f5f;
+  width: 25px;
+  height: 25px;
+  transition: 0.1s ease-in-out;
+}
+
+.button3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 5.7em;
+  height: 5.7em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #d42a02;
+  box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, #fb702c 2px 2px 10px 0px inset,
+    #d42a02 -4px -4px 1px 0px inset;
+  cursor: pointer;
+  font-family: Montserrat;
+  transition: 0.1s ease-in-out;
+}
+.button4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 5.7em;
+  height: 5.7em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #545251;
+  box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px,
+    #a8a6a4 1.5px 1.5px 1px 0px inset, #545251 -3.2px -3.2px 8px 0px inset;
+  cursor: pointer;
+  font-family: Montserrat;
+  transition: 0.1s ease-in-out;
+}
+
+.button_text {
+  color: white;
+  padding-top: 0.9em;
+  letter-spacing: 0.075em;
+  font-size: 0.85em;
+  transition: 0.1s ease-in-out;
+}
+
+.text {
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 0.65em;
+}
+
+.button1:active,
+.button2:active {
+  box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+    #c7c3c0 -3.2px -3.2px 8px 0px inset;
+}
+.button1:active .svg1,
+.button2:active .svg2 {
+  scale: 0.95;
+}
+.button3:active {
+  box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+    #d42a02 -3.2px -3.2px 8px 0px inset;
+}
+.button3:active .button_text {
+  transform: translateY(0.5px);
+}
+.button4:active {
+  box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+    #545251 -3.2px -3.2px 8px 0px inset;
+}
+.button4:active .button_text {
+  transform: translateY(0.5px);
+}
+
+</style>
+    
