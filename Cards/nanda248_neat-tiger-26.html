@@ -2,21 +2,47 @@
   <div class="card">
     <div class="i1">
       <span class="corner-text">A</span>
-      <svg viewBox="0 0 122.88 107.39"><defs></defs><title>red-heart</title><path class="heart-icon" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"></path></svg>
+      <svg viewBox="0 0 122.88 107.39">
+        <defs></defs>
+        <title>red-heart</title>
+        <path
+          d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"
+          class="heart-icon"
+        ></path>
+      </svg>
     </div>
+
     <div class="center-shape">
-      <svg viewBox="0 0 122.88 107.39"><defs></defs><title>red-heart</title><path class="heart-icon" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"></path></svg>
+      <svg viewBox="0 0 122.88 107.39">
+        <defs></defs>
+        <title>red-heart</title>
+        <path
+          d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"
+          class="heart-icon"
+        ></path>
+      </svg>
     </div>
+
     <div class="i2">
       <span class="corner-text">A</span>
-      <svg viewBox="0 0 122.88 107.39"><defs></defs><title>red-heart</title><path class="heart-icon" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"></path></svg>
+      <svg viewBox="0 0 122.88 107.39">
+        <defs></defs>
+        <title>red-heart</title>
+        <path
+          d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"
+          class="heart-icon"
+        ></path>
+      </svg>
     </div>
   </div>
+
   <div class="bg-card-1"></div>
+
   <div class="bg-card-2"></div>
 </div>
+
 <style>
-/* From Uiverse.io by nanda248 - Tags: card, playing card, stack of cards, gold card */
+/* From Uiverse.io by nanda248  - Tags: card, playing card, stack of cards, gold card */
 .main {
   position: relative;
 }
@@ -29,7 +55,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-auto-flow: row;
-  grid-template-areas: "i1 . ."
+  grid-template-areas:
+    "i1 . ."
     ". center ."
     ". . i2";
   width: 12em;
@@ -64,7 +91,7 @@
 
 /* glider animation */
 .card:before {
-  content: '';
+  content: "";
   position: absolute;
   height: 130%;
   width: 0.6em;
@@ -75,7 +102,7 @@
 }
 
 .card:after {
-  content: '';
+  content: "";
   position: absolute;
   height: 130%;
   width: 0.4em;
@@ -95,9 +122,10 @@
 }
 
 /* icon styles */
-.i1,.i2 svg {
+.i1,
+.i2 svg {
   width: 1.5em;
-  fill: #FF3131;
+  fill: #ff3131;
 }
 
 .i1 {
@@ -122,7 +150,7 @@
 }
 
 .corner-text {
-  color: #FF3131;
+  color: #ff3131;
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -136,7 +164,7 @@
 
 .center-shape svg {
   width: 4em;
-  fill: #FF3131;
+  fill: #ff3131;
 }
 
 /* hover effects */
@@ -145,7 +173,8 @@
   cursor: pointer;
 }
 
-.card:hover:after, .card:hover:before {
+.card:hover:after,
+.card:hover:before {
   visibility: hidden;
 }
 
@@ -157,13 +186,13 @@
 
 @keyframes color-change {
   from {
-    fill: #FF3131;
-    color: #FF3131;
+    fill: #ff3131;
+    color: #ff3131;
   }
 
   to {
-    fill: #E34234;
-    color: #E34234;
+    fill: #e34234;
+    color: #e34234;
   }
 }
 
@@ -178,4 +207,6 @@
   transform: rotate(5deg);
   transform-origin: bottom left;
 }
+
 </style>
+    
