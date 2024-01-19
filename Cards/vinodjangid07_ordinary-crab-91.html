@@ -1,0 +1,271 @@
+<div class="gender-card">
+  <div class="large-svg-container">
+    <svg
+      width="50"
+      height="90"
+      class="largemalesvg"
+      viewBox="0 0 50 90"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="25" cy="25" r="22" stroke="#76E3FE" stroke-width="6"></circle>
+      <path
+        d="M25 47L25 87"
+        stroke="#76E3FE"
+        stroke-width="6"
+        stroke-linecap="round"
+      ></path>
+      <path
+        d="M25 86.6958L38.6958 73"
+        stroke="#76E3FE"
+        stroke-width="6"
+        stroke-linecap="round"
+      ></path>
+      <path
+        d="M11 73L24.6958 86.6958"
+        stroke="#76E3FE"
+        stroke-width="6"
+        stroke-linecap="round"
+      ></path>
+    </svg>
+
+    <svg
+      width="50"
+      height="90"
+      class="largefemalesvg"
+      viewBox="0 0 50 90"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="25" cy="25" r="22" stroke="#F57CB3" stroke-width="6"></circle>
+      <path
+        d="M25 47L25 87"
+        stroke="#F57CB3"
+        stroke-width="6"
+        stroke-linecap="round"
+      ></path>
+      <path
+        d="M12 73H38"
+        stroke="#F57CB3"
+        stroke-width="6"
+        stroke-linecap="round"
+      ></path>
+    </svg>
+  </div>
+  <form action="#">
+    <p class="heading">What's your gender?</p>
+    <div class="radio-wrapper">
+      <input
+        type="radio"
+        name="gender"
+        value="male"
+        id="male"
+        class="gender-radio-buttons"
+      />
+      <label for="male" class="genderlabel malebutton">
+        <svg
+          class="smallsvg malesmallsvg"
+          viewBox="0 0 50 90"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="25"
+            cy="25"
+            r="22"
+            stroke="#76E3FE"
+            stroke-width="6"
+          ></circle>
+          <path
+            d="M25 47L25 87"
+            stroke="#76E3FE"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M25 86.6958L38.6958 73"
+            stroke="#76E3FE"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M11 73L24.6958 86.6958"
+            stroke="#76E3FE"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path></svg
+        >Male
+      </label>
+
+      <input
+        type="radio"
+        name="gender"
+        value="female"
+        id="female"
+        class="gender-radio-buttons"
+      />
+      <label for="female" class="genderlabel femalebutton">
+        <svg
+          class="smallsvg"
+          viewBox="0 0 50 90"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="25"
+            cy="25"
+            r="22"
+            stroke="#F57CB3"
+            stroke-width="6"
+          ></circle>
+          <path
+            d="M25 47L25 87"
+            stroke="#F57CB3"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M12 73H38"
+            stroke="#F57CB3"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path></svg
+        >Female
+      </label>
+
+      <input
+        type="radio"
+        name="gender"
+        value="other"
+        id="other"
+        class="gender-radio-buttons"
+      />
+      <label for="other" class="genderlabel otherbutton">
+        <svg
+          class="smallsvg other-gender"
+          viewBox="0 0 78 75"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M73.4657 16.6983L48.2159 16.6984L19.9816 58.0001L2.99911 58"
+            stroke="#9B4AED"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M73.1641 16.698L59.4705 2.99992"
+            stroke="#9B4AED"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M59.4648 30.696L73.1629 17.0024"
+            stroke="#9B4AED"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M74.022 57.8121L51.1697 57.8121L19.9997 16.9999L3 17"
+            stroke="#9B4AED"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M73.748 57.8123L61.3547 71.51"
+            stroke="#9B4AED"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M61.3496 43.8147L73.747 57.5079"
+            stroke="#9B4AED"
+            stroke-width="6"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+
+        Other
+      </label>
+    </div>
+  </form>
+</div>
+
+<style>
+/* From Uiverse.io by vinodjangid07  - Website: https://www.patreon.com/posts/animated-gender-78055964?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_fan&utm_content=join_link - Name: Online Tutorials - Tags: form, card, hover, radio, gender, buttons */
+.gender-card {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 25px;
+}
+.large-svg-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+}
+.largemalesvg {
+  transform: rotate(180deg);
+}
+.heading {
+  color: #f2f2f2;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+}
+.gender-radio-buttons {
+  display: none;
+}
+.smallsvg {
+  width: 10px;
+}
+.other-gender {
+  width: 15px;
+}
+.malesmallsvg {
+  transform: rotate(225deg);
+}
+.genderlabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(46, 46, 46);
+  border-radius: 5px;
+  padding: 8px 16px;
+  gap: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+.femalebutton:hover {
+  background-color: rgb(255, 158, 174);
+}
+.malebutton:hover {
+  background-color: #569fcf;
+}
+.otherbutton:hover {
+  background-color: #4d227a;
+}
+
+</style>
+    
