@@ -1,0 +1,39 @@
+<button class="btn">Hover Me</button>
+
+<style>
+/* From Uiverse.io by SujitAdroja  - Tags: simple, material design, button, hover effect, hoverme, hover button, button hover effect , button hover */
+.btn {
+  position: relative;
+  background: none;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.btn::before {
+  content: "";
+  height: 0%;
+  width: 0%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  position: absolute;
+  background-color: #494958;
+  transition: all 0.3s;
+}
+.btn:hover {
+  border: 2px solid #32323c;
+  color: white;
+}
+.btn:hover::before {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+</style>
+    
