@@ -1,0 +1,63 @@
+<button class="button">Button</button>
+
+<style>
+/* From Uiverse.io by Dashrath-Sharma  - Tags: glassmorphism, flashy, button, shadow, glow, border, box-shadow, buttons */
+button {
+  cursor: pointer;
+  padding: 1em 2em;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  background: rgba(60, 73, 203, 0.35);
+  box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(14.5px);
+}
+
+button:hover {
+  box-shadow: 0px 0 32px 0 rgba(31, 38, 135, 0.37),
+    0px 0 32px 0 rgba(31, 38, 135, 0.37), 0 0 42px 0px rgba(31, 38, 135, 0.37),
+    0 0 52px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+}
+
+button,
+button::before {
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+button::before {
+  content: "Button";
+  position: absolute;
+  background: blue;
+  width: 90%;
+  height: 80%;
+  background: rgba(26, 18, 241, 0.25);
+  backdrop-filter: blur(18.5px);
+  -webkit-backdrop-filter: blur(18.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.4s;
+}
+
+button:hover::before {
+  background: rgba(51, 57, 236, 0.4);
+  box-shadow: 1px 1px 2px 0 rgba(31, 38, 135, 0.37),
+    2px 2px 2px 0 rgba(31, 38, 135, 0.37), 0 0px 32px 0 rgba(31, 38, 135, 0.37),
+    0 0px 32px 1px rgba(31, 38, 135, 0.37), 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+button:active::before {
+  transform: scale(0.67);
+}
+
+</style>
+    
