@@ -1,0 +1,41 @@
+<div class="container"></div>
+
+<style>
+/* From Uiverse.io by mRcOol7  - Tags: pink, black, pattern */
+.container {
+  width: 100%;
+  height: 100%;
+  --s: 150px;
+  --c1: #282c34;
+  --c2: #3e4149;
+  --c3: #525762;
+  --c4: #ff6384;
+  --c5: #36a2eb;
+  --c6: #4bc0c0;
+  --c7: #ffcc29;
+  --c8: #8e8f91;
+  --c9: #626262;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 45deg,
+      var(--c2) 0 90deg,
+      var(--c3) 0 135deg,
+      var(--c4) 0 180deg,
+      var(--c5) 0 225deg,
+      var(--c6) 0 270deg,
+      var(--c7) 0 315deg,
+      var(--c8) 0 360deg,
+      var(--c9) 0 405deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+</style>
+    
