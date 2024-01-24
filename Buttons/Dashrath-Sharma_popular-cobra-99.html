@@ -3,8 +3,9 @@
   <span></span>
   <span></span>
 </button>
+
 <style>
-/* From Uiverse.io by Dashrath-Sharma - Tags: button, active, animated, border, btn, advanced, cool btn, transparent */
+/* From Uiverse.io by Dashrath-Sharma  - Tags: button, active, animated, border, btn, advanced, cool btn, transparent */
 .button {
   position: relative;
   font-size: 17px;
@@ -13,21 +14,27 @@
   padding: 1em 2em;
   border: none;
   background: none;
+  clip-path: polygon(0 0, 67% 0, 100% 100%, 33% 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  text-shadow: 1px 1px 20px #e0aaff;
+  text-shadow: 1px 1px 20px #e0aaff, 1px 1px 60px #e0aaff;
+  transition: 0.3s;
+}
+
+button:active {
+  transform: scale(0.89);
 }
 
 .button::before,
 .button::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
   background: #c77dff;
-  transition: width .3s .6s;
+  transition: width 0.3s 0.6s;
 }
 
 .button::before {
@@ -52,7 +59,7 @@
   width: 0;
   height: 2px;
   background: #c77dff;
-  transition: width .3s, transform .3s .3s;
+  transition: width 0.3s, transform 0.3s 0.3s;
   transform: rotate(22.3deg);
 }
 
@@ -72,4 +79,6 @@
   width: 55%;
   transform: rotate(50deg);
 }
+
 </style>
+    
