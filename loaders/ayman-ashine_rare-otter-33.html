@@ -1,0 +1,81 @@
+<div class="loader">
+  <div class="layer">loading</div>
+  <div class="layer">loading</div>
+</div>
+
+<style>
+/* From Uiverse.io by ayman-ashine  - Tags: loader, animated, multicolor */
+.loader {
+  --c-1: #a2ff37;
+  --c-2: #5bb2ff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: kfs-loader 5s infinite ease-in-out;
+}
+
+@keyframes kfs-loader {
+  0% {
+    transform: rotate(5deg) translate(-20px);
+  }
+  50% {
+    transform: rotate(-5deg) translate(20px);
+  }
+  100% {
+    transform: rotate(5deg) translate(-20px);
+  }
+}
+
+.layer {
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: absolute;
+}
+
+.layer:nth-child(1) {
+  color: var(--c-1);
+  animation: kfs-layer-1 1s infinite ease-in-out;
+}
+
+.layer:nth-child(2) {
+  color: var(--c-2);
+  animation: kfs-layer-2 1s 0.5s infinite ease-in-out;
+}
+
+@keyframes kfs-layer-1 {
+  0% {
+    text-shadow: 0 0 30px var(--c-1);
+    transform: scaleY(0);
+    z-index: 2;
+  }
+  50% {
+    transform: scaleY(1.5);
+    z-index: 2;
+  }
+  100% {
+    transform: scaleY(1.5);
+    z-index: 0;
+  }
+}
+
+@keyframes kfs-layer-2 {
+  0% {
+    text-shadow: 0 0 30px var(--c-2);
+    transform: scaleY(0);
+    z-index: 2;
+  }
+  50% {
+    transform: scaleY(1.5);
+    z-index: 2;
+  }
+  100% {
+    transform: scaleY(1.5);
+    z-index: 0;
+  }
+}
+
+</style>
+    
