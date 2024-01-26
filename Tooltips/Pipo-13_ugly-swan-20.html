@@ -1,0 +1,75 @@
+<div class="tooltip-container">
+  <span class="tooltip">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="80"
+      zoomAndPan="magnify"
+      viewBox="0 0 60 44.999999"
+      height="60"
+      preserveAspectRatio="xMidYMid meet"
+      version="1.0"
+    >
+      <defs>
+        <clipPath id="e2947948d6">
+          <path
+            d="M 2.25 6.75 L 57.75 6.75 C 58.992188 6.75 60 7.757812 60 9 L 60 42.75 C 60 43.992188 58.992188 45 57.75 45 L 2.25 45 C 1.007812 45 0 43.992188 0 42.75 L 0 9 C 0 7.757812 1.007812 6.75 2.25 6.75 Z M 2.25 6.75"
+            clip-rule="nonzero"
+          ></path>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#e2947948d6)">
+        <path
+          fill="#ff914d"
+          d="M 0 6.75 L 60.0625 6.75 L 60.0625 45 L 0 45 Z M 0 6.75"
+          fill-opacity="1"
+          fill-rule="nonzero"
+        ></path>
+        <text x="15" y="30" fill="white" style="font-size:12px">hello</text>
+      </g>
+      <path
+        fill="#ff914d"
+        d="M 38.988281 12.292969 C 38.988281 11.898438 38.820312 11.449219 38.496094 10.988281 L 31.664062 0.996094 C 31.226562 0.351562 30.625 0 29.992188 0 C 29.363281 0 28.757812 0.351562 28.324219 0.996094 L 21.488281 10.972656 C 21.167969 11.4375 21.011719 11.898438 21.011719 12.292969 C 21.011719 13.035156 21.613281 13.5 22.613281 13.5 L 37.386719 13.5 C 38.386719 13.5 38.988281 13.035156 38.988281 12.292969 Z M 38.988281 12.292969"
+        fill-opacity="1"
+        fill-rule="nonzero"
+      ></path>
+    </svg>
+  </span>
+  <span class="text">Tooltip</span>
+</div>
+
+<style>
+/* From Uiverse.io by Pipo-13  - Tags: simple, tooltip, svg */
+.tooltip-container {
+  --background: #d87639;
+  position: relative;
+  background: var(--background);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  padding: 0.7em 1.8em;
+  border-radius: 0.2rem;
+}
+
+.tooltip {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(90deg);
+  padding: 0.6em;
+  opacity: 0.6;
+  transition: all 0.5s ease;
+  background: transparent;
+  height: 0px;
+  cursor: default;
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  background: none;
+  transform: translateX(-50%) rotateX(0deg);
+}
+
+</style>
+    
