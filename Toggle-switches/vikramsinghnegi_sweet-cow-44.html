@@ -1,0 +1,248 @@
+<div class="checkbox-wrap">
+  <input name="slide" id="slide" type="checkbox" />
+  <label for="slide">
+    <div id="pinkliquid">
+      <div id="shine-one" class="shine"></div>
+      <div id="shine-two" class="shine"></div>
+      <div id="bubbles"></div>
+    </div>
+    <div id="circle">
+      <div id="inner-circle"></div>
+      <div id="inner-circle-two"></div>
+    </div>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by vikramsinghnegi  - Tags: loading, active, switch, 2d button */
+.checkbox-wrap {
+  display: block;
+  width: 106px;
+  height: 51px;
+  position: relative;
+  margin: 1px auto;
+}
+#slide {
+  display: block;
+  width: 106px;
+  height: 51px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+#slide + label {
+  display: block;
+  width: 105px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 1;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+#pinkliquid {
+  width: 88px;
+  height: 36px;
+  border-radius: 18px;
+  margin: 7px 0 0 9px;
+  overflow: hidden;
+  background: #b4264a;
+  background: linear-gradient(to bottom, #fe0744 0%, #ff0460 50%, #ff0082 100%);
+  box-shadow: 0px 0px 9px 0px #ff1e00;
+}
+.shine {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.23);
+  margin: 6px 0 4px 0;
+  transition: all 300ms ease;
+}
+.shine#shine-one {
+  height: 12px;
+}
+.shine#shine-two {
+  height: 3px;
+}
+#bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+#bubbles i {
+  display: block;
+  border-radius: 20px;
+  background: #3a3236;
+  position: absolute;
+  transition: all 600ms ease;
+}
+i#a {
+  width: 4px;
+  height: 4px;
+  top: 35px;
+  left: 19px;
+}
+i#b {
+  width: 5px;
+  height: 5px;
+  top: 24px;
+  left: 30px;
+}
+i#c {
+  width: 3px;
+  height: 3px;
+  top: 15px;
+  left: 26px;
+}
+i#d {
+  width: 6px;
+  height: 6px;
+  top: 20px;
+  left: 40px;
+}
+i#e {
+  width: 5px;
+  height: 5px;
+  top: 30px;
+  left: 33px;
+}
+i#f {
+  width: 5px;
+  height: 5px;
+  top: 30px;
+  right: 33px;
+}
+i#g {
+  width: 6px;
+  height: 6px;
+  top: 20px;
+  right: 40px;
+}
+i#h {
+  width: 3px;
+  height: 3px;
+  top: 15px;
+  right: 26px;
+}
+i#i {
+  width: 4px;
+  height: 4px;
+  top: 35px;
+  right: 19px;
+}
+i#j {
+  width: 5px;
+  height: 5px;
+  top: 24px;
+  right: 30px;
+}
+#circle {
+  width: 37px;
+  height: 37px;
+  border-radius: 19px;
+  background: #191919;
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  border-right: 1px solid #e3006f;
+  box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, 0.24),
+    0px 3px 4px 0px #000000;
+  transition: all 300ms ease;
+}
+#inner-circle {
+  width: 31px;
+  height: 31px;
+  margin: 3px;
+  border-radius: 16px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 1, 122, 0.2) 100%
+  );
+}
+#slide:checked + label #circle {
+  left: 60px;
+  border-right: 1px solid transparent;
+  border-left: 1px solid #e3006f;
+  background-color: #c27098;
+}
+#slide:checked + label #inner-circle {
+  background: linear-gradient(
+    to right,
+    rgba(255, 1, 122, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#slide:checked + label i#a {
+  width: 4px;
+  height: 4px;
+  top: 26px;
+  left: 19px;
+}
+#slide:checked + label i#b {
+  width: 5px;
+  height: 5px;
+  top: 24px;
+  left: 30px;
+}
+#slide:checked + label i#c {
+  width: 3px;
+  height: 3px;
+  top: 24px;
+  left: 26px;
+}
+#slide:checked + label i#d {
+  width: 6px;
+  height: 6px;
+  top: 29px;
+  left: 40px;
+}
+#slide:checked + label i#e {
+  width: 5px;
+  height: 5px;
+  top: 21px;
+  left: 33px;
+}
+#slide:checked + label i#f {
+  width: 5px;
+  height: 5px;
+  top: 26px;
+  right: 33px;
+}
+#slide:checked + label i#g {
+  width: 6px;
+  height: 6px;
+  top: 28px;
+  right: 40px;
+}
+#slide:checked + label i#h {
+  width: 3px;
+  height: 3px;
+  top: 23px;
+  right: 26px;
+}
+#slide:checked + label i#i {
+  width: 4px;
+  height: 4px;
+  top: 25px;
+  right: 19px;
+}
+#slide:checked + label i#j {
+  width: 5px;
+  height: 5px;
+  top: 30px;
+  right: 30px;
+}
+#slide:checked + label .shine#shine-one {
+  height: 12px;
+  margin-top: 12px;
+}
+#slide:checked + label .shine#shine-two {
+  height: 3px;
+  margin-top: -20px;
+}
+
+</style>
+    
