@@ -1,0 +1,116 @@
+<div class="card">
+  <div class="bar"></div>
+  <div class="card_form"></div>
+  <div class="card_data">
+    <div class="data">
+      <div class="text">
+        <label class="text_m">Main Title</label>
+        <div class="cube text_s">
+          <label class="side front">Access the list (Topic)</label>
+          <label class="side top">Username-id</label>
+        </div>
+        <label class="text_d"
+          >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Unum nescio,
+          quo modo possit, si luxuriosus sit, finitas cupiditates habere.
+        </label>
+      </div>
+    </div>
+    <span title="Acceder a la lista (Temas)">Access</span>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Cobp  - Tags: material design, animation, card, modern */
+.card {
+  position: relative;
+  display: flex;
+  width: 350px;
+  background-color: #242824;
+  padding: 10px;
+  border-radius: 6px;
+  gap: 0.5rem;
+  height: max-content;
+}
+.bar {
+  width: 10px;
+  border-radius: 5px;
+  background-color: #9147ff;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover .bar {
+  margin-right: 5px;
+}
+.card_form {
+  position: relative;
+  min-width: 5em;
+  min-height: 5em;
+  border-radius: 4px;
+  background-color: #9147ff;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+.card_data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card_data span {
+  color: #9147ff;
+  margin-top: auto;
+  font-size: 0.9em;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.card_data span:hover {
+  color: #28aea5;
+  text-decoration: underline;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0.5em;
+  color: white;
+}
+.text_m {
+  font-size: 0.9em;
+}
+.text_s {
+  color: #9147ff;
+  font-size: 0.6em;
+}
+.text_d {
+  font-size: 0.7em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.cube {
+  width: max-content;
+  height: 10px;
+  transition: all 0.2s;
+  transform-style: preserve-3d;
+}
+.card:hover .cube {
+  transform: rotateX(90deg);
+}
+.side {
+  width: max-content;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+.top {
+  transform: rotateX(-90deg) translate3d(0, 0, 0em);
+}
+.front {
+  transform: translate3d(0, 0, 1em);
+}
+
+</style>
+    
