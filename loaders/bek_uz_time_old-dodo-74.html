@@ -1,0 +1,81 @@
+<div class="loader">
+  <span></span>
+</div>
+
+<style>
+/* From Uiverse.io by bek_uz_time  - Tags: red, loader, css */
+.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 30%;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 1.55);
+  border: 1px solid #ecc904;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  background: transparent;
+  border: 1px dashed #b0a1a1;
+  border-radius: 30%;
+  box-shadow: inset -5px -5px 25px rgba(0, 10, 10, 15),
+    inset 5px 5px 35px rgba(10, 0, 10, 2);
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  border: 1px dashed #d6d3d3;
+  box-shadow: inset -5px -5px 25px rgba(10, 10, 10, 2.25),
+    inset 5px 5px 35px rgba(10, 10, 10, 10.45);
+}
+
+.loader span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top left;
+  animation: radar81 1s linear infinite;
+  border-top: 1px dashed #c1bdbd;
+}
+
+.loader span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f20303;
+  /* pink */
+  transform-origin: top left;
+  transform: rotate(-55deg);
+  filter: blur(30px) drop-shadow(20px 20px 20px #ff0241);
+  /* pink */
+}
+
+@keyframes radar81 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+    
