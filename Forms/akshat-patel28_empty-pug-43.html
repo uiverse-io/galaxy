@@ -1,0 +1,180 @@
+<div class="form-container">
+  <form class="form">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="lock-icon"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="0"
+      fill="currentColor"
+      stroke="currentColor"
+    >
+      <path
+        d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7zm4 10.723V20h-2v-2.277a1.993 1.993 0 0 1 .567-3.677A2.001 2.001 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723z"
+      ></path>
+    </svg>
+    <input class="toggle-input" id="toggle-checkbox" type="checkbox" />
+    <p class="form-title">Welcome back</p>
+    <p class="form-sub-title">
+      Glad to see you again Login to your account below.
+    </p>
+    <div class="login-card">
+      <div class="field-container">
+        <input placeholder="" class="input" type="email" />
+        <span class="placeholder">Email</span>
+      </div>
+      <button class="btn" type="button">
+        <label class="btn-label" for="toggle-checkbox">Continue</label>
+      </button>
+    </div>
+    <div class="password-card">
+      <div class="field-container">
+        <input placeholder="" class="input" type="password" />
+        <span class="placeholder">Password</span>
+      </div>
+      <button class="btn" type="button">
+        <label class="btn-label" for="toggle-checkbox">Login</label>
+      </button>
+    </div>
+  </form>
+</div>
+
+<style>
+/* From Uiverse.io by akshat-patel28  - Tags: form, transition, login , html, css, login form, css effect, input effect  */
+.form-container {
+  width: 400px;
+  height: 254px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.lock-icon {
+  font-size: 20px;
+  color: #0e2954;
+}
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 20px 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  color: #0e2954;
+  position: relative;
+}
+.toggle-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.form-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.form-sub-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.login-card,
+.password-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 25px;
+  gap: 20px;
+  align-items: flex-end;
+  position: absolute;
+  width: calc(100% - 30px);
+  transition: all 0.3s ease-in-out;
+  bottom: 20px;
+}
+.login-card {
+  left: 15px;
+}
+.password-card {
+  left: 100%;
+}
+.field-container {
+  border: 1px solid #a7a7a7;
+  border-radius: 8px;
+  width: 100%;
+  height: 45px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: relative;
+  z-index: 11;
+}
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #a7a7a7;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  top: 5px;
+  transform: none;
+  font-size: 12px;
+}
+.input:focus,
+.input:not(:placeholder-shown) {
+  height: 68%;
+}
+.btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  background: #0e2954;
+  border: none;
+  outline: none;
+}
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.toggle-input:checked ~ .login-card {
+  left: -100%;
+}
+.toggle-input:checked ~ .password-card {
+  left: 15px;
+}
+
+</style>
+    
