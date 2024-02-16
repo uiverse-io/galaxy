@@ -1,0 +1,204 @@
+<div class="radio-input">
+  <div class="radio-input-path">
+    <div class="radioContainer1 radioContainer">
+      <label class="label1" for="value-1">1</label>
+      <input
+        class="radio1"
+        value="value-1"
+        name="value-radio"
+        id="value-1"
+        type="radio"
+      />
+    </div>
+    <div class="radioContainer radioContainer2">
+      <label class="label2" for="value-2">2</label>
+      <input
+        class="radio2"
+        value="value-2"
+        name="value-radio"
+        id="value-2"
+        type="radio"
+      />
+    </div>
+    <div class="radioContainer radioContainer3">
+      <label class="label3" for="value-3">3</label>
+      <input
+        class="radio3"
+        value="value-3"
+        name="value-radio"
+        id="value-3"
+        type="radio"
+      />
+    </div>
+    <div class="radioContainer radioContainer4">
+      <label class="label4" for="value-4">4</label>
+      <input
+        class="radio4"
+        value="value-4"
+        name="value-radio"
+        id="value-4"
+        type="radio"
+      />
+    </div>
+    <div class="radioContainer radioContainer5">
+      <label class="label5" for="value-5">5</label>
+      <input
+        class="radio5"
+        value="value-5"
+        name="value-radio"
+        id="value-5"
+        type="radio"
+      />
+    </div>
+  </div>
+  <div class="knob">
+    <div class="center"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Subaashbala  - Tags: skeuomorphism, realistic, radio, rotate, click effect */
+.radio-input {
+  position: relative;
+}
+.radio-input-path {
+  position: relative;
+  width: 20em; /* width of the container holding the radiobutton and the label */
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.radioContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+.radioContainer label {
+  font-size: 0.85em;
+  font-weight: 900;
+  cursor: pointer;
+}
+.radio-input-path input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: #000;
+  transform-origin: bottom center;
+  outline: none;
+}
+.radioContainer1 {
+  left: 0;
+  top: 25%;
+  transform: rotateZ(-45deg);
+}
+.radioContainer5 {
+  right: 0;
+  top: 25%;
+  transform: rotateZ(45deg);
+}
+.radioContainer2 {
+  left: 15%;
+  top: 5%;
+  transform: rotateZ(-25deg);
+}
+.radioContainer4 {
+  right: 15%;
+  top: 5%;
+  transform: rotateZ(25deg);
+}
+.radioContainer3 {
+  left: 44%;
+  top: -5%;
+  transform: rotateZ(0deg);
+}
+
+/* The circular thing that rotates */
+.knob {
+  width: 13em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 25%;
+  left: 50%;
+  position: absolute;
+  border: 3px solid black;
+  outline: 3px solid gray;
+  background: #cfc9bd;
+  overflow: hidden;
+  transform: translateX(-50%);
+  transform-origin: center center;
+  transition: transform 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.center {
+  height: 100%;
+  width: 2.25em;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  background-color: #cfc9bd;
+  border-radius: 7px;
+  outline: 1px solid rgba(255, 255, 255, 0.377);
+  transform: translate(-50%, -50%);
+  box-shadow: 15px 0px 35px rgba(255, 255, 255, 0.474),
+    -15px 0px 40px 5px rgba(128, 128, 128, 0.563),
+    inset 0px 0px 4px 0px rgba(255, 255, 255, 0.226);
+  transition: box-shadow 100ms linear;
+}
+.center::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 25px;
+  background-color: black;
+  left: 50%;
+  top: 1%;
+  transform: translateX(-50%);
+}
+
+/* Adjust rotateZ if the knob rotation is away from the label */
+.radio-input-path:has(.radio1:checked) ~ .knob {
+  transform: translateX(-50%) rotateZ(-60deg);
+}
+.radio-input-path:has(.radio2:checked) ~ .knob {
+  transform: translateX(-50%) rotateZ(-35deg);
+}
+.radio-input-path:has(.radio3:checked) ~ .knob {
+  transform: translateX(-50%) rotateZ(0deg);
+}
+.radio-input-path:has(.radio4:checked) ~ .knob {
+  transform: translateX(-50%) rotateZ(35deg);
+}
+.radio-input-path:has(.radio5:checked) ~ .knob {
+  transform: translateX(-50%) rotateZ(60deg);
+}
+
+/* Dynamic shadow adustment based on the knob position */
+.radio-input-path:has(.radio1:checked) ~ .knob > .center {
+  box-shadow: 15px 0px 35px rgba(255, 255, 255, 0.74),
+    -15px 0px 40px 5px rgb(128, 128, 128),
+    inset 0px 0px 4px 0px rgba(255, 255, 255, 0.226);
+}
+.radio-input-path:has(.radio2:checked) ~ .knob > .center {
+  box-shadow: 15px 0px 35px rgba(255, 255, 255, 0.74),
+    -15px 0px 40px 5px rgb(128, 128, 128, 0.574),
+    inset 0px 0px 4px 0px rgba(255, 255, 255, 0.226);
+}
+.radio-input-path:has(.radio4:checked) ~ .knob > .center {
+  box-shadow: 15px 0px 35px rgba(128, 128, 128, 0.63),
+    -15px 0px 40px 5px rgba(255, 255, 255, 0.574),
+    inset 0px 0px 4px 0px rgba(255, 255, 255, 0.226);
+}
+.radio-input-path:has(.radio5:checked) ~ .knob > .center {
+  box-shadow: 15px 0px 35px rgb(128, 128, 128),
+    -15px 0px 40px 5px rgba(255, 255, 255, 0.74),
+    inset 0px 0px 4px 0px rgba(255, 255, 255, 0.226);
+}
+
+</style>
+    
