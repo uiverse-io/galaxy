@@ -1,0 +1,209 @@
+<div class="container">
+  <label for="dislike">
+    <input type="radio" name="evaluation" id="dislike" />
+    <svg
+      class="icon dislike"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M20 3H6.693A2.01 2.01 0 0 0 4.82 4.298l-2.757 7.351A1 1 0 0 0 2 12v2c0 1.103.897 2 2 2h5.612L8.49 19.367a2.004 2.004 0 0 0 .274 1.802c.376.52.982.831 1.624.831H12c.297 0 .578-.132.769-.36l4.7-5.64H20c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm-8.469 17h-1.145l1.562-4.684A1 1 0 0 0 11 14H4v-1.819L6.693 5H16v9.638L11.531 20zM18 14V5h2l.001 9H18z"
+      ></path>
+    </svg>
+  </label>
+  <div class="count">
+    <div class="number">
+      <span>0</span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+    </div>
+    <div class="number">
+      <span>0</span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+    </div>
+    <div class="number">
+      <span>0</span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+    </div>
+  </div>
+  <label for="like">
+    <input type="radio" name="evaluation" id="like" checked="" />
+    <svg
+      class="icon like"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"
+      ></path>
+    </svg>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by 3bdel3ziz-T  - Tags: red, blue, social, smooth, radio, custom, click effect, click animation */
+.container {
+  --col-gray: #3f3f3f;
+  --col-white: #fff;
+  --col-like: #2196f3;
+  --col-dislike: #ff3232;
+  --transition: 350ms;
+  background-color: var(--col-gray);
+  width: 130px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px;
+  user-select: none;
+  /*you can easlly change the number by using this variabels*/
+  --zero: translateY(calc(50% - 11px));
+  --one: translateY(calc(40% - 11px));
+  --two: translateY(calc(30% - 11px));
+  --three: translateY(calc(20% - 11px));
+  --four: translateY(calc(10% - 11px));
+  --five: translateY(calc(0% - 11px));
+  --six: translateY(calc(-10% - 11px));
+  --seven: translateY(calc(-20% - 11px));
+  --eight: translateY(calc(-30% - 11px));
+  --nine: translateY(calc(-40% - 11px));
+  --ten: translateY(calc(-50% - 11px));
+}
+.container:has(#like:checked) .count {
+  border-left-color: var(--col-like);
+  border-right-color: transparent;
+}
+.container:has(#like:checked) .count .number:first-child {
+  /*change first number from here*/
+  /*when click on like*/
+  transform: var(--nine);
+}
+.container:has(#like:checked) .count .number:nth-child(2) {
+  /*change second number from here*/
+  /*when click on like*/
+  transform: var(--five);
+}
+.container:has(#like:checked) .count .number:last-child {
+  /*change third number from here*/
+  /*when click on like*/
+  transform: var(--three);
+}
+.container:has(#dislike:checked) > .count {
+  border-right-color: var(--col-dislike);
+  border-left-color: transparent;
+}
+.container:has(#dislike:checked) > .count .number:first-child {
+  /*change first number from here*/
+  /*when click on dislike*/
+  transform: var(--zero);
+}
+.container:has(#dislike:checked) > .count .number:nth-child(2) {
+  /*change second number from here*/
+  /*when click on dislike*/
+  transform: var(--zero);
+}
+.container:has(#dislike:checked) > .count .number:last-child {
+  /*change third number from here*/
+  /*when click on dislike*/
+  transform: var(--nine);
+}
+.container label input {
+  display: none;
+}
+.container #like:checked + svg {
+  animation: evaluation-animation var(--transition) ease-in-out 0s 1 normal both;
+  fill: var(--col-like);
+}
+.container #dislike:checked + svg {
+  animation: evaluation-animation var(--transition) ease-in-out 0s 1 normal both;
+  fill: var(--col-dislike);
+}
+.container .icon {
+  cursor: pointer;
+  fill: var(--col-white);
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .icon.like {
+  margin-left: 9px;
+}
+.container .icon.dislike {
+  margin-right: 9px;
+}
+.container .count {
+  transition: var(--transition);
+  flex: 1;
+  border-left: 1px solid var(--col-white);
+  border-right: 1px solid var(--col-white);
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+  margin: auto;
+  color: white;
+  font-size: 16px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  gap: 0.5px;
+  flex-direction: row;
+}
+.container .count .number {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(calc(50% - 8px));
+  transition: 1000ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.container .count .number:first-child {
+  transition-delay: 200ms;
+}
+.container .count .number:nth-child(2) {
+  transition-delay: 150ms;
+}
+.container .count .number:last-child {
+  transition-delay: 50ms;
+}
+
+@keyframes evaluation-animation {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-10deg);
+  }
+}
+
+</style>
+    
