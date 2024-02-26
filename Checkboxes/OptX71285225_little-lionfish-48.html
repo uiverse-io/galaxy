@@ -1,0 +1,82 @@
+<label class="checkbox-container">
+  <input type="checkbox" />
+  <span class="checkmark"></span>
+</label>
+
+<style>
+/* From Uiverse.io by OptX71285225  - Tags: simple, green, checkbox */
+/* Hide the default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox container */
+.checkbox-container {
+  position: relative;
+  display: inline-block;
+  font-size: 18px; /* Make the checkbox slightly bigger */
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+/* Style the checkmark */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px; /* Make the checkbox slightly bigger */
+  width: 30px; /* Make the checkbox slightly bigger */
+  border: 2px solid #ccc; /* Add border for 3D effect */
+  border-radius: 6px; /* Round the corners */
+  background-color: #fff; /* Default color */
+  transition: all 0.3s ease; /* Add smooth transition */
+}
+
+/* Show the checkmark when checkbox is checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+  animation: checkboxExpand 0.3s ease forwards;
+}
+
+/* Style the checkmark/indicator */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) rotate(45deg) scale(0); /* Center and hide initially, then scale to appear */
+  width: 8px; /* Adjust size */
+  height: 15px; /* Adjust size */
+  border: solid #fff; /* Change color of the tick to white */
+  border-width: 0 4px 4px 0; /* Adjust thickness and direction */
+}
+
+/* On hover, add a grey background color */
+.checkbox-container:hover .checkmark {
+  background-color: #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transform: scale(1.05); /* Scale up slightly */
+}
+
+/* When the checkbox is checked, add a green background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #4caf50;
+  border-color: #4caf50; /* Change border color */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow for 3D effect */
+}
+
+/* Keyframes for expanding animation */
+@keyframes checkboxExpand {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+}
+
+</style>
+    
