@@ -1,0 +1,211 @@
+<button class="container">
+  <strong>SYNTHWAVE</strong>
+  <div id="glow">
+    <div class="circle"></div>
+  </div>
+  <div class="inner-container">
+    <div class="fade"></div>
+
+    <div class="up-text">
+      <div class="crawl">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+      </div>
+    </div>
+  </div>
+</button>
+
+<style>
+/* From Uiverse.io by StealthWorm  - Tags: button, synthwave, retrowave, vaporwave */
+:root {
+  --main-color: #212121;
+  --gradient-color-1: #ffdb3b;
+  --gradient-color-2: #fe53bb;
+  --gradient-color-3: #8f51ea;
+  --text-glow-color: #ff1372;
+}
+
+.container {
+  all: unset;
+  height: 4rem;
+  width: 16rem;
+  position: relative;
+  border-radius: 20px;
+  border: double 3px transparent;
+  transition: 50ms;
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(0, #ffdb3b 0%, #fe53bb 25%, #8f51ea 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  cursor: pointer;
+}
+
+.container:hover > strong {
+  transition: 300ms;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: brightness(1.75);
+  text-shadow: 2px 0 14px #fff;
+}
+
+.inner-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 18px;
+}
+
+strong,
+strong::before {
+  transition: 300ms;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 1.6rem;
+  letter-spacing: 5px;
+  z-index: 2;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(56, 127, 224, 0.4),
+    -2px -2px 8px rgba(254, 125, 255, 0.4);
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 142, 224, 1) 0%,
+    rgba(255, 29, 193, 1) 5%,
+    rgba(198, 72, 255, 1) 30%,
+    rgba(0, 0, 0, 1) 49%,
+    rgba(255, 255, 255, 1) 52%,
+    rgba(70, 148, 255, 1) 60%,
+    rgba(21, 59, 112, 1) 69%
+  );
+}
+
+strong::before {
+  text-shadow: -6px -6px 6px var(--text-glow-color);
+}
+
+#glow {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  max-height: 4rem;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  filter: blur(1.2rem);
+  animation: pulse 2s infinite alternate;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: linear-gradient(0, #ffdb3b 0%, #fe53bb 30%, #8f51ea 80%);
+}
+
+.fade {
+  position: absolute;
+  width: 100%;
+  min-height: 10rem;
+  top: -3rem;
+  height: 10rem;
+  background-image: linear-gradient(
+    to top,
+    rgba(236, 195, 11, 0.84) 15%,
+    rgba(255, 31, 184, 0.36) 40%,
+    rgb(43, 1, 54) 65%
+  );
+  z-index: 1;
+}
+
+.up-text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  position: relative;
+  animation: crawl 20s linear infinite alternate;
+}
+
+.grid-item {
+  width: 60px;
+  height: 100%;
+  border: 1px solid #f96bcc;
+  box-shadow: 0 0 10px 4px #ff1fb8;
+}
+
+@keyframes crawl {
+  0% {
+    top: -200px;
+    transform: rotateX(30deg) translateZ(40px);
+  }
+  100% {
+    top: -510px;
+    transform: rotateX(25deg) translateZ(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  }
+}
+
+</style>
+    
