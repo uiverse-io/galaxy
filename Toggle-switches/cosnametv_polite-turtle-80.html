@@ -1,0 +1,55 @@
+<label class="switch">
+  <div class="toggle-switch">
+    <input id="switch" type="checkbox" />
+    <label for="switch"></label>
+  </div>
+</label>
+
+<style>
+/* From Uiverse.io by cosnametv  - Tags: material design, notification, switch, checkbox, download, circle, light&dark, creative */
+.toggle-switch {
+  position: relative;
+  width: 80px;
+  height: 40px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #2e2e2e, #4a4a4a);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-switch input:checked + label {
+  background: linear-gradient(to right, #66bb6a, #43a047);
+}
+
+.toggle-switch label:before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.toggle-switch input:checked + label:before {
+  transform: translateX(40px);
+  background-color: #66bb6a;
+}
+
+</style>
+    
