@@ -1,0 +1,151 @@
+<label class="switch">
+  <input role="switch" type="checkbox" class="switch__input" />
+  <span class="switch__bg"></span>
+  <span class="switch__label">Power</span>
+</label>
+
+<style>
+/* From Uiverse.io by Admin12121  - Tags: switch, toggle, toggle switch, 3d button */
+.switch,
+.switch__input {
+  --hue: 223;
+  --bg: hsl(var(--hue), 90%, 60%);
+  --fg: hsl(var(--hue), 90%, 10%);
+  --primary: hsl(var(--hue), 90%, 50%);
+  --trans-dur: 0.3s;
+  --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
+  font-size: calc(40px + (80 - 40) * (100px - 320px) / (2560 - 320));
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+.switch {
+  display: block;
+  filter: grayscale(0.9);
+  margin: auto;
+  transition: filter var(--trans-dur) var(--trans-timing);
+  width: 6em;
+  height: 2.75em;
+}
+.switch:has(:checked) {
+  filter: grayscale(0);
+}
+.switch__input {
+  cursor: pointer;
+  outline: transparent;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 2;
+}
+.switch__bg {
+  background: radial-gradient(
+    7.75em 7.75em at 50% 4.0625em,
+    hsla(var(--hue), 90%, 90%, 0) 29.9%,
+    hsl(var(--hue), 90%, 90%) 30.1% 31.9%,
+    hsl(0, 0%, 100%) 32.1% 35.2%,
+    hsl(var(--hue), 50%, 80%) 35.4% 36%,
+    hsl(var(--hue), 90%, 70%) 36.2% 41.8%,
+    hsl(var(--hue), 90%, 65%) 42% 43.6%,
+    hsl(var(--hue), 50%, 80%) 43.8% 44.4%,
+    hsl(0, 0%, 100%) 44.6% 46.6%,
+    hsl(var(--hue), 90%, 90%) 46.8% 49.3%,
+    hsl(var(--hue), 90%, 98%) 49.5% 49.8%,
+    hsla(var(--hue), 90%, 98%, 0) 49.9%
+  );
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.switch:before,
+.switch:after,
+.switch__input:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.switch:before,
+.switch:after {
+  background: radial-gradient(
+      60% 60% at 50% 50%,
+      hsla(var(--hue), 50%, 80%, 0) 34%,
+      hsl(var(--hue), 50%, 80%) 35% 40.5%,
+      hsl(0, 0%, 100%) 41.5% 49%,
+      hsla(0, 0%, 100%, 0) 50%
+    ),
+    linear-gradient(
+        hsla(var(--hue), 90%, 65%, 0) 30%,
+        hsl(var(--hue), 90%, 65%) 30% 40%,
+        hsla(var(--hue), 90%, 65%, 0) 40%
+      )
+      50% 0 / 40% 100% no-repeat,
+    radial-gradient(
+      50% 50% at 50% 50%,
+      hsl(var(--hue), 90%, 70%) 41%,
+      hsla(var(--hue), 90%, 70%, 0) 42%
+    ),
+    radial-gradient(
+      75% 75% at 50% 52.5%,
+      hsl(0, 0%, 100%) 49.8%,
+      hsla(0, 0%, 100%, 0) 50%
+    ),
+    radial-gradient(
+      112% 112% at 50% 55%,
+      hsl(var(--hue), 90%, 98%, 0) 46.8%,
+      hsl(var(--hue), 90%, 98%) 47% 49.8%,
+      hsla(var(--hue), 90%, 98%, 0) 50%
+    ),
+    radial-gradient(
+      100% 100% at 50% 50%,
+      hsl(var(--hue), 90%, 90%) 49.8%,
+      hsla(var(--hue), 90%, 90%, 0) 50%
+    );
+  border-radius: 50%;
+  top: auto;
+  bottom: 0.0625em;
+  width: 1.5625em;
+  height: 1.5625em;
+}
+.switch:before {
+  transform: rotate(-45deg);
+}
+.switch:after {
+  right: 0;
+  left: auto;
+  transform: rotate(45deg);
+}
+.switch__input:before {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.5em hsla(var(--hue), 90%, 40%, 0),
+    0 0.25em 0.5em 0.125em hsl(var(--hue), 90%, 50%);
+  top: 3.5em;
+  left: calc(50% - 0.625em);
+  width: 1.25em;
+  height: 1.25em;
+  transform: rotate(-45deg) translateY(-3.125em) rotate(45deg);
+  transition: background-color var(--trans-dur) var(--trans-timing),
+    box-shadow 0.15s var(--trans-timing),
+    transform var(--trans-dur) var(--trans-timing);
+}
+.switch__input:checked:before {
+  background-color: hsl(var(--hue), 90%, 70%);
+  transform: rotate(45deg) translateY(-3.125em) rotate(-45deg);
+}
+.switch__input:focus-visible:before {
+  box-shadow: 0 0 0 0.5em hsla(var(--hue), 90%, 40%, 0.5),
+    0 0.25em 0.5em 0.125em hsl(var(--hue), 90%, 50%);
+}
+.switch__label {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+
+</style>
+    
