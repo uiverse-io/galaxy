@@ -1,0 +1,103 @@
+<div class="loader">
+  <div class="clockLoader">
+    <div class="clockHand minuteHand"></div>
+    <div class="clockHand hourHand"></div>
+  </div>
+  <div class="decorativeElementContainer">
+    <div class="decorativeElement decorativeElement1"></div>
+    <div class="decorativeElement decorativeElement2"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Subaashbala  - Tags: glassmorphism, animation, loader, circle loader, box-shadow, loading animation */
+.loader {
+  position: relative;
+  --duration: 1500ms; /* minute hand's rotation time duration */
+}
+.clockLoader {
+  width: 15em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.25em solid black;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.171);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  animation: floatEffect 15s linear infinite alternate;
+}
+.clockLoader::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -65%);
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: black;
+}
+.clockHand {
+  position: absolute;
+  background-color: black;
+  border-radius: 5em;
+  width: 0.25em;
+  transform-origin: bottom;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+}
+.hourHand {
+  height: 20%;
+  animation: rotateHand calc(12 * var(--duration)) linear infinite;
+}
+.minuteHand {
+  height: 30%;
+  animation: rotateHand var(--duration) linear infinite;
+}
+.decorativeElementContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: rotate calc(50 * var(--duration)) linear infinite;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+.decorativeElement {
+  position: relative;
+  width: 7em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  z-index: -1;
+}
+.decorativeElement1 {
+  left: 50% !important;
+  background: orangered;
+  animation: floatEffect 16ss linear infinite;
+}
+.decorativeElement2 {
+  right: 55%;
+  background: hotpink;
+}
+@keyframes rotateHand {
+  to {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+@keyframes floatEffect {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(0, 2em);
+  }
+}
+
+</style>
+    
