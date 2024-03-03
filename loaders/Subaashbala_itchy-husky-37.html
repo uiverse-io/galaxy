@@ -1,0 +1,61 @@
+<div class="loader">
+  <div class="shape">
+    <div class="numRowContainer">
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+      <div class="numRow">0 1 0 1 1 0 0 1</div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Subaashbala  - Tags: animation, minimalist, loader, rotate, loading animation */
+.shape {
+  --BG-COLOR: #59d5e0;
+  --OUTLINE-COLOR: #068b97;
+  --OUTLINE-SIZE: 15px;
+  width: 7rem;
+  aspect-ratio: 1;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  outline: var(--OUTLINE-SIZE) solid var(--OUTLINE-COLOR);
+  background: var(--BG-COLOR);
+  box-shadow: 0px 0px calc(var(--OUTLINE-SIZE) + 25px) rgba(0, 0, 0, 0.438);
+  animation: morph 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+.numRowContainer {
+  height: fit-content;
+  animation: infiniteScroll 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+@keyframes infiniteScroll {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -50%);
+  }
+}
+@keyframes morph {
+  50% {
+    --BG-COLOR: PINK;
+    --OUTLINE-COLOR: #ff407d;
+    transform: rotate(150deg);
+    border-radius: 20%;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+    
