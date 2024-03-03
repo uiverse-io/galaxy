@@ -1,0 +1,89 @@
+<form class="form">
+  <span class="heading">Sign In</span>
+
+  <span class="Mail">E-Mail</span>
+  <input placeholder="Enter E-Mail" type="text" class="input" />
+  <span class="Password">Password</span>
+  <input placeholder="Enter Password" type="text" class="input" />
+  <span class="forgot"><a href="">forgot password?</a></span>
+  <button>Submit</button>
+</form>
+
+<style>
+/* From Uiverse.io by vishal2231179  - Tags:  */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(241, 241, 130);
+  padding: 60px;
+  padding-inline: 28px;
+  border-radius: 20px;
+  box-shadow: 4px 4px rgb(0, 2, 65);
+  font-family: cursive;
+}
+
+.heading {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-family: cursive;
+}
+
+.form button {
+  /* align-self: flex-end; */
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: rgb(241, 241, 130);
+  box-shadow: 2px 3px rgb(0, 2, 65);
+
+  color: rgb(0, 0, 0);
+  font-size: medium;
+  font-weight: 600;
+  transition: 400ms;
+  font-family: cursive;
+}
+
+.form button:hover {
+  background-color: rgb(235, 255, 59);
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.input {
+  padding: 10px;
+  width: 280px;
+  border-radius: 10px;
+  border-style: double;
+  border-color: black;
+  font-size: 15px;
+  box-shadow: 2px 3px rgb(0, 2, 65);
+
+  font-family: cursive;
+}
+
+.forgot,
+a {
+  padding-top: 10px;
+  /* font-weight: 600; */
+  color: rgba(0, 0, 0, 0.994);
+  font-family: cursive;
+  text-decoration: none;
+  transition: 400ms;
+}
+.forgot,
+a:hover {
+  color: rgba(0, 0, 0, 0.703);
+  transition: 400ms;
+}
+
+.Mail,
+.Password {
+  font-size: 16px;
+  /* font-weight: 600; */
+  font-family: cursive;
+}
+
+</style>
+    
