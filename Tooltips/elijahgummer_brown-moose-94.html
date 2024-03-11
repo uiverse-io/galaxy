@@ -1,0 +1,59 @@
+<div class="tooltip-container">
+  <span class="tooltip">8 contributions on March 8th.</span>
+  <span class="text"></span>
+</div>
+
+<style>
+/* From Uiverse.io by elijahgummer  - Tags: simple, tooltip, green, minimalist, github, clean, transition, hover effect */
+.tooltip-container {
+  --background-tooltip-container: #2ea44f; /* GitHub green color */
+  position: relative;
+  background: var(--background-tooltip-container);
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 16px;
+  height: 16px;
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+.tooltip {
+  --background-tooltip: #6e7681; /* Default background color for tooltip */
+  position: absolute;
+  top: -39px; /* Adjusted top position */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  background: var(--background-tooltip);
+  color: white; /* Text color */
+  border-radius: 5px;
+  width: 210px;
+  height: 30px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  background: var(
+    --background-tooltip
+  ); /* Use the same background color as the tooltip */
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+</style>
+    
