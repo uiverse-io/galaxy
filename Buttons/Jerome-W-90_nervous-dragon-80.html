@@ -1,0 +1,142 @@
+<div class="box">
+  <div class="container">
+    <button class="button"><span>A</span></button>
+    <button class="button"><span>B</span></button>
+    <button class="button"><span>C</span></button>
+    <button class="button"><span>D</span></button>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Jerome-W-90  - Website: https://codepen.io/pfndesign/pen/KKYPqMz - Name: pfndesign - Tags: 3d, button, realistic, 3d button */
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) skew(15deg);
+  width: 250px;
+  height: 250px;
+}
+.box .container {
+  width: 250px;
+  height: 250px;
+  background: #2f0000;
+  border-radius: 15px;
+  border: 10px solid #cbcdcd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5px;
+}
+.box .container .button {
+  position: relative;
+  flex-basis: calc(50% - 0.5px);
+  background: #ca0a0b;
+  border: 0;
+  font-size: 35px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.box .container .button::before {
+  content: "";
+  position: absolute;
+  width: 94px;
+  height: 94px;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(229, 136, 137);
+  background: linear-gradient(
+    133deg,
+    rgba(229, 136, 137, 1) 0%,
+    rgba(229, 136, 137, 1) 15%,
+    rgba(209, 13, 12, 1) 20%,
+    rgba(209, 13, 12, 1) 65%,
+    rgba(97, 4, 3, 1) 100%
+  );
+}
+.box .container .button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background: rgb(80, 8, 8);
+  background: linear-gradient(
+    90deg,
+    #4c0405 1%,
+    rgb(202, 10, 11) 5%,
+    rgb(199, 39, 39) 45%,
+    #d88180 100%
+  );
+  left: 0;
+  bottom: 0;
+  transform: skewY(0deg) skewX(-40deg);
+  z-index: -4;
+  transition: all 0.5s ease;
+}
+.box .container .button:hover::after {
+  height: 13px;
+  bottom: -12px;
+  left: -7px;
+}
+.box .container .button span {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.box .container .button:hover {
+  transform: translate(12px, -12px);
+  box-shadow: -30px 10px 26px -5px black, -12px 12px 0 0 #ca0a0b,
+    -11px 11px 0 0 #ca0a0b, -10px 10px 0 0 #ca0a0b, -9px 9px 0 0 #ca0a0b,
+    -8px 8px 0 0 #ca0a0b, -7px 7px 0 0 #ca0a0b, -6px 6px 0 0 #ca0a0b,
+    -5px 5px 0 0 #ca0a0b, -4px 4px 0 0 #ca0a0b, -3px 3px 0 0 #ca0a0b,
+    -2px 2px 0 0 #ca0a0b, -1px 1px 0 0 #ca0a0b;
+  z-index: 999;
+}
+.box::before {
+  content: "";
+  width: calc(100% + 25px);
+  height: calc(100% + 10px);
+  position: absolute;
+  left: -25px;
+  top: 35px;
+  background: rgb(100, 104, 106);
+  background: linear-gradient(
+    135deg,
+    rgba(100, 104, 106, 1) 0%,
+    rgba(100, 104, 106, 1) 45%,
+    rgba(222, 221, 221, 1) 55%,
+    rgba(222, 221, 221, 1) 100%
+  );
+  z-index: -1;
+  border-radius: 15px;
+}
+.box::after {
+  content: "";
+  width: 30px;
+  height: 45px;
+  position: absolute;
+  left: -14px;
+  top: 12px;
+  background: rgba(100, 104, 106, 1);
+  z-index: -1;
+  transform: rotate(215deg);
+}
+.box .container::before {
+  content: "";
+  width: 30px;
+  height: 45px;
+  position: absolute;
+  right: -9px;
+  bottom: -39px;
+  background: rgba(222, 221, 221, 1);
+  z-index: -1;
+  transform: rotate(215deg);
+}
+
+</style>
+    
