@@ -1,0 +1,54 @@
+<div class="loading-container">
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by BlagaDavid74257  - Tags: tooltip, icon, animation, loader, dark, theme */
+.loading-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+</style>
+    
