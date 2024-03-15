@@ -1,0 +1,64 @@
+<button class="btn">
+  <span>Modern Button</span>
+</button>
+
+<style>
+/* From Uiverse.io by gharsh11032000  - Tags: animation, button, animated, hover effect, simple button, hover button, button hover effect  */
+.btn {
+  position: relative;
+  transition: color 0.48s 0s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  padding: 12px 24px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.btn span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 3px;
+  height: 100%;
+  background: #0a3cff;
+  transition: transform 0.48s 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    width 0.48s 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn:hover {
+  color: #ffffff;
+  transition: color 0.48s 0.24s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.48s 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn:hover::before {
+  transform: translateY(-50%) scaleY(1);
+  width: 100%;
+  transition: transform 0.48s 0.1s cubic-bezier(0.23, 1, 0.32, 1),
+    width 0.48s 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+</style>
+    
