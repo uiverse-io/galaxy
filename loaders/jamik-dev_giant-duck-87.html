@@ -1,0 +1,50 @@
+<div class="cube">
+  <div class="cube_item cube_x"></div>
+  <div class="cube_item cube_y"></div>
+  <div class="cube_item cube_y"></div>
+  <div class="cube_item cube_x"></div>
+</div>
+
+<style>
+/* From Uiverse.io by jamik-dev  - Tags: loader, smooth, cube, modern, animated */
+.cube {
+  height: 80px;
+  width: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.cube_item {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+}
+
+.cube_x {
+  background-color: blueviolet;
+  animation: animateLoaders 1s infinite;
+}
+
+.cube_y {
+  background-color: aqua;
+  animation: animateLoaders 1s 0.5s infinite;
+}
+
+@keyframes animateLoaders {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+</style>
+    
