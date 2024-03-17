@@ -1,0 +1,169 @@
+<div class="loading">
+  <div class="loading-box">
+    <div class="WH color l1"></div>
+    <div class="ball color"></div>
+    <div class="WH color l2"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by TemRevil  - Tags: simple, blue, loading, loader, game, circle loader, effect loader, loading animation */
+loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-box {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.color {
+  background-color: #3395ff;
+}
+.WH {
+  width: 10px;
+  height: 70px;
+  position: absolute;
+}
+
+.l1 {
+  left: 0;
+  animation: l1 4s infinite linear;
+}
+.l2 {
+  right: 0;
+  animation: l2 4s infinite linear;
+}
+.ball {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  animation: ball 4s infinite linear;
+}
+
+@keyframes l1 {
+  0% {
+    top: 0%;
+  }
+  10% {
+    top: -20%;
+  }
+  20% {
+    top: 0%;
+  }
+  30% {
+    top: 40%;
+  }
+  40% {
+    top: 0%;
+  }
+  50% {
+    top: 30%;
+  }
+  60% {
+    top: 40%;
+  }
+  70% {
+    top: 60%;
+  }
+  80% {
+    top: -10%;
+  }
+  90% {
+    top: 10%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes l2 {
+  0% {
+    bottom: 0%;
+  }
+  10% {
+    bottom: -20%;
+  }
+  20% {
+    bottom: 40%;
+  }
+  30% {
+    bottom: 60%;
+  }
+  40% {
+    bottom: 20%;
+  }
+  50% {
+    bottom: 30%;
+  }
+  60% {
+    bottom: 40%;
+  }
+  70% {
+    bottom: 60%;
+  }
+  80% {
+    bottom: -10%;
+  }
+  90% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+@keyframes ball {
+  0% {
+    top: 80%;
+    left: 96%;
+  }
+  10% {
+    top: 10%;
+    left: 3%;
+  }
+  20% {
+    top: 10%;
+    left: 90%;
+  }
+  30% {
+    top: 60%;
+    left: 3%;
+  }
+  40% {
+    top: 10%;
+    left: 90%;
+  }
+  50% {
+    top: 50%;
+    left: 3%;
+  }
+  60% {
+    top: 10%;
+    left: 90%;
+  }
+  70% {
+    top: 93%;
+    left: 3%;
+  }
+  80% {
+    top: 83%;
+    left: 90%;
+  }
+  90% {
+    top: 10%;
+    left: 3%;
+  }
+  100% {
+    top: 80%;
+    left: 90%;
+  }
+}
+
+</style>
+    
