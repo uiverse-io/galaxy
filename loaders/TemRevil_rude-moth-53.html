@@ -1,0 +1,50 @@
+<div class="loading-box">
+  <div class="WH animation color"></div>
+  <div class="WH animation color"></div>
+  <div class="WH animation color"></div>
+</div>
+
+<style>
+/* From Uiverse.io by TemRevil  - Tags: simple, action, loading, loader, smooth, code, neon, game */
+.loading-box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.WH {
+  width: 20px;
+  height: 70px;
+}
+.color {
+  background-color: #ff5100;
+}
+.animation {
+  animation: Loading 1s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes Loading {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 70px;
+  }
+  50% {
+    height: 70px;
+    transform: rotate(10deg);
+  }
+  75% {
+    height: 70px;
+    transform: rotate(0deg);
+  }
+  100% {
+    height: 0;
+  }
+}
+
+</style>
+    
