@@ -1,0 +1,63 @@
+<button class="button font">Hold Me</button>
+
+<style>
+/* From Uiverse.io by BurgiSimon  - Tags: simple, green, gradient, button, glow, html, css, click animation */
+.button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5); /* Hinzufügen eines inneren Schattens für Tiefe */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  background-image: linear-gradient(
+    to top,
+    rgba(206, 255, 255, 0.75),
+    rgba(216, 255, 244, 0.65)
+  );
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 0%;
+}
+
+.button:hover {
+  box-shadow: 0 7px 9px rgba(0, 0, 0, 0.15),
+    inset 0 3px 5px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fillButtonAndPress {
+  0% {
+    background-size: 100% 0%;
+    transform: translateY(0);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    background-size: 100% 100%;
+    transform: translateY(2px);
+    border: 1px solid rgba(205, 235, 218, 0.6);
+  }
+}
+
+.button:active {
+  animation: fillButtonAndPress 0.4s ease forwards;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.font {
+  font-family: sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+</style>
+    
