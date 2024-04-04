@@ -1,0 +1,126 @@
+<div class="loader">
+  <li class="orb"></li>
+  <li class="orb"></li>
+  <li class="orb"></li>
+  <li class="orb"></li>
+  <li class="orb"></li>
+  <li class="orb"></li>
+  <li class="orb"></li>
+  <li class="orb"></li>
+  <li class="orb"></li>
+</div>
+
+<style>
+/* From Uiverse.io by MiniJohan  - Tags: simple, animation, white, loader */
+.loader {
+  display: flex;
+  max-width: 350;
+  position: relative;
+  gap: 20px;
+  justify-content: space-evenly;
+  animation: rotate 3s linear infinite;
+  color: white;
+}
+
+.loading {
+}
+
+.orb {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.orb:nth-child(1) {
+  top: 20px;
+  left: 20px;
+  animation: bounce2 1.5s ease 1s infinite;
+}
+
+.orb:nth-child(2) {
+  top: 20px;
+  right: 20px;
+  animation: bounce2 1.5s ease 1s infinite;
+}
+
+.orb:nth-child(3) {
+  bottom: 20px;
+  left: 20px;
+  animation: bounce2 1.5s ease 1s infinite;
+}
+
+.orb:nth-child(4) {
+  bottom: 20px;
+  right: 20px;
+  animation: bounce2 1.5s ease 1s infinite;
+}
+
+.orb:nth-child(5) {
+  top: 20px;
+  animation: bounce2 1.5s ease 1s infinite;
+}
+
+.orb:nth-child(6) {
+  bottom: 20px;
+  animation: bounce2 1.5s ease 1s infinite;
+}
+
+.orb:nth-child(7) {
+  left: 20px;
+  top: -12.5px;
+  animation: bounce2 1.5s ease 1s infinite;
+}
+
+.orb:nth-child(8) {
+  right: 20px;
+  top: -12.5px;
+  animation: bounce2 1.5s ease 1s infinite;
+}
+
+.orb:nth-child(9) {
+  top: -12.5px;
+  animation: bounce 1.5s ease 1.5s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+</style>
+    
