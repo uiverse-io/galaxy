@@ -1,0 +1,168 @@
+<div class="container">
+  <div class="card">
+    <div class="header">
+      <p class="title">Terminal</p>
+      <span class="copy">
+        <svg
+          class="w-[19px] h-[19px] text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M18 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1V9a4 4 0 0 0-4-4h-3a1.99 1.99 0 0 0-1 .267V5a2 2 0 0 1 2-2h7Z"
+            clip-rule="evenodd"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            d="M8 7.054V11H4.2a2 2 0 0 1 .281-.432l2.46-2.87A2 2 0 0 1 8 7.054ZM10 7v4a2 2 0 0 1-2 2H4v6a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </span>
+    </div>
+
+    <div class="footer">
+      <div class="code">
+        <span class="icon">
+          <svg
+            class="w-[19px] h-[19px] text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="13"
+            height="13"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="m9 5 7 7-7 7"
+            ></path>
+          </svg>
+        </span>
+        <p class="text">npm install -D tailwindcss</p>
+      </div>
+      <div class="code">
+        <span class="icon">
+          <svg
+            class="w-[19px] h-[19px] text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="13"
+            height="13"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="m9 5 7 7-7 7"
+            ></path>
+          </svg>
+        </span>
+        <p class="text">npx tailwindcss init</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Na3ar-17  - Tags:  */
+.container * {
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  width: 363px;
+  height: 130px;
+  background-color: #1e293b;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+}
+
+.card .header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card .header .title {
+  color: #7dd3fc;
+  font-size: 13px;
+  padding: 2px 12px;
+}
+
+.card .header .copy {
+  position: absolute;
+  top: 61%;
+  right: 1px;
+  transform: translate(-50%, -50%);
+  color: rgb(100, 116, 139);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.card .header .copy:hover {
+  color: rgb(148, 163, 184);
+}
+
+.card .header::before {
+  content: "";
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid #64748b4d;
+  right: 1px;
+  bottom: 0;
+  background-color: #33415580;
+  width: 358px;
+  height: 33px;
+  z-index: 100;
+}
+
+.card .header::after {
+  content: "";
+  position: absolute;
+  width: 14%;
+  height: 1px;
+  background-color: #7dd3fc;
+  bottom: 0;
+}
+
+.card .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding-left: 10px;
+}
+
+.card .footer .code {
+  display: flex;
+  align-items: center;
+}
+
+.card .footer .code .icon {
+  color: rgb(244, 114, 182);
+  padding-top: 3px;
+}
+
+.card .footer .code .text {
+  padding-left: 3px;
+  color: #f8fafc;
+}
+
+</style>
+    
