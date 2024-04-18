@@ -1,0 +1,74 @@
+<div class="uv-checkbox-wrapper">
+  <input type="checkbox" id="uv-checkbox" class="uv-checkbox" />
+  <label for="uv-checkbox" class="uv-checkbox-label">
+    <div class="uv-checkbox-icon">
+      <svg viewBox="0 0 24 24" class="uv-checkmark">
+        <path d="M4.1,12.7 9,17.6 20.3,6.3" fill="none"></path>
+      </svg>
+    </div>
+    <span class="uv-checkbox-text">Check me!</span>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by LeonKohli  - Tags: icon, animation, minimalist, checkbox, rounded, smooth, light, clean */
+.uv-checkbox-wrapper {
+  display: inline-block;
+}
+
+.uv-checkbox {
+  display: none;
+}
+
+.uv-checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.uv-checkbox-icon {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: 2px solid #ccc;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  transition: border-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.uv-checkmark {
+  position: absolute;
+  top: 0.1em;
+  left: 0.1em;
+  width: 1.6em;
+  height: 1.6em;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.uv-checkbox-text {
+  margin-left: 0.5em;
+  transition: color 0.3s ease;
+}
+
+.uv-checkbox:checked + .uv-checkbox-label .uv-checkbox-icon {
+  border-color: #6c5ce7;
+  border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  background-color: #6c5ce7;
+}
+
+.uv-checkbox:checked + .uv-checkbox-label .uv-checkmark {
+  stroke-dashoffset: 0;
+}
+
+.uv-checkbox:checked + .uv-checkbox-label .uv-checkbox-text {
+  color: #6c5ce7;
+}
+
+</style>
+    
