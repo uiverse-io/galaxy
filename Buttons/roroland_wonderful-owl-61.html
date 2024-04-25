@@ -1,0 +1,112 @@
+<button class="button">Join now</button>
+
+<style>
+/* From Uiverse.io by roroland  - Tags: glassmorphism, pink, gradient, button, rounded, smooth, colorful */
+.button {
+  --radius: 20px;
+  --col0: 0, 0, 0;
+  --col1: 219, 161, 240;
+  --col2: 239, 214, 248;
+  --col3: 255, 255, 255;
+  --col4: 270, 153, 138;
+  --col5: 244, 164, 177;
+  --col6: 244, 136, 136;
+  --col7: 243, 136, 94;
+  --col8: 252, 187, 165;
+  --col9: 254, 230, 222;
+  --col10: 247, 197, 161;
+  --col11: 245, 205, 238;
+  --col12: 252, 67, 130;
+  position: relative;
+  background: linear-gradient(
+    65deg,
+    rgba(var(--col1), 0.81) 0%,
+    rgba(var(--col2), 0.81) 11%,
+    rgba(var(--col3), 0.81) 21%,
+    rgba(var(--col3), 0.81) 24%,
+    rgba(var(--col4), 0.5) 37%,
+    rgba(var(--col5), 0.81) 42%,
+    rgba(var(--col6), 0.81) 50%,
+    rgba(var(--col7), 0.9) 58%,
+    rgba(var(--col8), 0.81) 68%,
+    rgba(var(--col9), 0.81) 72%,
+    rgba(var(--col3), 0.81) 78%,
+    rgba(var(--col10), 0.81) 86%,
+    rgba(var(--col11), 0.81) 93%,
+    rgba(var(--col1), 0.81) 98%
+  );
+  background-size: 105%;
+  box-shadow: -10px 10px 0px rgba(var(--col0), 0.005),
+    0px 20px 30px rgba(var(--col0), 0.16),
+    inset 5px 0 20px rgba(var(--col1), 0.5),
+    inset -5px 20px 10px rgba(var(--col4), 0.5),
+    inset 1px 3px 3px rgba(var(--col0), 0.25),
+    inset 0px -5px 1px rgba(var(--col7), 0.5),
+    inset 0px -5px 1px rgba(var(--col2), 0.95),
+    inset 1px 2px 1px rgba(var(--col12), 0.15),
+    inset 5px 5px 1px rgba(var(--col12), 0.35),
+    inset -5px 5px 1px rgba(var(--col12), 0.15),
+    inset 0px -20px 10px rgba(var(--col12), 0.15);
+  cursor: pointer;
+  padding: 1rem 2rem;
+  min-height: 5rem;
+  min-width: 16rem;
+  font-size: 1rem;
+  padding-inline-start: 10%;
+  font-weight: 600;
+  filter: hue-rotate(0deg);
+  color: #505050;
+  border-radius: var(--radius);
+  appearance: none;
+  border: 0;
+  transition: all 3s ease-in-out;
+  z-index: 0;
+}
+.button:hover {
+  color: rgba(var(--col7), 1);
+  text-shadow: 2px 2px 5px rgba(var(--col1), 0.75);
+  background-size: 350%;
+  filter: hue-rotate(125deg);
+}
+.button:active {
+  transition: all 0.1s ease-out;
+  scale: 0.95;
+}
+
+.button:hover::after {
+  backdrop-filter: blur(1px);
+  opacity: 0.25;
+  box-shadow: 0;
+  translate: 10%;
+}
+.button::before {
+  --border: 4px;
+  box-shadow: inset 0px 0px 20px rgba(var(--col1), 0.5),
+    0px 0px 1px rgba(var(--col2), 0.95);
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  display: block;
+  width: calc(90% - var(--border));
+  height: calc(75% - var(--border));
+  inset: 0.5rem 0.5rem 0.5rem;
+  z-index: 0;
+  border: var(--border) solid transparent;
+  transition: all 3s ease-out;
+}
+.button::after {
+  content: "";
+  aspect-ratio: 1;
+  clip-path: polygon(88% 0, 70% 45%, 100% 45%, 61% 100%, 72% 57%, 43% 57%);
+  position: absolute;
+  background: #505050;
+  backdrop-filter: blur(5px);
+  width: 10%;
+  opacity: 1;
+  inset: 33% 0 0 25%;
+  z-index: -1;
+  transition: all 1s ease-out;
+}
+
+</style>
+    
