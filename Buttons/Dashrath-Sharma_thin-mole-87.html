@@ -1,0 +1,86 @@
+<button class="button">
+  <svg
+    xml:space="preserve"
+    viewBox="0 0 256 256"
+    height="256"
+    width="256"
+    version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs></defs>
+    <g
+      transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+      style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+    >
+      <path
+        stroke-linecap="round"
+        transform="matrix(1 0 0 1 0 0)"
+        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+        d="M 71.79 34.614 c -0.334 -0.497 -0.926 -0.745 -1.513 -0.63 l -18.311 3.528 l 3.718 -35.877 c 0.071 -0.682 -0.332 -1.32 -0.979 -1.55 c -0.648 -0.229 -1.362 0.011 -1.738 0.585 L 18.202 53.746 c -0.328 0.5 -0.325 1.144 0.008 1.639 c 0.33 0.493 0.922 0.742 1.513 0.632 l 18.312 -3.529 l -3.718 35.876 c -0.071 0.684 0.332 1.322 0.979 1.551 C 35.455 89.971 35.622 90 35.792 90 c 0.502 0 0.965 -0.251 1.241 -0.67 l 34.765 -53.076 C 72.126 35.754 72.122 35.11 71.79 34.614 z"
+      ></path>
+    </g>
+  </svg>
+  Join Now
+</button>
+
+<style>
+/* From Uiverse.io by Dashrath-Sharma  - Tags: material design, animation, 3d, white, black, button, simple button */
+.button {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 15px #444,
+    inset -5px -5px 15px #222;
+}
+
+.button {
+  cursor: pointer;
+  position: relative;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em 4.5em;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  transition: 0.5s;
+  z-index: 1;
+}
+.button:active {
+  transform: scale(0.8);
+}
+.button:active::before {
+  transform: translateY(-10px);
+}
+
+.button > svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  transition: 0.2s;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  z-index: -1;
+}
+
+.button::after {
+  width: 90%;
+  height: 68%;
+}
+
+.button::before {
+  width: 99%;
+  height: 90%;
+}
+
+</style>
+    
