@@ -1,0 +1,163 @@
+<button class="button">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    class="icon"
+  >
+    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      id="SVGRepo_tracerCarrier"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        fill="#222222"
+        d="M11.5 13.8H10.1299C8.72143 13.8 8.01721 13.8 7.72228 13.3385C7.42735 12.8769 7.72321 12.2379 8.31493 10.9597L11.0463 5.06006C11.4205 4.25182 11.6075 3.8477 11.8038 3.89091C12 3.93413 12 4.37946 12 5.27013V9.7C12 9.9357 12 10.0536 12.0732 10.1268C12.1464 10.2 12.2643 10.2 12.5 10.2H13.8701C15.2786 10.2 15.9828 10.2 16.2777 10.6615C16.5726 11.1231 16.2768 11.7621 15.6851 13.0402L12.9537 18.9399C12.5795 19.7482 12.3925 20.1523 12.1962 20.1091C12 20.0659 12 19.6205 12 18.7299V14.3C12 14.0643 12 13.9464 11.9268 13.8732C11.8536 13.8 11.7357 13.8 11.5 13.8Z"
+      ></path>
+    </g>
+  </svg>
+  <span class="title">Join now</span>
+  <span class="border"></span>
+</button>
+
+<style>
+/* From Uiverse.io by Yaya12085  - Tags: glassmorphism, button, hover, hover effect, challenges */
+.button {
+  --color1: #e3a4fb;
+  --color2: #fca7a6;
+  --color3: #fe986d;
+  --white: rgba(255, 255, 255, 0.9);
+  --white2: rgba(255, 255, 255, 0.6);
+  --white3: rgba(255, 255, 255, 0.4);
+  --white4: rgba(255, 255, 255, 0.2);
+  --white5: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  padding: 10px 20px;
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  border: none;
+  background: transparent;
+  background-color: transparent;
+  transition: all 235ms ease-in-out;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  content: "";
+  width: 120%;
+  height: 150%;
+  border-radius: 16px;
+  background-color: var(--color1);
+  background: linear-gradient(
+    55deg,
+    var(--color1) 10%,
+    var(--color2) 40%,
+    var(--color3) 60%,
+    var(--color1) 80%
+  );
+  transition: all 235ms ease-in-out;
+}
+
+.button::before {
+  filter: blur(2px);
+  z-index: -1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: radial-gradient(
+      circle at 20% 50%,
+      var(--white2) 8%,
+      transparent 0%
+    ),
+    radial-gradient(circle at 25% 50%, var(--white2) 8%, transparent 0%),
+    radial-gradient(ellipse at 5% 90%, var(--white4) 8%, transparent 0%),
+    radial-gradient(ellipse at 5% 50%, var(--white4) 8%, transparent 0%),
+    radial-gradient(circle at 15% 80%, var(--white3) 3%, transparent 0%),
+    radial-gradient(ellipse at 15% 10%, var(--white2) 14%, transparent 0%),
+    radial-gradient(ellipse at 15% 25%, var(--white3) 10%, transparent 0%),
+    radial-gradient(circle at 50% 50%, var(--white4) 12%, transparent 0%),
+    radial-gradient(circle at 45% 25%, var(--white4) 12%, transparent 0%),
+    radial-gradient(circle at 50% 75%, var(--white4) 12%, transparent 0%),
+    radial-gradient(circle at 70% 50%, var(--white4) 12%, transparent 0%),
+    radial-gradient(circle at 75% 25%, var(--white4) 12%, transparent 0%),
+    radial-gradient(circle at 70% 50%, var(--white2) 8%, transparent 0%),
+    radial-gradient(circle at 70% 75%, var(--white4) 12%, transparent 0%),
+    radial-gradient(circle at 80% 50%, var(--white4) 12%, transparent 0%),
+    radial-gradient(circle at 85% 25%, var(--white4) 12%, transparent 0%),
+    radial-gradient(circle at 98% 5%, var(--white2) 4%, transparent 0%),
+    radial-gradient(circle at 88% 25%, var(--white2) 8%, transparent 0%),
+    radial-gradient(ellipse at 90% 75%, var(--white2) 6%, transparent 0%),
+    radial-gradient(circle at 98% 55%, var(--white2) 8%, transparent 0%),
+    radial-gradient(circle at 98% 95%, var(--white2) 8%, transparent 0%);
+  background-repeat: no-repeat;
+}
+.button::after {
+  z-index: -2;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+}
+.title {
+  display: block;
+  font-weight: 600;
+}
+
+.border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  transition: all 235ms ease-in-out;
+}
+.border::before,
+.border::after {
+  position: absolute;
+  content: "";
+  border-radius: 16px;
+  width: 120%;
+  height: 150%;
+}
+.border::before {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background: linear-gradient(
+      50deg,
+      rgba(0, 0, 0, 0.1) 1%,
+      var(--color1) 10%,
+      var(--color2) 40%,
+      var(--color3) 60%,
+      var(--color1) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.button:hover::after {
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -24px;
+}
+.button:hover {
+  transform: translate3d(0, 2px, 0);
+}
+
+</style>
+    
