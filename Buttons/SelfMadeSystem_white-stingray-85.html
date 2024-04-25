@@ -1,0 +1,242 @@
+<svg width="0">
+  <filter id="l-distort">
+    <feTurbulence
+      numOctaves="20"
+      baseFrequency=".03"
+      type="fractalNoise"
+    ></feTurbulence>
+    <feDisplacementMap scale="60" in="SourceGraphic"></feDisplacementMap>
+  </filter>
+  <filter id="m-distort">
+    <feTurbulence
+      numOctaves="20"
+      baseFrequency=".02"
+      type="fractalNoise"
+    ></feTurbulence>
+    <feDisplacementMap scale="30" in="SourceGraphic"></feDisplacementMap>
+  </filter>
+</svg>
+
+<button class="button">
+  <div class="btn-bg">
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bd1"></div>
+    <div class="bd1h"></div>
+    <div
+      class="bg-cloud"
+      style="inset: unset; left: -10px; bottom: -20px; height: 70px; scale: 0.5;"
+    ></div>
+    <div class="bd6"></div>
+    <div class="bd-sat"></div>
+    <div class="bg-cloud" style="top: 30px; left: 270px; height: 50px;"></div>
+    <div class="bg-cloud" style="top: 7px; left: 10px; height: 30px;"></div>
+    <div
+      class="bg-cloud"
+      style="top: 0px; left: 70px; height: 30px; aspect-ratio: 5;"
+    ></div>
+    <div
+      class="bg-cloud"
+      style="top: 0px; left: -39px; rotate: 215deg; height: 30px; aspect-ratio: 3;"
+    ></div>
+    <div class="bd3"></div>
+    <div class="bd3a"></div>
+    <div class="bd4"></div>
+    <div class="bd4h"></div>
+    <div class="bd4d"></div>
+    <div class="bd5"></div>
+  </div>
+  <span class="btn-txt">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M11 15H6L13 1V9H18L11 23V15Z"></path>
+    </svg>
+    Join now
+  </span>
+</button>
+
+<style>
+/* From Uiverse.io by SelfMadeSystem  - Tags: 3d, pink, gradient, button, hover, active, 3d button */
+.button {
+  --br: 27px;
+  --w: 360px;
+  --h: 113px;
+  --bg-grad: radial-gradient(#fffd 10px, #0000 calc(var(--w) - 60px)),
+    linear-gradient(
+      70deg in lch,
+      #8e0dff,
+      #e39cf6 15%,
+      #fd9b9a 45%,
+      #ff7139 65%,
+      #fdbff1 85%
+    );
+
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--br);
+  isolation: isolate;
+  border: 0;
+  overflow: hidden;
+  width: var(--w);
+  height: var(--h);
+}
+
+.btn-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+:where(.btn-bg > div) {
+  position: absolute;
+  inset: 0;
+}
+
+.bg1 {
+  inset: -30px;
+  filter: url("#l-distort");
+  background: var(--bg-grad);
+}
+
+.bg2 {
+  left: 0;
+  top: 0;
+  height: 100%;
+  aspect-ratio: 1.5;
+  background: radial-gradient(#fffd 10px, #0000 60px);
+  filter: url("#m-distort");
+}
+
+.bg-cloud {
+  transform: translate(-50%);
+  aspect-ratio: 1.5;
+  background: radial-gradient(#fffd, #0000 70%);
+  filter: url("#m-distort");
+}
+
+.bd-sat {
+  mask: linear-gradient(#fff, #fff0 40% 60%, #fff);
+}
+
+.bd-sat::after {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: calc(var(--br) + 30px);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  /* I forgor that I need the two mask composites because of firefoxxxxxx */
+  mask-composite: exclude;
+  mask-composite: xor;
+  background: var(--bg-grad);
+  filter: url("#l-distort") saturate(3);
+  padding: calc(30px + 7px);
+}
+
+.bd1 {
+  transition: opacity 0.5s;
+  border-radius: calc(var(--br) - 18px);
+  inset: 6px;
+  box-shadow: inset -13px -13px 5px -10px #fffa;
+}
+
+.button:hover .bd1 {
+  opacity: 0;
+}
+
+.bd1h {
+  transition: opacity 0.5s;
+  border-radius: calc(var(--br) - 18px);
+  opacity: 0;
+  inset: 6px;
+  box-shadow: inset 13px 13px 5px -10px #fffa;
+}
+
+.button:hover:not(:active) .bd1h {
+  opacity: 1;
+}
+
+.bd3 {
+  inset: 20px;
+  border-radius: 17px;
+  border: 2px solid #fff8;
+  box-shadow: 0px 0px 6px 0px #fffa, inset -6px -6px 6px -6px #fffa,
+    inset 0px 6px 6px -6px #0004;
+  filter: blur(1px);
+}
+
+.bd3a {
+  inset: 42px;
+  right: 38px;
+  border-radius: 10px;
+  filter: blur(4px);
+  box-shadow: 0px 0px 20px 2px #0001, inset 0px 0px 3px 0px #fffa;
+}
+
+.bd4 {
+  transition: opacity 0.5s;
+  border-radius: calc(var(--br) - 5px);
+  box-shadow: inset 8px 8px 5px -5px #0005;
+}
+
+.button:hover .bd4 {
+  opacity: 0;
+}
+
+.bd4h {
+  transition: opacity 0.5s;
+  opacity: 0;
+  border-radius: calc(var(--br) - 5px);
+  box-shadow: inset -8px -8px 5px -5px #0005;
+}
+
+.button:hover:not(:active) .bd4h {
+  opacity: 1;
+}
+
+.bd4d {
+  transition: opacity 0.5s;
+  opacity: 0;
+  border-radius: var(--br);
+  box-shadow: inset 0px 0px 5px 3px #0005;
+}
+
+.button:active .bd4d {
+  opacity: 1;
+}
+
+.bd5 {
+  left: 26px;
+  top: 10px;
+  width: 60px;
+  height: 12px;
+  box-shadow: inset 5px -5px 5px -5px #fff;
+  background: linear-gradient(30deg, #fff, #fff0);
+  border-radius: 99px;
+  filter: blur(1.5px);
+}
+
+.bd6 {
+  left: 2px;
+  top: 26px;
+  width: 20px;
+  height: 60px;
+  rotate: 10deg;
+  box-shadow: inset 7px 7px 7px -7px #fff;
+  /* background: linear-gradient(150deg, #fff, #fff0); */
+  border-radius: 99px;
+  filter: blur(1.5px);
+}
+
+.btn-txt {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  width: fit-content;
+  margin: auto;
+}
+
+.btn-txt svg {
+  height: 25px;
+}
+
+</style>
+    
