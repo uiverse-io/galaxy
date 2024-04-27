@@ -1,0 +1,77 @@
+<ul class="ul">
+  <li class="li">
+    <button class="button"><p class="p">Home</p></button>
+  </li>
+  <li class="li">
+    <button class="button"><p class="p">Store</p></button>
+  </li>
+  <li class="li">
+    <button class="button"><p class="p">Settings</p></button>
+  </li>
+</ul>
+
+<style>
+/* From Uiverse.io by asgardOP  - Tags: action, button, modern, menu, btn, hover effect, html, css */
+.ul {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  list-style: none;
+}
+.li {
+  margin-bottom: 0px;
+}
+.button {
+  background-color: transparent;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 10px 30px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 11px;
+  text-align: center;
+  transition: 0.1s;
+  z-index: 1;
+}
+
+.p {
+  z-index: 2;
+  position: relative;
+}
+
+.button:hover {
+  color: rgb(172, 40, 0);
+  text-align: center;
+}
+.button:hover::before {
+  transform: rotate(0deg);
+  width: 100%;
+  height: 40px;
+  top: 2px;
+  border-radius: 3px;
+  background-color: rgb(255, 83, 53);
+}
+.button::before {
+  content: "";
+  border-radius: 1px;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: tomato;
+  left: -10px;
+  top: 19px;
+  cursor: pointer;
+  transform: rotate(225deg);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.button:active::before {
+  background-color: rgb(255, 38, 0);
+}
+
+</style>
+    
