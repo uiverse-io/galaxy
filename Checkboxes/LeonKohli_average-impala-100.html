@@ -1,0 +1,89 @@
+<div class="bookmark-checkbox">
+  <input
+    type="checkbox"
+    id="bookmark-toggle"
+    class="bookmark-checkbox__input"
+  />
+  <label for="bookmark-toggle" class="bookmark-checkbox__label">
+    <svg class="bookmark-checkbox__icon" viewBox="0 0 24 24">
+      <path
+        class="bookmark-checkbox__icon-back"
+        d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+      ></path>
+      <path class="bookmark-checkbox__icon-check" d="M8 11l3 3 5-5"></path>
+    </svg>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by LeonKohli  - Tags: icon, animation, active, checkbox, glow, svg, cool checkbox */
+.bookmark-checkbox {
+  display: inline-block;
+}
+
+.bookmark-checkbox__input {
+  display: none;
+}
+
+.bookmark-checkbox__label {
+  cursor: pointer;
+}
+
+.bookmark-checkbox__icon {
+  width: 2em;
+  height: 2em;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s, fill 0.3s;
+}
+
+.bookmark-checkbox__icon-back {
+  stroke: #333;
+  transition: transform 0.3s;
+}
+
+.bookmark-checkbox__icon-check {
+  stroke: #fff;
+  stroke-dasharray: 16;
+  stroke-dashoffset: 16;
+  transition: stroke-dashoffset 0.3s, transform 0.3s;
+  transform: translateX(2px);
+}
+
+.bookmark-checkbox__input:checked
+  + .bookmark-checkbox__label
+  .bookmark-checkbox__icon {
+  fill: #ff5a5f;
+}
+
+.bookmark-checkbox__input:checked
+  + .bookmark-checkbox__label
+  .bookmark-checkbox__icon-back {
+  stroke: #ff5a5f;
+  transform: scale(1.1);
+  animation: bookmark-pop 0.4s ease;
+}
+
+.bookmark-checkbox__input:checked
+  + .bookmark-checkbox__label
+  .bookmark-checkbox__icon-check {
+  stroke-dashoffset: 0;
+  transition-delay: 0.2s;
+}
+
+@keyframes bookmark-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+</style>
+    
