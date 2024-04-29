@@ -1,0 +1,73 @@
+<button class="custom-button"><span>Click Here </span></button>
+
+<style>
+/* From Uiverse.io by estefaniarizzo  - Tags: button, click, animated, css effect, multicolor, hover button, 3d button */
+.custom-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #4caf50, #ffc107, #2196f3);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 4px rgba(0, 0, 0, 0.1) inset;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+  width: 200px;
+  height: 40px;
+}
+
+.custom-button:hover {
+  transform: translateY(-2px) rotateX(20deg) rotateY(10deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(0, 0, 0, 0.2) inset;
+  background: linear-gradient(45deg, #02ff0e, #fc0000, #ae00ff);
+}
+
+.custom-button:focus {
+  outline: none;
+}
+
+.custom-button:active {
+  transform: translateY(0) scale(1.1) rotate(45deg);
+  box-shadow: none;
+  animation: pulse 0.5s ease;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1) rotate(120deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.custom-button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  opacity: 1; /* El texto principal estará visible por defecto */
+}
+
+</style>
+    
