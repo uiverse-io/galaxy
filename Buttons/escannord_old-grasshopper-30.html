@@ -1,0 +1,36 @@
+<button class="button">join now</button>
+
+<style>
+/* From Uiverse.io by escannord  - Tags: simple, button, btn */
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: 14rem;
+  height: 4rem;
+  border: solid 2px;
+  background: linear-gradient(to right, #ff00ffb0, #ff9900a1, #ff00ff9f),
+    radial-gradient(rgb(255, 255, 255), rgb(255, 0, 0));
+  border-radius: 20px;
+  font-weight: 800;
+  position: relative;
+  border-image: linear-gradient(to right, #5e005e, #804d00, #eb1beb);
+  border-image-slice: 50;
+}
+
+.button::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.575),
+    inset 0px 0px 0px 0px rgba(255, 255, 255, 0.575);
+}
+
+</style>
+    
