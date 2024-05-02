@@ -1,0 +1,79 @@
+<button class="BTN-style">
+  <span class="BTN-text">Hover me</span>
+</button>
+
+<style>
+/* From Uiverse.io by John-CFO  - Tags: simple, button, hover, hover effect */
+.BTN-style {
+  position: relative;
+  width: 12em;
+  height: 3.8em;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: #ffff;
+  display: block;
+  padding: 8px;
+  background: linear-gradient(to left, #c0c0c0, #dcdcdc);
+  color: #ffffff;
+  line-height: 1.25rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.BTN-text {
+  font-weight: 500;
+  font-size: 0.975rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase;
+}
+
+.BTN-style:hover {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+  cursor: pointer;
+}
+
+.BTN-style:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.BTN-style::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+</style>
+    
