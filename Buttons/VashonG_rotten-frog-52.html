@@ -1,0 +1,88 @@
+<button class="neo-pop-tilted-button">
+  <span>Play Now</span>
+</button>
+
+<style>
+/* From Uiverse.io by VashonG  - Tags: flashy, button, game, 3d button, shimmer, cred, neopop */
+.neo-pop-tilted-button {
+  border: 0.1px;
+  padding-bottom: 6px;
+  box-shadow: 1px 5px 7px #494a4b;
+  position: relative;
+  overflow: hidden;
+  background-color: #b7a81d;
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transform: perspective(180px) rotateX(30deg) translateY(2px);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.neo-pop-tilted-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(196, 196, 196, 0.8) 5px,
+    rgba(196, 196, 196, 0) 5px,
+    rgba(196, 196, 196, 0) 10px,
+    rgba(196, 196, 196, 0.8) 2px
+  );
+  animation: shimmer 5.5s infinite linear;
+}
+
+.neo-pop-tilted-button span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 5px,
+    rgba(255, 255, 255, 0) 5px,
+    rgba(255, 255, 255, 0) 10px,
+    rgba(255, 255, 255, 1) 2px
+  );
+  animation: shimmer 5.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-1950%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.neo-pop-tilted-button span {
+  background: #ffeb34;
+  padding: 1rem 2.5rem;
+  position: relative;
+  z-index: 1;
+  display: block;
+  border-radius: 0px;
+  border: 1px solid #494a4b;
+}
+
+.neo-pop-tilted-button:focus {
+  outline: none;
+}
+
+.neo-pop-tilted-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 235, 52, 0.5);
+}
+
+button:active {
+  transform: perspective(170px) rotateX(36deg) translateY(5px);
+}
+
+</style>
+    
