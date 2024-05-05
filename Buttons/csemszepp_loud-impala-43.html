@@ -1,0 +1,60 @@
+<div class="gas ne">
+  <span class="number">10</span>
+  <div class="symbol">Ne</div>
+  <p class="name">Neon</p>
+</div>
+
+<style>
+/* From Uiverse.io by csemszepp  - Website: https://codepen.io/CITguy/pen/yLaZZbO - Name: Ryan Johnson - Tags: button, neon, lights */
+#gasses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gas {
+  --blur: 1.75rem;
+  --box-blur: calc(0.5 * var(--blur));
+  --glow: var(--color);
+  --size: 12rem;
+
+  align-items: center;
+  border-radius: 12px;
+  border: 4px solid currentColor;
+  box-shadow: 
+    /* --- "glass" tube --- */
+    /* inside */ inset 0 0 0 2px
+      rgba(0, 0, 0, 0.15),
+    /* outside */ 0 0 0 2px rgba(0, 0, 0, 0.15),
+    /* --- glow --- */ /* inside */ inset 0 0 var(--box-blur) var(--glow),
+    /* outside */ 0 0 var(--box-blur) var(--glow);
+  color: var(--color, white);
+  display: inline-flex;
+  flex-direction: column;
+  font-family: system-ui, sans-serif;
+  height: var(--size);
+  justify-content: space-around;
+  padding: 1rem;
+  width: var(--size);
+}
+.gas.number {
+  font-weight: 700;
+}
+
+.symbol {
+  font-size: 4rem;
+  font-family: "Neon Glow";
+  text-shadow: 0 0 var(--blur) var(--glow);
+}
+
+.gas.ne {
+  --color: #fda802;
+  filter: brightness(110%);
+  cursor: pointer;
+}
+.gas.ne:hover {
+  filter: brightness(120%) drop-shadow(0 0 10px var(--glow));
+}
+
+</style>
+    
