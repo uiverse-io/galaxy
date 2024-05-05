@@ -1,0 +1,77 @@
+<div class="nav_bar">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3_h"></div>
+  <div class="bar4"></div>
+</div>
+
+<style>
+/* From Uiverse.io by MopokD71304  - Tags: simple, button, advanced, input effect  */
+.nav_bar {
+  background-color: rgb(27, 27, 27);
+  position: relative;
+  display: flex;
+  transition: 0.4s;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 15px;
+  border-radius: 15px;
+}
+
+.bar1 {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  margin-bottom: 15px;
+  transition: 0.4s;
+  height: 5px;
+}
+
+.bar2 {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  position: absolute;
+  transition: 0.4s;
+  height: 5px;
+}
+
+.bar3_h {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  transition: 0.4s;
+  height: 5px;
+}
+
+.bar4 {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  margin-top: 15px;
+  transition: 0.4s;
+  height: 5px;
+}
+
+.nav_bar:hover {
+  border-radius: 50px;
+}
+.nav_bar:hover .bar3_h {
+  transform: rotate(-45deg);
+}
+.nav_bar:hover .bar2 {
+  transform: rotate(45deg);
+}
+
+.nav_bar:hover .bar1 {
+  opacity: 0;
+  width: 30px;
+}
+.nav_bar:hover .bar4 {
+  opacity: 0;
+  width: 30px;
+}
+
+</style>
+    
