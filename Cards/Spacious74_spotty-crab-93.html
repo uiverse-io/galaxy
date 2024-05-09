@@ -1,0 +1,64 @@
+<div class="card">
+  <div class="shadow">⚠ Always follow traffic rules.</div>
+</div>
+
+<style>
+/* From Uiverse.io by Spacious74  - Tags: animation, 3d, social, card, 3d card */
+.card {
+  width: 500px;
+  height: 120px;
+  background: #353535;
+  transform-style: preserve-3d;
+  transform: perspective(30rem) rotateX(30deg);
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #fff 70%,
+    #353535 70%,
+    #353535 100%
+  );
+  background-size: 120px;
+  animation: animateRoad 0.5s linear infinite;
+}
+@keyframes animateRoad {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -120px;
+  }
+}
+
+.card::after {
+  content: "";
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: -20px;
+  background-color: #272727;
+  transform-origin: top;
+  transform: perspective(30rem) rotateX(-30deg);
+  box-shadow: 0 10px 20px -2px #272727;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.shadow {
+  color: #fff;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+</style>
+    
