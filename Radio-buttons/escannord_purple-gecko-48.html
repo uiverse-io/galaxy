@@ -1,0 +1,116 @@
+<div class="radio-input">
+  <input value="value-1" name="value-radio" id="value-1" type="radio" />
+  <label for="value-1">
+    <div class="text">
+      <span class="circle"></span>
+      Monthly
+    </div>
+    <div class="price">
+      <span>$30/mo</span>
+      <span class="small">$30 billed every month</span>
+    </div> </label
+  ><input value="value-2" name="value-radio" id="value-2" type="radio" />
+  <label for="value-2">
+    <div class="text">
+      <span class="circle"></span>
+      Annualy
+    </div>
+    <div class="price">
+      <span>$15/mo</span>
+      <span class="small">$180 billed once a year</span>
+    </div>
+    <span class="info">save up to 50%</span>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by escannord  - Tags: simple, material design, radio, payment */
+.radio-input input {
+  display: none;
+}
+
+.radio-input label {
+  --border-color: #a1b0d8;
+
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  min-width: 5rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+
+.radio-input input:checked + label {
+  --border-color: #2f64d8;
+  border-color: var(--border-color);
+  border-width: 2px;
+}
+.radio-input label:hover {
+  --border-color: #2f64d8;
+  border-color: var(--border-color);
+}
+
+.radio-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(189, 187, 207);
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.radio-input input:checked + label span.circle::before {
+  content: "";
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2f64d8;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.text {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-weight: bold;
+}
+
+.small {
+  font-size: 10px;
+  color: rgb(136, 138, 139);
+  font-weight: 100;
+}
+
+.info {
+  position: absolute;
+  display: inline-block;
+  font-size: 11px;
+  background-color: rgb(31, 236, 123);
+  border-radius: 20px;
+  padding: 1px 9px;
+  top: 0;
+  transform: translateY(-50%);
+  right: 5px;
+}
+
+</style>
+    
