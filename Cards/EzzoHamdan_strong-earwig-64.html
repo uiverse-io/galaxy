@@ -80,7 +80,7 @@
 }
 
 .card:hover {
-  box-shadow: 0px 5px 15px rgb(116, 214, 247), 0px -5px 15px blueviolet;
+  box-shadow: 0px 5px 10px rgb(116, 214, 247), 0px -5px 10px blueviolet;
   transform: scale(1.05);
   background-size: 0 0;
 }
@@ -96,8 +96,8 @@
     circle,
     rgba(0, 0, 0, 0.8) 0%,
     rgb(138, 43, 226) 15%,
-    rgb(138, 79, 226) 35%,
-    rgb(138, 43, 226, 0.5) 50%,
+    rgba(138, 79, 226, 0.75) 35%,
+    rgba(138, 43, 226, 0.5) 50%,
     transparent 100%
   );
   background-size: 200% 100%;
@@ -139,6 +139,10 @@
 
 .image {
   width: 100%;
+  max-width: 190px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
   border-radius: 10px;
   transition: rotate 1s ease, scale 1s ease;
   rotate: -70deg;
@@ -169,13 +173,13 @@
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  margin-top: 20px;
   color: #f0f0f0;
+  transform: translateY(-30px);
   transition: all 0.3s ease;
 }
 
 .heading:hover {
-  transform: translateY(-10px);
+  transform: translateY(-40px);
 }
 
 .card:hover .heading {
@@ -183,7 +187,6 @@
 }
 
 .icons {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -242,7 +245,7 @@
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 
   100% {
