@@ -147,15 +147,17 @@
   transition: rotate 1s ease, scale 1s ease;
   rotate: -70deg;
   animation: float 10s ease infinite;
+  scale: 1.4;
+  z-index: -1;
 }
 
 .card:hover .image {
   rotate: 70deg;
-  scale: 0.7;
+  scale: 1.05;
 }
 
 .card:hover .image:hover {
-  scale: 0.8;
+  scale: 1.15;
 }
 
 @keyframes float {
