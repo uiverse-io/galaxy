@@ -1,0 +1,112 @@
+<div class="loader">
+  <figure class="iconLoaderProgress">
+    <svg class="iconLoaderProgressFirst" width="240" height="240">
+      <circle cx="120" cy="120" r="100"></circle>
+    </svg>
+
+    <svg class="iconLoaderProgressSecond" width="240" height="240">
+      <circle cx="120" cy="120" r="100"></circle>
+    </svg>
+  </figure>
+</div>
+
+<style>
+/* From Uiverse.io by Fareny  - Tags: simple, purple, loader, like, circle, html, css */
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #141218;
+}
+
+.iconLoaderProgress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: rotateLoader;
+}
+
+.iconLoaderProgress svg {
+  stroke-width: 16px;
+  fill: none;
+  transform-origin: center;
+  z-index: 999;
+}
+
+.iconLoaderProgressFirst circle,
+.iconLoaderProgressSecond circle,
+.iconLoaderProgressFirst,
+.iconLoaderProgressSecond {
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.iconLoaderProgressFirst circle,
+.iconLoaderProgressSecond circle {
+  animation-duration: 3s;
+  border-radius: 15px;
+}
+
+.iconLoaderProgressFirst,
+.iconLoaderProgressSecond {
+  position: absolute;
+  animation-duration: 6s;
+}
+
+.iconLoaderProgressFirst circle {
+  animation-name: circleFirst;
+  stroke-dasharray: 628, 628;
+  stroke-dashoffset: 0;
+  stroke: #7c57f4;
+  stroke-linecap: round;
+}
+
+.iconLoaderProgressSecond {
+  transform: rotate(-14deg);
+}
+
+.iconLoaderProgressSecond circle {
+  animation-name: circleSecond;
+  stroke-dasharray: 628, 628;
+  stroke-dashoffset: 0;
+  stroke: #bfb2f7;
+  stroke-linecap: round;
+}
+
+@keyframes circleFirst {
+  from,
+  to {
+    stroke-dashoffset: 50;
+  }
+
+  50% {
+    stroke-dashoffset: 625;
+  }
+}
+
+@keyframes circleSecond {
+  from,
+  to {
+    stroke-dashoffset: -625;
+  }
+
+  50% {
+    stroke-dashoffset: -50;
+  }
+}
+
+@keyframes rotateLoader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+    
