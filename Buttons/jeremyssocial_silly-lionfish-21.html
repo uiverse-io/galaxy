@@ -1,0 +1,87 @@
+<button class="fancy-3d-button">
+  <svg
+    role="img"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    class="button-icon"
+  >
+    <path
+      d="M12 .587l3.668 7.431L24 9.587l-6 5.845L19.335 24 12 20.01 4.665 24 6 15.432 0 9.587l8.332-1.569z"
+    ></path>
+  </svg>
+  <span class="button-text">3D Hover</span>
+</button>
+
+<style>
+/* From Uiverse.io by jeremyssocial  - Tags: 3d, red, button, hover, hover effect, hoverme, hover button, 3d button */
+.fancy-3d-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  font-size: 1em;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  perspective: 500px; /* Adding perspective for 3D effect */
+  transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+
+.fancy-3d-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 100%);
+  z-index: -1;
+  transition: all 0.6s ease-in-out;
+  transform: translateZ(-20px); /* 3D depth effect */
+  border-radius: 50px;
+}
+
+.fancy-3d-button:hover::before {
+  transform: translateZ(-40px); /* Enhance depth on hover */
+}
+
+.fancy-3d-button:hover {
+  transform: rotateX(15deg) rotateY(15deg); /* Rotate on hover for 3D effect */
+}
+
+.fancy-3d-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 75, 43, 0.5);
+}
+
+.button-icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.5em;
+  fill: currentColor;
+  transition: transform 0.6s ease-in-out;
+  transform: translateZ(10px); /* Bring SVG out for 3D effect */
+}
+
+.fancy-3d-button:hover .button-icon {
+  transform: rotate(360deg) translateZ(10px); /* Rotate SVG on hover */
+}
+
+.button-text {
+  z-index: 2;
+  transform: translateZ(10px); /* Bring text out for 3D effect */
+  transition: transform 0.6s ease-in-out;
+}
+
+.fancy-3d-button:hover .button-text {
+  transform: translateZ(20px); /* Enhance depth on hover */
+}
+
+</style>
+    
