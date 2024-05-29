@@ -1,0 +1,94 @@
+<div class="loading">
+  <div class="loading-box">
+    <div class="grid">
+      <div class="color l1"></div>
+      <div class="color l2"></div>
+      <div class="color l3"></div>
+      <div class="color l4"></div>
+      <div class="color l5"></div>
+      <div class="color l6"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by TemRevil  - Tags:  */
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-box {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.color {
+  background-color: #eee;
+  border-radius: 5px;
+}
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 120px 120px 120px;
+  grid-template-areas:
+    "l1 l2 l3"
+    "l1 l2 l4"
+    "l6 l6 l5";
+  gap: 10px;
+}
+
+.l1 {
+  grid-area: l1;
+  animation: Loading 6s 0s infinite linear;
+}
+.l2 {
+  grid-area: l2;
+  animation: Loading 5s 1s infinite linear;
+}
+.l3 {
+  grid-area: l3;
+  animation: Loading 4s 2s infinite linear;
+}
+.l4 {
+  grid-area: l4;
+  animation: Loading 3s 3s infinite linear;
+}
+.l5 {
+  grid-area: l5;
+  animation: Loading 2s 4s infinite linear;
+}
+.l6 {
+  grid-area: l6;
+  animation: Loading 1s 5s infinite linear;
+}
+
+@keyframes Loading {
+  0% {
+    background-color: #eee;
+  }
+  50% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #eee;
+  }
+}
+
+@media (max-width: 500px) {
+  .loading-box {
+    width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .grid {
+    grid-template-rows: 80px 80px 80px;
+  }
+}
+
+</style>
+    
