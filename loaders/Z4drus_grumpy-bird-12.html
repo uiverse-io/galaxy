@@ -1,0 +1,59 @@
+<div class="meteor"></div>
+
+<style>
+/* From Uiverse.io by Z4drus  - Tags: simple, glassmorphism, minimalist, white, black, loading, loader, loading animation */
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotateY(360deg) translateZ(0);
+  }
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meteor {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  border-radius: 50%;
+  position: relative;
+  animation: spin 3s linear infinite;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transform-style: preserve-3d;
+}
+
+.meteor::before,
+.meteor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.meteor::before {
+  transform: translateZ(-15px);
+}
+
+.meteor::after {
+  transform: translateZ(15px);
+}
+
+</style>
+    
