@@ -1,0 +1,236 @@
+<label
+  type="checkbox"
+  class="reduceMotionToggle st-reduceMotionToggleBtn"
+  for="reduceMotionToggle"
+>
+  <input
+    class="reduceMotionToggleInput"
+    id="reduceMotionToggle"
+    type="checkbox"
+  />
+  <svg
+    stroke-width="0"
+    stroke="currentColor"
+    fill="currentColor"
+    viewBox="0 0 18 18"
+    height="18"
+    width="18"
+  >
+    <mask id="lineMask">
+      <rect fill="white" height="18" width="18"></rect>
+      <rect
+        fill="black"
+        style="rotate: 30deg;"
+        height="16"
+        width="4.1"
+        y="-5"
+        x="9.807"
+        class="line"
+      ></rect>
+    </mask>
+    <rect
+      style="rotate: 30deg;"
+      height="13"
+      width="1.3"
+      y="-3.3"
+      x="11.3"
+      class="line"
+    ></rect>
+    <g mask="url(#lineMask)">
+      <circle
+        style="--_toCenterXOffset: 5.76px;--_appearOffset: -.1s;"
+        fill="none"
+        stroke-width=".1"
+        r="2.95"
+        cy="9"
+        cx="3.24"
+        class="ballTrace"
+      ></circle>
+      <circle
+        style="--_toCenterXOffset: 3px;--_appearOffset: .02s;"
+        fill="none"
+        stroke-width=".2"
+        r="2.9"
+        cy="9"
+        cx="6"
+        class="ballTrace"
+      ></circle>
+      <circle
+        style="--_toCenterXOffset: 0px;--_appearOffset: .07s;"
+        fill="none"
+        stroke-width=".3"
+        r="2.8"
+        cy="9"
+        cx="9"
+        class="ballTrace"
+      ></circle>
+      <circle
+        style="--_toCenterXOffset: -2.75px;--_appearOffset: .13s;"
+        fill="none"
+        stroke-width=".4"
+        r="2.75"
+        cy="9"
+        cx="11.75"
+        class="ballTrace"
+      ></circle>
+      <circle
+        style="--_toCenterXOffset: -5.7px;"
+        r="3"
+        cy="9"
+        cx="14.7"
+        class="ball"
+      ></circle>
+    </g>
+  </svg>
+</label>
+
+<style>
+/* From Uiverse.io by Type-Delta  - Tags: animation, minimalist, switch, toggle switch */
+/* design inspired by icon from thenounproject.com */
+
+.reduceMotionToggle {
+  width: 4em;
+  height: auto;
+  color: #bbb;
+}
+
+.st-reduceMotionToggleBtn {
+  position: relative;
+  cursor: pointer;
+}
+
+.st-reduceMotionToggleBtn .reduceMotionToggleInput {
+  opacity: 0;
+  width: inherit;
+  aspect-ratio: 1;
+}
+
+.st-reduceMotionToggleBtn svg {
+  position: absolute;
+  left: 0;
+  width: inherit;
+  height: inherit;
+}
+.st-reduceMotionToggleBtn svg .line {
+  transform: scaleX(0);
+}
+
+.st-reduceMotionToggleBtn
+  .reduceMotionToggleInput:not(:checked)
+  + svg
+  .ballTrace {
+  animation: ballTrace_toggleMotionOff9371A 0.3s ease 0s 1 forwards,
+    ballTrace_toggleMotionOff9371B 0.1s steps(2, end)
+      calc(0.32s + var(--_appearOffset)) 1 forwards;
+}
+.st-reduceMotionToggleBtn .reduceMotionToggleInput:not(:checked) + svg .ball {
+  animation: ball_toggleMotionOn9371A 0.3s ease 0s 1 forwards,
+    ball_toggleMotionOn9371B 0.4s cubic-bezier(0.165, 0.84, 0.45, 1.11) 0.3s 1
+      forwards;
+}
+
+.st-reduceMotionToggleBtn .reduceMotionToggleInput:checked + svg circle {
+  animation: ball_toggleMotionOff9371 0.9s linear 0s 1 forwards;
+}
+
+.st-reduceMotionToggleBtn .reduceMotionToggleInput:checked + svg .line {
+  animation: line_toggleMotionOff9371 0.32s cubic-bezier(0.075, 0.82, 0.165, 1)
+    0.47s 1 forwards;
+}
+
+@keyframes ball_toggleMotionOff9371 {
+  0% {
+    transform: translateX(0px);
+  }
+  6.66% {
+    transform: translateX(calc(var(--_toCenterXOffset) * 0.45));
+  }
+  13.33% {
+    transform: translateX(calc(var(--_toCenterXOffset) * 0.77));
+  }
+  20% {
+    transform: translateX(calc(var(--_toCenterXOffset) * 0.9));
+  }
+  26.66% {
+    transform: translateX(calc(var(--_toCenterXOffset) * 0.94));
+  }
+  33.33% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.965 + 1px), 2px);
+  }
+  35% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.988), 1px);
+  }
+  37% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.991 + 1px), -1px);
+  }
+  39% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.995 - 1px), -2px);
+  }
+  41% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.999 + 1px), -1px);
+  }
+  43% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.75), 1px);
+  }
+  45% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.5), 0px);
+  }
+  100% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.5), 0px);
+  }
+}
+
+@keyframes line_toggleMotionOff9371 {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes ball_toggleMotionOn9371A {
+  0% {
+    transform: translate(calc(var(--_toCenterXOffset) * 0.5), 0px);
+  }
+  100% {
+    transform: translate(calc(var(--_toCenterXOffset) - 5.67px), 0px);
+  }
+}
+
+@keyframes ball_toggleMotionOn9371B {
+  0% {
+    transform: translate(calc(var(--_toCenterXOffset) - 5.67px), 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes ballTrace_toggleMotionOff9371A {
+  0% {
+    opacity: 1;
+    transform: translate(calc(var(--_toCenterXOffset) * 0.5), 0px);
+  }
+  99.9% {
+    opacity: 1;
+    transform: translate(calc(var(--_toCenterXOffset) - 5.67px), 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--_toCenterXOffset) - 5.67px), 0px);
+  }
+}
+@keyframes ballTrace_toggleMotionOff9371B {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+</style>
+    
