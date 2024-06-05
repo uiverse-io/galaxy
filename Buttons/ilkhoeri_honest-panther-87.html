@@ -1,0 +1,102 @@
+<button class="action_has has_liked" aria-label="like" type="button">
+  <span data-icon=""
+    ><svg
+      data-icon="aoeri"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      fill="none"
+    >
+      <path
+        d="m8.05,11.99c0-.84.28-1.07,1.2-1.25,1.6-.31,2.35-.74,3.14-1.54,1.19-1.21,1.58-1.97,2.18-3.24.66-1.69,1.55-2.82,3.04-2.76.9.03,2.33.8,1.67,2.72-.31.9-1.98,3.61-2.23,4.23-.18.46.4.8.8.8h2.5c1.2,0,2.2,1,2.2,2.2l-1.1,5.6c-.3,1.5-1.02,2.23-2.2,2.2h-7.6c-2,0-3.6-1.6-3.6-3.6v-5.35Z"
+        data-d="thumb"
+      ></path>
+      <path
+        d="m5.4,19.9c0,.6-.5,1.1-1.1,1.1h-1c-1,0-1.9-.9-1.9-1.9v-6.3c0-1,.9-1.9,1.9-1.9h.9c.7,0,1.2.6,1.2,1.2v7.7Z"
+        data-d="sleeves"
+      ></path></svg
+  ></span>
+</button>
+
+<style>
+/* From Uiverse.io by ilkhoeri  - Tags: simple, success, button, like, click */
+.action_has {
+  --color: 0 0% 60%;
+  --color-has: 211deg 100% 48%;
+  --sz: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--sz) * 2.5);
+  width: calc(var(--sz) * 2.5);
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid hsl(var(--color));
+}
+
+.has_liked svg,
+.has_saved svg {
+  overflow: visible;
+  height: calc(var(--sz) * 1.75);
+  width: calc(var(--sz) * 1.75);
+  --ease: cubic-bezier(0.5, 0, 0.25, 1);
+  --zoom-from: 1.75;
+  --zoom-via: 0.75;
+  --zoom-to: 1;
+  --duration: 1s;
+}
+
+.has_liked:hover {
+  transition: border-color var(--duration) var(--ease);
+  border-color: hsl(var(--color-has));
+}
+
+.has_liked:hover svg,
+.has_saved:hover svg {
+  fill: hsl(var(--color-has) / 0.5);
+  color: hsl(var(--color-has));
+}
+
+.has_liked:hover [data-d="thumb"] {
+  animation: has-liked-thumb var(--duration) var(--ease) forwards;
+}
+.has_liked:hover [data-d="sleeves"] {
+  animation: has-liked-sleeves var(--duration) var(--ease) forwards;
+}
+
+@keyframes has-liked-thumb {
+  33.333% {
+    transform: rotate(-20deg) translate(1px, 2px) scale(var(--zoom-from));
+  }
+  66.666% {
+    transform: rotate(20deg) translate(2px, -2px) scale(var(--zoom-via));
+    d: path(
+      "m8.05,11.99c0-.84.28-1.07,1.2-1.25,1.6-.31,2.3-.64,2.9-1.09,0,0,1.64-1.31,2.21-3.11,1.12-3.59,2.11-4.85,3.72-4.85,2.27,0,2.96,2.22,2.55,3.54-.6,1.97-3.81,4.09-3.94,4.99-.07.49.76.72,1.16.72h2.5c1.2,0,2.2,1,2.2,2.2l-1.1,5.6c-.3,1.5-1.02,2.23-2.2,2.2h-7.6c-2,0-3.6-1.6-3.6-3.6v-5.35Z"
+    );
+  }
+  99.999% {
+    transform: rotate(0deg) translate(0px, 0px) scale(var(--zoom-to));
+  }
+}
+
+@keyframes has-liked-sleeves {
+  33.333% {
+    transform: rotate(10deg) translate(6px, -2px) scale(var(--zoom-from));
+  }
+  66.666% {
+    transform: rotate(-10deg) translate(-6px, 0px) scale(var(--zoom-via));
+  }
+  99.999% {
+    transform: rotate(0deg) translate(0px, 0px) scale(var(--zoom-to));
+  }
+}
+
+</style>
+    
