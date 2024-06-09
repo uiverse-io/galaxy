@@ -1,0 +1,68 @@
+<button class="button">
+  <span class="icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 46 45"
+      height="45"
+      width="46"
+    >
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="3"
+        stroke="black"
+        d="M29.5487 17.0828L27.4588 19.235L20.4922 26.4091M20.4922 26.4091L5.82359 21.5242C1.20662 19.9867 1.28359 13.4294 5.93538 12.0007L37.5858 2.27996C41.4233 1.10135 45.0151 4.69768 43.8315 8.53369L34.3384 39.3027C32.9045 43.9502 26.3517 44.022 24.8163 39.4069L20.4922 26.4091Z"
+      ></path>
+    </svg>
+  </span>
+  <span>Send Message</span>
+</button>
+
+<style>
+/* From Uiverse.io by Subaashbala  - Tags: simple, neumorphism, button */
+.button {
+  cursor: pointer;
+  position: relative;
+  border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 900;
+  background-color: white;
+  border: none;
+  background: linear-gradient(to bottom, #ecefee, #fff);
+  transition: all 500ms;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 115%;
+  background: linear-gradient(to top, #ecefeeb4, #fff);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  padding: 2px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #d5d6d5;
+  border-bottom: 3px solid #7b7d7cc0;
+  border-left: 2px solid #b5b5b5;
+  border-right: 2px solid #b5b5b5;
+  box-shadow: 0px 20px 45px #b5b9b8;
+}
+.icon svg {
+  width: 1.18rem;
+  height: auto;
+  vertical-align: middle;
+}
+.icon path {
+  stroke-width: 5px;
+}
+
+</style>
+    
