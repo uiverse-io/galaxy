@@ -1,0 +1,133 @@
+<button class="button">
+  <div class="border">
+    <div class="outer">
+      <div class="inner">
+        <svg
+          class="icon"
+          width="26"
+          height="26"
+          viewBox="0 0 26 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_253_3447)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M22.8417 5.93711C23.5329 3.62302 21.377 1.46711 19.0629 2.15834L5.19469 6.30079C2.9915 6.95888 2.29064 9.7318 3.91654 11.3577L5.29411 12.7353C6.54198 13.9831 8.43704 14.3033 10.0203 13.5481L14.8037 8.76481C15.199 8.36951 15.8399 8.36951 16.2352 8.76481C16.6305 9.16011 16.6305 9.80102 16.2352 10.1963L11.4519 14.9797C10.6967 16.563 11.0169 18.458 12.2647 19.7059L13.6423 21.0835C15.2682 22.7094 18.0411 22.0085 18.6992 19.8053L22.8417 5.93711ZM9.08131 15.9187C7.20189 16.1789 5.25956 15.5637 3.8626 14.1668L2.48504 12.7892C-0.224811 10.0794 0.943288 5.45784 4.61528 4.36102L18.4835 0.218565C22.3403 -0.933473 25.9335 2.65971 24.7814 6.51653L20.639 20.3847C19.5422 24.0567 14.9206 25.2248 12.2108 22.515L10.8332 21.1374C9.43626 19.7404 8.82111 17.7981 9.08131 15.9187Z"
+              fill="#171717"
+            ></path>
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_253_3447"
+              x="0"
+              y="0"
+              width="26"
+              height="26"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              ></feColorMatrix>
+              <feOffset dy="1"></feOffset>
+              <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
+              <feComposite in2="hardAlpha" operator="out"></feComposite>
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              ></feColorMatrix>
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_253_3447"
+              ></feBlend>
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_253_3447"
+                result="shape"
+              ></feBlend>
+            </filter>
+          </defs>
+        </svg>
+        <span>Send Message</span>
+      </div>
+    </div>
+  </div>
+</button>
+
+<style>
+/* From Uiverse.io by vladaxnt  - Tags: button, hover, active, message, shadow, rotate, click effect */
+.icon,
+.button {
+  transition: box-shadow 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.button {
+  background: none;
+  border: none;
+  border-radius: 21px;
+  cursor: pointer;
+  color: #171717;
+  box-shadow: 0px 192px 54px 0px rgba(23, 23, 23, 0),
+    0px 123px 49px 0px rgba(23, 23, 23, 0.01),
+    0px 69px 41px 0px rgba(23, 23, 23, 0.05),
+    0px 31px 31px 0px rgba(23, 23, 23, 0.09),
+    0px 8px 17px 0px rgba(23, 23, 23, 0.1);
+}
+
+.button span {
+  font-size: 25px;
+  line-height: 36px;
+  font-weight: 500;
+  text-shadow: 0px 1px 1px rgba(23, 23, 23, 0.25);
+}
+
+.button .inner {
+  background: linear-gradient(0deg, #fff 0%, #edeeee 100%);
+  padding: 21px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 56px;
+}
+
+.button .outer {
+  padding: 6px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fff 25.56%, #ebebeb 115.56%);
+}
+
+.button .border {
+  padding: 4px;
+  border-radius: 20px;
+  border: 1px solid #f0f0f0;
+  background: linear-gradient(180deg, #e3e3e3 0%, #7d7d7d 100%);
+}
+
+.button:hover .icon {
+  transform: rotate(45deg);
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+.button:active {
+  transform: scale(0.94);
+  box-shadow: 0px 30px 8px 0px rgba(23, 23, 23, 0),
+    0px 19px 8px 0px rgba(23, 23, 23, 0),
+    0px 11px 6px 0px rgba(23, 23, 23, 0.01),
+    0px 5px 5px 0px rgba(23, 23, 23, 0.02),
+    0px 1px 3px 0px rgba(23, 23, 23, 0.03);
+}
+
+</style>
+    
