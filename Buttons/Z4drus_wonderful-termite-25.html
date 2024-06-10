@@ -1,0 +1,108 @@
+<div class="button-container">
+  <button class="button-3d">
+    <div class="button-top">
+      <span class="material-icons">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          height="22"
+          width="22"
+        >
+          <path
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="1.5"
+            stroke="#292D32"
+            d="M7.4 6.32l8.49-2.83c3.81-1.27 5.88.81 4.62 4.62l-2.83 8.49c-1.9 5.71-5.02 5.71-6.92 0l-.84-2.52-2.52-.84c-5.71-1.9-5.71-5.01 0-6.92zm2.71 7.33l3.58-3.59"
+          ></path>
+        </svg>
+      </span>
+      <span class="button-text">Send Message</span>
+    </div>
+    <div class="button-bottom"></div>
+    <div class="button-base"></div>
+  </button>
+</div>
+
+<style>
+/* From Uiverse.io by Z4drus  - Tags: simple, 3d, action, minimalist, white, black, button, smooth */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.material-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-text {
+  margin-left: 6px;
+  font-weight: 600;
+  color: black;
+}
+
+.button-3d {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  border-width: 0;
+  padding: 0 8px;
+  min-width: 4em;
+  min-height: 4em;
+  box-sizing: border-box;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.button-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  padding: 10px 10px;
+  transform: translateY(0);
+  background-image: linear-gradient(to bottom, #e7e7e775, #ffffff);
+  border-radius: 20px;
+  transition: transform 0.3s, border-radius 0.3s, background 10s;
+}
+
+.button-3d:active .button-top {
+  border-radius: 10px 10px 8px 8px / 8px;
+  transform: translateY(2px);
+  background-image: linear-gradient(to bottom, #ffffff, #e7e7e7);
+}
+
+.button-bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 10px;
+  padding-top: 10px;
+  width: calc(100% - 8px);
+  height: calc(100% - 10px);
+  background-image: linear-gradient(to bottom, #ffffff, #e7e7e7);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+  transition: border-radius 0.2s, padding-top 0.2s;
+}
+
+.button-3d:active .button-bottom {
+  border-radius: 10px 10px 8px 8px / 8px;
+  padding-top: 0;
+}
+
+.button-3d:active .button-base {
+  border-radius: 10px 10px 8px 8px / 8px;
+}
+
+</style>
+    
