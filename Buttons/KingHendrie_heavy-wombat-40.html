@@ -1,0 +1,118 @@
+<input type="checkbox" id="send-checkbox" class="send-checkbox" />
+<label for="send-checkbox" class="send-button">
+  <svg
+    class="svg-style"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    height="20px"
+    width="20px"
+  >
+    <path
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="1.5"
+      stroke="#292D32"
+      d="M7.39999 6.32003L15.89 3.49003C19.7 2.22003 21.77 4.30003 20.51 8.11003L17.68 16.6C15.78 22.31 12.66 22.31 10.76 16.6L9.91999 14.08L7.39999 13.24C1.68999 11.34 1.68999 8.23003 7.39999 6.32003Z"
+    ></path>
+    <path
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="1.5"
+      stroke="#292D32"
+      d="M10.11 13.6501L13.69 10.0601"
+    ></path>
+  </svg>
+  <span class="message">Send Message</span>
+  <span class="message-sent">Message Sent</span>
+</label>
+
+<style>
+/* From Uiverse.io by KingHendrie  - Tags: simple, icon, animation, action, button, rounded, social media, button hover effect  */
+.send-checkbox {
+  display: none;
+}
+
+.send-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  color: #2c2c2c;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+    2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.send-checkbox:checked + .send-button .message {
+  opacity: 0;
+}
+
+.send-checkbox:checked + .send-button .message-sent {
+  animation: fadeIn 3s forwards;
+}
+
+.send-checkbox:checked + .send-button svg {
+  animation: send 1s forwards;
+}
+
+@keyframes rotate-hover {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes send {
+  0% {
+    transform: translateX(0) rotate(40deg);
+  }
+  100% {
+    transform: translateX(150px) rotate(40deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.send-button .message-sent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #125b96;
+}
+
+.send-button:hover {
+  background-color: #e0e0e0;
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1),
+    3px 3px 7px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.send-button:hover svg {
+  animation: rotate-hover 0.2s;
+  transform: rotate(40deg);
+}
+
+</style>
+    
