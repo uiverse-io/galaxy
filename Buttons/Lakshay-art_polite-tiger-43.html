@@ -1,0 +1,196 @@
+<button class="button">
+  <div id="main-border">
+    <div id="main">
+      <div id="inner-box">
+        <div id="inner-dent"></div>
+        <div id="send">Send</div>
+        <div id="sent">Sent</div>
+        <div id="tick">
+          <svg
+            width="30px"
+            height="30px"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            fill="none"
+            stroke="#000000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          >
+            <path
+              d="m1.75 9.75 2.5 2.5m3.5-4 2.5-2.5m-4.5 4 2.5 2.5 6-6.5"
+            ></path>
+          </svg>
+        </div>
+        <div id="text-container" tabindex="-1">
+          <div id="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="black"
+              stroke-width="0.5px"
+              fill="none"
+              viewBox="0 0 24 24"
+              height="30px"
+              width="30px"
+            >
+              <path
+                fill="#000000"
+                d="M14.2199 21.63C13.0399 21.63 11.3699 20.8 10.0499 16.83L9.32988 14.67L7.16988 13.95C3.20988 12.63 2.37988 10.96 2.37988 9.78001C2.37988 8.61001 3.20988 6.93001 7.16988 5.60001L15.6599 2.77001C17.7799 2.06001 19.5499 2.27001 20.6399 3.35001C21.7299 4.43001 21.9399 6.21001 21.2299 8.33001L18.3999 16.82C17.0699 20.8 15.3999 21.63 14.2199 21.63ZM7.63988 7.03001C4.85988 7.96001 3.86988 9.06001 3.86988 9.78001C3.86988 10.5 4.85988 11.6 7.63988 12.52L10.1599 13.36C10.3799 13.43 10.5599 13.61 10.6299 13.83L11.4699 16.35C12.3899 19.13 13.4999 20.12 14.2199 20.12C14.9399 20.12 16.0399 19.13 16.9699 16.35L19.7999 7.86001C20.3099 6.32001 20.2199 5.06001 19.5699 4.41001C18.9199 3.76001 17.6599 3.68001 16.1299 4.19001L7.63988 7.03001Z"
+              ></path>
+              <path
+                fill="#000000"
+                d="M10.11 14.4C9.92005 14.4 9.73005 14.33 9.58005 14.18C9.29005 13.89 9.29005 13.41 9.58005 13.12L13.16 9.53C13.45 9.24 13.93 9.24 14.22 9.53C14.51 9.82 14.51 10.3 14.22 10.59L10.64 14.18C10.5 14.33 10.3 14.4 10.11 14.4Z"
+              ></path>
+            </svg>
+          </div>
+          <div id="text">Message</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</button>
+
+<style>
+/* From Uiverse.io by Lakshay-art  - Tags: simple, animation, button, transition, click animation, bounce animation */
+.button {
+  cursor: pointer;
+  border: none;
+  /* margin: 0px !important; */
+  background: transparent;
+  transition: scale 1s;
+}
+.button:hover {
+  scale: 1.05;
+}
+#main-border {
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(180deg, #e8e8e8, #d2d2d2);
+  box-shadow: 0px 20px 25px #0002, 0px 3px 4px #0004;
+}
+#main {
+  /* border: 2px solid #e4e4e4; */
+  border-radius: 21px;
+  width: 260px;
+  height: 90px;
+  background: linear-gradient(180deg, #1111, #0007);
+  padding: 4px;
+
+  /* overflow: hidden; */
+}
+#inner-box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #fff, #eaeaea);
+  border-radius: 16px;
+  box-shadow: 0px 2px 2px #0002;
+  padding-block: 6px;
+  padding-inline: 6px;
+  position: relative;
+}
+#inner-dent {
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #eaeaea 0%, #fff 70%);
+  filter: blur(1.5px);
+}
+#text-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 75px;
+  /* background-color: red; */
+}
+#text {
+  font-size: 24px;
+  font-weight: 600;
+}
+#text-container:focus > #arrow {
+  transform: rotate(-45deg) translateX(110px) translateY(90px);
+  /* transform: rotate(45deg) translateX(100px) translateY(-90px); */
+  transition: transform 1s;
+}
+#send {
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: 0px;
+  left: 57px;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#text-container:focus {
+  transform: translateY(-450px);
+  transition: transform 1s 1s;
+  /* background-color: red; */
+}
+#inner-box:focus-within > #send {
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+#sent {
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: 0px;
+  left: 57px;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+}
+
+#inner-box:focus-within > #sent {
+  opacity: 1;
+  transform: translateX(20px);
+  transition: opacity 1s 1s, transform 1s 1s;
+}
+
+#tick {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  /* justify-content: center; */
+  align-items: center;
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  opacity: 0;
+}
+#inner-box:focus-within > #tick {
+  opacity: 1;
+  transform: translateX(-85px);
+  transition: opacity 1s 1.3s, transform 1s 1s;
+}
+.button:focus-within {
+  animation: recoil 0.4s 0.9s;
+  /* transform: translateY(10px);
+  transition: transform 1s 0.8s; */
+}
+
+@keyframes recoil {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+</style>
+    
