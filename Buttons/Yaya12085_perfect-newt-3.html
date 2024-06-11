@@ -1,0 +1,126 @@
+<button class="button">
+  <span class="icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      id="paper-plane"
+    >
+      <path
+        d="M20.34,9.32l-14-7a3,3,0,0,0-4.08,3.9l2.4,5.37h0a1.06,1.06,0,0,1,0,.82l-2.4,5.37A3,3,0,0,0,5,22a3.14,3.14,0,0,0,1.35-.32l14-7a3,3,0,0,0,0-5.36Zm-.89,3.57-14,7a1,1,0,0,1-1.35-1.3l2.39-5.37A2,2,0,0,0,6.57,13h6.89a1,1,0,0,0,0-2H6.57a2,2,0,0,0-.08-.22L4.1,5.41a1,1,0,0,1,1.35-1.3l14,7a1,1,0,0,1,0,1.78Z"
+      ></path>
+    </svg>
+  </span>
+  <span class="title">Send Message</span>
+</button>
+
+<style>
+/* From Uiverse.io by Yaya12085  - Tags: button, challenge, hover effect, ui */
+.button {
+  --radius: 20px;
+  --white: #ffffff;
+  --white50: #ffffff80;
+  --white35: #ffffff59;
+  --second_white: #f8f8f8;
+  --second_white75: #f8f8f8bf;
+  --third_white: #fafbfb;
+  --gray: #cacaca;
+  --gray50: #cacaca80;
+  --black: #1c1c1c;
+  --black15: #1c1c1c26;
+  --black13: #1c1c1c21;
+  --black10: #1c1c1c1a;
+  --black5: #1c1c1c0d;
+  --black35: #1c1c1c59;
+  --black75: #1c1c1cbf;
+  --black50: #1c1c1c80;
+  position: relative;
+  width: 250px;
+  height: 80px;
+  border-radius: var(--radius);
+  background-color: var(--white);
+  background: linear-gradient(var(--white) 100%, var(--gray) 50%);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.3s;
+}
+.icon {
+  position: relative;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+  transition: all 0.3s;
+}
+.icon #paper-plane {
+  height: 24px;
+  width: 24px;
+  fill: var(--black);
+  filter: drop-shadow(0 1px 1px var(--black35));
+}
+
+.title {
+  filter: drop-shadow(0 1px 1px var(--black35));
+  font-size: 20px;
+  color: var(--black);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.button::after,
+.button::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+.button::before {
+  background-color: var(--white);
+  box-shadow: inset 10px 10px 15px var(--gray50),
+    inset -10px -10px 15px var(--white), 0 0 0 2px var(--white);
+  width: 90%;
+  height: 80%;
+  border-radius: calc(var(--radius) * 10);
+}
+.button::after {
+  filter: drop-shadow(0 2px 4px var(--black15)),
+    drop-shadow(0 30px 100px var(--black13)),
+    drop-shadow(0 15px 30px var(--black10)),
+    drop-shadow(0 16px 12px var(--black5));
+  box-shadow: 0 0 0 1px var(--white);
+  background-color: var(--black);
+  background: linear-gradient(0deg, var(--black50), var(--gray));
+  width: 102%;
+  height: 108%;
+  border-radius: calc(var(--radius) + 2px);
+  z-index: -1;
+  transition: all 0.1s;
+}
+
+.button:hover::after {
+  width: 101%;
+  height: 104%;
+  filter: none;
+}
+.button:active::after {
+  width: 100%;
+  height: 100%;
+  filter: none;
+}
+.button:hover .icon {
+  transform: rotate(0) translateX(50%);
+  left: calc(50% + 24px);
+}
+.button:hover .title {
+  transform: translateX(-24px);
+}
+
+</style>
+    
