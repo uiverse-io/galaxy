@@ -1,0 +1,152 @@
+<button
+  aria-label="Send Message"
+  class="button relative overflow-hidden flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 border border-transparent rounded-full shadow-lg text-white cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50 focus:scale-105 active:scale-95"
+>
+  <div class="ripple"></div>
+  <svg
+    class="relative w-12 h-12 mr-2 z-10 transition-transform duration-300 ease-in-out transform hover:rotate-12 shadow-sm transition-colors duration-300 ease-in-out"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 36.000000 75.000000"
+    height="80pt"
+    width="80pt"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.0"
+  >
+    <g
+      stroke="none"
+      fill="#ffffff"
+      transform="translate(0.000000,75.000000) scale(0.100000,-0.100000)"
+    >
+      <path
+        d="M188 481 c-42 -15 -84 -34 -93 -41 -27 -22 -14 -53 31 -74 30 -14 46  -30 60 -60 23 -50 55 -59 78 -24 24 36 56 137 56 174 0 23 -6 37 -19 44 -25 13 -23 13 -113 -19z m110 -20 c4 -28 -37 -158 -55 -173 -17 -14 -39 4 -48 39 -4 19 0 35 14 54 30 41 26 47 -9 14 -30 -29 -30 -29 -65 -12 -58 28 -47 42 65 81 41 14 80 24 85 22 6 -1 11 -13 13 -25z"
+      ></path>
+    </g>
+  </svg>
+  <svg
+    class="relative w-8 h-8 mr-2 z-10 transition-transform duration-300 ease-in-out transform hover:rotate-12 shadow-sm transition-colors duration-300 ease-in-out"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 36.000000 75.000000"
+    height="80pt"
+    width="80pt"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.0"
+  >
+    <g
+      stroke="none"
+      fill="#ffffff"
+      transform="translate(0.000000,75.000000) scale(0.100000,-0.100000)"
+    >
+      <path
+        d="M100 300 l0 -300 30 0 30 0 0 300 0 300 -30 0 -30 0 0 -300z"
+      ></path>
+    </g>
+  </svg>
+  <span
+    class="relative z-10 font-semibold text-lg transition-all duration-300 ease-in-out"
+    >Send Message</span
+  >
+</button>
+
+<style>
+/* From Uiverse.io by mRcOol7  - Tags: button, #button, button hover effect  */
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+.button svg {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.button:hover svg {
+  transform: rotate(20deg) scale(1.1);
+  filter: drop-shadow(0 0 10px #ffd700);
+}
+
+.button span {
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+}
+
+.button:hover span {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+.button .text-md {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,
+    text-shadow 0.3s ease-in-out;
+}
+
+.button:hover .text-md {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  animation: ripple 1s linear infinite;
+  pointer-events: none;
+}
+
+.button:active .ripple {
+  animation: ripple-on-click 0.6s linear;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-on-click {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+</style>
+    
