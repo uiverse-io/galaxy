@@ -1,0 +1,83 @@
+<button class="send-message-button">
+  <div class="send-message-content">
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 23.19 19.89"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0,19.89l23.19-9.95L0,0v7.74l16.58,2.21L0,12.16v7.74Z"
+        fill="#ccc"
+      ></path>
+      <path
+        d="M.42,19.53l22.36-9.59L.42.36v7.46l15.98,2.13L.42,12.08v7.46Z"
+        fill="#fff"
+      ></path>
+      <path
+        d="M1.1,18.95l20.99-9L1.1.95v7l15,2L1.1,11.95v7Z"
+        fill="#000"
+      ></path>
+    </svg>
+    <span>Send Message</span>
+  </div>
+</button>
+
+<style>
+/* From Uiverse.io by Vaperene  - Tags: simple, material design, neumorphism, icon, button, #button, button hover effect , 2d button */
+.send-message-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f300;
+  border: 2px solid #a5a5a500;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.5s, border-color 0.4s,
+    padding 0.3s;
+}
+
+.send-message-button:hover {
+  background-image: linear-gradient(59deg, #f3f3f3, #d7d6d6c0);
+  border-color: #e9e9e9;
+}
+
+.send-message-button:active {
+}
+
+.send-message-content {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 8px 16px;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s;
+}
+
+.send-message-button:active .send-message-content {
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.send-message-content svg {
+  margin-right: 10px;
+  fill: #1d0c0c;
+  transition: fill 0.3s;
+}
+
+.send-message-content span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.send-message-button:hover .send-message-content span {
+  color: #1d0c0c;
+}
+
+</style>
+    
