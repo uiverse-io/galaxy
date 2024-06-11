@@ -26,12 +26,13 @@
 /* From Uiverse.io by Spacious74  - Tags: neumorphism, button, shadow, 3d button */
 .button {
   cursor: pointer;
-  background: linear-gradient(180deg, #e3e4e3, #7e7e7e);
+  background: linear-gradient(180deg, #cfcfcf, #808080);
   padding: 3px;
   border-radius: 15px;
   border: solid 1px #ebebeb;
   box-shadow: 0 3px 10px -1px #00000017, 0px 1px 5px #0000000e,
     0 10px 40px -15px #0000006e;
+  transition: all 0.3s ease;
 }
 .inner {
   background: linear-gradient(180deg, #fff, #e0e0e0);
@@ -49,10 +50,32 @@
   border-radius: 300px;
   box-shadow: inset 0 10px 20px #0000000c;
   background-color: #f8fafa;
+  transition: all 0.4s ease;
 }
-.svg {
+.roundInner .svg {
   transform: rotate(-45deg);
   margin-bottom: 5px;
+  filter: drop-shadow(0 1px 1px #000000);
+  transition: all 0.3s ease;
+}
+.roundInner:hover > .svg {
+  transform: rotate(0deg);
+  animation: move 1s linear infinite alternate;
+}
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(3px, 0px);
+  }
+}
+
+.button:active {
+  box-shadow: none;
+}
+.inner:active {
+  padding: 5px;
 }
 
 </style>
