@@ -1,0 +1,82 @@
+<button class="send-message-button">
+  <span class="icon">✈️</span> <span class="text">Send Message</span>
+</button>
+
+<style>
+/* From Uiverse.io by CaptainToy  - Tags: button, buttons, simple button, hover button, bounce animation */
+.send-message-button {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.send-message-button .icon {
+  font-size: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  left: 0;
+}
+
+.send-message-button .text {
+  transition: opacity 0.3s ease;
+}
+
+.send-message-button:hover .icon {
+  transform: translateX(200%);
+}
+
+.send-message-button:hover .text {
+  opacity: 0;
+}
+
+.send-message-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.send-message-button::after {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.send-message-button:hover::after {
+  opacity: 1;
+}
+
+.send-message-button::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: 50%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.send-message-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+</style>
+    
