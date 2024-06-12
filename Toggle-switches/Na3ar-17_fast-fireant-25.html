@@ -1,0 +1,117 @@
+<label class="switch">
+  <input type="checkbox" />
+  <span class="slider">
+    <span class="yolk"> </span>
+    <span class="back"> </span>
+  </span>
+</label>
+
+<style>
+/* From Uiverse.io by Na3ar-17  - Tags: simple, animation, action, switch, dark, modern, click, toggle switch */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 95px;
+  height: 50px;
+  background-color: #2a2a2a;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  top: 50%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.3s cubic-bezier(0.68, -0.25, 0.265, 1.1);
+  overflow: hidden;
+}
+
+.slider .yolk {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  aspect-ratio: 1/1;
+  background-color: #f2a828;
+  border-radius: 50%;
+  -webkit-box-shadow: inset -2px -2px 43px -35px rgba(255, 255, 255, 1);
+  -moz-box-shadow: inset -2px -2px 43px -35px rgba(255, 255, 255, 1);
+  box-shadow: inset -2px -2px 43px -35px rgba(255, 255, 255, 1);
+}
+
+.slider .yolk::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: #cabea8;
+  border-radius: 50%;
+}
+
+.slider .yolk::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border-left: 6px solid #fff;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.slider .back {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #cabea8;
+  transition: 0.3s cubic-bezier(0, 0, 0.265, 1.1);
+  overflow: hidden;
+}
+
+.slider .back::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  aspect-ratio: 1/1;
+  background-color: #eec076;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  left: 74%;
+}
+
+.switch input:checked + .slider .back {
+  left: 50%;
+}
+
+</style>
+    
