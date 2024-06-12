@@ -1,0 +1,103 @@
+<button class="button">
+  <div>
+    <svg
+      class="w-6 h-6 text-gray-800 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"
+      ></path>
+    </svg>
+    Send Message
+  </div>
+</button>
+
+<style>
+/* From Uiverse.io by asgardOP  - Tags: simple, animation, white, button, message, modern, btn, click animation */
+.button {
+  width: 170px;
+  height: 55px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  border-bottom: 2px solid rgb(77, 77, 77);
+  display: flex;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.349);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s;
+  background: linear-gradient(140deg, white, rgb(214, 214, 214));
+}
+
+.button:hover {
+  box-shadow: none;
+  transform: scaleY(0.65);
+  border-bottom: 2px solid rgb(77, 77, 77);
+  background: linear-gradient(160deg, white, rgb(214, 214, 214));
+}
+
+.button:active {
+  margin-top: 20px;
+  transition: 0.05s;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  bottom: 0px;
+  width: 170px;
+  height: 0px;
+  background: rgb(194, 194, 194);
+  border-top: 0px solid black;
+  border-bottom: 0px solid black;
+  transition: height 0.4s, bottom 0.4s, opacity 0s 0.35s;
+  opacity: 0;
+  box-shadow: inset 0px -10px 10px rgba(167, 167, 167, 0.719);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.button:hover::before {
+  height: 35px;
+  bottom: -27px;
+  opacity: 1;
+  border-bottom: 1px solid black;
+  transition: height 0.4s, bottom 0.4s;
+}
+
+.button:active::before {
+  height: 18px;
+  bottom: -9px;
+  transition: height 0.05s, bottom 0.05s, opacity 0s 0s;
+}
+
+.button div {
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(180deg, rgba(212, 212, 212, 0.925), white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-weight: 900;
+}
+
+.button div svg {
+  width: 20px;
+  transform: rotate(40deg);
+  margin-right: 5px;
+}
+
+</style>
+    
