@@ -2,18 +2,18 @@
   <div class="in">
     <div class="image">
       <svg
-        transform="rotate(-45)"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        height="25px"
-        width="25px"
         fill="#000000"
+        width="25px"
+        height="25px"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        transform="rotate(-45)"
       >
-        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g
-          stroke-linejoin="round"
-          stroke-linecap="round"
           id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           <path
@@ -27,13 +27,12 @@
 </button>
 
 <style>
-/* From Uiverse.io by anushkaps  - Tags: gradient, button, glow, theme-switch, code, blur filter, arrow, 2d button */
+/* From Uiverse.io by anushkaps  - Tags: animation, alert, gradient, button, code, svg, arrow, 2d button */
 .button {
   cursor: pointer;
   height: 6em;
   width: 18em;
   border-radius: 1em;
-  border: navy;
   border-top: 0.2em solid #b0b1b0;
   border-bottom: 0.2em solid #50504f;
   border-left: 0.2em solid #848584;
@@ -43,7 +42,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 0.2em;
+  background: linear-gradient(135deg, #b0b1b0, #848584, #50504f);
+  z-index: -1;
+}
+
 .in {
   display: flex;
   justify-content: space-around;
@@ -52,15 +67,54 @@
   width: 16.9em;
   border-radius: 2em;
   background: linear-gradient(to bottom, #eceeec, #ffffff);
+  transition: background 2s, transform 2s ease;
 }
+
 .text {
   font-size: 21px;
   font-weight: bold;
   width: 9em;
   color: #252625;
+  transition: transform 0.6s ease-in-out;
 }
+
 .image {
   padding-left: 1.2em;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image svg {
+  transition: transform 0.6s ease-in-out; /* Smooth rotation */
+}
+
+.button:hover .in {
+  background: linear-gradient(to bottom, #ffffff, #eceeec);
+  transform: scale(1.05);
+}
+
+.button:hover .image {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button:hover svg {
+  transform: translateX(6.5em) rotate(2deg);
+}
+
+.button:hover .text {
+  transform: translateX(9em);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+  to {
+    transform: translateY(-0.1em);
+  }
 }
 
 </style>
