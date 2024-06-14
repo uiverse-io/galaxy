@@ -2,19 +2,19 @@
   <div class="inner">
     <div class="roundInner">
       <svg
-        viewBox="0 0 24 24"
-        height="1.3em"
-        width="1.3em"
-        xmlns="http://www.w3.org/2000/svg"
         class="svg"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1.3em"
+        height="1.3em"
+        viewBox="0 0 24 24"
       >
         <path
-          d="m5 12l-.604-5.437C4.223 5.007 5.825 3.864 7.24 4.535l11.944 5.658c1.525.722 1.525 2.892 0 3.614L7.24 19.466c-1.415.67-3.017-.472-2.844-2.028zm0 0h7"
-          stroke-width="1.5"
-          stroke-linejoin="round"
-          stroke-linecap="round"
-          stroke="currentColor"
           fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="m5 12l-.604-5.437C4.223 5.007 5.825 3.864 7.24 4.535l11.944 5.658c1.525.722 1.525 2.892 0 3.614L7.24 19.466c-1.415.67-3.017-.472-2.844-2.028zm0 0h7"
         ></path>
       </svg>
       Send Message
@@ -55,27 +55,14 @@
 .roundInner .svg {
   transform: rotate(-45deg);
   margin-bottom: 5px;
-  filter: drop-shadow(0 1px 1px #000000);
   transition: all 0.3s ease;
 }
-.roundInner:hover > .svg {
-  transform: rotate(0deg);
-  animation: move 1s linear infinite alternate;
-}
-@keyframes move {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  100% {
-    transform: translate(3px, 0px);
-  }
+.roundInner:active > .svg {
+  transform: translate(3px, -3px) rotate(-45deg);
 }
 
 .button:active {
   box-shadow: none;
-}
-.inner:active {
-  padding: 5px;
 }
 
 </style>
