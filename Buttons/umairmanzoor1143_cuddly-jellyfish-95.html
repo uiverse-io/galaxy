@@ -1,0 +1,55 @@
+<button class="button">
+  <span class="span">Button</span>
+</button>
+
+<style>
+/* From Uiverse.io by umairmanzoor1143  - Tags: loading, button, on, off, glow, circle, rotate, click */
+.button {
+  background: #fff;
+  position: relative;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.span {
+  display: inline-block;
+}
+.button:hover {
+  font-size: 20px;
+  transform: skew(-5deg);
+  padding-right: 30px;
+}
+.button::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  width: 15px;
+  height: 15px;
+  margin-top: -8px;
+  margin-left: -5px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #000;
+  opacity: 0;
+  animation: spinner 0.6s linear infinite;
+  transition: 0.5s;
+}
+.button:hover::before {
+  opacity: 1;
+  left: 85%;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+    
