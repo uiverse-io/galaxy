@@ -1,0 +1,84 @@
+<button class="button">
+  <div class="ellipse">
+    <span class="icon"
+      ><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"
+        ></path></svg
+    ></span>
+    <span class="text1"> Send message </span>
+    <span class="text2"> Send! </span>
+  </div>
+</button>
+
+<style>
+/* From Uiverse.io by Mini-khamasino  - Tags: simple, animation, button */
+.button {
+  background-color: rgb(236, 235, 235);
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0.1px solid rgb(179, 178, 178);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 7px rgb(97, 97, 97);
+  cursor: pointer;
+}
+.ellipse {
+  position: relative;
+  padding-top: 10px;
+  width: 160px;
+  height: 40px;
+  border-radius: 25px;
+  border: 0px;
+  background-image: linear-gradient(rgb(218, 217, 217), rgb(250, 250, 250));
+  box-shadow: 0px 4px 5px rgb(231, 231, 231);
+  cursor: pointer;
+  font-size: medium;
+}
+.icon {
+  position: absolute;
+  width: 18px;
+  left: 8%;
+  transition-duration: 0.5s;
+}
+
+.button:hover .icon {
+  left: 80%;
+  transform: rotate(45deg);
+  fill: rgb(22, 219, 101);
+}
+
+.text2 {
+  position: absolute;
+  left: 30%;
+  top: 27%;
+  font-weight: bold;
+  color: rgb(22, 219, 101, 0);
+  letter-spacing: 3px;
+  transition: color 0.3s;
+}
+
+.button:hover .text1 {
+  color: rgb(255, 255, 255, 0);
+  transition-duration: 0.3s;
+}
+
+.text1 {
+  width: 70%;
+  position: absolute;
+  font-size: 15px;
+  left: 24%;
+  transition-duration: 1s;
+}
+
+.button:hover .text2 {
+  color: rgb(22, 219, 101);
+  letter-spacing: 3px;
+  transition-duration: 0.5s;
+}
+
+</style>
+    
