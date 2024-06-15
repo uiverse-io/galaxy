@@ -1,0 +1,72 @@
+<button class="button">
+  <svg
+    class="size-6"
+    stroke="currentColor"
+    stroke-width="2.5"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    ></path>
+  </svg>
+  <span>Send Message</span>
+</button>
+
+<style>
+/* From Uiverse.io by snguem  - Tags: icon, animation, button, hover */
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 80px;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 5px;
+  transition: width 0.5s 0.2s ease;
+}
+.button::after {
+  position: absolute;
+  content: "";
+  width: 95%;
+  height: 87%;
+  border-radius: 40px;
+  box-shadow: inset 5px 5px 25px #00000018, 1px 1px 10px #00000013;
+  transition: all 0.5s ease;
+}
+.button:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.button svg {
+  width: 20px;
+  rotate: -45deg;
+  transform-origin: top;
+  transition: all 0.3s 0.2s ease-out;
+}
+.button:hover svg {
+  transform-origin: center;
+  width: 40px;
+}
+.button:hover span {
+  display: none;
+  margin: 0 auto;
+}
+
+.button:hover {
+  width: 100px;
+  gap: 0px;
+}
+
+</style>
+    
