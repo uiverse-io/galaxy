@@ -1,0 +1,337 @@
+<div class="container">
+  <input type="checkbox" id="send-checkbox" class="send-checkbox" />
+  <label for="send-checkbox" class="button">
+    <div class="send-message-icon">
+      <svg
+        class="icon-send"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 128 128"
+        id="send"
+      >
+        <path
+          stroke="#000000"
+          stroke-width="7"
+          d="M32.523 55.8837C25.7086 41.9768 22.3014 35.0233 23.9101 30.9241C24.8875 28.4336 26.8223 26.4385 29.2817 25.3851C33.3295 23.6514 40.3843 26.8436 54.4939 33.228L82.2307 45.7786C99.5721 53.6254 108.243 57.5488 108.243 64C108.243 70.4512 99.5721 74.3746 82.2307 82.2214L54.4938 94.772C40.3843 101.156 33.3295 104.349 29.2817 102.615C26.8223 101.561 24.8875 99.5664 23.9101 97.0759C22.3014 92.9767 25.7086 86.0232 32.523 72.1163V72.1163C34.0948 68.9087 34.8806 67.3049 35.1314 65.6137C35.2901 64.5437 35.2901 63.4563 35.1314 62.3863C34.8806 60.6951 34.0948 59.0913 32.523 55.8837V55.8837Z"
+          class="colorStroke000000 svgStroke"
+        ></path>
+        <path
+          stroke="#1c1c1c"
+          stroke-linecap="round"
+          stroke-width="7"
+          d="M60 64H36"
+          class="colorStroke000000 svgStroke"
+        ></path>
+      </svg>
+    </div>
+    <svg
+      class="icon-check"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      id="check"
+    >
+      <path fill="none" d="M0 0h24v24H0V0z"></path>
+      <path
+        d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"
+        fill="#000000"
+        class="color000000 svgShape"
+      ></path>
+    </svg>
+    <span class="button-text">Send Message</span>
+    <span class="button-text sending"></span>
+    <span class="button-text sent">Sent</span>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by elijahgummer  - Tags: minimalist, button, realistic, modern, submit, click effect, click animation, button hover effect  */
+/* OUTER FRAME CONTAINER */
+.container {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f8f8f8;
+  overflow: hidden;
+  padding: 2px;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(28, 28, 28, 0.15),
+    /* Drop Shadow */ 0 30px 100px rgba(28, 28, 28, 0.13),
+    /* Drop Shadow */ 0 15px 30px rgba(28, 28, 28, 0.1),
+    /* Drop Shadow */ 0 6px 12px rgba(28, 28, 28, 0.05),
+    /* Drop Shadow */ inset 0 8px 24px rgba(255, 255, 255, 0.35),
+    /* Inner Shadow */ inset 0 -8px 24px rgba(255, 255, 255, 0.35); /* Inner Shadow */
+}
+.send-checkbox {
+  display: none;
+}
+/* --------------------- BUTTON STYLING -----------*/
+/* INNER FRAME 1 */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 42.67px;
+  padding: 26px 20px;
+  border-radius: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1c1c1c;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background: linear-gradient(to top, silver, whitesmoke);
+  box-shadow: inset 0 8px 24px rgba(255, 255, 255, 0.35),
+    /* Inner Shadow */ 0 6px 16px rgba(28, 28, 28, 0.75),
+    /* Drop Shadow */ 0 2px 4px rgba(28, 28, 28, 0.15),
+    /* Drop Shadow */ 0 30px 100px rgba(28, 28, 28, 0.13),
+    /* Drop Shadow */ 0 15px 30px rgba(28, 28, 28, 0.1),
+    /* Drop Shadow */ 0 6px 12px rgba(28, 28, 28, 0.05); /* Drop Shadow */
+  background: linear-gradient(to top, silver, whitesmoke);
+  transition: all 0.3s ease;
+}
+.button:hover #dots {
+  display: block;
+}
+.button:hover {
+  box-shadow: inset 0 8px 24px rgba(255, 255, 255, 0.35),
+    0 6px 16px rgba(28, 28, 28, 0.95),
+    /* darker inner shadow */ 0 2px 4px rgba(28, 28, 28, 0.25),
+    /* darker drop shadow */ 0 30px 100px rgba(28, 28, 28, 0.2),
+    0 15px 30px rgba(28, 28, 28, 0.17),
+    /* darker drop shadow */ 0 6px 12px rgba(28, 28, 28, 0.12); /* darker drop shadow */
+  transform: translateY(-1px); /* Move up on hover */
+}
+.button:active {
+  transform: translateY(0.1px);
+}
+.button:active::before {
+  top: 2.8px;
+  left: 5px;
+  right: 5px;
+  bottom: 2.8px;
+  background: linear-gradient(
+    0deg,
+    whitesmoke,
+    silver 75%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  box-shadow: 15px 15px 38px #979494, -15px -15px 38px #f0f0f0;
+}
+.button:active {
+  top: 0.2px;
+  left: 0.3px;
+  right: 0.2px;
+  bottom: 0.2px;
+}
+/* INNER FRAME 2 */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  border-radius: 28px;
+  background: linear-gradient(90deg, #ffffff 50%, #cacaca 100%);
+  background: -moz-linear-gradient(#f0eee9, #eceae8);
+  background: -ms-linear-gradient(#efeeeb, #e7e4e1);
+  background: -o-linear-gradient(#e1dfda, #d2cbc3);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f3f2ef), to(#eceae7));
+  background: -webkit-linear-gradient(#dfdfdc, #fbb2b2);
+  background: linear-gradient(#e7e6e5, #e1e1de);
+  box-shadow: inset 0 -2px 5px rgba(255, 255, 255, 0.05),
+    /* Inner Shadow */ 0 2px 5px rgba(255, 255, 255, 0.1); /* Inner Shadow */
+  border: 1px solid #fafbfb;
+  box-shadow: 15px 15px 38px #979494, -15px -15px 38px #f0f0f0;
+  background: linear-gradient(silver, whitesmoke);
+  transition: all 0.3s ease;
+  z-index: -1;
+  opacity: 0.25;
+  padding: 20px 10px;
+}
+/* ICONS STYLING */
+.icon-send {
+  margin-right: 5px;
+  filter: drop-shadow(0px 1px 1px rgba(28, 28, 28, 0.35)); /* Icon shadow */
+  width: 20px;
+  height: 20px;
+  transform: rotate(-55deg);
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+
+.icon-send:hover {
+  animation: flying 0.6s ease-in-out infinite alternate;
+  transform: translateX(3px) translateY(-3px) rotate(2deg) scale(1.1);
+}
+
+/* When hovering over button or button-text, only the icon should animate */
+.icon-send:hover,
+.button-text:hover .icon-send {
+  animation: flying 0.6s ease-in-out infinite alternate;
+}
+.icon-send:hover,
+.button-text:hover .icon-send {
+  transform: translateX(3px) translateY(-3px) rotate(2deg) scale(1.1);
+}
+/* TEXT STYLING */
+.sending {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  position: absolute;
+  top: -5%;
+  left: -10%;
+  transform: translate(-10%, 10%);
+}
+@keyframes changeText {
+  0% {
+    content: "Sending";
+  }
+  33% {
+    content: "Sending.";
+  }
+  66% {
+    content: "Sending..";
+  }
+  100% {
+    content: "Sending...";
+  }
+}
+
+/* Apply the animation to the sending text */
+.sending::after {
+  content: "Sending"; /* Initial text */
+  animation: changeText 1.5s 2; /* Animation properties */
+}
+.sent {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  position: absolute;
+  top: 1%;
+  left: -45%;
+  transform: translate(-10%, -10%);
+}
+.button .button-text,
+.button .icon-send {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0px 1px 1px rgba(28, 28, 28, 0.35); /* Text shadow */
+}
+.button.clicked .icon-send {
+  animation: rotateBack 0.4s ease forwards;
+}
+
+.button:active .icon-send {
+  transform: translateY(2px) translateX(-1px); /* Move up when pressed */
+}
+.button:not(:active) .icon-send {
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+.icon-send {
+  margin-right: 8px;
+  filter: drop-shadow(0px 1px 1px rgba(28, 28, 28, 0.35)); /* Icon shadow*/
+  width: 20px;
+  height: 20px;
+  transform: rotate(-55deg);
+  transition: transform 0.4s ease-in-out;
+}
+.icon-check {
+  margin-right: 10px;
+  opacity: 0;
+  position: absolute;
+  left: 55px;
+  transform: translateY(-80px);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  filter: drop-shadow(0px 1px 1px rgba(28, 28, 28, 0.35)); /* Icon shadod*/
+  width: 20px;
+  height: 20px;
+}
+.send-checkbox:checked ~ .button .icon-send {
+  transform: scale(0.5) translateX(-200px);
+}
+.send-checkbox:checked ~ .button .button-text {
+  opacity: 0;
+}
+.send-checkbox:checked ~ .button .sending {
+  display: block;
+  opacity: 1;
+  animation: hideSending 0.5s ease forwards;
+  animation-delay: 2.6s;
+}
+.send-checkbox:checked ~ .button .sent {
+  display: block;
+  animation: showSent 0.2s ease forwards; /* Delay to start after showing */
+  animation-delay: 4s;
+}
+.send-checkbox:checked ~ .button .icon-check {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 4s;
+}
+.send-checkbox:checked ~ .button .icon-send {
+  animation: planeSlide 1s ease forwards 3.4s; /* Wait for other animations to complete */
+}
+
+/* ANIMATIONS */
+@keyframes planeSlide {
+  0% {
+    transform: translateX(-200px); /* Start from left */
+  }
+  100% {
+    transform: translateX(200px); /* Move to right */
+  }
+}
+@keyframes flying {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+@keyframes showSent {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px); /* Adjust as needed */
+  }
+}
+@keyframes hideSending {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+@keyframes rotateBack {
+  0% {
+    transform: rotate(-55deg);
+  }
+  100% {
+    transform: rotate(0deg); /* Rotate back to 0 degrees */
+  }
+}
+
+</style>
+    
