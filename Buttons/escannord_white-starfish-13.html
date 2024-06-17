@@ -1,0 +1,93 @@
+<button class="button">
+  <i class="icon"
+    ><svg
+      width="20px"
+      height="20px"
+      viewBox="-0.5 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.33045 8.38999C0.250452 11.82 9.42048 14.9 9.42048 14.9C9.42048 14.9 12.5005 24.07 15.9305 21.99C19.5705 19.77 23.9305 6.13 21.0505 3.27C18.1705 0.409998 4.55045 4.74999 2.33045 8.38999Z"
+        stroke="#000000"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+      <path
+        d="M15.1999 9.12L9.41992 14.9"
+        stroke="#000000"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path></svg
+  ></i>
+  Send Message
+</button>
+
+<style>
+/* From Uiverse.io by escannord  - Tags: gray, button, sendMessage */
+.button {
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+  min-width: 10rem;
+  min-height: 4rem;
+  font-weight: bold;
+  border: solid 1px white;
+  /*   background-color: white; */
+  background: linear-gradient(rgb(173, 171, 171) 50%, #4e4d4df8 100%);
+  position: relative;
+  border-radius: 15px;
+  z-index: 1;
+  font-size: 20px;
+  transition: 0.3s all;
+  text-shadow: 0 1px 1px #1c1c1c44;
+  box-shadow: 0px 2px 4px #1c1c1c48, 0px 30px 100px #1c1c1c33,
+    0px 15px 30px #1c1c1c2c, 0px 12px 6px #1c1c1c18;
+}
+
+button:hover:before {
+  background: linear-gradient(#ffffff8f 50%, #cacaca86 100%);
+  box-shadow: 0 -1px rgba(0, 0, 0, 0.171);
+}
+
+.button::before {
+  content: "";
+  transition: 0.8s all;
+  inset: 7px 5px;
+  border-radius: 25px;
+  border: solid 1px #b4b4b473;
+  background: linear-gradient(#d8d6d686 15%, #faf9f9 80%);
+  z-index: -1;
+  position: absolute;
+}
+.button:active {
+  box-shadow: none;
+}
+.icon {
+  display: inline-block;
+  transition: all 0.5s;
+  transform: none;
+}
+
+.button:hover .icon {
+  transform: translateX(-7px) rotate(45deg);
+}
+.button::after {
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 90%;
+  z-index: -2;
+  border-radius: 15px;
+  background: linear-gradient(
+    rgb(255, 255, 255),
+    rgba(253, 253, 253, 0.589) 75%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+    
