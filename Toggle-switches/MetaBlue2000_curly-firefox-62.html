@@ -1,0 +1,68 @@
+<label class="switch">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+
+<style>
+/* From Uiverse.io by MetaBlue2000  - Tags: red, green, minimalist, switch, click animation */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 01em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff6a59;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "✕";
+  display: grid;
+  text-align: center;
+  vertical-align: middle;
+  place-items: center;
+  font-size: 1em;
+  font-weight: 900;
+  width: 2em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: white;
+  background-color: #ff3c00;
+  border: 1px solid #ba0300;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: teal;
+}
+
+.switch input:checked + .slider:before {
+  content: "\002713";
+  color: teal;
+  background: paleturquoise;
+  border: 1px solid rgba(0, 128, 128, 0.514);
+  transform: translate(1.75em, -50%) rotateZ(360deg);
+}
+
+</style>
+    
