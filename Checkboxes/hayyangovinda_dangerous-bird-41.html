@@ -1,0 +1,63 @@
+<div class="days-btn-container">
+  <input class="day-btn" id="monday" type="checkbox" checked="true" />
+  <label class="day-label" for="monday">M</label>
+
+  <input class="day-btn" id="tuesday" type="checkbox" checked="true" />
+  <label class="day-label" for="tuesday">T</label>
+
+  <input class="day-btn" id="wednesday" type="checkbox" checked="true" />
+  <label class="day-label" for="wednesday">W</label>
+
+  <input class="day-btn" id="thursday" type="checkbox" checked="true" />
+  <label class="day-label" for="thursday">T</label>
+
+  <input class="day-btn" id="friday" type="checkbox" checked="true" />
+  <label class="day-label" for="friday">F</label>
+
+  <input class="day-btn" id="saturday" type="checkbox" checked="true" />
+  <label class="day-label" for="saturday">S</label>
+
+  <input class="day-btn" id="sunday" type="checkbox" checked="true" />
+  <label class="day-label" for="sunday">S</label>
+</div>
+
+<style>
+/* From Uiverse.io by hayyangovinda  - Tags: flashy, checkbox, clock, days, alarm */
+.days-btn-container {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 34px;
+}
+
+.day-btn {
+  display: none; /* Hide the original checkbox */
+}
+
+.day-label {
+  background-color: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ff5b22;
+  cursor: pointer;
+  border: 2px solid #ff5b22;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+/* Apply styles for the selected state */
+.day-btn:checked + .day-label {
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+  border: none;
+  color: white;
+}
+
+</style>
+    
