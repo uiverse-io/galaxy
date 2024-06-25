@@ -1,20 +1,20 @@
 <div class="radio-input">
   <label class="label">
     <input
-      value="value-1"
-      name="value-radio"
-      checked=""
-      id="value-1"
       type="radio"
+      id="value-1"
+      checked=""
+      name="value-radio"
+      value="value-1"
     />
     <p class="text">Designer</p>
   </label>
   <label class="label">
-    <input value="value-2" name="value-radio" id="value-2" type="radio" />
+    <input type="radio" id="value-2" name="value-radio" value="value-2" />
     <p class="text">Student</p>
   </label>
   <label class="label">
-    <input value="value-3" name="value-radio" id="value-3" type="radio" />
+    <input type="radio" id="value-3" name="value-radio" value="value-3" />
     <p class="text">Teacher</p>
   </label>
 </div>
@@ -83,6 +83,8 @@
 }
 .radio-input .label input[type="radio"]:checked {
   background-color: #435dd8;
+  -webkit-animation: puls 0.7s forwards;
+  animation: pulse 0.7s forwards;
 }
 
 .radio-input .label input[type="radio"]:before {
@@ -97,8 +99,6 @@
 
 .radio-input .label input[type="radio"]:checked::before {
   transform: scale(1);
-  -webkit-animation: puls 0.7s forwards;
-  animation: pulse 0.7s forwards;
 }
 
 @keyframes pulse {
@@ -106,7 +106,7 @@
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
   }
   100% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
