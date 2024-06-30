@@ -1,22 +1,23 @@
 <div class="loader">
-    <svg viewBox="0 0 80 80">
-        <circle id="test" cx="40" cy="40" r="32"></circle>
-    </svg>
+  <svg viewBox="0 0 80 80">
+    <circle r="32" cy="40" cx="40" id="test"></circle>
+  </svg>
 </div>
 
 <div class="loader triangle">
-    <svg viewBox="0 0 86 80">
-        <polygon points="43 8 79 72 7 72"></polygon>
-    </svg>
+  <svg viewBox="0 0 86 80">
+    <polygon points="43 8 79 72 7 72"></polygon>
+  </svg>
 </div>
 
 <div class="loader">
-    <svg viewBox="0 0 80 80">
-        <rect x="8" y="8" width="64" height="64"></rect>
-    </svg>
+  <svg viewBox="0 0 80 80">
+    <rect height="64" width="64" y="8" x="8"></rect>
+  </svg>
 </div>
+
 <style>
-/* From Uiverse.io by mobinkakei - Tags: loader */
+/* From Uiverse.io by mobinkakei  - Website: https://codepen.io/aaroniker/pen/omvYNZ - Name: Aaron Iker - Tags: loader, square, triangle, loader, square */
 .loader {
   --path: #2f3545;
   --dot: #5628ee;
@@ -27,7 +28,7 @@
 }
 
 .loader:before {
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -37,7 +38,8 @@
   top: 37px;
   left: 19px;
   transform: translate(-18px, -18px);
-  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
 }
 
 .loader svg {
@@ -46,7 +48,9 @@
   height: 100%;
 }
 
-.loader svg rect, .loader svg polygon, .loader svg circle {
+.loader svg rect,
+.loader svg polygon,
+.loader svg circle {
   fill: none;
   stroke: var(--path);
   stroke-width: 10px;
@@ -57,7 +61,8 @@
 .loader svg polygon {
   stroke-dasharray: 145 76 145 76;
   stroke-dashoffset: 0;
-  animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
 }
 
 .loader svg rect {
@@ -69,7 +74,8 @@
 .loader svg circle {
   stroke-dasharray: 150 50 150 50;
   stroke-dashoffset: 75;
-  animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
 }
 
 .loader.triangle {
@@ -79,7 +85,8 @@
 .loader.triangle:before {
   left: 21px;
   transform: translate(-10px, -18px);
-  animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
 }
 
 @keyframes pathTriangle {
@@ -169,5 +176,5 @@
   margin: 0 16px;
 }
 
- 
 </style>
+    
