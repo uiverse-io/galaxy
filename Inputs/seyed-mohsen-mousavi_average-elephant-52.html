@@ -1,0 +1,139 @@
+<div class="search-bar">
+  <div class="blob"></div>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="icon"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+    ></path>
+  </svg>
+  <input type="text" id="ser" class="inner" placeholder="Search ..." />
+</div>
+
+<style>
+/* From Uiverse.io by seyed-mohsen-mousavi  - Tags: input, shadow, gradient */
+/* Main style for the search bar */
+.search-bar {
+  cursor: text;
+  font-size: 1.6rem;
+  border-radius: 16px;
+  border: none;
+  padding: 2px;
+  background: -webkit-radial-gradient(circle 80px at 80% -10%, #fff, #181b1b);
+  background: -moz-radial-gradient(circle 80px at 80% -10%, #fff, #181b1b);
+  background: radial-gradient(circle 80px at 80% -10%, #fff, #181b1b);
+  position: relative;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.66);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.66);
+  overflow: hidden;
+}
+
+/* Style for the ::after pseudo-element of the search bar */
+.search-bar::after {
+  cursor: text;
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.22);
+  -moz-box-shadow: 0 0 20px rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.22);
+  z-index: -1;
+}
+
+/* Style for the decorative blob */
+.blob {
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: -webkit-radial-gradient(
+    circle 60px at 0% 100%,
+    #ff3fcb,
+    rgba(255, 0, 216, 0.5),
+    transparent
+  );
+  background: -moz-radial-gradient(
+    circle 60px at 0% 100%,
+    #ff3fcb,
+    rgba(255, 0, 216, 0.5),
+    transparent
+  );
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #ff3fcb,
+    rgba(255, 0, 216, 0.5),
+    transparent
+  );
+  -webkit-box-shadow: -10px 10px 30px rgba(255, 0, 229, 0.18);
+  -moz-box-shadow: -10px 10px 30px rgba(255, 0, 229, 0.18);
+  box-shadow: -10px 10px 30px rgba(255, 0, 229, 0.18);
+}
+
+/* Style for the inner content */
+.inner {
+  padding: 14px 25px;
+  border-radius: 14px;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+  background: -webkit-radial-gradient(circle 80px at 80% -50%, #777, #0f1111);
+  background: -moz-radial-gradient(circle 80px at 80% -50%, #777, #0f1111);
+  background: radial-gradient(circle 80px at 80% -50%, #777, #0f1111);
+  outline: none;
+  margin: 3px;
+  padding-left: 40px;
+  font-weight: 600;
+  caret-color: gray;
+  text-shadow: 0 0 0 gray;
+  -webkit-text-fill-color: transparent;
+  font-size: 17px;
+  font-family: system-ui, sans-serif;
+  width: 98%;
+}
+
+/* Style for placeholder text */
+.inner::placeholder {
+  font-weight: 100;
+  padding-left: 2px;
+}
+
+/* Style for the icon */
+.icon {
+  width: 1.5rem;
+  position: absolute;
+  color: gray;
+  z-index: 4;
+  top: 20.5px;
+  left: 15px;
+}
+
+/* Style when the search bar is focused */
+.search-bar:focus-within {
+  background-position: 290px;
+  -webkit-transform: skew(10deg, 0deg);
+  -moz-transform: skew(10deg, 0deg);
+  transform: skew(10deg, 0deg);
+  -webkit-box-shadow: -13px 20px 20px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: -13px 20px 20px rgba(0, 0, 0, 0.66);
+  box-shadow: -13px 20px 20px rgba(0, 0, 0, 0.66);
+}
+
+</style>
+    
