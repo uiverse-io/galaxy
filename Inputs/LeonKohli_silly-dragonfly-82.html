@@ -1,0 +1,342 @@
+<div class="neon-search-container">
+  <div class="particle-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  <div class="glow-container">
+    <div class="glow-effect-left"></div>
+    <div class="glow-effect-right"></div>
+    <div class="search-bar">
+      <div class="search-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          ></path>
+        </svg>
+      </div>
+      <input type="text" class="search-input" placeholder="Search..." />
+      <button class="filter-container">
+        <div class="filter-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+            ></path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by LeonKohli  - Tags: input, modern, neon, search, neumorphism */
+.neon-search-container {
+  --background-color: rgb(1, 1, 1);
+  --grid-color: rgb(20, 20, 20);
+  --glow-color-1: rgba(227, 63, 183, 0.3);
+  --glow-color-2: rgba(90, 73, 212, 0.3);
+  --border-color-1: rgba(255, 100, 220, 1);
+  --border-color-2: rgba(120, 100, 255, 1);
+  --search-bar-gradient: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.541) 0%,
+    rgba(0, 0, 0, 0.226) 100%
+  );
+  --filter-button-gradient: linear-gradient(
+    135deg,
+    rgba(120, 100, 255, 0.2) 0%,
+    rgba(120, 100, 255, 0.1) 100%
+  );
+
+  width: 400px;
+  height: 120px;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.neon-search-container .glow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.neon-search-container .glow-effect-left,
+.neon-search-container .glow-effect-right {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(30px);
+  transition: all 0.3s ease;
+}
+
+.neon-search-container .glow-effect-left {
+  top: -40px;
+  left: -30px;
+  background: radial-gradient(circle, var(--glow-color-1) 0%, transparent 70%);
+}
+
+.neon-search-container .glow-effect-right {
+  bottom: -40px;
+  right: -30px;
+  background: radial-gradient(circle, var(--glow-color-2) 0%, transparent 70%);
+}
+
+.neon-search-container .search-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 60px;
+  background: var(--search-bar-gradient);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  transition: all 0.3s ease;
+}
+
+.neon-search-container .search-bar::before,
+.neon-search-container .search-bar::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.neon-search-container .search-bar::before {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--border-color-1), transparent),
+    linear-gradient(to bottom, var(--border-color-1), transparent);
+  background-size: 100% 2px, 2px 100%;
+  background-repeat: no-repeat;
+  border-top-left-radius: 8px;
+}
+
+.neon-search-container .search-bar::after {
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to left, var(--border-color-2), transparent),
+    linear-gradient(to top, var(--border-color-2), transparent);
+  background-size: 100% 2px, 2px 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border-bottom-right-radius: 8px;
+}
+
+.neon-search-container .search-input {
+  flex-grow: 1;
+  height: 100%;
+  padding: 0 20px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.neon-search-container .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.neon-search-container .search-icon,
+.neon-search-container .filter-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.neon-search-container .search-icon {
+  margin-left: 20px;
+}
+
+.neon-search-container .search-icon svg,
+.neon-search-container .filter-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: white;
+  transition: all 0.3s ease;
+}
+
+.neon-search-container .filter-container {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--filter-button-gradient);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Animations */
+.neon-search-container .search-bar:focus-within {
+  box-shadow: 0 0 15px rgba(255, 100, 220, 0.3),
+    0 0 15px rgba(120, 100, 255, 0.3);
+}
+
+.neon-search-container .search-bar:focus-within::before,
+.neon-search-container .search-bar:focus-within::after {
+  width: 70%;
+  height: 70%;
+}
+
+.neon-search-container .search-input:focus::placeholder {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.neon-search-container .search-icon svg {
+  animation: pulse 2s infinite;
+}
+
+.neon-search-container .filter-container:hover {
+  background: var(--filter-button-gradient);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(120, 100, 255, 0.5);
+}
+
+.neon-search-container .filter-container:hover .filter-icon svg {
+  transform: rotate(15deg);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.neon-search-container:hover .glow-effect-left {
+  transform: translate(5px, 5px);
+}
+
+.neon-search-container:hover .glow-effect-right {
+  transform: translate(-5px, -5px);
+}
+
+/* Particle effect */
+/* Enhanced Particle effect */
+.neon-search-container .particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.neon-search-container .particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: particleFloat 20s linear infinite;
+}
+
+.neon-search-container .particle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+.neon-search-container .particle:nth-child(2) {
+  top: 40%;
+  left: 10%;
+  animation-delay: -2s;
+}
+.neon-search-container .particle:nth-child(3) {
+  top: 10%;
+  left: 50%;
+  animation-delay: -4s;
+}
+.neon-search-container .particle:nth-child(4) {
+  top: 30%;
+  left: 30%;
+  animation-delay: -6s;
+}
+.neon-search-container .particle:nth-child(5) {
+  top: 5%;
+  left: 70%;
+  animation-delay: -8s;
+}
+.neon-search-container .particle:nth-child(6) {
+  top: 60%;
+  left: 80%;
+  animation-delay: -10s;
+}
+.neon-search-container .particle:nth-child(7) {
+  top: 70%;
+  left: 5%;
+  animation-delay: -12s;
+}
+.neon-search-container .particle:nth-child(8) {
+  top: 80%;
+  left: 60%;
+  animation-delay: -14s;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(200px, 300px) scale(0.2);
+    opacity: 0;
+  }
+}
+
+</style>
+    
