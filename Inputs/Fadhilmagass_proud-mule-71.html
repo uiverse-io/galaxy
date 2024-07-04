@@ -1,0 +1,163 @@
+<div id="container" class="custom-container">
+  <div id="searchBar" class="custom-search-bar dark-mode">
+    <svg
+      height="24"
+      width="24"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="custom-search-icon dark-mode"
+    >
+      <path
+        d="M11 19a8 8 0 100-16 8 8 0 000 16zm8-8l5 5"
+        stroke-width="2"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+      ></path>
+    </svg>
+    <input
+      placeholder="Search..."
+      class="custom-search-input dark-mode"
+      type="text"
+    />
+    <svg
+      height="24"
+      width="24"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="custom-filter-icon dark-mode"
+    >
+      <path
+        d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707l-6.414 6.414A2 2 0 0013 14.828V17.586a1 1 0 01-.293.707l-2 2A1 1 0 019 19.586V14.828a2 2 0 00-.293-1.414L2.293 6.707A1 1 0 012 6V4z"
+        stroke-width="2"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+      ></path>
+    </svg>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Fadhilmagass  - Tags: minimalist, gradient, input, search, input, minimalist, gradient, search */
+.custom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100%;
+  padding: 20px;
+  margin: 0;
+  transition: background-color 0.3s;
+}
+
+.custom-container.dark-mode {
+  background-color: black;
+}
+
+.custom-container.light-mode {
+  background-color: white;
+}
+
+.custom-search-bar {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border: 2px solid;
+  animation: rgb-outline 5s linear infinite;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+@keyframes rgb-outline {
+  0% {
+    border-color: rgb(255, 0, 0);
+  }
+
+  33% {
+    border-color: rgb(0, 255, 0);
+  }
+
+  66% {
+    border-color: rgb(0, 0, 255);
+  }
+
+  100% {
+    border-color: rgb(255, 0, 0);
+  }
+}
+
+.custom-search-bar.dark-mode {
+  background: linear-gradient(145deg, #333, #000);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.custom-search-bar.light-mode {
+  background: linear-gradient(145deg, #ddd, #fff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.custom-search-input.dark-mode {
+  color: white;
+}
+
+.custom-search-input.light-mode {
+  color: black;
+}
+
+.custom-search-input::placeholder {
+  transition: color 0.3s;
+}
+
+.custom-search-input::placeholder.dark-mode {
+  color: #888;
+}
+
+.custom-search-input::placeholder.light-mode {
+  color: #aaa;
+}
+
+.custom-search-icon,
+.custom-filter-icon {
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.custom-search-icon.dark-mode,
+.custom-filter-icon.dark-mode {
+  color: white;
+}
+
+.custom-search-icon.light-mode,
+.custom-filter-icon.light-mode {
+  color: black;
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+</style>
+    
