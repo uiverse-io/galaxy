@@ -1,0 +1,149 @@
+<div class="page">
+  <div class="search">
+    <input type="text" name="text" class="input" />
+    <div class="icon">
+      <svg
+        version="1.1"
+        id="Capa_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 488.4 488.4"
+        xml:space="preserve"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <g>
+            <g>
+              <path
+                d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z"
+              ></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="i"></div>
+    <div class="i"></div>
+    <div class="i"></div>
+    <div class="i"></div>
+    <span></span>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by javierBarroso  - Tags: blue, purple, input, dark, search, modern, neon, transition */
+.input {
+  min-width: 50px;
+  width: 50px;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  color: transparent;
+  font-family: "Courier New", Courier, monospace;
+  background: rgba(1, 1, 1, 0.9);
+  box-shadow: 0 2px 5px rgba(20, 20, 20, 0);
+  background: linear-gradient(0deg, #141414ec, #00000cea, #00000cea, #141414ec);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  z-index: -5;
+  opacity: 1;
+  background-image: linear-gradient(#18305527 1px, transparent 1px),
+    linear-gradient(to right, #18305527 1px, #00000c 1px);
+  background-size: 10px 10px;
+}
+
+.input:focus {
+  color: #999;
+  width: 300px;
+  outline-style: none;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.search .i {
+  position: absolute;
+  inset: -1px;
+  display: block;
+  border-radius: 50px;
+  pointer-events: none;
+  z-index: -1;
+  transition-duration: 0.8s;
+  background: linear-gradient(
+    -35deg,
+    #f7f7f721 10%,
+    transparent,
+    rgba(243, 238, 243, 0.349) 80%
+  );
+}
+
+.search .span {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50px;
+}
+
+.search .i:nth-child(3) {
+  filter: blur(10px);
+  background: linear-gradient(
+    -35deg,
+    #118cff 0%,
+    transparent,
+    transparent,
+    #f1e 99%
+  );
+  inset: -2px;
+}
+
+.search .i:nth-child(5) {
+  background: linear-gradient(
+    -35deg,
+    #118cff 0%,
+    transparent,
+    transparent,
+    #f1e 99%
+  );
+  z-index: -1;
+}
+
+.search .icon {
+  position: absolute;
+  pointer-events: none;
+  transition-duration: 0.8s;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 15px;
+  border-radius: 50px;
+  fill: #aaa;
+}
+
+</style>
+    
