@@ -1,0 +1,108 @@
+<div class="button-group">
+  <div class="button-container">
+    <a title="Go to the home page" href="#">
+      <svg>
+        <path
+          d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+        ></path>
+      </svg>
+    </a>
+    <a title="Go to post list page" href="#">
+      <svg>
+        <path
+          d="M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z"
+        ></path>
+        <path
+          d="M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z"
+        ></path>
+      </svg>
+    </a>
+    <a title="Go to about me page" href="#">
+      <svg>
+        <path
+          fill-rule="evenodd"
+          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by SoloResearchLab  - Website: https://uiverse.io/emmanuelh-dev/itchy-turtle-88 - Name: emmanuelh-dev - Tags: tooltip, action, button, smooth */
+.button-group {
+  display: flex;
+  background-color: white;
+  padding: 15px; /* 1.25rem assuming base font size is 12px */
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  padding: 15px; /* 1.5rem */
+  border-radius: 10px;
+}
+
+.button-container a {
+  color: #3b82f6; /* light-blue-light */
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px; /* 4 * 5 (assuming 1 unit = 5px) */
+  padding: 10px; /* 2.5 * 4 */
+  background-color: #f3f4f6; /* light-secondary */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.button-container a:last-child {
+  margin-right: 0;
+}
+
+.button-container a:hover {
+  color: black;
+  border-color: #3b82f6; /* light-blue-light */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-container a svg {
+  width: 20px; /* 5 * 4 */
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .button-group {
+    background-color: #1f2937; /* box-dark */
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.5),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  .button-container {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .button-container a {
+    color: #9ca3af; /* gray-400 */
+    background-color: #374151; /* button-curved-default-dark */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .button-container a:hover,
+  .button-container a:focus,
+  .button-container a:active {
+    background-color: #4b5563; /* button-curved-pressed-dark */
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}
+
+</style>
+    
