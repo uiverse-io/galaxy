@@ -1,0 +1,90 @@
+<div class="search-bar-container">
+  <div class="search-bar">
+    <span class="search-icon">
+      <svg
+        height="20"
+        width="20"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21.53,20.47l-5-5a8,8,0,1,0-1.06,1.06l5,5a.75.75,0,0,0,1.06-1.06ZM4,10A6,6,0,1,1,10,16,6,6,0,0,1,4,10Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </span>
+    <input placeholder="Search..." type="text" />
+    <button class="filter-button" type="button">
+      <svg
+        height="20"
+        width="20"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3,5V7H4L10,13.92V19A1,1,0,0,0,11,20h2a1,1,0,0,0,1-1V13.92L20,7h1V5ZM12,17H12V13a1,1,0,0,0-.29-.71L6.41,7h11.18l-5.29,5.29A1,1,0,0,0,12,13Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by AmruthLP12  - Tags: icon, purple, black, input, dark, theme, html, css */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #333,
+    #111
+  ); /* Dark gradient background */
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 20px #8839ff; /* Glowing effect */
+  padding: 10px 15px;
+}
+
+.search-icon {
+  color: #fff; /* White color for the search icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-bar input::placeholder {
+  color: #bbb; /* Lighter placeholder text color */
+}
+
+.filter-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #fff; /* White color for the filter icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+</style>
+    
