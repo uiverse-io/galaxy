@@ -1,0 +1,144 @@
+<div class="container">
+  <span class="bg-color"></span>
+  <input placeholder="Search..." class="input" name="text" type="text" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    class="search icon"
+  >
+    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      id="SVGRepo_tracerCarrier"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="2"
+        stroke="#dedede"
+        d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+      ></path>
+    </g>
+  </svg>
+  <button>
+    <svg
+      stroke="#ffffff"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24.00 24.00"
+      height="104px"
+      width="104px"
+      class="icon"
+    >
+      <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+      <g
+        stroke-width="0.144"
+        stroke="#CCCCCC"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        id="SVGRepo_tracerCarrier"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke-width="1"
+          stroke="#dedede"
+          d="M3 4.6C3 4.03995 3 3.75992 3.10899 3.54601C3.20487 3.35785 3.35785 3.20487 3.54601 3.10899C3.75992 3 4.03995 3 4.6 3H19.4C19.9601 3 20.2401 3 20.454 3.10899C20.6422 3.20487 20.7951 3.35785 20.891 3.54601C21 3.75992 21 4.03995 21 4.6V6.33726C21 6.58185 21 6.70414 20.9724 6.81923C20.9479 6.92127 20.9075 7.01881 20.8526 7.10828C20.7908 7.2092 20.7043 7.29568 20.5314 7.46863L14.4686 13.5314C14.2957 13.7043 14.2092 13.7908 14.1474 13.8917C14.0925 13.9812 14.0521 14.0787 14.0276 14.1808C14 14.2959 14 14.4182 14 14.6627V17L10 21V14.6627C10 14.4182 10 14.2959 9.97237 14.1808C9.94787 14.0787 9.90747 13.9812 9.85264 13.8917C9.7908 13.7908 9.70432 13.7043 9.53137 13.5314L3.46863 7.46863C3.29568 7.29568 3.2092 7.2092 3.14736 7.10828C3.09253 7.01881 3.05213 6.92127 3.02763 6.81923C3 6.70414 3 6.58185 3 6.33726V4.6Z"
+        ></path>
+      </g>
+    </svg>
+  </button>
+</div>
+
+<style>
+/* From Uiverse.io by Adamsco51  - Tags: simple, input, click */
+.container {
+  width: 300px;
+  height: 40px;
+  background: #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 2px;
+}
+
+.input {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 55px;
+  padding-right: 65px;
+  border-radius: 12px;
+  background: transparent;
+  overflow: hidden;
+  font-size: 1.25rem;
+  color: #dedede;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.search {
+  position: absolute;
+  left: 0;
+  margin: 0 12px;
+  z-index: 99;
+  stroke: #fff;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button {
+  position: absolute;
+  backdrop-filter: blur(8px);
+  background: transparent;
+  background-clip: border-box;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 2px;
+  right: 0;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgb(202, 241, 61);
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgb(202, 241, 61);
+  z-index: -1;
+  opacity: 0.1;
+}
+
+</style>
+    
