@@ -1,0 +1,181 @@
+<div class="container">
+  <div class="shadow-container"></div>
+  <label for="text" class="search-bar">
+    <i class="icon">
+      <svg viewBox="0 0 512 512">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-miterlimit="10"
+          stroke-width="32"
+          d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z"
+        ></path>
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-miterlimit="10"
+          stroke-width="32"
+          d="M338.29 338.29L448 448"
+        ></path>
+      </svg>
+    </i>
+    <input
+      id="text"
+      type="text"
+      name="text"
+      class="input"
+      placeholder="Search..."
+    />
+    <button type="button" class="icon filter">
+      <svg viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M8.857 12.506C6.37 10.646 4.596 8.6 3.627 7.45c-.3-.356-.398-.617-.457-1.076c-.202-1.572-.303-2.358.158-2.866S4.604 3 6.234 3h11.532c1.63 0 2.445 0 2.906.507c.461.508.36 1.294.158 2.866c-.06.459-.158.72-.457 1.076c-.97 1.152-2.747 3.202-5.24 5.065a1.05 1.05 0 0 0-.402.747c-.247 2.731-.475 4.227-.617 4.983c-.229 1.222-1.96 1.957-2.888 2.612c-.552.39-1.222-.074-1.293-.678a196 196 0 0 1-.674-6.917a1.05 1.05 0 0 0-.402-.755"
+          color="currentColor"
+        ></path>
+      </svg>
+    </button>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by Cobp  - Tags: material design, blue, pink, input, search, shadow, html, css */
+.container {
+  --foreground-color-1: rgba(225, 225, 225, 0.5);
+  --foreground-color-3: rgba(98, 98, 98, 0.3);
+  --foreground-color-2: #ffffff;
+  --background-color-1: #070807;
+  position: relative;
+  padding: 2px;
+  border-radius: 16px;
+  background-image: linear-gradient(
+    325deg,
+    #3b82f6 0%,
+    #3b82f6 10%,
+    rgba(98, 98, 98, 0.3) 25%,
+    rgba(98, 98, 98, 0.3) 50%,
+    rgba(98, 98, 98, 0.3) 75%,
+    #cd3aad 90%,
+    #cd3aad 100%
+  );
+}
+
+.shadow-container {
+  position: absolute;
+  border-radius: 16px;
+  background-image: linear-gradient(
+    325deg,
+    #3b82f6 0%,
+    #3b82f6 20%,
+    transparent 25%,
+    transparent 50%,
+    transparent 75%,
+    #cd3aad 80%,
+    #cd3aad 100%
+  );
+  filter: blur(20px);
+  inset: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.container:hover .shadow-container {
+  animation: floating 0.1s forwards;
+}
+.search-bar {
+  padding: 8px;
+  background-color: var(--background-color-1);
+  color: var(--foreground-color-1);
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  cursor: text;
+}
+.icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon svg {
+  padding: 4px;
+}
+.icon.filter {
+  border: 2px solid transparent;
+  background-image: linear-gradient(
+    to top,
+    #5b5b5b 0%,
+    #070807 40%,
+    #070807 60%,
+    #5b5b5b 100%
+  );
+  border-radius: 8px;
+  color: var(--foreground-color-2);
+  cursor: pointer;
+}
+.icon.filter svg {
+  border-radius: 6px;
+  background-color: var(--background-color-1);
+  box-shadow: inset 0 3px 3px -2px #424242, inset 0 -3px 3px -2px #424242;
+  transition: all 0.3s ease;
+}
+.icon.filter:hover svg {
+  scale: 1.1;
+}
+.input {
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  caret-color: var(--foreground-color-2);
+  color: var(--foreground-color-2);
+  font-size: 14px;
+}
+@keyframes floating {
+  0% {
+    background-image: linear-gradient(
+      335deg,
+      #3b82f6 0%,
+      #3b82f6 20%,
+      transparent 25%,
+      transparent 50%,
+      transparent 75%,
+      #cd3aad 80%,
+      #cd3aad 100%
+    );
+  }
+
+  50% {
+    background-image: linear-gradient(
+      345deg,
+      #3b82f6 0%,
+      #3b82f6 20%,
+      transparent 25%,
+      transparent 50%,
+      transparent 75%,
+      #cd3aad 80%,
+      #cd3aad 100%
+    );
+  }
+
+  100% {
+    background-image: linear-gradient(
+      355deg,
+      #3b82f6 0%,
+      #3b82f6 20%,
+      transparent 25%,
+      transparent 50%,
+      transparent 75%,
+      #cd3aad 80%,
+      #cd3aad 100%
+    );
+  }
+}
+
+</style>
+    
