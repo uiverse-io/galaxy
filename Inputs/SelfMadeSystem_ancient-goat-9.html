@@ -1,4 +1,19 @@
+<input type="checkbox" style="display: none;" id="searched" />
 <div class="outer">
+  <div class="tooltip">
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="b"></div>
+    <div class="b"></div>
+    <div class="b"></div>
+    <div class="b"></div>
+    <div class="b"></div>
+    <div class="label">
+      <div class="c"></div>
+      <div class="c"></div>
+      <span>Click Search</span>
+    </div>
+  </div>
   <div class="a"></div>
   <div class="b"></div>
   <div class="b"></div>
@@ -9,17 +24,28 @@
   <label for="text-field" class="label">
     <div class="c"></div>
     <div class="c"></div>
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="search">
-      <defs>
-        <radialGradient r="1" cy="0" cx="0" id="myGradient">
-          <stop stop-color="white" offset="0%"></stop>
-          <stop stop-color="#928293" offset="100%"></stop>
-        </radialGradient>
-      </defs>
-      <path
-        d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
-      ></path>
-    </svg>
+    <label for="searched" class="searched-thing">
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        class="search"
+      >
+        <defs>
+          <radialGradient r="1" cy="0" cx="0" id="myGradient">
+            <stop stop-color="white" offset="0%"></stop>
+            <stop stop-color="#928293" offset="100%"></stop>
+          </radialGradient>
+        </defs>
+        <path
+          class="search-path"
+          d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
+        ></path>
+        <path
+          class="chevron-path"
+          d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"
+        ></path>
+      </svg>
+    </label>
     <input
       placeholder="Search..."
       class="text-field"
@@ -47,23 +73,32 @@
         </svg>
       </div>
     </button>
+    <div class="results">
+      <div class="result">
+        <a href="#" class="link">Cat - Wikipedia</a>
+        <div class="description">
+          The cat (Felis catus), commonly referred to as the domestic...
+        </div>
+      </div>
+      <div class="result">
+        <a href="#" class="link">Cat Definition &amp; Meaning</a>
+        <div class="description">
+          The meaning of CAT is a carnivorous mammal...
+        </div>
+      </div>
+      <div class="result">
+        <a href="#" class="link">CAT | English meaning</a>
+        <div class="description">
+          CAT definition: 1. a small animal with fur, four legs, a tail, and...
+        </div>
+      </div>
+      <div class="dotdotdot"></div>
+    </div>
   </label>
 </div>
 
 <style>
-/* From Uiverse.io by SelfMadeSystem  - Tags: neumorphism, blue, pink, black, gradient, input */
-/* Lmao FF users don't get animation ~~UwU~~n't (~~ btw is strikethrough)
-Wait a few months when version 128 gets widely adopted s://caniuse.com/?search=%40property
- */
-
-/* Furtermore: DOESN'T SEEM TO WORK ON UIVERSE WTF */
-
-@property --angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0deg;
-}
-
+/* From Uiverse.io by SelfMadeSystem  - Tags:  */
 .outer {
   position: relative;
   border-radius: 0.75rem;
@@ -71,21 +106,8 @@ Wait a few months when version 128 gets widely adopted s://caniuse.com/?search=%
   width: 17rem;
   --angle: 155deg;
   animation: uwu 5s infinite linear paused;
-}
-
-.outer:hover,
-.outer:has(input:focus) {
-  animation-play-state: running;
-}
-
-@keyframes uwu {
-  0% {
-    --angle: 155deg;
-  }
-
-  100% {
-    --angle: 515deg;
-  }
+  height: 3rem;
+  transition: height 1s ease;
 }
 
 .a {
@@ -125,16 +147,16 @@ Wait a few months when version 128 gets widely adopted s://caniuse.com/?search=%
 }
 
 .label {
-  position: relative;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
   background-color: #000;
   z-index: 10;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   box-sizing: content-box;
   padding: 0.35rem;
   border-radius: 0.75rem;
-  height: 2rem;
 }
 
 .c {
@@ -160,8 +182,9 @@ Wait a few months when version 128 gets widely adopted s://caniuse.com/?search=%
   border: none;
   outline: 0 !important;
   color: #fff;
-  height: 1.5rem;
+  height: 2rem;
   margin: 0 0.5rem;
+  min-width: 0;
 }
 
 .text-field::placeholder {
@@ -169,11 +192,22 @@ Wait a few months when version 128 gets widely adopted s://caniuse.com/?search=%
 }
 
 .search {
+  fill: url(#myGradient);
+}
+
+.searched-thing {
+  display: flex;
+  align-items: center;
   z-index: 1;
   margin-left: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.searched-thing svg {
   width: 1.5rem;
   height: 1.5rem;
-  fill: url(#myGradient);
 }
 
 .filter {
@@ -185,6 +219,7 @@ Wait a few months when version 128 gets widely adopted s://caniuse.com/?search=%
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .filter-outer {
@@ -214,6 +249,140 @@ Wait a few months when version 128 gets widely adopted s://caniuse.com/?search=%
   width: 1.5rem;
   height: 1.5rem;
   fill: url(#myOtherGradient);
+}
+
+#searched:checked ~ .outer {
+  height: 20rem;
+}
+
+:is(.search-path, .filter) {
+  transition: opacity 1s;
+}
+
+#searched:checked ~ .outer :is(.search-path, .filter) {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.chevron-path {
+  opacity: 0;
+  transition: opacity 0.5s;
+  fill: #fdf;
+}
+
+#searched:checked ~ .outer .chevron-path {
+  opacity: 1;
+}
+
+.text-field {
+  transition: font-size 1s;
+}
+
+#searched:checked ~ .outer .text-field {
+  transition: font-size 0.5s;
+  font-size: large;
+}
+
+.results {
+  position: absolute;
+  opacity: 0;
+  top: 3rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+  transition: opacity 0.5s;
+  overflow: hidden;
+  background: #0004;
+  z-index: 1;
+  border-radius: 1rem;
+}
+
+#searched:checked ~ .outer .results {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.link {
+  color: #6882e3;
+}
+
+.description {
+  color: #fffa;
+  font-size: small;
+}
+
+.dotdotdot,
+.dotdotdot::before,
+.dotdotdot::after {
+  content: "";
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: #fffa;
+  border-radius: 100%;
+}
+
+.dotdotdot {
+  margin: 1.25rem auto 0 auto;
+  left: 50%;
+  bottom: 1.4rem;
+  transform: translate(-50%, -50%);
+}
+
+.dotdotdot::before {
+  position: absolute;
+  transform: translateY(-200%);
+}
+
+.dotdotdot::after {
+  position: absolute;
+  transform: translateY(200%);
+}
+
+.tooltip {
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  top: -6rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  opacity: 0;
+  transition: top 0.3s ease-in, opacity 0.3s linear;
+  background: linear-gradient(
+    var(--angle),
+    #ff00ff44,
+    #ff00ff00,
+    #5b49d600,
+    #3863ff44
+  );
+  background-color: #000;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+}
+
+.tooltip .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip .label span {
+  transform: rotate(180deg);
+}
+
+.tooltip :is(.b, .c) {
+  opacity: 0.5 !important;
+}
+
+#searched:not(:checked) ~ .outer:hover .tooltip {
+  transition: top 0.75s ease, opacity 0.5s linear;
+  top: -3.5rem;
+  opacity: 1;
 }
 
 </style>
