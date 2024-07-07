@@ -1,0 +1,461 @@
+<div class="spooky-house">
+  <div class="content-circle">
+    <div class="house">
+      <div class="porch"></div>
+      <div class="first-floor"></div>
+      <div class="second-floor"></div>
+      <div class="roof"></div>
+      <div class="door"></div>
+      <div class="small-windows"></div>
+      <div class="big-window"></div>
+      <div class="frames"></div>
+    </div>
+    <div class="moon"></div>
+    <div class="rain">
+      <div class="dropOne"></div>
+      <div class="dropTwo"></div>
+      <div class="dropThree"></div>
+      <div class="dropFour"></div>
+      <div class="dropFive"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by vishnu1100  - Tags: dark, animated, loader, rain, moon, night, windows, house, haunted, spooky */
+.spooky-house {
+  position: relative;
+}
+
+.content-circle {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  background-color: #212f3c;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.content-circle:before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 200px;
+  top: 300px;
+  border-radius: 50% 50% 0 0;
+  background-color: #000;
+}
+
+.house {
+  position: absolute;
+  width: 120px;
+  height: 150px;
+  background-color: black;
+  left: 180px;
+  top: 160px;
+  transform: rotate(5deg);
+  z-index: 2;
+}
+
+.house:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid black;
+  border-right: 50px solid transparent;
+  left: 115px;
+  top: 70px;
+  transform: rotate(5deg);
+}
+
+.house:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 65px;
+  background-color: black;
+  left: 145px;
+  top: 95px;
+}
+
+.porch {
+  position: absolute;
+  width: 30px;
+  height: 100px;
+  background-color: black;
+  left: -20px;
+  top: 55px;
+  transform: rotate(-10deg);
+}
+.porch:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid black;
+  border-left: 40px solid transparent;
+  left: -35px;
+  top: 45px;
+}
+
+.porch:after {
+  content: "";
+  position: absolute;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid black;
+  left: -5px;
+  top: -25px;
+}
+
+.first-floor {
+  position: absolute;
+  transform: rotate(-10deg);
+  background-color: black;
+  width: 5px;
+  height: 45px;
+  left: -37px;
+  top: 125px;
+}
+
+.first-floor:before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 85px;
+  height: 90px;
+  top: -150px;
+  left: 50px;
+}
+
+.first-floor:after {
+  content: "";
+  position: absolute;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+  border-bottom: 50px solid black;
+  top: -199px;
+  left: 40px;
+}
+
+.second-floor {
+  position: absolute;
+  background-color: black;
+  width: 35px;
+  height: 100px;
+  transform: rotate(3deg);
+  top: -70px;
+  left: 70px;
+}
+
+.second-floor:before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 20px;
+  height: 100px;
+  left: 33px;
+  top: 40px;
+  transform: rotate(-3deg);
+}
+
+.second-floor:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 30px solid black;
+  top: 12px;
+  left: 15px;
+}
+
+.roof {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 30px solid black;
+  left: 65px;
+  top: -95px;
+}
+
+.roof:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 20px;
+  background-color: black;
+  top: 5px;
+  left: 10px;
+  box-shadow: 20px 35px black;
+}
+
+.roof:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 20px;
+  background-color: black;
+  transform: rotate(-10deg);
+  left: -110px;
+  top: 35px;
+  box-shadow: -27px 97px black;
+}
+
+.door {
+  position: absolute;
+  background-color: #ffd166;
+  width: 30px;
+  height: 50px;
+  transform: rotate(-5deg);
+  border-radius: 30px 30px 0 0;
+  box-shadow: inset -10px 5px rgba(0, 0, 0, 0.5);
+  top: 90px;
+  left: 40px;
+}
+
+.door:before {
+  content: "";
+  position: absolute;
+  background-color: #ffd166;
+  border-radius: 30px 30px 0 0;
+  box-shadow: inset -5px 2px rgba(0, 0, 0, 0.5);
+  width: 20px;
+  height: 30px;
+  left: -40px;
+  transform: rotate(-3deg);
+}
+
+.door:after {
+  content: "";
+  position: absolute;
+  background-color: #ffd166;
+  box-shadow: inset -5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 30px 30px 0 0;
+  width: 20px;
+  height: 30px;
+  left: 45px;
+  transform: rotate(3deg);
+}
+
+.small-windows {
+  position: absolute;
+  background-color: #ffd166;
+  border-radius: 30px 30px 0 0;
+  width: 13px;
+  height: 25px;
+  left: 100px;
+  top: -20px;
+  box-shadow: -19px -40px #ffd166, inset -4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.small-windows:before {
+  content: "";
+  position: absolute;
+  background-color: #ffd166;
+  border-radius: 30px 30px 0 0;
+  width: 13px;
+  height: 25px;
+  transform: rotate(-7deg);
+  left: -60px;
+  top: 50px;
+  box-shadow: -60px 20px #ffd166;
+}
+
+.big-window {
+  position: absolute;
+  background-color: #ffd166;
+  border-radius: 30px 30px 0 0;
+  transform: rotate(-7deg);
+  width: 30px;
+  height: 40px;
+  top: -35px;
+  left: 10px;
+}
+
+.big-window:before,
+.big-window:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+}
+
+.big-window:before {
+  height: 40px;
+  width: 2px;
+  left: 15px;
+  box-shadow: 13px 55px black, -47px 80px black, -32px 120px black;
+}
+
+.big-window:after {
+  height: 2px;
+  width: 40px;
+  top: 22px;
+  box-shadow: 10px 58px black, -45px 78px black, -30px 120px black;
+}
+
+.frames {
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background-color: black;
+  top: -65px;
+  left: 86.5px;
+  box-shadow: 19px 40px black, 7px 150px black;
+}
+
+.frames:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: black;
+  top: 17px;
+  left: -10px;
+  box-shadow: 10px 40px black, 5px 150px black;
+}
+
+.moon {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #95a5a6;
+  z-index: 1;
+  left: 80px;
+  top: 40px;
+  box-shadow: inset 7px -7px 0 rgba(0, 0, 0, 0.09);
+}
+
+.moon:before,
+.moon:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.09);
+  box-shadow: inset -5px 5px 0 rgba(0, 0, 0, 0.09);
+}
+.moon:before {
+  width: 30px;
+  height: 30px;
+  top: 50px;
+  left: 45px;
+}
+
+.moon:after {
+  width: 40px;
+  height: 40px;
+  top: 100px;
+  left: 30px;
+}
+
+.rain {
+  position: absolute;
+  z-index: 5;
+}
+
+.rain:before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: #fff;
+  opacity: 0;
+  animation: lighting 3s linear infinite;
+}
+
+.dropOne,
+.dropTwo,
+.dropThree,
+.dropFour,
+.dropFive {
+  position: absolute;
+  background-color: rgba(211, 211, 211, 0.3);
+  height: 10px;
+  width: 1px;
+  top: 0;
+  box-shadow: 0 -270px rgba(211, 211, 211, 0.3),
+    -50px -50px rgba(211, 211, 211, 0.3), -50px -150px rgba(211, 211, 211, 0.3),
+    50px -395px rgba(211, 211, 211, 0.3), 50px -200px rgba(211, 211, 211, 0.3),
+    50px -100px rgba(211, 211, 211, 0.3), 100px -400px rgba(211, 211, 211, 0.3),
+    100px -320px rgba(211, 211, 211, 0.3), 100px -150px rgba(211, 211, 211, 0.3),
+    150px -200px rgba(211, 211, 211, 0.3), 200px -100px rgba(211, 211, 211, 0.3),
+    200px -370px rgba(211, 211, 211, 0.3), 250px -330px rgba(211, 211, 211, 0.3),
+    250px -220px rgba(211, 211, 211, 0.3), 300px -70px rgba(211, 211, 211, 0.3),
+    300px -140px rgba(211, 211, 211, 0.3), 300px -300px rgba(211, 211, 211, 0.3);
+}
+
+.dropOne {
+  animation: rain 1.5s linear infinite;
+  left: 100px;
+}
+
+.dropTwo {
+  left: -50px;
+  animation: rain 1.2s linear infinite;
+}
+
+.dropThree {
+  left: 50px;
+  animation: rain 1.7s linear infinite;
+}
+
+.dropFour {
+  left: 150px;
+  animation: rain 1.4s linear infinite;
+}
+
+.dropFive {
+  left: 80px;
+  animation: rain 1.3s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}
+
+@keyframes lighting {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  21% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 0;
+  }
+  104% {
+    opacity: 0;
+  }
+}
+
+</style>
+    
