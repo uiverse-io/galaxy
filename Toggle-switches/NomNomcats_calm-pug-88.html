@@ -1,0 +1,86 @@
+<label class="switch">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+
+<style>
+/* From Uiverse.io by NomNomcats  - Tags: simple, material design, blue, switch */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 30px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.6em;
+  width: 1.6em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: white;
+  transition: 0.4s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switch input:checked + .slider {
+  background-color: #4cc9f0;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #4cc9f0;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(2em);
+  background-color: #4cc9f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Add some cool effects */
+.slider:after {
+  content: "OFF";
+  color: white;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  transition: opacity 0.4s;
+  opacity: 1;
+}
+
+.switch input:checked + .slider:after {
+  content: "ON";
+  left: 0.5em;
+  opacity: 1;
+  right: auto;
+}
+
+</style>
+    
