@@ -1,0 +1,393 @@
+<div class="card">
+  <div class="border-light">
+    <div class="input-content">
+      <div class="light">
+        <span class="clip-container"></span>
+      </div>
+      <div class="search-icon">
+        <svg
+          class="span svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+        </svg>
+        <svg
+          class="span svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+        </svg>
+        <svg
+          class="span svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+        </svg>
+        <svg
+          class="svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+        </svg>
+      </div>
+      <input type="text" name="text" class="input" placeholder="Search..." />
+      <button href="" class="sort-btn">
+        <span></span>
+        <span></span>
+        <svg
+          class="svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V6.58579C21 6.851 20.8946 7.10536 20.7071 7.29289L14.2929 13.7071C14.1054 13.8946 14 14.149 14 14.4142V17L10 21V14.4142C10 14.149 9.89464 13.8946 9.70711 13.7071L3.29289 7.29289C3.10536 7.10536 3 6.851 3 6.58579V4Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by MijailVillegas  - Tags: input */
+.card {
+  scale: 1.5;
+  font-family: sans-serif;
+  width: 320px;
+  height: 200px;
+  border-radius: 80% 80%;
+  padding: 1.5rem;
+  display: flex;
+  --color: rgba(67, 67, 67, 0.2);
+  background-image: linear-gradient(to right, var(--color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color) 1px, transparent 1px);
+  background-size: 0.5rem 0.5rem;
+  box-shadow: inset 0 0 40px 20px rgb(0, 0, 0);
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.border-light {
+  position: relative;
+  display: flex;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.border-light::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0%;
+  left: 0%;
+  box-shadow: 0px 0px 30px 5px hsl(310, 90%, 65%, 0.5),
+    0px 0px 30px 30px hsla(310, 91%, 25%, 0.5);
+  animation: border-light 16s linear infinite;
+}
+
+.border-light::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 40px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px 5px hsl(247, 90%, 65%, 0.5),
+    0px 0px 30px 30px hsl(247, 90%, 25%, 0.5);
+  animation: border-light 16s linear infinite -8s;
+}
+
+@keyframes border-light {
+  0% {
+    top: 0%;
+    left: 0%;
+    animation-timing-function: cubic-bezier(0.19, 0.64, 0.85, 0.36);
+  }
+  48% {
+    top: 0%;
+    left: 80%;
+  }
+  50% {
+    top: 50%;
+    left: 80%;
+    animation-timing-function: cubic-bezier(0.19, 0.64, 0.85, 0.36);
+  }
+  98% {
+    top: 50%;
+    left: 0%;
+  }
+  100% {
+    top: 0%;
+    left: 0%;
+  }
+}
+
+.input-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: rgb(0, 0, 0);
+  padding: 5px 5px 5px 10px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.input-content::before {
+  content: "";
+  position: absolute;
+  height: 300px;
+  aspect-ratio: 1/1;
+  background-image: conic-gradient(
+    from 90deg,
+    hsl(310, 90%, 75%) 0%,
+    hsl(310, 90%, 25%) 2%,
+    var(--color) 5%,
+    black 20%,
+    black 30%,
+    var(--color) 35%,
+    var(--color) 95%,
+    hsl(310, 90%, 25%) 98%,
+    hsl(310, 90%, 75%) 100%
+  );
+  animation: rotate 16s linear infinite -8s;
+}
+
+.input-content::after {
+  content: "";
+  position: absolute;
+  height: 300px;
+  aspect-ratio: 1/1;
+  background-image: conic-gradient(
+    from 90deg,
+    hsl(247, 90%, 75%) 0%,
+    hsl(247, 90%, 25%) 2%,
+    var(--color) 5%,
+    rgb(19, 19, 19) 20%,
+    rgb(19, 19, 19) 30%,
+    var(--color) 35%,
+    var(--color) 95%,
+    hsl(247, 90%, 25%) 98%,
+    hsl(247, 90%, 75%) 100%
+  );
+  animation: rotate 16s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.clip-container {
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 round 7px 7px 7px 7px);
+  overflow: hidden;
+}
+
+.light {
+  display: flex;
+  position: absolute;
+  inset: 1px;
+  background: rgb(0, 0, 0);
+  clip-path: inset(0 round 7px 7px 7px 7px);
+  z-index: 1;
+}
+
+.light::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  bottom: -50%;
+  box-shadow: 0px 0px 30px 5px hsl(247, 90%, 25%),
+    0px 0px 30px 20px hsl(247, 90%, 55%);
+  animation: rotate-light 16s linear infinite -8s;
+  z-index: 4;
+}
+
+.light::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 150%;
+  box-shadow: 0px 0px 30px 5px hsl(310, 90%, 25%),
+    0px 0px 30px 20px hsl(310, 90%, 55%);
+  animation: rotate-light 16s linear infinite;
+}
+
+@keyframes rotate-light {
+  0% {
+    right: 100%;
+    bottom: 150%;
+    animation-timing-function: cubic-bezier(0.19, 0.64, 0.85, 0.36);
+  }
+  48% {
+    right: 0%;
+    bottom: 150%;
+  }
+  50% {
+    right: 0%;
+    bottom: -50%;
+    animation-timing-function: cubic-bezier(0.19, 0.64, 0.85, 0.36);
+  }
+  98% {
+    right: 100%;
+    bottom: -50%;
+  }
+  100% {
+    right: 100%;
+    bottom: 150%;
+  }
+}
+.input {
+  all: unset;
+  width: fit-content;
+  background: none;
+  border: none;
+  padding: 5px 0px 5px 10px;
+  color: rgb(67, 67, 67);
+  background: linear-gradient(
+    25deg,
+    white,
+    rgb(126, 126, 126) 20%,
+    rgba(67, 67, 67, 0.143)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
+}
+
+.search-icon {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.search-icon .span {
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.search-icon:hover .span:nth-child(1),
+.input-content:focus-within .span:nth-child(1) {
+  opacity: 0.6;
+  transform: translate(5px, -2px);
+  scale: 0.8;
+  transition: all 0.1s;
+}
+
+.search-icon:hover .span:nth-child(2),
+.input-content:focus-within .span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(20px, -10px);
+  scale: 0.4;
+  transition: all 0.2s;
+}
+
+.search-icon:hover .span:nth-child(3),
+.input-content:focus-within .span:nth-child(3) {
+  opacity: 0.2;
+  transform: translate(40px, -20px);
+  scale: 0.2;
+}
+
+.svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sort-btn {
+  all: unset;
+  display: grid;
+  cursor: pointer;
+  padding: 5px;
+  background: linear-gradient(
+    to bottom,
+    rgba(67, 67, 67, 0.143),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 20% 20%;
+  transition: all 0.3s;
+  box-shadow: inset -1px 7px 5px -2px rgb(255, 255, 255, 0.1),
+    inset 0px 9px 5px -2px rgb(255 255 255 / 5%),
+    inset 0px -10px 5px -4px rgb(255, 255, 255, 0.05),
+    inset 0 0 0px 1px rgb(255 255 255 / 5%),
+    inset 0px -8px 5px -4px rgb(255, 255, 255, 0.1),
+    inset 0 0 0px 1px rgb(255 247 247 / 5%);
+  z-index: 2;
+}
+
+.sort-btn span {
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transition: all 0.3s;
+  border-radius: 50%;
+  box-shadow: inset -1px 7px 5px -2px rgb(255, 255, 255, 0.5);
+}
+
+.sort-btn:hover {
+  border-radius: 50%;
+  scale: 1.1;
+}
+
+.sort-btn:active span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.sort-btn:active span:nth-child(2) {
+  opacity: 0.4;
+  transform: rotate(180deg);
+}
+
+</style>
+    
