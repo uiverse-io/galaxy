@@ -1,0 +1,161 @@
+<div class="custom-search-container">
+  <div class="custom-search-bar">
+    <div class="custom-icon">
+      <svg
+        class="feather feather-search"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle r="8" cy="11" cx="11"></circle>
+        <line y2="16.65" x2="16.65" y1="21" x1="21"></line>
+      </svg>
+    </div>
+    <input placeholder="Search..." class="custom-search-input" type="text" />
+    <div class="custom-icon">
+      <svg
+        class="feather feather-filter"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polygon points="22 3 2 3 10 13 10 19 14 21 14 13 22 3"></polygon>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Mythsoul  - Tags:  */
+.custom-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #000;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.1)
+  );
+  background-size: cover, 10px 10px;
+}
+
+.custom-search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  padding: 10px;
+  border-radius: 20px;
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(255, 0, 150, 0.5), 0 0 15px rgba(0, 0, 255, 0.5);
+  transition: width 0.3s;
+}
+
+.custom-icon {
+  color: #fff;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+}
+
+.custom-search-input::placeholder {
+  color: #aaa;
+}
+
+.custom-search-bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 255, 0.5),
+    rgba(0, 0, 255, 0.5)
+  );
+  z-index: -1;
+  filter: blur(10px);
+  animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    filter: blur(10px);
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    filter: blur(20px);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    filter: blur(10px);
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+.custom-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.custom-icon:hover svg {
+  color: #ff00ff;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* Media queries for better responsiveness */
+@media (max-width: 600px) {
+  .custom-search-bar {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .custom-search-bar {
+    width: 100%;
+  }
+
+  .custom-search-input {
+    font-size: 14px;
+  }
+
+  .custom-icon {
+    margin: 0 5px;
+  }
+
+  .custom-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+</style>
+    
