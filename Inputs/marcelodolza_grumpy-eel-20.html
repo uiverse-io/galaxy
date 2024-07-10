@@ -5,35 +5,35 @@
       <div class="glow left"></div>
       <div class="glow right"></div>
 
-      <input placeholder="Search..." name="text" type="text" />
+      <input type="text" name="text" placeholder="Search..." />
 
       <div class="reflection"></div>
 
       <div class="icon">
         <svg
-          class="loading"
-          xmlns="http://www.w3.org/2000/svg"
-          width="1em"
-          height="1em"
-          viewBox="0 0 38 38"
           stroke="#fff"
+          viewBox="0 0 38 38"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="loading"
         >
-          <g fill="none" fill-rule="evenodd">
-            <g transform="translate(1 1)" stroke-width="3">
-              <circle stroke-opacity=".2" cx="18" cy="18" r="18"></circle>
+          <g fill-rule="evenodd" fill="none">
+            <g stroke-width="3" transform="translate(1 1)">
+              <circle r="18" cy="18" cx="18" stroke-opacity=".2"></circle>
               <path d="M36 18c0-9.94-8.06-18-18-18"></path>
             </g>
           </g>
         </svg>
 
         <svg
-          class="magnifier"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          height="1em"
-          width="1em"
-          version="1.1"
           viewBox="0 0 490.4 490.4"
+          version="1.1"
+          width="1em"
+          height="1em"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          class="magnifier"
         >
           <path
             d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"
@@ -44,18 +44,18 @@
       <button class="filter">
         <span>
           <svg
-            stroke="currentColor"
-            fill="none"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            height="1em"
-            width="1em"
             xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            fill="none"
+            stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
               d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+              stroke-linejoin="round"
+              stroke-linecap="round"
             ></path>
           </svg>
         </span>
@@ -64,26 +64,26 @@
       <div class="result">
         <header class="result-header">
           <div style="--i:1">
-            <input checked="" name="tab" id="all" type="radio" />
-            <label data-label="All" for="all">
+            <input type="radio" id="all" name="tab" checked="" />
+            <label for="all" data-label="All">
               <span>All</span>
             </label>
           </div>
           <div style="--i:2">
-            <input name="tab" id="buttons" type="radio" />
-            <label data-label="Buttons" for="buttons">
+            <input type="radio" id="buttons" name="tab" />
+            <label for="buttons" data-label="Buttons">
               <span>Buttons</span>
             </label>
           </div>
           <div style="--i:3">
-            <input name="tab" id="cards" type="radio" />
-            <label data-label="Cards" for="cards">
+            <input type="radio" id="cards" name="tab" />
+            <label for="cards" data-label="Cards">
               <span>Cards</span>
             </label>
           </div>
           <div style="--i:4">
-            <input name="tab" id="inputs" type="radio" />
-            <label data-label="Inputs" for="inputs">
+            <input type="radio" id="inputs" name="tab" />
+            <label for="inputs" data-label="Inputs">
               <span>Inputs</span>
             </label>
           </div>
@@ -115,7 +115,7 @@
         </div>
       </div>
     </div>
-
+    <div class="glow-outline"></div>
     <div class="glow-layer-bg"></div>
     <div class="glow-layer-1"></div>
     <div class="glow-layer-2"></div>
@@ -130,6 +130,7 @@
 .container {
   --ease-elastic: cubic-bezier(0.7, -0.5, 0.3, 1.5);
   --icon-color: #bcacbd;
+  --glow-l-color: #8422b1;
   --glow-r-color: #0d00ff;
   --input-radius: 14px;
   --result-item-h: 33.5px;
@@ -185,7 +186,22 @@
   background-color: #010201;
   border-radius: var(--input-radius);
   position: relative;
-  z-index: 1;
+  z-index: 10;
+}
+.input::before {
+  pointer-events: none;
+  content: "type to interact";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 95px;
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+  font-weight: lighter;
+  opacity: 0.4;
+  color: white;
+  mask-image: linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, white 100%);
 }
 
 .reflection {
@@ -259,6 +275,7 @@
   font-size: 24px;
   color: var(--icon-color);
   z-index: 3;
+  pointer-events: none;
 }
 .icon svg {
   grid-area: 1 / 1;
@@ -462,8 +479,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -18px;
-  height: 15px;
+  bottom: -15px;
+  height: 10px;
   width: 100%;
   margin: auto;
   border-radius: 7px 7px 0 0;
@@ -507,11 +524,10 @@
 }
 .result label:hover::before,
 .result [type="radio"]:checked ~ label::before {
-  transform: translateY(-9px);
+  transform: translateY(-10px);
 }
 .result [type="radio"]:checked ~ label::before {
   background: #fff;
-  transform: translateY(-10px);
   transition: all 0.5s ease;
 }
 
@@ -646,7 +662,7 @@
   position: absolute;
   margin: auto;
   z-index: -1;
-  animation: glow 2s ease-in-out infinite;
+  animation: glow 2s cubic-bezier(0.6, 0, 0.6, 1) infinite;
 }
 @keyframes glow {
   50% {
@@ -662,8 +678,8 @@
   animation: none;
 }
 .glow.left {
-  box-shadow: 0 0 40px 30px #8422b1;
-  background-color: #8422b1;
+  box-shadow: 0 0 40px 30px var(--glow-l-color);
+  background-color: var(--glow-l-color);
   left: 0;
   top: 25%;
 }
@@ -673,18 +689,61 @@
   right: 0;
   bottom: 25%;
 }
-
-.glow-layer-bg {
-  background: rgb(27, 27, 27);
+.glow-layer-bg,
+.glow-outline {
   position: absolute;
   border-radius: var(--input-radius);
-  inset: -2px;
-  z-index: -1;
+  overflow: hidden;
 }
-
+.glow-layer-bg {
+  z-index: -1;
+  inset: -2px;
+  background: rgb(27, 27, 27);
+}
+.glow-outline {
+  z-index: 9;
+  inset: -1px;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+.glow-outline::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  width: 110px;
+  height: 420px;
+  margin: auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(197, 134, 203, 0.5),
+    transparent
+  );
+  animation: spin 3s linear infinite;
+  animation-play-state: paused;
+}
+.input-wrapper:hover .glow-outline::before {
+  animation-play-state: running;
+}
+.input-wrapper:hover .glow-outline {
+  opacity: 1;
+}
+.input-wrapper:focus-within .glow-outline {
+  transition-duration: 0.2s;
+  opacity: 0;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .glow-layer-1 {
   content: "";
   inset: -2px;
+  filter: blur(10px);
   position: absolute;
   border-radius: calc(var(--input-radius) * 1.1);
   background: linear-gradient(152deg, rgb(226 0 255 / 20%), rgb(0 0 0 / 0%) 40%),
@@ -696,11 +755,16 @@
 .glow-layer-1::after {
   content: "";
   position: absolute;
-  width: 40%;
+  width: 30%;
   height: 75%;
   border-radius: 20%;
-  filter: blur(10px);
   box-shadow: 0 0 50px currentColor;
+  transition: all 0.5s cubic-bezier(0.6, 0, 0.6, 1);
+}
+.input-wrapper:focus-within .glow-layer-1::before,
+.input-wrapper:focus-within .glow-layer-1::after {
+  width: 70%;
+  height: 95%;
 }
 .glow-layer-1::before {
   left: 0;
@@ -720,15 +784,24 @@
   position: absolute;
   width: 20%;
   height: 70%;
-  border-radius: calc(var(--input-radius) * 1.2);
+}
+.glow-layer-2::before,
+.glow-layer-3::before {
+  width: 70%;
+  height: 80%;
+  border-radius: calc(var(--input-radius) * 1.2) 100% 0 20%;
+}
+.glow-layer-2::after,
+.glow-layer-3::after {
+  width: 70%;
+  height: 100%;
+  border-radius: 0 50% calc(var(--input-radius) * 1.2) 100%;
 }
 .glow-layer-2 {
   inset: -5px;
   position: absolute;
-}
-.glow-layer-2::before,
-.glow-layer-2::after {
   filter: blur(3px);
+  z-index: 2;
 }
 .glow-layer-2::before {
   left: 0;
@@ -743,10 +816,11 @@
 .glow-layer-3 {
   inset: -3px;
   position: absolute;
+  z-index: 2;
 }
 .glow-layer-3::before,
 .glow-layer-3::after {
-  filter: blur(2px);
+  filter: blur(1.5px);
 }
 .glow-layer-3::before {
   left: 0;
@@ -815,7 +889,7 @@
 
 .input input:not(:placeholder-shown) ~ .result .result-content a {
   opacity: 0;
-  animation: slideDown 1.4s ease forwards calc(1.4s + var(--i) * 0.14s);
+  animation: slideDown 1.4s ease forwards calc(1.4s + var(--i) * 0.1s);
 }
 
 .input input:not(:placeholder-shown) ~ .result .result-content-header {
