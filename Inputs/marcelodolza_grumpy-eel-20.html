@@ -2,37 +2,38 @@
   <div class="bg"></div>
   <div class="input-wrapper">
     <div class="input">
-      <div class="reflection"></div>
       <div class="glow left"></div>
       <div class="glow right"></div>
 
-      <input placeholder="Search..." name="text" type="text" />
+      <input type="text" name="text" placeholder="Search..." />
+
+      <div class="reflection"></div>
 
       <div class="icon">
         <svg
-          class="loading"
-          xmlns="http://www.w3.org/2000/svg"
-          width="1em"
-          height="1em"
-          viewBox="0 0 38 38"
           stroke="#fff"
+          viewBox="0 0 38 38"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="loading"
         >
-          <g fill="none" fill-rule="evenodd">
-            <g transform="translate(1 1)" stroke-width="3">
-              <circle stroke-opacity=".2" cx="18" cy="18" r="18"></circle>
+          <g fill-rule="evenodd" fill="none">
+            <g stroke-width="3" transform="translate(1 1)">
+              <circle r="18" cy="18" cx="18" stroke-opacity=".2"></circle>
               <path d="M36 18c0-9.94-8.06-18-18-18"></path>
             </g>
           </g>
         </svg>
 
         <svg
-          class="magnifier"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          height="1em"
-          width="1em"
-          version="1.1"
           viewBox="0 0 490.4 490.4"
+          version="1.1"
+          width="1em"
+          height="1em"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          class="magnifier"
         >
           <path
             d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"
@@ -43,18 +44,18 @@
       <button class="filter">
         <span>
           <svg
-            stroke="currentColor"
-            fill="none"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            height="1em"
-            width="1em"
             xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            fill="none"
+            stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
               d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+              stroke-linejoin="round"
+              stroke-linecap="round"
             ></path>
           </svg>
         </span>
@@ -63,26 +64,26 @@
       <div class="result">
         <header class="result-header">
           <div style="--i:1">
-            <input checked="" name="tab" id="all" type="radio" />
-            <label data-label="All" for="all">
+            <input type="radio" id="all" name="tab" checked="" />
+            <label for="all" data-label="All">
               <span>All</span>
             </label>
           </div>
           <div style="--i:2">
-            <input name="tab" id="buttons" type="radio" />
-            <label data-label="Buttons" for="buttons">
+            <input type="radio" id="buttons" name="tab" />
+            <label for="buttons" data-label="Buttons">
               <span>Buttons</span>
             </label>
           </div>
           <div style="--i:3">
-            <input name="tab" id="cards" type="radio" />
-            <label data-label="Cards" for="cards">
+            <input type="radio" id="cards" name="tab" />
+            <label for="cards" data-label="Cards">
               <span>Cards</span>
             </label>
           </div>
           <div style="--i:4">
-            <input name="tab" id="inputs" type="radio" />
-            <label data-label="Inputs" for="inputs">
+            <input type="radio" id="inputs" name="tab" />
+            <label for="inputs" data-label="Inputs">
               <span>Inputs</span>
             </label>
           </div>
@@ -130,7 +131,7 @@
   --ease-elastic: cubic-bezier(0.7, -0.5, 0.3, 1.5);
   --icon-color: #bcacbd;
   --glow-r-color: #0d00ff;
-  --input-radius: 17px;
+  --input-radius: 15px;
   --result-item-h: 35px;
 
   background-color: #010001;
@@ -166,7 +167,7 @@
       transparent 1px
     ),
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 15px 15px;
+  background-size: 12px 12px;
   mask-image: linear-gradient(
     transparent 0%,
     black 40%,
@@ -212,6 +213,16 @@
   opacity: 0.3;
   transform: translateX(-540px) skew(-40deg);
 }
+.reflection::after {
+  content: "";
+  position: absolute;
+  left: 68px;
+  right: 50%;
+  top: 10px;
+  bottom: 10px;
+  z-index: -1;
+  background: linear-gradient(to right, transparent, rgba(2, 2, 2, 0.6));
+}
 .input:focus-within .reflection:before {
   transition: all 1.2s cubic-bezier(0.5, 0, 0.3, 1);
   transform: translate(440px, 0) skew(40deg) scaleX(0.5);
@@ -219,10 +230,10 @@
 
 .input input {
   max-width: 100%;
-  width: 420px;
-  height: 76px;
-  padding: 0 84px;
-  font-size: 26px;
+  width: 320px;
+  height: 60px;
+  padding: 0 67px;
+  font-size: 20px;
   background: none;
   border: none;
   color: white;
@@ -233,7 +244,7 @@
 }
 
 .input input::placeholder {
-  color: #a0a1a0;
+  color: #d6d0d6;
 }
 
 .icon {
@@ -243,8 +254,8 @@
   left: 14px;
   top: 8px;
   bottom: 8px;
-  width: 60px;
-  font-size: 30px;
+  width: 42px;
+  font-size: 24px;
   color: var(--icon-color);
 }
 .icon svg {
@@ -265,12 +276,12 @@
 .filter {
   z-index: 2;
   background: none;
-  font-size: 30px;
+  font-size: 27px;
   position: absolute;
-  right: 8px;
-  top: 8px;
-  bottom: 8px;
-  width: 60px;
+  right: 7px;
+  top: 7px;
+  bottom: 7px;
+  width: 46px;
   cursor: pointer;
   color: var(--icon-color);
   border: none;
@@ -329,7 +340,7 @@
   filter: brightness(1.3);
 }
 .filter:hover svg {
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 .filter:focus svg {
   animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -358,8 +369,8 @@
 
 .result {
   position: absolute;
-  left: 15px;
-  right: 15px;
+  left: 11px;
+  right: 11px;
   top: 100%;
   border-radius: 0 0 var(--input-radius) var(--input-radius);
   transition: all 0.4s cubic-bezier(0.5, 0, 0, 1);
@@ -415,8 +426,8 @@
   width: 0%;
 }
 .result-header::after {
-  right: -72px;
-  bottom: 78px;
+  right: -59px;
+  bottom: 69px;
   box-shadow: 0 0 40px 30px var(--glow-r-color);
   background-color: var(--glow-r-color);
   width: 20%;
@@ -432,7 +443,7 @@
   border: 0;
   color: #5e5669;
   background-color: transparent;
-  font-size: 15px;
+  font-size: 14px;
   animation: slideUp 0.4s ease forwards calc(var(--i) * 0.05s);
 }
 .result-header label {
@@ -633,7 +644,7 @@
   position: absolute;
   margin: auto;
   z-index: -1;
-  animation: glow 4s ease-in-out infinite;
+  animation: glow 2s ease-in-out infinite;
 }
 @keyframes glow {
   50% {
@@ -750,7 +761,11 @@
 
 .input input:not(:placeholder-shown),
 .input input:focus {
-  width: 520px;
+  width: 380px;
+}
+
+.input input:not(:placeholder-shown) ~ .reflection::after {
+  display: none;
 }
 
 .input input:focus:not(:placeholder-shown) ~ .icon .magnifier,
@@ -767,7 +782,7 @@
 }
 
 .input input:focus:not(:placeholder-shown) ~ .icon .magnifier {
-  transform: scale(1.2) translate(2.1px, 2.1px);
+  transform: scale(1.2) translate(1.7px, 1.7px);
 }
 
 .input input:not(:placeholder-shown) ~ .result {
