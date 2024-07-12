@@ -1,0 +1,64 @@
+<section class="container">
+  <label>
+    <input name="check" type="checkbox" />
+    <span></span>
+    <p>N</p>
+  </label>
+</section>
+
+<style>
+/* From Uiverse.io by mnikita7767  - Tags: checkbox */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container label {
+  cursor: pointer;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+label input {
+  appearance: none;
+}
+label span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#555353, #363535, #303030);
+  border: 2px solid #222;
+  border-top-width: 4px;
+  border-radius: 6px;
+  box-shadow: inset 0 5px 1px rgba(0, 0, 0, 0.23), 0 5px 5px rgba(0, 0, 0, 0.5),
+    0 15px 25px rgba(0, 0, 0, 0.35);
+}
+.container label span::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #fff;
+  inset: 5px 3px;
+  filter: blur(5px);
+}
+.container label input:checked ~ span {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.35),
+    inset 0 5px 5px rgba(0, 0, 0, 0.5), inset 0 15px 25px rgba(0, 0, 0, 0.35);
+}
+label p {
+  position: relative;
+  z-index: 10;
+  font-size: 3rem;
+  color: #111;
+}
+.container label input:checked ~ p {
+  color: #fff;
+  text-shadow: 0 0 5px #219cf3, 0 0 8px #219cf3;
+}
+
+</style>
+    
