@@ -1,0 +1,148 @@
+<!-- From Uiverse.io by Itskrish01  - Tags: form, payment -->
+<div class="border border-zinc-800 p-8 rounded-xl w-[600px]">
+  <div>
+    <h3 class="text-white font-semibold text-[1.17rem]">Payment Method</h3>
+    <p class="text-[#a1a1aa]">Add a new payment method to your account.</p>
+  </div>
+  <ul class="grid w-full gap-6 grid-cols-3 mt-6">
+    <li>
+      <input
+        required=""
+        class="hidden peer"
+        value="card"
+        name="pay"
+        id="card"
+        type="radio"
+      />
+      <label
+        class="inline-flex items-center justify-center w-full px-14 py-5 text-gray-500 bg-transparent border-2 border-zinc-800 rounded-lg cursor-pointer peer-checked:border-white hover:bg-zinc-800"
+        for="card"
+      >
+        <div class="flex flex-col items-center gap-2">
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+            fill="#fff"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 9H21M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+
+          <div class="w-full text-lg font-semibold text-white">Card</div>
+        </div>
+      </label>
+    </li>
+    <li>
+      <input
+        required=""
+        class="hidden peer"
+        value="apple"
+        name="pay"
+        id="apple"
+        type="radio"
+      />
+      <label
+        class="inline-flex items-center justify-center w-full px-14 py-5 text-gray-500 bg-transparent border-2 border-zinc-800 rounded-lg cursor-pointer peer-checked:border-white hover:bg-zinc-800"
+        for="apple"
+      >
+        <div class="flex flex-col items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            height="40px"
+            width="40px"
+            fill="#fff"
+          >
+            <path
+              d="M19.665 16.811a10.316 10.316 0 0 1-1.021 1.837c-.537.767-.978 1.297-1.316 1.592-.525.482-1.089.73-1.692.744-.432 0-.954-.123-1.562-.373-.61-.249-1.17-.371-1.683-.371-.537 0-1.113.122-1.73.371-.616.25-1.114.381-1.495.393-.577.025-1.154-.229-1.729-.764-.367-.32-.826-.87-1.377-1.648-.59-.829-1.075-1.794-1.455-2.891-.407-1.187-.611-2.335-.611-3.447 0-1.273.275-2.372.826-3.292a4.857 4.857 0 0 1 1.73-1.751 4.65 4.65 0 0 1 2.34-.662c.46 0 1.063.142 1.81.422s1.227.422 1.436.422c.158 0 .689-.167 1.593-.498.853-.307 1.573-.434 2.163-.384 1.6.129 2.801.759 3.6 1.895-1.43.867-2.137 2.08-2.123 3.637.012 1.213.453 2.222 1.317 3.023a4.33 4.33 0 0 0 1.315.863c-.106.307-.218.6-.336.882zM15.998 2.38c0 .95-.348 1.838-1.039 2.659-.836.976-1.846 1.541-2.941 1.452a2.955 2.955 0 0 1-.021-.36c0-.913.396-1.889 1.103-2.688.352-.404.8-.741 1.343-1.009.542-.264 1.054-.41 1.536-.435.013.128.019.255.019.381z"
+            ></path>
+          </svg>
+
+          <div class="w-full text-lg font-semibold text-white">Apple</div>
+        </div>
+      </label>
+    </li>
+    <li>
+      <input
+        required=""
+        class="hidden peer"
+        value="google"
+        name="pay"
+        id="google"
+        type="radio"
+      />
+      <label
+        class="inline-flex items-center justify-center w-full px-14 py-5 text-gray-500 bg-transparent border-2 border-zinc-800 rounded-lg cursor-pointer peer-checked:border-white hover:bg-zinc-800"
+        for="google"
+      >
+        <div class="flex flex-col items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            height="40px"
+            width="40px"
+            fill="#fff"
+          >
+            <path
+              d="M21.35 11.1H12.18V13.83H18.69C18.36 17.64 15.19 19.27 12.19 19.27C8.36003 19.27 5.00003 16.25 5.00003 12C5.00003 7.9 8.20003 4.73 12.2 4.73C15.29 4.73 17.1 6.7 17.1 6.7L19 4.72C19 4.72 16.56 2 12.1 2C6.42003 2 2.03003 6.8 2.03003 12C2.03003 17.05 6.16003 22 12.25 22C17.6 22 21.5 18.33 21.5 12.91C21.5 11.76 21.35 11.1 21.35 11.1Z"
+            ></path>
+          </svg>
+
+          <div class="w-full text-lg font-semibold text-white">Google</div>
+        </div>
+      </label>
+    </li>
+  </ul>
+  <div class="mt-6 space-y-4">
+    <div class="flex flex-col gap-1">
+      <label class="text-white text-lg font-semibold">Name</label>
+      <input
+        placeholder="John Doe"
+        class="rounded-lg bg-transparent border border-zinc-800 py-2 text-white px-4"
+      />
+    </div>
+    <div class="flex flex-col gap-1">
+      <label class="text-white text-lg font-semibold">Name</label>
+      <input
+        placeholder="Card No."
+        class="rounded-lg bg-transparent border border-zinc-800 py-2 text-white px-4"
+      />
+    </div>
+  </div>
+  <div class="flex gap-4 mt-5">
+    <div class="flex flex-col gap-1">
+      <label class="text-white text-lg font-semibold">Expires</label>
+      <input
+        placeholder="Month"
+        class="text-white flex w-full rounded-md border border-zinc-800 bg-transparent px-4 py-2"
+      />
+    </div>
+    <div class="flex flex-col gap-1">
+      <label class="text-white text-lg font-semibold">Year</label>
+      <input
+        placeholder="Year"
+        class="text-white flex w-full rounded-md border border-zinc-800 bg-transparent px-4 py-2"
+      />
+    </div>
+    <div class="flex flex-col gap-1">
+      <label class="text-white text-lg font-semibold">CVV</label>
+      <input
+        placeholder="CVV"
+        class="text-white flex w-full rounded-md border border-zinc-800 bg-transparent px-4 py-2"
+      />
+    </div>
+  </div>
+  <button class="mt-6 bg-white w-full py-1.5 rounded-lg text-lg font-semibold">
+    Continue
+  </button>
+</div>
+
+
+    
