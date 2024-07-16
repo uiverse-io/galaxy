@@ -1,0 +1,99 @@
+<label class="switch">
+  <input type="checkbox" />
+  <span class="slider"></span>
+</label>
+
+<style>
+/* From Uiverse.io by Subaashbala  - Tags: switch */
+/* The switch - the box around the slider */
+.switch {
+  --INITIAL-SWITCH-TRACK-COLOR: #fffbeb;
+  --INITIAL-THUMB-COLOR: #ff5722;
+  --OVERALL-TRANSITION-DURATION: 500ms; /* Overall transition speed */
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.75em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--INITIAL-SWITCH-TRACK-COLOR);
+  transition: var(--OVERALL-TRANSITION-DURATION);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Thumb */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--INITIAL-THUMB-COLOR);
+  transition: var(--OVERALL-TRANSITION-DURATION);
+}
+
+.switch input:checked + .slider {
+  background-color: var(--INITIAL-THUMB-COLOR);
+}
+
+/* Actions to be performed when the switch is TOGGLED ON */
+.switch input:checked + .slider::before {
+  transform-origin: left;
+  background-color: var(--INITIAL-SWITCH-TRACK-COLOR);
+  animation: wobble var(--OVERALL-TRANSITION-DURATION)
+    cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: scale(1, 1) translateX(2rem);
+}
+
+/* Actions to be performed when the switch is TOGGLED OFF */
+.switch input:not(:checked) + .slider::before {
+  transform-origin: right;
+  animation: reverse-wobble var(--OVERALL-TRANSITION-DURATION)
+    cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes wobble {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(3, 1);
+  }
+  100% {
+    transform: scale(1, 1) translateX(2rem);
+  }
+}
+
+@keyframes reverse-wobble {
+  0% {
+    transform: scale(1, 1) translateX(2rem);
+  }
+  50% {
+    transform: scale(3, 1);
+  }
+  100% {
+    transform: scale(1, 1) translateX(0);
+  }
+}
+
+</style>
+    
