@@ -1,0 +1,84 @@
+<button class="Btn-container">
+  <span class="inner-wrapper">
+    <span class="text">
+      <p>Upgrade to</p>
+      <p class="pro">PRO</p>
+    </span>
+    <span class="icon">
+      <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+        ></path>
+      </svg>
+    </span>
+  </span>
+</button>
+
+<style>
+/* From Uiverse.io by vinodjangid07  - Website: https://dribbble.com/shots/18149466-Upgrade-to-Pro-Button/attachments/13347110?mode=media - Name: Mobin Madadi - Tags: link, button, hover, active, hover effect, pro, upgrade, redirect */
+.Btn-container {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: #ebebeb;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px #e1e1e1;
+  transition: 0.2s;
+}
+.inner-wrapper {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 8px 15px;
+  box-shadow: 0px 4px 10px #d3d3d3;
+  gap: 50px;
+  transition: 0.2s;
+}
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.text p {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: rgb(140, 140, 140);
+}
+.text .pro {
+  background-color: black;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+  transition: 0.2s;
+}
+.icon svg {
+  width: 15px;
+}
+.Btn-container:active {
+  transform: scale(1);
+}
+.Btn-container:active .inner-wrapper {
+  transform: scale(0.97);
+}
+.Btn-container:hover .icon {
+  transform: rotate(0deg);
+}
+
+</style>
+    
