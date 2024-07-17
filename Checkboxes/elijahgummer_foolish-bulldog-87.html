@@ -1,0 +1,46 @@
+<label class="checkbox">
+  <input type="checkbox" class="checkbox-input" />
+  <svg height="28" width="28" class="checkbox-check">
+    <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+</label>
+
+<style>
+/* From Uiverse.io by elijahgummer  - Tags: checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.checkbox:hover .checkbox-check {
+  background: #ff475425;
+}
+
+.checkbox-input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.checkbox-input:checked + .checkbox-check {
+  background: #dc143c;
+  stroke-dashoffset: 0;
+}
+
+.checkbox-check {
+  border: 0.2rem solid #dc143c;
+  stroke: #f9f9f9;
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
+  stroke-linecap: round;
+  stroke-width: 0.2rem;
+  border-radius: 0.2rem;
+  fill: none;
+  transition: background 0.4s, stroke-dashoffset 0.6s;
+}
+
+</style>
+    
