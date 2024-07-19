@@ -1,0 +1,106 @@
+<label class="container">
+  <input type="checkbox" checked="checked" id="checkbox" />
+  <div class="checkmark">
+    <span class="off"></span>
+    <span class="on"></span>
+  </div>
+</label>
+<label class="label" for="checkbox">CheckBox</label>
+
+<style>
+/* From Uiverse.io by javierBarroso  - Tags: checkbox, neon */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.label {
+  color: #888;
+  font-size: 1.3rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #888;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #555;
+  border-radius: 50px;
+  transition-duration: 0.5s;
+  overflow: hidden;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #49be5c;
+  box-shadow: 0 0px 10px #49be5cdc;
+}
+
+.container .off {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.5s;
+}
+
+.container .on {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  transform: translateY(25px);
+  transition-duration: 0.5s;
+}
+
+.container .on::before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: #fff solid 2px;
+  transition-duration: 0.2s;
+  position: absolute;
+  transform: translate(2.5px, 2.5px);
+}
+
+.container .off::before {
+  content: "";
+  height: 15px;
+  width: 3px;
+  background-color: #fff;
+  transition-duration: 0.2s;
+  position: absolute;
+  transform: translate(-1.5px, -7.5px);
+  left: 50%;
+  top: 50%;
+}
+
+.container input:checked ~ .checkmark .on {
+  transform: translateX(0%);
+}
+
+.container input:checked ~ .checkmark .off {
+  transform: translateY(-100%);
+}
+
+</style>
+    
