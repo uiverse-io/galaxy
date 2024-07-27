@@ -1,0 +1,119 @@
+<input id="bookmark" type="checkbox" />
+<label class="bookmark" for="bookmark">
+  <svg
+    id="Bookmark"
+    viewBox="0 0 10 22"
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    width="24px"
+    class="bookmark-icon"
+  >
+    <g fill-rule="evenodd" fill="none">
+      <g
+        class="color000000 svgShape"
+        transform="translate(-265 -2679)"
+        fill="#242424"
+      >
+        <g
+          class="color000000 svgShape"
+          fill="#242424"
+          transform="translate(56 160)"
+        >
+          <path
+            class="color000000 svgShape"
+            fill="#242424"
+            d="M219 2521v16.998c0 .891-1.077 1.337-1.707.707l-2.586-2.586a1 1 0 0 0-1.414 0l-2.586 2.586c-.63.63-1.707.184-1.707-.707V2521a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2"
+          ></path>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <div class="shimmer"></div>
+</label>
+
+<style>
+/* From Uiverse.io by elijahgummer  - Tags: simple, animation, hover, checkbox, modern, click, bookmark, shimmer */
+#bookmark[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.bookmark {
+  overflow: hidden;
+  position: absolute;
+  left: calc(50% - 24px);
+  top: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.bookmark:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.bookmark:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+.bookmark:active:before {
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+.bookmark .bookmark-icon {
+  margin: 12px;
+}
+.bookmark .bookmark-icon path {
+  stroke: black;
+  fill: rgba(0, 0, 0, 0);
+}
+
+#bookmark:checked + .bookmark .bookmark-icon {
+  animation: booking 0.3s linear forwards;
+}
+#bookmark:checked + .bookmark .bookmark-icon path {
+  fill: black;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.bookmark .shimmer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skew(-13deg) translateX(-110%);
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+  transition: transform 1s ease;
+}
+.bookmark:hover .shimmer {
+  transform: skew(-13deg) translateX(110%);
+}
+
+@keyframes booking {
+  0% {
+    transform: rotateY(0) translateY(0) scale(1);
+  }
+  50% {
+    transform: rotateY(90deg) translateY(-16px) scale(1.1);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0) scale(1.2);
+  }
+}
+
+</style>
+    
