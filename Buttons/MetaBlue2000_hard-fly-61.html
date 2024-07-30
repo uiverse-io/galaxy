@@ -1,0 +1,103 @@
+<button class="button">
+  <div class="msg">
+    <p>
+      <span style="--i:0">J</span>
+      <span style="--i:1">o</span>
+      <span style="--i:2">i</span>
+      <span style="--i:3">n</span>
+      <span>&nbsp;</span>
+      <span style="--i:4">T</span>
+      <span style="--i:5">o</span>
+      <span style="--i:6">d</span>
+      <span style="--i:7">a</span>
+      <span style="--i:8">y</span>
+    </p>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 25 25"
+      class="arrow"
+    >
+      <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+      <g
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        id="SVGRepo_tracerCarrier"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          stroke-width="1.2"
+          stroke="#ffffff"
+          d="M13 7L18.5 12.5L13 18M18.5 12.5H6"
+        ></path>
+      </g>
+    </svg>
+  </div>
+</button>
+
+<style>
+/* From Uiverse.io by MetaBlue2000  - Tags: button */
+.button {
+  cursor: pointer;
+  border-radius: 15px;
+  border: solid 3px #a86bdd;
+  width: 210px;
+  height: 75px;
+  transform: rotate3d(1, 1, 1, 335deg);
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(#bf76f9, #9a48dd);
+  backdrop-filter: blur(2px, black);
+  box-shadow: -8px 7px 1px #865ba9;
+  transition: all 0.4s ease-in-out;
+}
+
+.arrow {
+  padding: 5px;
+  width: 55px;
+  transition: all 0.4s ease-in-out;
+}
+
+.msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover .arrow {
+  transform: translateX(5px);
+}
+
+.button:hover {
+  transform: translateX(10px);
+}
+
+.button p span {
+  display: inline-block;
+  opacity: 1;
+  animation: slideDown 0.8s ease forwards calc(var(--i) * 0.03s);
+}
+.button:hover p span {
+  opacity: 1;
+  animation: wave 0.5s ease forwards calc(var(--i) * 0.02s);
+}
+@keyframes wave {
+  30% {
+    opacity: 1;
+    transform: translateY(12px) translateX(0) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+    color: var(--primary);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+
+</style>
+    
