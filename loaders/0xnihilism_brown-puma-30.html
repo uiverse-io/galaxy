@@ -1,0 +1,436 @@
+<div class="orwellian-container">
+  <div class="orwellian-loader">
+    <div class="eye">
+      <div class="pupil"></div>
+      <div class="eyelid"></div>
+    </div>
+    <div class="spotlight"></div>
+    <div class="text">BIG BROTHER IS LOADING</div>
+    <div class="scan-lines"></div>
+    <div class="tv-effect"></div>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by 0xnihilism  - Tags: loading, loader, animated, light&dark, brutalism, orwellian */
+.orwellian-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 900;
+}
+.orwellian-container .orwellian-loader {
+  width: 280px;
+  height: 280px;
+  background-color: #000;
+  border: 10px solid #333;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.orwellian-container .eye {
+  width: 160px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  animation: pulse 2s infinite;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.orwellian-container .pupil {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: look-diagonal 4s infinite ease-in-out;
+}
+
+.orwellian-container .pupil::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, rgb(255, 0, 0) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+
+.orwellian-container .eyelid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  animation: blink 4s infinite;
+}
+
+.orwellian-container .spotlight {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 47px;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.8), transparent);
+  filter: blur(8px);
+  transform-origin: top;
+  animation: spotlight-sweep-diagonal 4s infinite ease-in-out;
+}
+
+.orwellian-container .text {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f8d17c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: glitch 1s infinite;
+  z-index: 20;
+}
+
+.orwellian-container .scan-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.3) 50%
+  );
+  background-size: 100% 4px;
+  animation: scan 10s linear infinite;
+  z-index: 30;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.orwellian-container .tv-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size: 100% 2px, 3px 100%;
+  animation: tv-flicker 0.15s infinite;
+  z-index: 35;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.orwellian-container .orwellian-loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 40;
+}
+
+.orwellian-container .orwellian-loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 30%,
+    rgba(0, 0, 0, 0.5) 90%
+  );
+  z-index: 35;
+  pointer-events: none;
+}
+
+@keyframes look-diagonal {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-40%) rotate(-15deg);
+  }
+  75% {
+    transform: translateX(-60%) rotate(15deg);
+  }
+}
+
+@keyframes spotlight-sweep-diagonal {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-40%) rotate(-15deg);
+  }
+  75% {
+    transform: translateX(-60%) rotate(15deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -60%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -60%) scale(1.05);
+  }
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(-2px, 2px);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate(2px, -2px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(-2px, -2px);
+    opacity: 0.75;
+  }
+}
+
+@keyframes blink {
+  0%,
+  90%,
+  100% {
+    height: 0;
+  }
+  95% {
+    height: 100%;
+  }
+}
+
+@keyframes scan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes tv-flicker {
+  0% {
+    opacity: 0.27049;
+  }
+  5% {
+    opacity: 0.34801;
+  }
+  10% {
+    opacity: 0.23175;
+  }
+  15% {
+    opacity: 0.40923;
+  }
+  20% {
+    opacity: 0.29481;
+  }
+  25% {
+    opacity: 0.38584;
+  }
+  30% {
+    opacity: 0.24928;
+  }
+  35% {
+    opacity: 0.32451;
+  }
+  40% {
+    opacity: 0.37031;
+  }
+  45% {
+    opacity: 0.26941;
+  }
+  50% {
+    opacity: 0.35755;
+  }
+  55% {
+    opacity: 0.29288;
+  }
+  60% {
+    opacity: 0.31821;
+  }
+  65% {
+    opacity: 0.39726;
+  }
+  70% {
+    opacity: 0.25294;
+  }
+  75% {
+    opacity: 0.36898;
+  }
+  80% {
+    opacity: 0.28995;
+  }
+  85% {
+    opacity: 0.3398;
+  }
+  90% {
+    opacity: 0.38703;
+  }
+  95% {
+    opacity: 0.24619;
+  }
+  100% {
+    opacity: 0.35762;
+  }
+}
+
+/* Additional styles to ensure full coverage */
+.orwellian-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px; /* Ensures a minimum height for the container */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .orwellian-container .orwellian-loader {
+    width: 240px;
+    height: 240px;
+  }
+
+  .orwellian-container .eye {
+    width: 140px;
+    height: 50px;
+  }
+
+  .orwellian-container .pupil {
+    width: 40px;
+    height: 40px;
+  }
+
+  .orwellian-container .spotlight {
+    width: 40px;
+    height: 160px;
+  }
+
+  .orwellian-container .text {
+    font-size: 16px;
+  }
+}
+
+/* Accessibility improvements */
+.orwellian-container .text {
+  user-select: none; /* Prevents text selection */
+}
+
+.orwellian-container .orwellian-loader:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.orwellian-container .orwellian-loader {
+  animation: subtle-rotate 6s infinite ease-in-out;
+}
+
+/* Enhance TV effect */
+.orwellian-container .tv-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 80%
+    ),
+    repeating-radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  background-size: 100% 100%, 3px 3px;
+  pointer-events: none;
+}
+
+/* Improve text readability */
+.orwellian-container .text {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Enhance spotlight effect */
+.orwellian-container .spotlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 70%
+  );
+  filter: blur(5px);
+}
+
+/* Add a pulsating glow to the eye */
+@keyframes eye-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.orwellian-container .eye {
+  animation: pulse 2s infinite, eye-glow 4s infinite;
+}
+
+</style>
+    
