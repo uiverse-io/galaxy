@@ -1,0 +1,87 @@
+<button class="button">Join Now<span class="arrow">&gt;</span></button>
+
+<style>
+/* From Uiverse.io by hssqrshi  - Tags: button */
+.button {
+  background-color: #c47dfb;
+  background-image: linear-gradient(to bottom, #d992ff, #c47dfb);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.3s ease;
+  transform: perspective(500px) rotateX(0deg);
+}
+
+.button:hover {
+  background-color: #b46cea;
+  transform: perspective(500px) rotateX(5deg);
+  animation: glow 1.5s infinite alternate;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(196, 125, 251, 0.5);
+}
+
+.button:active {
+  transform: perspective(500px) rotateX(-5deg) translateY(2px);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow:
+      0 0 10px rgba(196, 125, 251, 0.5),
+      0 0 20px rgba(196, 125, 251, 0.5),
+      0 0 30px rgba(196, 125, 251, 0.5);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(196, 125, 251, 0.8),
+      0 0 30px rgba(196, 125, 251, 0.8),
+      0 0 40px rgba(196, 125, 251, 0.8);
+  }
+}
+
+.button .text {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.button:hover .text {
+  transform: scale(1.2);
+  font-size: 18px;
+  color: #e0bbff;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 16px;
+}
+
+.button:hover .arrow {
+  transform: translateX(5px);
+}
+
+</style>
+    
