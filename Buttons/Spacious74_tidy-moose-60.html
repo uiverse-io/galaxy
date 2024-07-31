@@ -1,0 +1,83 @@
+<div class="btn-container">
+  <button class="button">
+    <span>Join Today </span>
+    <svg
+      viewBox="0 0 48 48"
+      height="1.2em"
+      width="1.2em"
+      class="svg"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M42 24H6m24-12l12 12l-12 12"
+        stroke-width="4"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke="currentColor"
+        fill="none"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+/* From Uiverse.io by Spacious74  - Tags: button */
+.btn-container {
+  padding: 3px;
+  background: linear-gradient(180deg, #f3aefe, #8d35d3);
+  border-radius: 19px;
+  transform: perspective(850px) rotateX(14deg) rotateY(8deg) rotateZ(-11deg);
+  color: white;
+  box-shadow:
+    -4px 4px 0px #5d2b82,
+    -5px 7px 8px #4d1e7491,
+    -10px 13px 18px #4d1e7450,
+    -20px 20px 40px #4d1e74a8;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.btn-container:hover {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  box-shadow:
+    0px 4px 5px #5d2b82,
+    0px 7px 8px #4d1e7491,
+    0px 13px 18px #4d1e7450,
+    0px 20px 40px #4d1e74a8;
+}
+.btn-container:active {
+  box-shadow:
+    0px 4px 5px #5c2b82c7,
+    0px 7px 8px #4d1e745b,
+    0px 5px 18px #4d1e7434,
+    0px 10px 40px #4d1e746e;
+}
+.btn-container:active > .button {
+  box-shadow: inset 0px 6px 10px #3114494b;
+}
+
+.button {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 22px 24px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(180deg, #d28dff, #8533c6);
+  box-shadow: inset 0px -6px 10px #3114494b;
+  text-shadow: -1px 1px 3px #2a0f3fbb;
+  transition: all 0.3s ease;
+}
+.svg {
+  margin-top: 2px;
+  font-weight: bold;
+  filter: drop-shadow(-2px 2px 1px #2a0f3f6c);
+}
+
+</style>
+    
