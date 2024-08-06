@@ -1,0 +1,34 @@
+<button class="button">Hover</button>
+
+<style>
+/* From Uiverse.io by sofiapetushok  - Tags: button */
+.button {
+  cursor: pointer;
+  position: relative;
+  background: #1b1b1b;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  color: #fff;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  top: 97%;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #14efff, #34ffc5, transparent);
+  transition: width 0.3s ease-in-out;
+  box-shadow: 0 0 50px 0 #14a1ff64;
+  border-radius: 50%;
+}
+.button:hover::after {
+  width: 200%;
+}
+
+</style>
+    
