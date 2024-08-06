@@ -1,0 +1,115 @@
+<div class="share-wrapper">
+  <input id="share-toggle" type="checkbox" class="check" />
+  <label for="share-toggle" class="container">
+    <svg
+      class="icon inactive"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M18 16.08C17.24 16.08 16.56 16.38 16.05 16.87L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.95 7.13C16.46 7.62 17.24 7.92 18 7.92C19.66 7.92 21 6.58 21 4.92C21 3.26 19.66 1.92 18 1.92C16.34 1.92 15 3.26 15 4.92C15 5.16 15.04 5.39 15.09 5.62L8.05 9.79C7.54 9.3 6.76 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.76 15 7.54 14.7 8.05 14.21L15.18 18.38C15.13 18.61 15.09 18.84 15.09 19.08C15.09 20.74 16.43 22.08 18.09 22.08C19.75 22.08 21.09 20.74 21.09 19.08C21.09 17.42 19.75 16.08 18 16.08Z"
+      ></path>
+    </svg>
+    <svg
+      class="icon active"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M18 16.08C17.24 16.08 16.56 16.38 16.05 16.87L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.95 7.13C16.46 7.62 17.24 7.92 18 7.92C19.66 7.92 21 6.58 21 4.92C21 3.26 19.66 1.92 18 1.92C16.34 1.92 15 3.26 15 4.92C15 5.16 15.04 5.39 15.09 5.62L8.05 9.79C7.54 9.3 6.76 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.76 15 7.54 14.7 8.05 14.21L15.18 18.38C15.13 18.61 15.09 18.84 15.09 19.08C15.09 20.74 16.43 22.08 18.09 22.08C19.75 22.08 21.09 20.74 21.09 19.08C21.09 17.42 19.75 16.08 18 16.08Z"
+      ></path>
+    </svg>
+    <div class="checkmark"></div>
+    <span class="share-text">Share</span>
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by aryansagar2405  - Tags: button */
+.share-wrapper {
+  --gap: 0.5em;
+  --radius: 0.35em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  --dot-bg: #212121;
+  --dot-color: #313131;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background:
+    linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+  border: 0.1em solid #313131;
+  padding: 0.5em;
+  border-radius: var(--radius);
+  box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.check[type="checkbox"] {
+  display: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -0.25em;
+  margin-bottom: -0.25em;
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.5em;
+  fill: white;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.icon.active {
+  display: none;
+  fill: #2196f3;
+}
+
+.check[type="checkbox"]:checked + .container .icon.active {
+  display: inline-block;
+  animation: pop 0.5s ease-in-out;
+}
+
+.check[type="checkbox"]:checked + .container .icon.inactive {
+  display: none;
+}
+
+.share-text {
+  margin-left: 0.5em;
+  padding: 0.5em;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bolder;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
+    
