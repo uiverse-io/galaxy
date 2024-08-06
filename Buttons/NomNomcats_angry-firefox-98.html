@@ -1,0 +1,55 @@
+<button class="button10">Button</button>
+
+<style>
+/* From Uiverse.io by NomNomcats  - Tags: simple, flashy, button, hover */
+.button10 {
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #ffffff;
+  padding: 0.8em 2em;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0.5em;
+  background: #000;
+  border: 2px solid #00ffea;
+  box-shadow: 0 0 20px rgba(0, 255, 234, 0.5);
+}
+
+.button10:active {
+  color: #ffffff;
+  box-shadow: inset 0 0 10px rgba(0, 255, 234, 0.7);
+}
+
+.button10:before,
+.button10:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 255, 234, 0.2);
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s;
+  border-radius: inherit;
+}
+
+.button10:before {
+  transition-delay: 0s;
+}
+
+.button10:after {
+  transition-delay: 0.25s;
+}
+
+.button10:hover:before,
+.button10:hover:after {
+  transform: scale(1.2);
+}
+
+</style>
+    
