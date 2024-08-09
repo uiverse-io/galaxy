@@ -1,0 +1,225 @@
+<div class="card">
+  <div data-status="inprogress" class="teams">
+    <span class="team-info team-home">
+      <span class="team-info-container">
+        <span class="team-name-info">Team 1</span>
+      </span>
+    </span>
+    <span class="event-scoreboard">
+      <span class="event-score-container">
+        <span class="current-time-container">
+          <span class="event-current-time">
+            <span class="event-clock">85'</span>
+            <span class="current-part">2H</span>
+          </span>
+          <span class="progress-dots" data-progress="1S">
+            <span class="load"></span>
+          </span>
+        </span>
+        <span class="score-container">
+          <span class="score-home">2</span>
+          <span class="custom-sep">-</span>
+          <span class="score-away">4</span>
+        </span>
+      </span>
+    </span>
+    <span class="team-info team-away">
+      <span class="team-info-container">
+        <span class="team-icon-container"></span>
+        <span class="team-name-info">Team 2</span>
+      </span>
+    </span>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by sofiapetushok  - Tags: card */
+.card * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card .teams {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, transparent, #111, transparent);
+}
+.card .teams > span {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  font-size: 13px;
+  text-wrap: nowrap;
+}
+.card .teams .team-name-info {
+  text-wrap: nowrap;
+  color: #ffffff;
+  max-width: 210px;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  overflow: hidden;
+  display: block;
+}
+.card .teams span.progress-dots {
+  height: 3px;
+  position: relative;
+  width: 60px;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 10px;
+}
+.card .teams span.progress-dots .load {
+  background: linear-gradient(90deg, #3a3dff, #ff2929);
+  display: block;
+  height: 1.5px;
+  width: 3px;
+  bottom: 0;
+  position: absolute;
+  transform: translateX(0px);
+  animation: loading_dots 7.5s ease both infinite;
+}
+@keyframes loading_dots {
+  0% {
+    width: 3px;
+    transform: translateX(0px);
+  }
+  40% {
+    width: 3px;
+    transform: translateX(57px);
+  }
+
+  75% {
+    width: 100%;
+    transform: translateX(0px);
+  }
+  100% {
+    width: 3px;
+    transform: translateX(0px);
+  }
+}
+.card .teams .team-home,
+.card .teams .team-away {
+  padding: 15px 37px;
+  position: relative;
+  overflow: hidden;
+}
+.card .teams .team-away {
+  transform: skew(-41deg, 0deg);
+  border-radius: 10px 10px 30px 10px;
+}
+.card .teams .team-home {
+  border-radius: 10px 10px 10px 30px;
+  transform: skew(41deg, 0deg);
+}
+.card .teams .team-home::after {
+  position: absolute;
+  top: -3px;
+  background: #00caff;
+  content: "";
+  height: 23px;
+  border-radius: 27px;
+  left: -20px;
+  filter: blur(2px);
+  transform: rotate(208deg);
+  width: 20px;
+  box-shadow: 0px 0px 32px #00ffed;
+}
+.card .teams .team-home::before {
+  position: absolute;
+  bottom: -15px;
+  background: #0048ff;
+  content: "";
+  height: 17px;
+  border-radius: 80px;
+  right: 0;
+  filter: blur(1px);
+  transform: translate(-50%, 0%);
+  width: 80%;
+  box-shadow: 0px 0px 32px #0026ff;
+}
+.card .teams .team-away::after {
+  position: absolute;
+  top: -3px;
+  background: #cc9d00;
+  content: "";
+  height: 23px;
+  border-radius: 27px;
+  right: -20px;
+  filter: blur(2px);
+  transform: rotate(208deg);
+  width: 20px;
+  box-shadow: 0px 0px 32px #cc3700;
+}
+.card .teams .team-away::before {
+  position: absolute;
+  bottom: -15px;
+  background: #ff0000;
+  content: "";
+  height: 17px;
+  border-radius: 80px;
+  left: 0;
+  filter: blur(1px);
+  transform: translate(50%, 0%);
+  width: 80%;
+  box-shadow: 0px 0px 32px #d50000;
+}
+
+.card .teams .team-home .team-name-info {
+  transform: skew(-41deg, 0);
+}
+.card .teams .team-away .team-name-info {
+  transform: skew(41deg, 0);
+}
+
+.event-info-banner .info-heading {
+  position: absolute;
+  right: 12px;
+  bottom: 5px;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 0;
+}
+.card .event-scoreboard .event-score-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  background: linear-gradient(#1e1e1e 0%, #0c0c0c8e 4%, #1a1419);
+  box-shadow:
+    inset 0 0 1px 0 #2c2c2c,
+    0 0 20px 0 #1313139c;
+  margin: 10px 0;
+}
+.card .event-scoreboard .event-score-container .score-container {
+  font-size: 24px;
+  background: linear-gradient(90deg, #3a3dff, #ff2929);
+  -webkit-background-clip: text;
+  width: 100%;
+  -webkit-text-fill-color: transparent;
+}
+.card .event-scoreboard .event-score-container .current-time-container {
+  font-size: 12px;
+  margin-bottom: 8px;
+  width: 100%;
+  font-family: "SegoeUI";
+  color: #a1a1a1;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+.card
+  .event-scoreboard
+  .event-score-container
+  .current-time-container
+  .event-clock {
+  font-weight: 500;
+  color: #eee;
+  margin-right: 10px;
+}
+
+</style>
+    
