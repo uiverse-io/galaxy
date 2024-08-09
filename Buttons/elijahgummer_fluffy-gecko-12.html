@@ -1,0 +1,256 @@
+<input class="toggle-checkbox" id="toggle-checkbox" type="checkbox" />
+<label class="button" for="toggle-checkbox">
+  <div class="content">
+    <span class="letters">
+      <span style="--i: 1" data-label="C">C</span>
+      <span style="--i: 2" data-label="o">o</span>
+      <span style="--i: 3" data-label="p">p</span>
+      <span style="--i: 4" data-label="y">y</span>
+      <span style="--i: 5" data-label="L">L</span>
+      <span style="--i: 6" data-label="i">i</span>
+      <span style="--i: 7" data-label="n">n</span>
+      <span style="--i: 8" data-label="k">k</span>
+    </span>
+    <div class="icon-container">
+      <svg
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.6"
+        fill="none"
+        data-slot="icon"
+        class="icon"
+      >
+        <path
+          class="bm"
+          d="M12.0017 6V4M8.14886 7.40371L6.86328 5.87162M15.864 7.40367L17.1496 5.87158"
+        ></path>
+        <path
+          d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          class="link"
+        ></path>
+      </svg>
+    </div>
+  </div>
+</label>
+
+<style>
+/* From Uiverse.io by elijahgummer  - Tags: simple, animation, link, purple, button, hover, modern, copy */
+.toggle-checkbox {
+  display: none;
+}
+.button {
+  --white: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #6e3bff, #7e51ff);
+  color: #ffffff;
+  border: 1px solid #af93ff;
+  border-radius: 8px;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 8px 10px -4px #503b89,
+    0 0 0 2px#562cce;
+  font-size: 25px;
+}
+
+.icon path.bm {
+  stroke-dasharray: 3;
+  stroke-dashoffset: 3;
+  stroke-width: 1px;
+  transform: translateX(-23px) translateY(16px) scale(2) rotate(-44deg);
+}
+
+.toggle-checkbox:checked + .button .icon path.bm {
+  animation: bump 1s ease forwards;
+}
+.toggle-checkbox:checked + .button .icon {
+  animation: beat 1s ease-in-out forwards;
+}
+
+.letters span:nth-child(5) {
+  margin-left: 5px;
+}
+.letters span:nth-child(6) {
+  margin-left: 1px;
+}
+
+.button:active .content {
+  box-shadow:
+    inset -1px 12px 8px -5px rgba(71, 0, 137, 0.4),
+    inset 0px -3px 8px 0px #d190ff;
+}
+
+@keyframes bump {
+  20% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 3;
+  }
+  30% {
+    stroke-dasharray: 5;
+    stroke-dashoffset: 3;
+  }
+  30.1% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 6;
+  }
+  75% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 3;
+  }
+  100% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 3;
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 -2px 4px 0 #c6c6c6,
+    0 3px 6px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  z-index: 10;
+}
+
+.icon-container .icon {
+  width: 25px;
+  height: 30px;
+  stroke: #592cd6;
+  margin-top: -2px;
+  z-index: 4;
+  transform: rotate(180deg);
+}
+
+.content {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  gap: 16px;
+  border-radius: 7px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.content::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  top: 45%;
+  bottom: 35%;
+  opacity: 0.7;
+  margin: auto;
+  background: linear-gradient(to bottom, transparent, var(--purple-400));
+  filter: brightness(1.3) blur(5px);
+}
+
+.letters {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.letters span {
+  display: block;
+  color: transparent;
+  position: relative;
+  left: 6px;
+}
+
+.letters span {
+  animation: letterShow 1.2s ease backwards calc(var(--i) * 0.03s);
+}
+
+.letters span::before,
+.letters span::after {
+  content: attr(data-label);
+  position: absolute;
+  color: var(--white);
+  text-shadow: -1px 1px 2px var(--purple-500);
+  left: 0;
+}
+
+.letters span::before {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.button:hover .words {
+  opacity: 1;
+}
+
+.button:hover .letters span::before {
+  animation: letterShow 0.7s ease calc(var(--i) * 0.03s);
+}
+
+.button:hover .letters span::after {
+  opacity: 1;
+  animation: letterHide 0.7s ease calc(var(--i) * 0.03s);
+}
+
+@keyframes letterShow {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+    filter: blur(20px);
+  }
+  20% {
+    transform: translateY(70%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-15%);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes letterHide {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-70%);
+    opacity: 0;
+    filter: blur(3px);
+  }
+}
+
+</style>
+    
