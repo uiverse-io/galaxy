@@ -50,7 +50,7 @@
 </button>
 
 <style>
-/* From Uiverse.io by Creatlydev  - Tags: button */
+/* From Uiverse.io by Creatlydev  - Tags: button, arrow, button, text, circular, modern, purple, interactive, css, awesome */
 .button {
   cursor: pointer;
   border: none;
@@ -63,7 +63,9 @@
   position: relative;
   display: grid;
   place-content: center;
-  transition: background 300ms;
+  transition:
+    background 300ms,
+    transform 200ms;
   font-weight: 600;
 }
 
@@ -99,6 +101,11 @@
 
 .button:hover {
   background: #000;
+  transform: scale(1.05);
+}
+
+.button:hover .button__icon {
+  color: #000;
 }
 
 .button:hover .button__icon:first-child {
