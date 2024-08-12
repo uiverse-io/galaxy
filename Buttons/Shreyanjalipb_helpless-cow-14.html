@@ -1,0 +1,75 @@
+<div class="emoji-button-container">
+  <button class="emoji-button">Hover Me</button>
+  <div class="emoji-animations">
+    <span class="emoji">😊</span>
+    <span class="emoji">🎸</span>
+    <span class="emoji">🚀</span>
+    <span class="emoji">❤️</span>
+  </div>
+</div>
+
+<style>
+/* From Uiverse.io by Shreyanjalipb  - Tags: button */
+.emoji-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.emoji-button {
+  background-color: yellow;
+  border: none;
+  padding: 15px 30px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.emoji-animations {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.emoji {
+  font-size: 35px;
+  opacity: 0;
+  transform: translateY(0);
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.emoji-button:hover + .emoji-animations {
+  opacity: 1;
+}
+
+.emoji-button:hover + .emoji-animations .emoji:nth-child(1) {
+  opacity: 1;
+  transform: translate(-50px, -50px);
+}
+
+.emoji-button:hover + .emoji-animations .emoji:nth-child(2) {
+  opacity: 1;
+  transform: translate(50px, -50px);
+}
+
+.emoji-button:hover + .emoji-animations .emoji:nth-child(3) {
+  opacity: 1;
+  transform: translate(-50px, 50px);
+}
+
+.emoji-button:hover + .emoji-animations .emoji:nth-child(4) {
+  opacity: 1;
+  transform: translate(50px, 50px);
+}
+
+</style>
+    
