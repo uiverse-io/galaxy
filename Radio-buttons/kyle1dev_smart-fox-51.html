@@ -1,0 +1,109 @@
+<div class="custom-radio-group">
+  <label class="custom-radio-container">
+    <input type="radio" name="custom-radio" value="option1" />
+    <span class="custom-radio-checkmark"></span>
+    Option 1
+  </label>
+  <label class="custom-radio-container">
+    <input type="radio" name="custom-radio" value="option2" />
+    <span class="custom-radio-checkmark"></span>
+    Option 2
+  </label>
+  <label class="custom-radio-container">
+    <input type="radio" name="custom-radio" value="option3" />
+    <span class="custom-radio-checkmark"></span>
+    Option 3
+  </label>
+</div>
+
+<style>
+/* From Uiverse.io by kyle1dev  - Tags: radio */
+.custom-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 320px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.custom-radio-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  font-size: 16px;
+  color: #333333;
+  user-select: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.custom-radio-container:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.custom-radio-container input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+.custom-radio-checkmark {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition:
+    background-color 0.4s ease,
+    transform 0.4s ease;
+  margin-right: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.custom-radio-container input[type="radio"]:checked + .custom-radio-checkmark {
+  background-color: #ffffff;
+  border-color: #007bff;
+  box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.2);
+  transform: scale(1.2);
+  animation: pulse 0.6s forwards;
+}
+.custom-radio-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-radio-container
+  input[type="radio"]:checked
+  + .custom-radio-checkmark::after {
+  display: block;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #007bff;
+  transform: translate(-50%, -50%);
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+</style>
+    
