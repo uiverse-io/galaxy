@@ -1,0 +1,160 @@
+<div class="div">
+  <input type="checkbox" />
+  <span>
+    <svg
+      class="svgi"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#909090"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+    </svg>
+
+    <svg
+      class="svgii"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#3fc079"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+      <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+    </svg>
+  </span>
+  <input type="text" placeholder="'Unlock' me by clicking the lock icon" />
+</div>
+
+<style>
+/* From Uiverse.io by Admin12121  - Tags: input, toggle, futuristic, input effect  */
+.div {
+  --field-size: 50px;
+  --field-border-color: #ccc;
+  margin: 0 auto;
+  font-size: 1rem;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  border-radius: 5px;
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  background: white;
+}
+
+.div input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: var(--field-size);
+  height: var(--field-size);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.div input[type="checkbox"]:hover + span .svgi {
+  display: none;
+  /* Remove the background image */
+}
+.div input[type="checkbox"]:hover + span .svgii {
+  display: block;
+}
+
+.div input[type="checkbox"]:checked + span .svgi {
+  display: none; /* Remove the background image */
+}
+
+.div input[type="checkbox"]:checked + span .svgii {
+  display: block;
+}
+
+.div input[type="checkbox"]:checked + span::before,
+.div input[type="checkbox"]:checked + span::after {
+  pointer-events: none;
+}
+
+.div input[type="checkbox"]:checked + span::after {
+  transform: translateY(-100%);
+}
+
+.div input[type="checkbox"]:checked + span::before {
+  transform: translateY(100%);
+}
+.div input[type="checkbox"] + span .svgii {
+  display: none;
+}
+.div input[type="checkbox"] + span,
+.svgi,
+.svgii {
+  width: var(--field-size);
+  height: var(--field-size);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid var(--field-border-color);
+  cursor: pointer;
+}
+
+.div input[type="checkbox"] + span::after,
+.div input[type="checkbox"] + span::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 50%;
+  left: var(--field-size);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  background: rgba(0, 0, 0, 0.075);
+  z-index: 2;
+  cursor: not-allowed;
+}
+
+.div input[type="checkbox"] + span::after {
+  top: 0;
+}
+
+.div input[type="checkbox"] + span::before {
+  bottom: 0;
+}
+
+.div input[type="text"] {
+  padding: 1em;
+  border: 0;
+  flex: 1;
+  font-size: 1rem;
+  --placeholder-color: #ababab;
+  font-family: inherit;
+}
+
+.div input[type="text"]::-webkit-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+.div input[type="text"]:-ms-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+.div input[type="text"]::-moz-placeholder {
+  color: var(--placeholder-color);
+}
+
+.div input[type="text"]:-moz-placeholder {
+  color: var(--placeholder-color);
+}
+
+</style>
+    
