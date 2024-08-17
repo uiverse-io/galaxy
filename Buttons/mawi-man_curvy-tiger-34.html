@@ -1,0 +1,92 @@
+<button class="custom-button">Click Me</button>
+
+<style>
+/* From Uiverse.io by mawi-man  - Tags: button, interactive, hover effects, ui components, css animations, ripple effect, glassy, modern design */
+.custom-button {
+  background-color: #1a1a2e; /* Button background color */
+  color: #e94560; /* Text color */
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: #e94560;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.custom-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.9;
+}
+
+.custom-button:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+  color: #1a1a2e;
+}
+
+/* Effect of waves under pressure */
+.custom-button:active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s ease-out;
+  z-index: -1;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+/* Animated text glow effect */
+.custom-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover::after {
+  left: 100%;
+  transition: all 0.5s ease;
+}
+
+</style>
+    
