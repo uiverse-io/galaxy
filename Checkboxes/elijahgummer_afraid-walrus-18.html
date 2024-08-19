@@ -1,0 +1,55 @@
+<input class="toggle-checkbox" id="toggle" type="checkbox" />
+<label class="hamburger" for="toggle">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</label>
+
+<style>
+/* From Uiverse.io by elijahgummer  - Tags: animation, black, checkbox, hamburger, arrow */
+.toggle-checkbox {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 35px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  position: relative;
+}
+
+.toggle-checkbox:checked + .hamburger .bar:nth-child(2) {
+  transform: translate(0px, 10px);
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+
+.toggle-checkbox:checked + .hamburger .bar:nth-child(3) {
+  transform: translate(0px, -10px);
+  transition-delay: 0s;
+}
+
+.toggle-checkbox:checked + .hamburger .bar:nth-child(1) {
+  transform: rotate(-45deg) scale(0.7);
+  transition-delay: 0.6s;
+}
+.toggle-checkbox:checked + .hamburger .bar:nth-child(3) {
+  transform: rotate(45deg) scale(0.7);
+  transition-delay: 0.6s;
+}
+
+</style>
+    
