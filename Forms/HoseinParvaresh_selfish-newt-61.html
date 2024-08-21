@@ -1,13 +1,14 @@
- <div class="container">
-        <form class="form" action="">
-            <p class="title">Login Form</p>
-            <input placeholder="Username" class="username input" type="text">
-            <input placeholder="Password" class="password input" type="password">
-            <button class="btn" type="submit">Login</button>
-        </form>
-    </div>
+<div class="container">
+  <form class="form" action="">
+    <p class="title">Login Form</p>
+    <input placeholder="Username" class="username input" type="text" />
+    <input placeholder="Password" class="password input" type="password" />
+    <button class="btn" type="submit">Login</button>
+  </form>
+</div>
+
 <style>
-/* From Uiverse.io by HoseinParvaresh - Tags: form, login , login form */
+/* From Uiverse.io by HoseinParvaresh  - Tags: form, login , login form, dark, rounded, input, button, orange, gradient, minimalistic, password, form, username, centered, login */
 ::selection {
   background-color: gray;
 }
@@ -22,7 +23,7 @@
 .form {
   width: 400px;
   height: 400px;
-  background-image: linear-gradient(to bottom, #424242,#212121);
+  background-image: linear-gradient(to bottom, #424242, #212121);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -43,30 +44,14 @@
   color: wheat;
   border: none;
   outline: none;
-}
-
-.username {
   border-bottom: 1px solid wheat;
   transition: all 400ms;
 }
-
-.username:hover {
+.input:hover {
   background-color: #424242;
   border: none;
   border-radius: 0.5rem;
 }
-
-.password {
-  border-bottom: 1px solid wheat;
-  transition: all 400ms;
-}
-
-.password:hover {
-  background-color: #424242;
-  border: none;
-  border-radius: 0.5rem;
-}
-
 .btn {
   height: 3rem;
   width: 20rem;
@@ -76,12 +61,15 @@
   border: none;
   font-size: 1.2rem;
   transition: all 400ms;
-  box-shadow: 0 0 10px  antiquewhite, 0 0 10px antiquewhite;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px antiquewhite,
+    0 0 10px antiquewhite;
 }
-
 .btn:hover {
   background-color: antiquewhite;
   box-shadow: none;
 }
 
 </style>
+    
