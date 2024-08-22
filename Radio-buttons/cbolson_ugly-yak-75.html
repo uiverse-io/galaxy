@@ -1,0 +1,96 @@
+<form class="my-form">
+  <div>
+    <input id="radio-1" type="radio" name="option" />
+    <label for="radio-1">Radio 1</label>
+  </div>
+  <div>
+    <input checked="" id="radio-2" type="radio" name="option" />
+    <label for="radio-2">Radio 2</label>
+  </div>
+  <div>
+    <input id="radio-3" type="radio" name="option" />
+    <label for="radio-3">Radio 3</label>
+  </div>
+  <div>
+    <input id="radio-4" type="radio" name="option" />
+    <label for="radio-4">Radio 4</label>
+  </div>
+</form>
+
+<style>
+/* From Uiverse.io by cbolson  - Tags: radio */
+/* From Uiverse.io by cbolson */
+.my-form {
+  --_clr-primary: #666;
+  --_clr-hover: #f33195;
+  --_clr-checked: #127acf;
+}
+.my-form > div {
+  --_clr-current: var(--_clr-primary);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.my-form > div + div {
+  margin-block-start: 0.5rem;
+}
+.my-form label {
+  cursor: pointer;
+  color: var(--_clr-current);
+  transition: color 150ms ease-in-out;
+}
+/* styled radio */
+.my-form input[type="radio"] {
+  appearance: none;
+  outline: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  aspect-ratio: 1;
+  padding: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--_clr-current);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.my-form input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  inset: 0.25rem;
+  opacity: 0;
+  scale: 0;
+  transition:
+    opacity 150ms ease-in-out,
+    scale 150ms ease-in-out;
+  background-color: var(--_clr-checked);
+  border-radius: inherit;
+}
+
+.my-form label:hover,
+.my-form input[type="radio"]:focus-visible,
+.my-form input[type="radio"]:focus-visible + label,
+.my-form input[type="radio"]:hover,
+.my-form input[type="radio"]:hover + label {
+  --_clr-current: var(--_clr-hover);
+}
+.my-form input[type="radio"]:focus-visible::after,
+.my-form input[type="radio"]:hover::after {
+  opacity: 0.5;
+  scale: 1;
+  background-color: var(--_clr-hover);
+}
+
+.my-form input[type="radio"]:checked + label:not(:hover),
+.my-form input[type="radio"]:checked:not(:hover) {
+  --_clr-current: var(--_clr-checked);
+}
+.my-form input[type="radio"]:checked::after {
+  opacity: 1;
+  scale: 1;
+}
+
+</style>
+    
