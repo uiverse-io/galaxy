@@ -1,0 +1,69 @@
+<div class="mat-input">
+  <label for="food">Favorite food</label>
+  <input id="food" type="text" placeholder="Ex. Pizza" />
+</div>
+
+<style>
+/* From Uiverse.io by fbernack  - Tags: input */
+.mat-input {
+  position: relative;
+  font-size: inherit;
+}
+
+.mat-input input {
+  border-width: 0 0 1px;
+  outline: none;
+  background-color: #0000000a;
+  border-radius: 4px 4px 0 0;
+  padding: 1.8em 0.75em 0.75em;
+  border-color: #8c8c8c;
+  border-style: solid;
+  font-size: inherit;
+  transition: 0.1s;
+}
+
+.mat-input input:hover,
+.mat-input input:focus {
+  border-bottom-width: 2px;
+  padding-bottom: calc(0.75em - 1px);
+}
+
+.mat-input input:hover {
+  border-color: #121212;
+}
+
+.mat-input input:focus {
+  border-color: #2196f3;
+}
+
+.mat-input label {
+  position: absolute;
+  top: 1.4em;
+  left: 1em;
+  pointer-events: none;
+  transition: 0.2s;
+  color: #0009;
+}
+
+.mat-input:has(input:focus) label {
+  color: #2196f3;
+}
+
+.mat-input:has(input:focus) label,
+.mat-input:not(:has(input:placeholder-shown)) label {
+  top: 0.75em;
+  font-size: 0.8em;
+}
+
+.mat-input input::placeholder {
+  opacity: 0;
+  transition: 0.2s;
+  color: #aaa;
+}
+
+.mat-input input:focus::placeholder {
+  opacity: 1;
+}
+
+</style>
+    
