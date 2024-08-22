@@ -1,0 +1,79 @@
+<div class="formContainer">
+  <input placeholder="example@email.com" type="text" />
+  <label>Email</label>
+</div>
+
+<style>
+/* From Uiverse.io by pablofernz  - Tags: email, form, input, dark, darkmode, dark mode, example */
+.formContainer {
+  height: 100%;
+  /* change the width here if you want */
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  /* explanation: Reverse make the label appear visually above the input, when in the HTML it is below so that the "+" selector can work  */
+  gap: 10px;
+  position: relative;
+}
+
+/* This selects the label inside "formContainer*/
+.formContainer > label {
+  font-family: Basier Square;
+  font-weight: 900;
+  font-size: 15px;
+  color: rgb(99, 99, 99);
+  text-align: start;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+/* This selects the input inside "formContainer*/
+.formContainer > input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 900px;
+  background-color: transparent;
+  color: rgb(99, 99, 99);
+  border: 2px solid rgb(85, 85, 85);
+  font-size: 15px;
+  font-family: Basier Square;
+  padding-left: 10px;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+/* If you give the input a class, this would be equal to: 
+.input:focus */
+.formContainer > input:focus {
+  color: rgb(197, 197, 197);
+  outline: none;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow:
+    0px 0px 10px rgba(255, 255, 255, 0.145),
+    0px 0px 5px rgba(255, 255, 255, 0.145) inset;
+}
+
+/* This would be equal to: .input:focus+.label */
+.formContainer > input:focus + label {
+  color: rgb(197, 197, 197);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.145);
+}
+
+/* This would be equal to: .input::placeholder */
+.formContainer > input::placeholder {
+  color: rgb(85, 85, 85);
+  transition: all 0.5s ease;
+}
+
+/* This would be equal to: .input:focus::placeholder */
+.formContainer > input:focus::placeholder {
+  color: rgb(150, 150, 150);
+}
+
+/* <thx/> */
+
+</style>
+    
