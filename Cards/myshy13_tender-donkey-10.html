@@ -1,0 +1,33 @@
+<div class="card"></div>
+
+<style>
+/* From Uiverse.io by myshy13  - Tags: card */
+.card {
+  font-family: monospace;
+  scale: 1.2;
+  height: 15em;
+  width: 20em;
+  border-radius: 0.8em;
+  background: #222;
+  overflow: hidden;
+  color: #ccc;
+
+  transition: 0.3s ease;
+  &:before {
+    content: "User - zsh";
+    text-align: center;
+    padding: 0.2em;
+    display: block;
+    background-color: #4e4e4e;
+  }
+  &:after {
+    content: "User@device ~ $ ";
+    margin: 0.2em;
+  }
+  &:hover {
+    scale: 1.3;
+  }
+}
+
+</style>
+    
