@@ -1,0 +1,480 @@
+<div class="orbital">
+  <div class="ringOne"></div>
+  <div class="ringTwo"></div>
+  <div class="ringThree"></div>
+  <div class="core"></div>
+  <div class="spin"></div>
+</div>
+
+<style>
+/* From Uiverse.io by Cksunandh  - Tags: loader */
+.orbital {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 110px;
+}
+.ringOne {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  border-radius: 200px;
+  box-shadow: -5px -5px 15px rgba(15, 180, 231, 0.3);
+}
+.ringTwo {
+  background: #161616; /* Old browsers */
+  background: -moz-linear-gradient(top, #161616 0%, #3d3d3d 100%); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #161616),
+    color-stop(100%, #3d3d3d)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    #161616 0%,
+    #3d3d3d 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    top,
+    #161616 0%,
+    #3d3d3d 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #161616 0%, #3d3d3d 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #161616 0%, #3d3d3d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#161616', endColorstr='#3d3d3d',GradientType=0 ); /* IE6-9 */
+
+  border: 1px solid #444;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  bottom: -25px;
+  left: -25px;
+  border-radius: 200px;
+  z-index: -2;
+}
+.spin {
+  margin: 0 auto;
+  background: #91ffff; /* Old browsers */
+  background: -moz-radial-gradient(
+    20% 20%,
+    ellipse cover,
+    #91ffff 0%,
+    #920a51 24%,
+    #000000 74%,
+    #000000 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    radial,
+    20% 20%,
+    0px,
+    20% 20%,
+    100%,
+    color-stop(0%, #91ffff),
+    color-stop(24%, #0fb4e7),
+    color-stop(74%, #000000),
+    color-stop(100%, #000000)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(
+    20% 20%,
+    ellipse cover,
+    #91ffff 0%,
+    #0fb4e7 24%,
+    #000000 74%,
+    #000000 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(
+    20% 20%,
+    ellipse cover,
+    #91ffff 0%,
+    #0fb4e7 24%,
+    #000000 74%,
+    #000000 100%
+  ); /* Opera 12+ */
+  background: -ms-radial-gradient(
+    20% 20%,
+    ellipse cover,
+    #91ffff 0%,
+    #0fb4e7 24%,
+    #000000 74%,
+    #000000 100%
+  ); /* IE10+ */
+  background: radial-gradient(
+    ellipse at 20% 20%,
+    #91ffff 0%,
+    #0fb4e7 24%,
+    #000000 74%,
+    #000000 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#91ffff', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  border-radius: 110px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@-webkit-keyframes spinRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  -webkit-animation-name: spinRotation;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spinRotation;
+  -moz-animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  animation-name: spinRotation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.ringTwo {
+  -webkit-animation-name: spinRotation;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spinRotation;
+  -moz-animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  animation-name: spinRotation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.ringThree {
+  color: #fff;
+  background-color: #ccc;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  border-radius: 110px;
+  background: #575b60; /* Old browsers */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #575b60 1%,
+    #000000 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(1%, #575b60),
+    color-stop(100%, #000000)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #575b60 1%,
+    #000000 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    #575b60 1%,
+    #000000 100%
+  ); /* Opera 12+ */
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    #575b60 1%,
+    #000000 100%
+  ); /* IE10+ */
+  background: radial-gradient(
+    ellipse at center,
+    #575b60 1%,
+    #000000 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#575b60', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  box-shadow:
+    -1px 0px 0px #333,
+    0px -1px 0px #333;
+}
+.core {
+  color: #ccc;
+  background-color: #ccc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 2;
+  border-radius: 110px;
+  background: #575b60; /* Old browsers */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #575b60 1%,
+    #000000 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(1%, #575b60),
+    color-stop(100%, #000000)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #575b60 1%,
+    #000000 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    #575b60 1%,
+    #000000 100%
+  ); /* Opera 12+ */
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    #575b60 1%,
+    #000000 100%
+  ); /* IE10+ */
+  background: radial-gradient(
+    ellipse at center,
+    #575b60 1%,
+    #000000 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#575b60', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  box-shadow:
+    -1px 0px 0px #666,
+    0px -1px 0px #666;
+}
+.core:active {
+  color: #fff;
+  background: #373a3d; /* Old browsers */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #373a3d 1%,
+    #000000 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(1%, #373a3d),
+    color-stop(100%, #000000)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #373a3d 1%,
+    #000000 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    #373a3d 1%,
+    #000000 100%
+  ); /* Opera 12+ */
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    #373a3d 1%,
+    #000000 100%
+  ); /* IE10+ */
+  background: radial-gradient(
+    ellipse at center,
+    #373a3d 1%,
+    #000000 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373a3d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* Button Container */
+.orbital {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 110px;
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.orbital:hover {
+  transform: scale(1.1); /* Slightly increases size on hover */
+}
+
+/* Outer Ring */
+.ringOne {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  border-radius: 200px;
+  box-shadow: -5px -5px 15px rgba(15, 180, 231, 0.3);
+}
+
+/* Middle Ring */
+.ringTwo {
+  border: 1px solid #444;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  bottom: -25px;
+  left: -25px;
+  border-radius: 200px;
+  z-index: -2;
+  background: linear-gradient(to bottom, #161616 0%, #3d3d3d 100%);
+  animation: rotateClockwise 4s infinite linear; /* Rotate clockwise */
+}
+
+/* Core */
+.core {
+  color: #ccc;
+  background-color: #ccc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 2;
+  border-radius: 110px;
+  background: radial-gradient(ellipse at center, #575b60 1%, #000000 100%);
+  box-shadow:
+    -1px 0px 0px #666,
+    0px -1px 0px #666;
+  animation: pulse 2s infinite ease-in-out; /* Pulse animation */
+}
+
+.core:hover {
+  background: radial-gradient(ellipse at center, #373a3d 1%, #000000 100%);
+}
+
+.core p {
+  text-align: center;
+  margin-top: 40%;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-shadow: -1px -1px 0px #444;
+}
+
+/* Spin Animation */
+.spin {
+  background: radial-gradient(
+    ellipse at 20% 20%,
+    #91ffff 0%,
+    #0fb4e7 24%,
+    #000000 100%
+  );
+  border-radius: 110px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: rotateAntiClockwise 6s infinite linear; /* Rotate anticlockwise */
+}
+
+/* Animations */
+
+/* Rotate clockwise */
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rotate anticlockwise */
+@keyframes rotateAntiClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Pulse animation for the core */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px #666;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0fb4e7;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px #666;
+  }
+}
+
+</style>
+    
