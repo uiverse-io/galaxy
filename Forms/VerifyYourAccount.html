@@ -1,0 +1,123 @@
+<div class="verify-account-container">
+  <h1>🔒 Verify Your Account</h1>
+  <p>Enter the 6-digit OTP sent to your email to verify your account.</p>
+
+  <div class="otp-container">
+    <input type="text" maxlength="1" id="otp-0" />
+    <input type="text" maxlength="1" id="otp-1" />
+    <input type="text" maxlength="1" id="otp-2" />
+    <input type="text" maxlength="1" id="otp-3" />
+    <input type="text" maxlength="1" id="otp-4" />
+    <input type="text" maxlength="1" id="otp-5" />
+  </div>
+
+  <div class="timer" id="timer">Time left: --:--</div>
+
+  <button class="submit-button" id="verify-btn" disabled="">Verify</button>
+</div>
+<style>
+  /* contributor https://github.com/pedadasaikrishna */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1c1c1e, #2a2a2d);
+  color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container styles */
+.verify-account-container {
+  background: #121212;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 400px;
+  transition: all 0.3s ease-in-out;
+}
+
+.verify-account-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.verify-account-container h1 {
+  color: #4a90e2;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.verify-account-container p {
+  color: #b3b3b3;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* OTP input styles */
+.otp-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.otp-container input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: #1c1c1e;
+  border: 2px solid #333;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.otp-container input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px #4a90e2;
+}
+
+.otp-container input:hover {
+  transform: scale(1.05);
+  border-color: #4a90e2;
+}
+
+/* Timer styles */
+.timer {
+  color: #ff7f50;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Button styles */
+.submit-button {
+  background: linear-gradient(135deg, #4a90e2, #9013fe);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 4px 15px rgba(74, 144, 226, 0.5);
+  transform: scale(1.05);
+}
+
+.submit-button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+</style>
